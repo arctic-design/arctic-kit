@@ -1,2 +1,2 @@
-export * from './components/Accordion/Accordion';
-export * from './components';
+export * from './lib/Accordion/Accordion';
+export * from './lib';

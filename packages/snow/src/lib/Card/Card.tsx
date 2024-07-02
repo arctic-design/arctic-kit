@@ -1,7 +1,7 @@
 export function Card() {
   return (
     <div>
-      <h1>Welcome from the Card component</h1>
+      <h1>Welcome to Card!</h1>
     </div>
   );
 }
