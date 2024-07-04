@@ -4,12 +4,17 @@ import react from '@vitejs/plugin-react';
 import dts from 'vite-plugin-dts';
 import * as path from 'path';
 import { nxViteTsPaths } from '@nx/vite/plugins/nx-tsconfig-paths.plugin';
+import { pigment } from '@pigment-css/vite-plugin';
+import { DEFAULT_THEME } from './src/theming/theme';
 
 export default defineConfig({
   root: __dirname,
   cacheDir: '../../node_modules/.vite/packages/snow',
 
   plugins: [
+    pigment({
+      theme: DEFAULT_THEME,
+    }),
     react(),
     nxViteTsPaths(),
     dts({
