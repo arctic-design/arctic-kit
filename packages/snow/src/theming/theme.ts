@@ -52,7 +52,7 @@ export const DEFAULT_THEME: SnowTheme = {
   },
   font: {
     family: {
-      base: "'Roboto', sans-serif",
+      base: "'Inter', sans-serif;",
     },
     weight: {
       regular: 400,

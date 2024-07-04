@@ -1,4 +1,6 @@
 import type { StorybookConfig } from '@storybook/react-vite';
+import * as path from 'path';
+import { mergeConfig, searchForWorkspaceRoot } from 'vite';
 
 const config: StorybookConfig = {
   stories: ['../src/lib/**/*.stories.@(js|jsx|ts|tsx|mdx)'],
@@ -10,6 +12,27 @@ const config: StorybookConfig = {
         viteConfigPath: 'vite.config.ts',
       },
     },
+  },
+  viteFinal: async (config, { configType }) => {
+    return mergeConfig(config, {
+      resolve: {
+        alias: {
+          '@fontsource/inter': path.resolve(
+            __dirname,
+            '../../../node_modules/@fontsource/inter'
+          ),
+        },
+      },
+      server: {
+        fs: {
+          allow: [
+            // search up for workspace root
+            searchForWorkspaceRoot(process.cwd()),
+            path.resolve(__dirname, '../../../node_modules/@fontsource/inter'),
+          ],
+        },
+      },
+    });
   },
 };
 
