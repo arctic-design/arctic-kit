@@ -7,8 +7,8 @@ import {
   yellow,
   grey,
   neutral,
-  electricBlue,
   violet,
+  aurora,
 } from '../colors';
 import {
   borderRadius,
@@ -41,7 +41,7 @@ export const DEFAULT_THEME: SnowTheme = {
   },
 
   colors: {
-    primary: { ...electricBlue, main: electricBlue[500] },
+    primary: { ...aurora, main: aurora[500] },
     secondary: { ...violet, main: violet[500] },
     error: { ...red, main: red[500] },
     warning: { ...yellow, main: yellow[500] },

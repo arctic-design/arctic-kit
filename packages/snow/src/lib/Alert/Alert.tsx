@@ -1,13 +1,33 @@
 import { styled } from '@pigment-css/react';
 import { PropsWithChildren, forwardRef } from 'react';
-import { SnowFeedbackColor } from '../types';
+import { SnowFeedbackColor, SnowFeedbackColorValues } from '../types';
 import {
   InformationCircleIcon,
   CheckCircleIcon,
   ExclamationCircleIcon,
   ExclamationTriangleIcon,
 } from '@heroicons/react/16/solid';
-import { SnowThemeArgs } from '../../core';
+import { SnowTheme, SnowThemeArgs } from '../../core';
+
+const getVariantStyles = (theme: SnowTheme) => {
+  return [
+    ...SnowFeedbackColorValues.map((severity) => ({
+      props: { severity: severity as SnowFeedbackColor },
+      style: {
+        backgroundColor: theme.colors[severity as SnowFeedbackColor][100],
+        borderColor: theme.colors[severity as SnowFeedbackColor][200],
+        color: theme.colors[severity as SnowFeedbackColor][700],
+        '& svg': {
+          color: theme.colors[severity as SnowFeedbackColor].main,
+        },
+      },
+    })),
+    {
+      props: { shadow: true },
+      style: { boxShadow: theme.shadow[200], borderColor: 'transparent' },
+    },
+  ];
+};
 
 const IconMap: Record<SnowFeedbackColor, JSX.Element> = {
   success: <CheckCircleIcon />,
@@ -40,23 +60,7 @@ const Container = styled.div<AlertProps>(({ theme }: SnowThemeArgs) => ({
   display: 'flex',
   border: '1px solid transparent',
   boxShadow: 'none',
-  variants: [
-    ...['success', 'error', 'warning', 'info'].map((severity) => ({
-      props: { severity: severity as SnowFeedbackColor },
-      style: {
-        backgroundColor: theme.colors[severity as SnowFeedbackColor][100],
-        borderColor: theme.colors[severity as SnowFeedbackColor][200],
-        color: theme.colors[severity as SnowFeedbackColor][700],
-        '& svg': {
-          color: theme.colors[severity as SnowFeedbackColor].main,
-        },
-      },
-    })),
-    {
-      props: { shadow: true },
-      style: { boxShadow: theme.shadow[200], borderColor: 'transparent' },
-    },
-  ],
+  variants: getVariantStyles(theme),
   '& svg': {
     width: 16,
     height: 'auto',

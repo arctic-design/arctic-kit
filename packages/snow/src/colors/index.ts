@@ -10,3 +10,4 @@ export { default as grape } from './grape';
 export { default as indigo } from './indigo';
 export { default as electricBlue } from './electricBlue';
 export { default as violet } from './violet';
+export { default as aurora } from './aurora';
