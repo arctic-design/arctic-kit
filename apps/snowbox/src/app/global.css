@@ -1,0 +1,16 @@
+html {
+  -webkit-text-size-adjust: 100%;
+  font-family: 'Inter', sans-serif;
+  line-height: 1.5;
+  tab-size: 4;
+  scroll-behavior: smooth;
+}
+body {
+  font-family: inherit;
+  line-height: inherit;
+  margin: 0;
+}
+
+.container {
+  padding: 8px;
+}

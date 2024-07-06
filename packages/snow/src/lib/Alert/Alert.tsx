@@ -7,6 +7,7 @@ import {
   ExclamationCircleIcon,
   ExclamationTriangleIcon,
 } from '@heroicons/react/16/solid';
+import { SnowThemeArgs } from '../../core';
 
 const IconMap: Record<SnowFeedbackColor, JSX.Element> = {
   success: <CheckCircleIcon />,
@@ -23,14 +24,13 @@ export type AlertProps = {
   id?: string;
 };
 
-const Container = styled.div<AlertProps>(({ theme }) => ({
+const Container = styled.div<AlertProps>(({ theme }: SnowThemeArgs) => ({
   fontFamily: theme.font.family.base,
   fontSize: '0.875rem',
   fontStyle: 'normal',
-  fontWeight: 400,
+  fontWeight: theme.font.weight.regular,
   lineHeight: '1.225rem',
   minWidth: '300px',
-  margin: '10px',
   position: 'relative',
   letterSpacing: '0.01071em',
   alignItems: 'center',

@@ -1,5 +1,6 @@
 import { SnowSize } from '../lib/types';
 import { ColorType, NeutralColorType } from '../colors/types';
+import type { ExtendTheme } from '@pigment-css/react/theme';
 
 export interface DefaultTokenTypeVariant {
   main: string;
@@ -111,4 +112,11 @@ export interface SnowTheme extends SnowColorTheme {
   lineHeight: SnowLineHeight;
   getContrastText: (background: string) => string;
   verticalTextSpacing: (size: SnowSize) => number;
+}
+
+export interface SnowThemeArgs {
+  theme: ExtendTheme<{
+    colorScheme: 'light' | 'dark';
+    tokens: SnowTheme;
+  }>;
 }

@@ -44,3 +44,7 @@ Thumbs.db
 
 storybook-static
 doctor-storybook.log
+
+# Next.js
+.next
+out

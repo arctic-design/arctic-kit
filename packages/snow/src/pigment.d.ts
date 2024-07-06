@@ -1,13 +1,19 @@
-import type { ExtendTheme } from '@pigment-css/react/theme';
-import { SnowTheme } from './core/theme.types';
+import type { ThemeArgs } from '@pigment-css/react/theme';
+import { SnowTheme, SnowThemeArgs } from './core/theme.types';
 
 declare module '@pigment-css/react/theme' {
-  interface ThemeTokens extends SnowTheme {}
+  interface ThemeArgs extends SnowThemeArgs {}
+}
 
-  interface ThemeArgs {
-    theme: ExtendTheme<{
-      colorScheme: 'light' | 'dark';
-      tokens: ThemeTokens;
-    }>;
+declare global {
+  namespace React {
+    interface HTMLAttributes<T> {
+      sx?:
+        | React.CSSProperties
+        | ((theme: SnowTheme) => React.CSSProperties)
+        | ReadonlyArray<
+            React.CSSProperties | ((theme: SnowTheme) => React.CSSProperties)
+          >;
+    }
   }
 }

@@ -1,14 +1,10 @@
 import { styled } from '@pigment-css/react';
+import { SnowThemeArgs } from '../../core';
 
-const StyledButton = styled.button(({ theme }) => ({
+const StyledButton = styled.button(({ theme }: SnowThemeArgs) => ({
   backgroundColor: theme.colors.primary.main,
   color: theme.colors.neutral[0],
 }));
-
-const StyledButton1 = styled.button`
-  background-color: red;
-  color: #fff;
-`;
 
 export type ButtonProps = {
   children: React.ReactNode;
