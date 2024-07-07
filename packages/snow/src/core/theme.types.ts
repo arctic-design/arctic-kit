@@ -111,7 +111,6 @@ export interface SnowTheme extends SnowColorTheme {
   font: SnowFont;
   lineHeight: SnowLineHeight;
   getContrastText: (background: string) => string;
-  verticalTextSpacing: (size: SnowSize) => number;
 }
 
 export interface SnowThemeArgs {

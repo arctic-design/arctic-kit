@@ -77,7 +77,7 @@ export const DEFAULT_THEME: SnowTheme = {
     300: 1.5,
   },
   getContrastText,
-  verticalTextSpacing: function Spacing(size: SnowSize) {
-    return this.spacings.main * SnowSpacingMap[size];
-  },
+  // verticalTextSpacing: function Spacing(size: SnowSize) {
+  //   return this.spacings.main * SnowSpacingMap[size];
+  // },
 };
