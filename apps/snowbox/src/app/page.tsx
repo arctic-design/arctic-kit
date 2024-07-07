@@ -1,4 +1,12 @@
-import { Alert, Accordion, AccordionItem, Box } from '@arctic-kit/snow';
+import {
+  Alert,
+  Accordion,
+  AccordionItem,
+  Box,
+  Button,
+  SnowSize,
+  Loader,
+} from '@arctic-kit/snow';
 export default function Index() {
   /*
    * Replace the elements below with your own.
@@ -55,6 +63,42 @@ export default function Index() {
                   </Alert>
                 </AccordionItem>
               </Accordion>
+              {['small', 'medium', 'large'].map((size) => (
+                <Box
+                  key={size}
+                  sx={{
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'flex-start',
+                    flexWrap: 'wrap',
+                    gap: 8,
+                    padding: 4,
+                  }}
+                >
+                  <Button size={size as SnowSize}>Default{` - ${size}`}</Button>
+                  <Button size={size as SnowSize} variant="outlined">
+                    Outlined{` - ${size}`}
+                  </Button>
+                  <Button size={size as SnowSize} variant="text">
+                    Text{` - ${size}`}
+                  </Button>
+                </Box>
+              ))}
+              {['small', 'medium', 'large'].map((size) => (
+                <Box
+                  key={size}
+                  sx={{
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'flex-start',
+                    gap: 8,
+                    padding: 4,
+                  }}
+                >
+                  <Loader size={size as SnowSize} type="dots" />
+                  <Loader size={size as SnowSize} type="spinner" />
+                </Box>
+              ))}
             </Box>
           </div>
         </div>
