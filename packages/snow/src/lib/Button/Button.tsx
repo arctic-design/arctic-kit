@@ -1,3 +1,4 @@
+'use client';
 import {
   MouseEventHandler,
   PropsWithChildren,
@@ -215,7 +216,5 @@ const Button = forwardRef<HTMLButtonElement, PropsWithChildren<ButtonProps>>(
     );
   }
 );
-
-Button.displayName = 'Button';
 
 export { Button };
