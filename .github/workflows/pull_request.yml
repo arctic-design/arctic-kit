@@ -1,0 +1,28 @@
+name: Pull Request
+
+on:
+  pull_request:
+    types: [opened, reopened, edited]
+
+# Needed for nx-set-shas when run on the main branch
+permissions:
+  actions: read
+  contents: read
+
+jobs:
+  lint_build_test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout 🛎️
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - uses: ./.github/actions/install-dependencies
+
+      - uses: nrwl/nx-set-shas@v4
+
+      - name: Run Affected Tasks
+        if: success() # Only run this step if the previous step succeeded
+        run: npx nx affected -t lint test build e2e-ci
