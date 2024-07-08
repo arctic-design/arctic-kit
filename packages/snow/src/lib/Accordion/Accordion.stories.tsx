@@ -4,11 +4,11 @@ import { Accordion } from './Accordion';
 import { AccordionItem } from './AccordionItem';
 // import { Icon } from '../Icons';
 import {
-  PaperAirplaneIcon,
-  BuildingLibraryIcon,
+  // PaperAirplaneIcon,
+  // BuildingLibraryIcon,
   HandThumbDownIcon,
-  ShieldExclamationIcon,
-  CameraIcon,
+  // ShieldExclamationIcon,
+  // CameraIcon,
   MegaphoneIcon,
 } from '@heroicons/react/16/solid';
 // import { faMagnet, faCar } from '@fortawesome/free-solid-svg-icons';

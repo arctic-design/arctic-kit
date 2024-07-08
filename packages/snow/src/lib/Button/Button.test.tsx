@@ -39,7 +39,13 @@ describe('Button Component', () => {
 
   it('renders leadingSection', () => {
     const { getByTestId } = render(
-      <Button leadingSection={<span data-testid="icon">🚀</span>}>
+      <Button
+        leadingSection={
+          <span data-testid="icon" role="img" aria-label="icon">
+            🚀
+          </span>
+        }
+      >
         With Icon
       </Button>
     );
@@ -49,7 +55,13 @@ describe('Button Component', () => {
 
   it('renders trailingSection', () => {
     const { getByTestId } = render(
-      <Button trailingSection={<span data-testid="icon">🚀</span>}>
+      <Button
+        trailingSection={
+          <span data-testid="icon" role="img" aria-label="icon">
+            🚀
+          </span>
+        }
+      >
         Reverse
       </Button>
     );

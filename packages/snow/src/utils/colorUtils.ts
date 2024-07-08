@@ -2,8 +2,9 @@ import { ColorType } from '../colors/types';
 import { DefaultTokenTypeVariant } from '../core';
 
 export const contrastThreshold = 3;
+
 // Convert hex color to RGB array
-function hexToRgb(hex: string): number[] {
+function hexToRgb(hex: string): number[] | null {
   let r = 0,
     g = 0,
     b = 0;
@@ -16,13 +17,11 @@ function hexToRgb(hex: string): number[] {
   }
   // 6 digits
   else if (hex.length === 7) {
-    r = parseInt(hex[1] + hex[2], 16);
-    g = parseInt(hex[3] + hex[4], 16);
-    b = parseInt(hex[5] + hex[6], 16);
-  } else {
     r = parseInt(hex.substring(1, 3), 16);
     g = parseInt(hex.substring(3, 5), 16);
     b = parseInt(hex.substring(5, 7), 16);
+  } else {
+    return null;
   }
 
   return [r, g, b];
@@ -38,7 +37,10 @@ export const rgbToHex = (r: number, g: number, b: number): string => {
 
 // Adjust color brightness
 export const adjustBrightness = (color: string, amount: number): string => {
-  const rgbColor = hexToRgb(color)!;
+  const rgbColor = hexToRgb(color);
+  if (!rgbColor) {
+    throw new Error('Invalid color format');
+  }
   // Calculate adjustment
   const adjust = (color: number) => Math.max(Math.min(255, color + amount), 0);
   return rgbToHex(
@@ -85,6 +87,10 @@ export function getContrastRatio(color1: string, color2: string): number {
   const rgb1 = hexToRgb(color1);
   const rgb2 = hexToRgb(color2);
 
+  if (!rgb1 || !rgb2) {
+    throw new Error('Invalid color format');
+  }
+
   const luminance1 = getRelativeLuminance(rgb1);
   const luminance2 = getRelativeLuminance(rgb2);
 
@@ -95,7 +101,7 @@ export function getContrastRatio(color1: string, color2: string): number {
   return parseFloat(contrastRatio.toFixed(2));
 }
 
-export function getContrastText(background: string) {
+export function getContrastText(background: string): string {
   const contrast = getContrastRatio('#ffffff', background);
 
   const contrastText = contrast >= contrastThreshold ? '#ffffff' : '#000000';

@@ -33,14 +33,14 @@ export const ActionMenuItem = forwardRef<
       disabled={disabled}
       id={`${id}-${item.index}`}
       data-testid={`${id}-${item.index}`}
-      {...menu.getItemProps({
+      {...menu.getItemProps?.({
         onClick(event: React.MouseEvent<HTMLButtonElement>) {
           props.onClick?.(event);
           tree?.events.emit('click');
         },
         onFocus(event: React.FocusEvent<HTMLButtonElement>) {
           props.onFocus?.(event);
-          menu.setHasFocusInside(true);
+          menu.setHasFocusInside?.(true);
         },
       })}
     >

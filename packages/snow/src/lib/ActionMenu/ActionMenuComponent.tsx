@@ -172,12 +172,12 @@ export const ActionMenuComponent = forwardRef<
           color={color}
           itemSize={itemSize}
           {...getReferenceProps(
-            parent.getItemProps({
+            parent.getItemProps?.({
               ...props,
               onFocus(event: React.FocusEvent<HTMLButtonElement>) {
                 props.onFocus?.(event);
                 setHasFocusInside(false);
-                parent.setHasFocusInside(true);
+                parent.setHasFocusInside?.(true);
               },
             })
           )}

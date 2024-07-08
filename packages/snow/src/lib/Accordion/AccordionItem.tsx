@@ -229,24 +229,22 @@ const AccordionItem = forwardRef(function AccordionItem(
                 {titleComponent}
               </span>
             ) : (
-              <>
-                <span
-                  id={`${id}-header-title`}
-                  data-testid={`${id}-header-title`}
-                  className="title"
-                >
-                  {title}
-                  {subTitle && (
-                    <span
-                      id={`${id}-header-sub-title`}
-                      data-testid={`${id}-header-sub-title`}
-                      className="subTitle"
-                    >
-                      {`${title ? ' - ' : ''}${subTitle}`}
-                    </span>
-                  )}
-                </span>
-              </>
+              <span
+                id={`${id}-header-title`}
+                data-testid={`${id}-header-title`}
+                className="title"
+              >
+                {title}
+                {subTitle && (
+                  <span
+                    id={`${id}-header-sub-title`}
+                    data-testid={`${id}-header-sub-title`}
+                    className="subTitle"
+                  >
+                    {`${title ? ' - ' : ''}${subTitle}`}
+                  </span>
+                )}
+              </span>
             )}
           </div>
           {titleFooter && <TitleFooter>{titleFooter}</TitleFooter>}

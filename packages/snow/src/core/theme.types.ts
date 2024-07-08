@@ -1,4 +1,3 @@
-import { SnowSize } from '../lib/types';
 import { ColorType, NeutralColorType } from '../colors/types';
 import type { ExtendTheme } from '@pigment-css/react/theme';
 
