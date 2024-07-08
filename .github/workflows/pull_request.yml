@@ -18,13 +18,14 @@ jobs:
         with:
           fetch-depth: 0
 
-      - uses: actions/setup-node@v4
-        with:
-          node-version: 20.12.2
-          cache: 'yarn'
+      - uses: ./.github/actions/install-dependencies
 
-      - run: yarn
+      - name: Derive appropriate SHAs for base and head for `nx affected` commands
+        id: setSHAs
+        uses: nrwl/nx-set-shas@v4
 
-      - uses: nrwl/nx-set-shas@v4
+      - run: |
+          echo "BASE: ${{ steps.setSHAs.outputs.base }}"
+          echo "HEAD: ${{ steps.setSHAs.outputs.head }}"
 
       - run: npx nx affected -t lint test build e2e-ci
