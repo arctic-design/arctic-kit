@@ -14,15 +14,17 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout 🛎️
-        uses: actions/checkout@v4
+      - uses: actions/checkout@v4
         with:
           fetch-depth: 0
 
-      - uses: ./.github/actions/install-dependencies
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20.12.2
+          cache: 'yarn'
+
+      - run: yarn
 
       - uses: nrwl/nx-set-shas@v4
 
-      - name: Run Affected Tasks
-        if: success() # Only run this step if the previous step succeeded
-        run: npx nx affected -t lint test build e2e-ci
+      - run: npx nx affected -t lint test build e2e-ci
