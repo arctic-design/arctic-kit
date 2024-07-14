@@ -15,7 +15,7 @@ import {
 } from '../types';
 import { SnowHeights, SnowSpacingMap } from '../constants';
 import { ButtonGroupContext } from '../ButtonGroup/ButtonGroupContext';
-import { ButtonVariantValues, ButtonVariants } from './types';
+import { ButtonVariants } from './types';
 import { Loader } from '../Loader';
 import { SnowTheme, SnowThemeArgs } from '../../core';
 
@@ -39,13 +39,7 @@ const getColorVariantStyles = (theme: SnowTheme) =>
         color: theme.colors[color][200],
       },
       '&.outlined, &.text': {
-        color: theme.colors.grey[900],
-        backgroundColor: theme.colors.neutral[0],
         border: `1px solid ${theme.colors[color][400]}`,
-        boxShadow: 'none',
-        svg: {
-          fill: theme.colors.grey[900],
-        },
 
         '&:hover': {
           backgroundColor: theme.colors[color][50],
@@ -74,9 +68,6 @@ const getColorVariantStyles = (theme: SnowTheme) =>
         },
 
         '&.text': {
-          backgroundColor: 'transparent',
-          border: 'none',
-
           '&:not(:disabled):hover, &:not(:disabled):focus': {
             backgroundColor: theme.colors[color][100],
           },
@@ -97,17 +88,6 @@ const getSizeVariantStyles = (theme: SnowTheme) =>
       padding: `${Spacing(sizeItem, theme)}px ${
         Spacing(sizeItem, theme) * 2
       }px`,
-    },
-  }));
-
-const getButtonVariantStyles = (theme: SnowTheme) =>
-  ButtonVariantValues.map((variant) => ({
-    props: { variant: variant },
-    style: {
-      top: `${VariantOutlineMap[variant] * -1}px`,
-      left: `${VariantOutlineMap[variant] * -1}px`,
-      right: `${VariantOutlineMap[variant] * -1}px`,
-      bottom: `${VariantOutlineMap[variant] * -1}px`,
     },
   }));
 
@@ -140,6 +120,7 @@ const StyledButton = styled.button<ButtonProps>(({ theme }: SnowThemeArgs) => ({
   display: 'flex',
   alignItems: 'center',
   color: theme.colors.neutral[0],
+  backgroundColor: theme.colors.primary.main,
   boxShadow: theme.shadow.main,
   position: 'relative',
   boxSizing: 'border-box',
@@ -148,6 +129,61 @@ const StyledButton = styled.button<ButtonProps>(({ theme }: SnowThemeArgs) => ({
   svg: {
     fill: theme.colors.neutral[0],
   },
+  '&:hover': {
+    backgroundColor: theme.colors.primary[600],
+  },
+
+  '&:active': {
+    backgroundColor: theme.colors.primary[700],
+  },
+  '&.outlined, &.text': {
+    color: theme.colors.grey[900],
+    backgroundColor: theme.colors.neutral[0],
+    border: `1px solid ${theme.colors.grey[400]}`,
+    boxShadow: 'none',
+    svg: {
+      fill: theme.colors.grey[900],
+    },
+    '&:hover': {
+      backgroundColor: theme.colors.grey[50],
+      borderColor: theme.colors.grey[700],
+    },
+    '&:active': {
+      backgroundColor: theme.colors.grey[400],
+    },
+    '&:disabled': {
+      backgroundColor: theme.colors.grey[100],
+      borderColor: theme.colors.grey[400],
+      color: theme.colors.grey[500],
+      svg: {
+        fill: theme.colors.grey[600],
+      },
+    },
+    '&[data-variant="group"]': {
+      '&:not(:disabled)': {
+        '&:active': {
+          borderColor: theme.colors.grey[700],
+        },
+        '&:focus': {
+          borderColor: theme.colors.grey[600],
+        },
+      },
+    },
+    '&.text': {
+      backgroundColor: 'transparent',
+      border: 'none',
+
+      '&:not(:disabled)': {
+        '&:hover, &:focus': {
+          backgroundColor: theme.colors.grey[100],
+        },
+
+        '&:active': {
+          backgroundColor: theme.colors.grey[200],
+        },
+      },
+    },
+  },
   variants: [
     {
       props: { disabled: true },
@@ -155,7 +191,6 @@ const StyledButton = styled.button<ButtonProps>(({ theme }: SnowThemeArgs) => ({
     },
     ...getColorVariantStyles(theme),
     ...getSizeVariantStyles(theme),
-    ...getButtonVariantStyles(theme),
   ],
 }));
 
@@ -166,7 +201,7 @@ const Button = forwardRef<HTMLButtonElement, PropsWithChildren<ButtonProps>>(
       disabled: btnDisabled = false,
       children,
       onClick,
-      color: btnColor = 'primary',
+      color: btnColor,
       type = 'button',
       variant: btnVariant = 'filled',
       className = '',
