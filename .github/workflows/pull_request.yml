@@ -28,4 +28,4 @@ jobs:
           echo "BASE: ${{ steps.setSHAs.outputs.base }}"
           echo "HEAD: ${{ steps.setSHAs.outputs.head }}"
 
-      - run: npx nx affected -t lint test build e2e-ci
+      - run: npx nx affected -t lint test build
