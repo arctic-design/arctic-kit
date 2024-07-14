@@ -78,9 +78,6 @@
         "file": false,
         "createRelease": "github"
       }
-    },
-    "version": {
-      "conventionalCommits": true
     }
   },
   "targetDefaults": {
