@@ -9,5 +9,10 @@
       "import": "./index.mjs",
       "require": "./index.js"
     }
+  },
+  "author": "Barun Prasad",
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
   }
 }
