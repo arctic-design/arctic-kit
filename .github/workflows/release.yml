@@ -27,6 +27,7 @@ jobs:
         shell: bash
 
       - name: Create release and publish
+        if: github.ref == 'refs/heads/main'
         run: npx nx release --yes
         shell: bash
         env:
