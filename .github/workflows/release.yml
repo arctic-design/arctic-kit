@@ -26,6 +26,11 @@ jobs:
         run: npx nx report
         shell: bash
 
+      - name: Set up GitHub username and email
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+
       - name: Create a patch release and publish
         if: github.ref == 'refs/heads/main'
         run: npx nx release patch --yes
