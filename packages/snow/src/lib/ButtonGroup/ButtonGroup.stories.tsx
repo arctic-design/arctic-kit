@@ -1,6 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import { Button } from '../Button';
 import { ButtonGroup } from './ButtonGroup';
+import { ActionMenu, ActionMenuItem } from '../ActionMenu';
 // import { ActionMenu, ActionMenuItem } from '../ActionMenu';
 
 // More on how to set up stories at: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
@@ -24,22 +25,22 @@ type Story = StoryObj<typeof meta>;
 
 // More on writing stories with args: https://storybook.js.org/docs/react/writing-stories/args
 
-// function SplitButtonRender(args: Story['args']) {
-//   return (
-//     <ButtonGroup {...args}>
-//       <Button onClick={() => console.log('button')}>Button</Button>
-//       <ActionMenu placement='bottom-end' disabled={args?.disabled}>
-//         <ActionMenuItem label='Undo' onClick={() => console.log('Undo')} />
-//         <ActionMenuItem
-//           label='Redo'
-//           disabled
-//           onClick={() => console.log('Redo')}
-//         />
-//         <ActionMenuItem label='Cut' onClick={() => console.log('Cut')} />
-//       </ActionMenu>
-//     </ButtonGroup>
-//   );
-// }
+function SplitButtonRender(args: Story['args']) {
+  return (
+    <ButtonGroup {...args}>
+      <Button onClick={() => console.log('button')}>Button</Button>
+      <ActionMenu placement="bottom-end" disabled={args?.disabled}>
+        <ActionMenuItem label="Undo" onClick={() => console.log('Undo')} />
+        <ActionMenuItem
+          label="Redo"
+          disabled
+          onClick={() => console.log('Redo')}
+        />
+        <ActionMenuItem label="Cut" onClick={() => console.log('Cut')} />
+      </ActionMenu>
+    </ButtonGroup>
+  );
+}
 
 export const Default: Story = {
   args: {
@@ -56,5 +57,5 @@ export const Default: Story = {
 
 export const SplitButton: Story = {
   args: {},
-  // render: SplitButtonRender,
+  render: SplitButtonRender,
 };
