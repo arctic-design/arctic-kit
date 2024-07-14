@@ -103,12 +103,6 @@ export interface ButtonProps extends DefaultSnowProps {
   loading?: boolean;
 }
 
-const VariantOutlineMap = {
-  filled: 4,
-  outlined: 5,
-  text: 4,
-};
-
 const StyledButton = styled.button<ButtonProps>(({ theme }: SnowThemeArgs) => ({
   fontFamily: theme.font.family.base,
   fontSize: theme.font.size[100],
