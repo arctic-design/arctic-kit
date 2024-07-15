@@ -6,9 +6,10 @@
   "type": "module",
   "exports": {
     ".": {
-      "import": "./index.mjs",
-      "require": "./index.js"
-    }
+      "import": "./index.js",
+      "require": "./index.cjs"
+    },
+    "./style.css": "./style.css"
   },
   "author": "Barun Prasad",
   "license": "MIT",
