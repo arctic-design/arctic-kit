@@ -9,3 +9,5 @@ Run `nx test snow` to execute the unit tests via [Vitest](https://vitest.dev/).
 ## fix release version
 
 ## update publish workflow
+
+## update the release and publish workflows

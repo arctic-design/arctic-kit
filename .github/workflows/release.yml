@@ -32,7 +32,7 @@ jobs:
 
       - name: Create a release and skip publish
         if: github.ref == 'refs/heads/main'
-        run: npx nx release --skip-publish
+        run: npx nx release --yes
         shell: bash
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
