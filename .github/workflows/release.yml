@@ -30,9 +30,9 @@ jobs:
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
 
-      - name: Create a patch release and skip publish
+      - name: Create a release and skip publish
         if: github.ref == 'refs/heads/main'
-        run: npx nx release patch --skip-publish
+        run: npx nx release --skip-publish
         shell: bash
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
