@@ -5,17 +5,14 @@ import { ActionMenuComponent } from './ActionMenuComponent';
 import { ActionMenuProps } from './types';
 import { ButtonGroupContext } from '../ButtonGroup/ButtonGroupContext';
 
-export const ActionMenu = forwardRef<
-  HTMLButtonElement,
-  ActionMenuProps & React.HTMLProps<HTMLButtonElement>
->(
+export const ActionMenu = forwardRef<HTMLButtonElement, ActionMenuProps>(
   (
     {
       placement = 'bottom-start',
       itemSize = 'medium',
       id = 'action-menu',
       ...props
-    },
+    }: ActionMenuProps,
     ref
   ) => {
     const parentId = useFloatingParentNodeId();

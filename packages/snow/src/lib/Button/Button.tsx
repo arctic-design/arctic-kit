@@ -205,7 +205,7 @@ const Button = forwardRef<HTMLButtonElement, PropsWithChildren<ButtonProps>>(
       id = 'button',
       loading = false,
       ...props
-    },
+    }: PropsWithChildren<ButtonProps>,
     ref
   ) => {
     const {

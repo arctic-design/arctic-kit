@@ -24,7 +24,7 @@ export type AccordionProps = {
 
 const Accordion = React.forwardRef<HTMLDivElement, AccordionProps>(
   function Accordion(
-    { children, spacing = 4, id = 'accordion', ...otherProps },
+    { children, spacing = 4, id = 'accordion', ...otherProps }: AccordionProps,
     ref
   ) {
     return (
