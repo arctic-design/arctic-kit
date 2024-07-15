@@ -87,10 +87,7 @@
     "nx-release-publish": {
       "options": {
         "packageRoot": "dist/packages/{projectName}"
-      },
-      "dependsOn": [
-        "build"
-      ]
+      }
     }
   }
 }
