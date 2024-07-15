@@ -11,3 +11,5 @@ Run `nx test snow` to execute the unit tests via [Vitest](https://vitest.dev/).
 ## update publish workflow
 
 ## update the release and publish workflows
+
+## add id-token permissions for release workflow
