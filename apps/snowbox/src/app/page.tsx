@@ -8,6 +8,8 @@ import {
   Loader,
   ActionMenu,
   ActionMenuItem,
+  TextInput,
+  TextArea,
 } from '@arctic-kit/snow';
 import { UndoActionMenuItem } from '../ui/UndoActionMenuItem';
 export default function Index() {
@@ -126,6 +128,18 @@ export default function Index() {
                   <ActionMenuItem label="Delete" color="error" />
                 </ActionMenu>
               </Box>
+            </Box>
+            <Box
+              sx={{
+                padding: 8,
+                display: 'flex',
+                flexWrap: 'wrap',
+                gap: 12,
+                flexDirection: 'column',
+              }}
+            >
+              <TextInput label="Snow input" required />
+              <TextArea label="Snow textarea" required />
             </Box>
           </div>
         </div>

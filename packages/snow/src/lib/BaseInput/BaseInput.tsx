@@ -55,13 +55,11 @@ export function InputLabel({
   htmlFor: string;
 }) {
   return (
-    <>
-      {label && (
-        <Typography htmlFor={htmlFor} id={id} as="label">
-          {label} <RequiredIndicator required={required} />
-        </Typography>
-      )}
-    </>
+    label && (
+      <Typography htmlFor={htmlFor} id={id} as="label">
+        {label} <RequiredIndicator required={required} />
+      </Typography>
+    )
   );
 }
 type BaseInputContainerProps = {
