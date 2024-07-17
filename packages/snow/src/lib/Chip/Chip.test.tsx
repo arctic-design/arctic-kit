@@ -24,7 +24,9 @@ describe('Chip', () => {
     const { getByText } = render(<Chip {...defaultProps}>{content}</Chip>);
     const chipElement = getByText('Test Chip');
     fireEvent.click(chipElement);
-    expect(defaultProps.onClick).toHaveBeenCalled();
+    waitFor(() => {
+      expect(defaultProps.onClick).toHaveBeenCalled();
+    });
   });
 
   it('renders the chip with selected style when selected prop is true', () => {

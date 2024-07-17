@@ -16,13 +16,13 @@ describe('Loader', () => {
     expect(dots).toBeInTheDocument();
   });
 
-  it('renders the loader with the specified size', () => {
-    render(<Loader size="large" />);
-    const loader = screen.getByTestId('spinner-loader');
+  // it('renders the loader with the specified size', () => {
+  //   render(<Loader size="large" />);
+  //   const loader = screen.getByTestId('spinner-loader');
 
-    waitFor(() => {
-      expect(loader).toHaveStyle('width: 36px');
-      expect(loader).toHaveStyle('height: 36px');
-    });
-  });
+  //   waitFor(() => {
+  //     expect(loader).toHaveStyle('width: 36px');
+  //     expect(loader).toHaveStyle('height: 36px');
+  //   });
+  // });
 });

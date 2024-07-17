@@ -12,6 +12,7 @@ import {
   TextArea,
   Chip,
   Tooltip,
+  Switch,
 } from '@arctic-kit/snow';
 import { UndoActionMenuItem } from '../ui/UndoActionMenuItem';
 import { MultipleCardStack } from '../ui/MultipleCardStack';
@@ -186,6 +187,19 @@ export default function Index() {
               }}
             >
               <MultipleCardStack />
+            </Box>
+            <Box
+              sx={{
+                display: 'flex',
+                justifyContent: 'flex-start',
+                flexWrap: 'wrap',
+                alignItems: 'center',
+                padding: 8,
+                gap: 12,
+              }}
+            >
+              <Switch label="Unselected" />
+              <Switch checked label="Selected" />
             </Box>
           </div>
         </div>
