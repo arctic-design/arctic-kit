@@ -9,6 +9,7 @@ export * from './Card';
 export * from './CardStack';
 export * from './Chip';
 export * from './Loader';
+export * from './Switch';
 export * from './TextArea';
 export * from './TextInput';
 export * from './Tooltip';
