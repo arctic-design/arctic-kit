@@ -11,6 +11,7 @@ import {
   TextInput,
   TextArea,
   Chip,
+  Tooltip,
 } from '@arctic-kit/snow';
 import { UndoActionMenuItem } from '../ui/UndoActionMenuItem';
 import { MultipleCardStack } from '../ui/MultipleCardStack';
@@ -153,7 +154,9 @@ export default function Index() {
                 gap: 12,
               }}
             >
-              <Chip>Default</Chip>
+              <Tooltip message="This is the content of the tooltip">
+                <Chip>Default with tooltip</Chip>
+              </Tooltip>
               <Chip color="primary">Primary</Chip>
               <Chip color="secondary">Secondary</Chip>
               <Chip color="info">Info</Chip>
