@@ -10,8 +10,10 @@ import {
   ActionMenuItem,
   TextInput,
   TextArea,
+  Chip,
 } from '@arctic-kit/snow';
 import { UndoActionMenuItem } from '../ui/UndoActionMenuItem';
+import { MultipleCardStack } from '../ui/MultipleCardStack';
 export default function Index() {
   /*
    * Replace the elements below with your own.
@@ -140,6 +142,47 @@ export default function Index() {
             >
               <TextInput label="Snow input" required />
               <TextArea label="Snow textarea" required />
+            </Box>
+            <Box
+              sx={{
+                display: 'flex',
+                justifyContent: 'flex-start',
+                flexWrap: 'wrap',
+                alignItems: 'center',
+                padding: 8,
+                gap: 12,
+              }}
+            >
+              <Chip>Default</Chip>
+              <Chip color="primary">Primary</Chip>
+              <Chip color="secondary">Secondary</Chip>
+              <Chip color="info">Info</Chip>
+              <Chip color="warning">Warning</Chip>
+              <Chip color="error">Error</Chip>
+              <Chip color="primary" interactive>
+                Primary Interactive
+              </Chip>
+              <Chip color="primary" interactive selected>
+                Primary Interactive - selected
+              </Chip>
+              <Chip color="secondary" interactive>
+                Secondary Interactive
+              </Chip>
+              <Chip color="secondary" interactive selected>
+                Secondary Interactive - selected
+              </Chip>
+            </Box>
+            <Box
+              sx={{
+                display: 'flex',
+                justifyContent: 'flex-start',
+                flexWrap: 'wrap',
+                alignItems: 'center',
+                padding: 8,
+                gap: 12,
+              }}
+            >
+              <MultipleCardStack />
             </Box>
           </div>
         </div>
