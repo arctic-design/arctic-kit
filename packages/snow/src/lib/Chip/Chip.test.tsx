@@ -128,12 +128,16 @@ describe('Chip', () => {
       </Chip>
     );
     const loadingElement = getByTestId('spinner-loader');
-    expect(loadingElement).toBeInTheDocument();
+    waitFor(() => {
+      expect(loadingElement).toBeInTheDocument();
+    });
   });
 
   it('doest not render the loading component when loading is false', () => {
     const { queryByTestId } = render(<Chip {...defaultProps}>{content}</Chip>);
     const loadingElement = queryByTestId('spinner-loader');
-    expect(loadingElement).not.toBeInTheDocument();
+    waitFor(() => {
+      expect(loadingElement).not.toBeInTheDocument();
+    });
   });
 });

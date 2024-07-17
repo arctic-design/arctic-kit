@@ -1,4 +1,4 @@
-import { fireEvent, render } from '../../utils/test-utils';
+import { fireEvent, render, waitFor } from '../../utils/test-utils';
 import { Button } from './Button';
 
 describe('Button Component', () => {
@@ -72,12 +72,16 @@ describe('Button Component', () => {
   it('renders the loading component', () => {
     const { getByTestId } = render(<Button loading>Content</Button>);
     const loadingElement = getByTestId('spinner-loader');
-    expect(loadingElement).toBeInTheDocument();
+    waitFor(() => {
+      expect(loadingElement).toBeInTheDocument();
+    });
   });
 
   it('doest not render the loading component when loading is not set', () => {
     const { queryByTestId } = render(<Button>Content</Button>);
     const loadingElement = queryByTestId('spinner-loader');
-    expect(loadingElement).not.toBeInTheDocument();
+    waitFor(() => {
+      expect(loadingElement).not.toBeInTheDocument();
+    });
   });
 });

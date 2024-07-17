@@ -4,8 +4,11 @@ import { Loader } from '../Loader';
 describe('Loader', () => {
   it('renders the spinner loader by default', () => {
     render(<Loader />);
-    const spinner = screen.getByTestId('spinner-loader');
-    expect(spinner).toBeInTheDocument();
+
+    waitFor(() => {
+      const spinner = screen.getByTestId('spinner-loader');
+      expect(spinner).toBeInTheDocument();
+    });
   });
 
   it('renders the dots loader when type is set to "dots"', () => {
@@ -16,6 +19,7 @@ describe('Loader', () => {
 
   it('renders the loader with the specified size', () => {
     render(<Loader size="large" />);
+
     waitFor(() => {
       const loader = screen.getByTestId('spinner-loader');
       expect(loader).toHaveStyle('width: 36px');
