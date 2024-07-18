@@ -43,3 +43,17 @@ jobs:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_ACCESS_TOKEN }} # needed for publish to npm
           NPM_CONFIG_PROVENANCE: true
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Build storybook
+        if: github.ref == 'refs/heads/main'
+        run: npx nx run snow:build-storybook
+        shell: bash
+
+      - name: Run Chromatic
+        if: github.ref == 'refs/heads/main'
+        uses: chromaui/action@latest
+        with:
+          projectToken: ${{ secrets.CHROMATIC_SNOW_TOKEN }}
+          storybookBuildDir: 'packages/snow/storybook-static'
+          autoAcceptChanges: true
+          exitZeroOnChanges: true
