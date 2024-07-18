@@ -26,7 +26,14 @@ const HEADER_HEIGHT = 50;
 const CARD_GAP = 3;
 const REDUCING_WIDTH = 8;
 
-const Container = styled.div({});
+const Container = styled.div(({ theme }: SnowThemeArgs) => ({
+  borderRadius: 8,
+  minWidth: 320,
+  background: 'transparent',
+  "&[aria-expanded='true']": {
+    background: theme.colors.grey[200],
+  },
+}));
 
 const Title = styled.span(({ theme }: SnowThemeArgs) => ({
   fontSize: theme.font.size[300],
