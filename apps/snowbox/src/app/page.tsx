@@ -16,6 +16,7 @@ import {
 } from '@arctic-kit/snow';
 import { UndoActionMenuItem } from '../ui/UndoActionMenuItem';
 import { MultipleCardStack } from '../ui/MultipleCardStack';
+import { CalendarView } from '../ui/CalendarView';
 export default function Index() {
   /*
    * Replace the elements below with your own.
@@ -200,6 +201,18 @@ export default function Index() {
             >
               <Switch label="Unselected" />
               <Switch checked label="Selected" />
+            </Box>
+            <Box
+              sx={{
+                display: 'flex',
+                justifyContent: 'flex-start',
+                flexWrap: 'wrap',
+                alignItems: 'center',
+                padding: 8,
+                gap: 24,
+              }}
+            >
+              <CalendarView />
             </Box>
           </div>
         </div>
