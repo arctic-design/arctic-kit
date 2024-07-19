@@ -10,6 +10,7 @@ export * from './Card';
 export * from './CardStack';
 export * from './Chip';
 export * from './DatePicker';
+export * from './IconButton';
 export * from './Loader';
 export * from './Paper';
 export * from './Popover';

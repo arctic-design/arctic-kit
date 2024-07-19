@@ -1,0 +1,121 @@
+import { styled } from '@pigment-css/react';
+import { ComponentPropsWithoutRef, PropsWithChildren, forwardRef } from 'react';
+import {
+  DefaultSnowProps,
+  SnowColor,
+  SnowColorValues,
+  SnowSize,
+  SnowSizeValues,
+} from '../types';
+import { SnowHeights } from '../constants';
+import { SnowThemeArgs } from '../../core';
+
+export const Container = styled.div<{
+  rounded?: boolean;
+  color?: SnowColor;
+  size?: SnowSize;
+}>(({ theme }: SnowThemeArgs) => ({
+  fontFamily: theme.font.family.base,
+  fontSize: theme.font.size[100],
+  fontStyle: 'normal',
+  fontWeight: theme.font.weight.regular,
+  lineHeight: 'normal',
+  cursor: 'pointer',
+  color: theme.colors.neutral[1000],
+  border: `1px solid ${theme.colors.grey[400]}`,
+  borderRadius: 4,
+  backgroundColor: theme.colors.neutral[0],
+  svg: {
+    fill: theme.colors.neutral[1000],
+    width: 20,
+  },
+  display: 'flex',
+  justifyContent: 'center',
+  alignItems: 'center',
+  boxShadow: theme.shadow.main,
+
+  outline: 'none',
+
+  '&:hover': {
+    cursor: 'pointer',
+    backgroundColor: theme.colors.grey[50],
+    borderColor: theme.colors.grey[700],
+    svg: {
+      fill: theme.colors.neutral[1000],
+    },
+  },
+  '&:focus': {
+    '&:not(:disabled)': {
+      outlineOffset: 2,
+      outline: `1px solid ${theme.colors.grey[300]}`,
+    },
+  },
+
+  "&[aria-disabled='true']": {
+    backgroundColor: theme.colors.grey[100],
+    borderColor: theme.colors.grey[400],
+    cursor: 'default',
+  },
+
+  variants: [
+    ...SnowColorValues.map((color) => ({
+      props: { color },
+      style: {
+        border: `1px solid ${theme.colors[color][400]}`,
+        outlineColor: theme.colors[color][200],
+        svg: {
+          fill: theme.colors[color].main,
+        },
+        '&:hover': {
+          borderColor: theme.colors[color][700],
+          svg: {
+            fill: theme.colors[color][700],
+          },
+        },
+        '&:focus': {
+          '&:not(:disabled)': {
+            outlineColor: theme.colors[color][300],
+          },
+        },
+      },
+    })),
+    ...SnowSizeValues.map((size) => ({
+      props: { size },
+      style: {
+        height: SnowHeights[size] - 2,
+        width: SnowHeights[size] - 2,
+      },
+    })),
+    {
+      props: { rounded: true },
+      style: {
+        borderRadius: '50%',
+      },
+    },
+  ],
+}));
+
+export type IconButtonProps = DefaultSnowProps & {
+  rounded?: boolean;
+} & ComponentPropsWithoutRef<'div'>;
+
+export const IconButton = forwardRef<
+  HTMLDivElement,
+  PropsWithChildren<IconButtonProps>
+>(({ children, disabled, size = 'medium', ...props }, ref) => {
+  return (
+    <Container
+      ref={ref}
+      role="button"
+      aria-label="icon-button"
+      tabIndex={0}
+      aria-disabled={disabled}
+      size={size}
+      {...props}
+    >
+      {children}
+    </Container>
+  );
+});
+
+IconButton.displayName = 'IconButton';

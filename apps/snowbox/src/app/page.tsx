@@ -13,10 +13,12 @@ import {
   Chip,
   Tooltip,
   Switch,
+  IconButton,
 } from '@arctic-kit/snow';
 import { UndoActionMenuItem } from '../ui/UndoActionMenuItem';
 import { MultipleCardStack } from '../ui/MultipleCardStack';
 import { CalendarView } from '../ui/CalendarView';
+import { FaceSmileIcon } from '@heroicons/react/20/solid';
 export default function Index() {
   /*
    * Replace the elements below with your own.
@@ -93,6 +95,15 @@ export default function Index() {
                   <Button size={size as SnowSize} variant="text">
                     Text{` - ${size}`}
                   </Button>
+                  <IconButton size={size as SnowSize}>
+                    <FaceSmileIcon />
+                  </IconButton>
+                  <IconButton color="primary" size={size as SnowSize}>
+                    <FaceSmileIcon />
+                  </IconButton>
+                  <IconButton color="error" rounded size={size as SnowSize}>
+                    <FaceSmileIcon />
+                  </IconButton>
                 </Box>
               ))}
               {['small', 'medium', 'large'].map((size) => (
