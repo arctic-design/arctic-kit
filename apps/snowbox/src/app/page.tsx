@@ -15,11 +15,21 @@ import {
   Switch,
   IconButton,
   Skeleton,
+  SegmentedControl,
+  SegmentedControlButton,
 } from '@arctic-kit/snow';
 import { UndoActionMenuItem } from '../ui/UndoActionMenuItem';
 import { MultipleCardStack } from '../ui/MultipleCardStack';
 import { CalendarView } from '../ui/CalendarView';
-import { FaceSmileIcon } from '@heroicons/react/20/solid';
+import {
+  BackwardIcon,
+  CheckIcon,
+  CreditCardIcon,
+  FaceSmileIcon,
+  ForwardIcon,
+  PauseIcon,
+} from '@heroicons/react/20/solid';
+import { ControlContainer } from '../ui/ControlContainer';
 export default function Index() {
   /*
    * Replace the elements below with your own.
@@ -78,17 +88,7 @@ export default function Index() {
                 </AccordionItem>
               </Accordion>
               {['small', 'medium', 'large'].map((size) => (
-                <Box
-                  key={size}
-                  sx={{
-                    display: 'flex',
-                    alignItems: 'center',
-                    justifyContent: 'flex-start',
-                    flexWrap: 'wrap',
-                    gap: 8,
-                    padding: 4,
-                  }}
-                >
+                <ControlContainer key={size}>
                   <Button size={size as SnowSize}>Default{` - ${size}`}</Button>
                   <Button size={size as SnowSize} variant="outlined">
                     Outlined{` - ${size}`}
@@ -105,22 +105,13 @@ export default function Index() {
                   <IconButton color="error" rounded size={size as SnowSize}>
                     <FaceSmileIcon />
                   </IconButton>
-                </Box>
+                </ControlContainer>
               ))}
               {['small', 'medium', 'large'].map((size) => (
-                <Box
-                  key={size}
-                  sx={{
-                    display: 'flex',
-                    alignItems: 'center',
-                    justifyContent: 'flex-start',
-                    gap: 8,
-                    padding: 4,
-                  }}
-                >
+                <ControlContainer key={size}>
                   <Loader size={size as SnowSize} type="dots" />
                   <Loader size={size as SnowSize} type="spinner" />
-                </Box>
+                </ControlContainer>
               ))}
               <Box sx={{ padding: 4 }}>
                 <ActionMenu label="Edit Menu">
@@ -158,16 +149,7 @@ export default function Index() {
               <TextInput label="Snow input" required />
               <TextArea label="Snow textarea" required />
             </Box>
-            <Box
-              sx={{
-                display: 'flex',
-                justifyContent: 'flex-start',
-                flexWrap: 'wrap',
-                alignItems: 'center',
-                padding: 8,
-                gap: 12,
-              }}
-            >
+            <ControlContainer>
               <Tooltip message="This is the content of the tooltip">
                 <Chip>Default with tooltip</Chip>
               </Tooltip>
@@ -188,44 +170,17 @@ export default function Index() {
               <Chip color="secondary" interactive selected>
                 Secondary Interactive - selected
               </Chip>
-            </Box>
-            <Box
-              sx={{
-                display: 'flex',
-                justifyContent: 'flex-start',
-                flexWrap: 'wrap',
-                alignItems: 'center',
-                padding: 8,
-                gap: 12,
-              }}
-            >
+            </ControlContainer>
+            <ControlContainer>
               <MultipleCardStack />
-            </Box>
-            <Box
-              sx={{
-                display: 'flex',
-                justifyContent: 'flex-start',
-                flexWrap: 'wrap',
-                alignItems: 'center',
-                padding: 8,
-                gap: 12,
-              }}
-            >
+            </ControlContainer>
+            <ControlContainer>
               <Switch label="Unselected" />
               <Switch checked label="Selected" />
-            </Box>
-            <Box
-              sx={{
-                display: 'flex',
-                justifyContent: 'flex-start',
-                flexWrap: 'wrap',
-                alignItems: 'center',
-                padding: 8,
-                gap: 24,
-              }}
-            >
+            </ControlContainer>
+            <ControlContainer>
               <CalendarView />
-            </Box>
+            </ControlContainer>
             <Box
               sx={{
                 padding: 8,
@@ -243,6 +198,55 @@ export default function Index() {
               <Skeleton height={20} />
               <Skeleton height={100} />
             </Box>
+            <ControlContainer>
+              <SegmentedControl>
+                <SegmentedControlButton>React</SegmentedControlButton>
+                <SegmentedControlButton>Angular</SegmentedControlButton>
+                <SegmentedControlButton>Vue</SegmentedControlButton>
+                <SegmentedControlButton>Preact</SegmentedControlButton>
+                <SegmentedControlButton>Svelte</SegmentedControlButton>
+              </SegmentedControl>
+              <SegmentedControl>
+                <SegmentedControlButton leadingIcon={<CheckIcon />}>
+                  React
+                </SegmentedControlButton>
+                <SegmentedControlButton
+                  leadingIcon={<CreditCardIcon />}
+                  disabled
+                >
+                  Angular
+                </SegmentedControlButton>
+                <SegmentedControlButton leadingIcon={<ForwardIcon />}>
+                  Vue
+                </SegmentedControlButton>
+
+                <SegmentedControlButton leadingIcon={<BackwardIcon />}>
+                  Vue
+                </SegmentedControlButton>
+              </SegmentedControl>
+              <SegmentedControl>
+                <SegmentedControlButton>
+                  <CheckIcon />
+                </SegmentedControlButton>
+                <SegmentedControlButton>
+                  <CreditCardIcon />
+                </SegmentedControlButton>
+                <SegmentedControlButton>
+                  <ForwardIcon />
+                </SegmentedControlButton>
+              </SegmentedControl>
+              <SegmentedControl>
+                <SegmentedControlButton tooltipMessage="Backward">
+                  <BackwardIcon />
+                </SegmentedControlButton>
+                <SegmentedControlButton tooltipMessage="Pause">
+                  <PauseIcon />
+                </SegmentedControlButton>
+                <SegmentedControlButton tooltipMessage="Forward">
+                  <ForwardIcon />
+                </SegmentedControlButton>
+              </SegmentedControl>
+            </ControlContainer>
           </div>
         </div>
       </div>
