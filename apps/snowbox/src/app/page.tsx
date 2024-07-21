@@ -31,6 +31,7 @@ import {
 } from '@heroicons/react/20/solid';
 import { ControlContainer } from '../ui/ControlContainer';
 import { RadioGroupView } from '../ui/RadioGroupView';
+import { CheckboxView } from '../ui/CheckboxView';
 
 const options = [
   { label: 'Ford Mustang', value: 'ford_mustang' },
@@ -295,6 +296,7 @@ export default function Index() {
                 id="large_radio_options"
                 options={largeRadioOptions}
               />
+              <CheckboxView />
             </ControlContainer>
           </div>
         </div>

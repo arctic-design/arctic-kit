@@ -8,6 +8,7 @@ export * from './ButtonGroup';
 export * from './Calendar';
 export * from './Card';
 export * from './CardStack';
+export * from './Checkbox';
 export * from './Chip';
 export * from './DatePicker';
 export * from './IconButton';
