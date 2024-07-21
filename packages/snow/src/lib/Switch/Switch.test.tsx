@@ -22,14 +22,14 @@ describe('Switch Component', () => {
   test('calls onToggle when clicked', () => {
     const onToggle = vi.fn();
     const { getByRole } = render(<Switch onToggle={onToggle} />);
-    fireEvent.click(getByRole('radio'));
+    fireEvent.click(getByRole('checkbox'));
     expect(onToggle).toHaveBeenCalled();
   });
 
   test('does not call onToggle when disabled', () => {
     const onToggle = vi.fn();
     const { getByRole } = render(<Switch onToggle={onToggle} disabled />);
-    fireEvent.click(getByRole('radio'));
+    fireEvent.click(getByRole('checkbox'));
     expect(onToggle).not.toHaveBeenCalled();
   });
 
@@ -42,7 +42,7 @@ describe('Switch Component', () => {
   test('handles toggle correctly', () => {
     const onToggleMock = vi.fn();
     const { getByRole } = render(<Switch onToggle={onToggleMock} />);
-    const switchElement = getByRole('radio');
+    const switchElement = getByRole('checkbox');
     fireEvent.click(switchElement);
     expect(onToggleMock).toHaveBeenCalled();
   });
@@ -50,7 +50,7 @@ describe('Switch Component', () => {
   test('handles toggle correctly when disabled', () => {
     const onToggleMock = vi.fn();
     const { getByRole } = render(<Switch onToggle={onToggleMock} disabled />);
-    const switchElement = getByRole('radio');
+    const switchElement = getByRole('checkbox');
     fireEvent.click(switchElement);
     expect(onToggleMock).not.toHaveBeenCalled();
   });
