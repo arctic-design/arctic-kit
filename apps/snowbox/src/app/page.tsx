@@ -14,6 +14,7 @@ import {
   Tooltip,
   Switch,
   IconButton,
+  Skeleton,
 } from '@arctic-kit/snow';
 import { UndoActionMenuItem } from '../ui/UndoActionMenuItem';
 import { MultipleCardStack } from '../ui/MultipleCardStack';
@@ -224,6 +225,23 @@ export default function Index() {
               }}
             >
               <CalendarView />
+            </Box>
+            <Box
+              sx={{
+                padding: 8,
+                display: 'flex',
+                flexDirection: 'column',
+                gap: 8,
+              }}
+            >
+              <Box sx={{ display: 'flex', alignItems: 'center', gap: 4 }}>
+                <Skeleton height={40} circle />
+                <Skeleton height={40} circle />
+                <Skeleton height={40} circle />
+              </Box>
+              <Skeleton height={20} />
+              <Skeleton height={20} />
+              <Skeleton height={100} />
             </Box>
           </div>
         </div>
