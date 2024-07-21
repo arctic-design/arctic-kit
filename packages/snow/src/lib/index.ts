@@ -14,6 +14,7 @@ export * from './IconButton';
 export * from './Loader';
 export * from './Paper';
 export * from './Popover';
+export * from './Radio';
 export * from './SegmentedControl';
 export * from './Skeleton';
 export * from './Switch';

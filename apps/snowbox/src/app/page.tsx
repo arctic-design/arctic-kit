@@ -30,6 +30,48 @@ import {
   PauseIcon,
 } from '@heroicons/react/20/solid';
 import { ControlContainer } from '../ui/ControlContainer';
+import { RadioGroupView } from '../ui/RadioGroupView';
+
+const options = [
+  { label: 'Ford Mustang', value: 'ford_mustang' },
+  { label: 'Chevrolet Camaro', value: 'chevrolet_camaro' },
+  { label: 'Porsche 911', value: 'porsche_911' },
+  { label: 'Tesla Model S', value: 'tesla_model_s' },
+  { label: 'Ferrari F40', value: 'ferrari_f40' },
+  { label: 'Lamborghini Aventador', value: 'lamborghini_aventador' },
+  { label: 'Audi R8', value: 'audi_r8' },
+  { label: 'BMW M3', value: 'bmw_m3' },
+];
+
+const largeRadioOptions = [
+  {
+    label: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+    value: 'reason1',
+  },
+  {
+    label: 'Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+    value: 'reason2',
+  },
+  {
+    label:
+      'Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.',
+    value: 'reason3',
+  },
+  {
+    label: 'Nisi ut aliquip ex ea commodo consequat.',
+    value: 'reason4',
+  },
+  {
+    label:
+      'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.',
+    value: 'reason5',
+  },
+  {
+    label:
+      'Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+    value: 'reason6',
+  },
+];
 export default function Index() {
   /*
    * Replace the elements below with your own.
@@ -246,6 +288,13 @@ export default function Index() {
                   <ForwardIcon />
                 </SegmentedControlButton>
               </SegmentedControl>
+            </ControlContainer>
+            <ControlContainer>
+              <RadioGroupView id="default_radio" options={options} />
+              <RadioGroupView
+                id="large_radio_options"
+                options={largeRadioOptions}
+              />
             </ControlContainer>
           </div>
         </div>
