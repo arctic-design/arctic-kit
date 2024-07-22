@@ -134,7 +134,7 @@ export function RadioGroup({
           readOnly={readOnly}
         />
       </Container>
-      <HelperText>{errorText}</HelperText>
+      {errorText && <HelperText>{errorText}</HelperText>}
     </Wrapper>
   );
 }
