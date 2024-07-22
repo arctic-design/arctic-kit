@@ -166,7 +166,7 @@ function Switch({
           aria-disabled={disabled}
           aria-readonly={readOnly ? 'true' : undefined}
           onClick={!disabled && !readOnly ? onToggle : noOp}
-          role="radio"
+          role="checkbox"
           data-testid={`${id}-element`}
           id={`${id}-element`}
         >

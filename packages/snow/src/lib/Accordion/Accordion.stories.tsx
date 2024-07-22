@@ -266,14 +266,18 @@ function LeadingExpandSection(args: Story['args']) {
 function WithDisabledToggleRender(args: Story['args']) {
   return (
     <Accordion {...args}>
-      <AccordionItem title="Section 1" disableToggle>
-        This is the content of Section 1.
+      <AccordionItem title="Section 1" disableToggle expandSection>
+        This is the content of Section 1 which is disabled.
       </AccordionItem>
-      <AccordionItem title="Section 2">
-        This is the content of Section 2.
+      <AccordionItem title="Section 2" disableToggle hideVerticalBorder>
+        This is the content of Section 2 which is disabled with
+        hideVerticalBorder
       </AccordionItem>
       <AccordionItem title="Section 3">
-        This is the content of section 3.
+        This is the content of Section 3.
+      </AccordionItem>
+      <AccordionItem title="Section 4">
+        This is the content of section 4.
       </AccordionItem>
     </Accordion>
   );

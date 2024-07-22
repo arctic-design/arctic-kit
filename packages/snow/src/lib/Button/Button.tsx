@@ -130,6 +130,15 @@ const StyledButton = styled.button<ButtonProps>(({ theme }: SnowThemeArgs) => ({
   '&:active': {
     backgroundColor: theme.colors.primary[700],
   },
+
+  '&:focus': {
+    '&:not(:disabled)': {
+      outlineOffset: 2,
+      outlineWidth: 2,
+      outlineStyle: 'solid',
+      outlineColor: theme.colors.primary.main,
+    },
+  },
   '&.outlined, &.text': {
     color: theme.colors.grey[900],
     backgroundColor: theme.colors.neutral[0],
@@ -153,6 +162,12 @@ const StyledButton = styled.button<ButtonProps>(({ theme }: SnowThemeArgs) => ({
         fill: theme.colors.grey[600],
       },
     },
+    '&:focus': {
+      '&:not(:disabled)': {
+        outlineColor: theme.colors.grey[300],
+      },
+    },
+
     '&[data-variant="group"]': {
       '&:not(:disabled)': {
         '&:active': {
@@ -174,6 +189,11 @@ const StyledButton = styled.button<ButtonProps>(({ theme }: SnowThemeArgs) => ({
 
         '&:active': {
           backgroundColor: theme.colors.grey[200],
+        },
+      },
+      '&:focus': {
+        '&:not(:disabled)': {
+          outlineColor: theme.colors.grey[100],
         },
       },
     },

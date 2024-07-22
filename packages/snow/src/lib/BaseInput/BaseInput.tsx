@@ -94,7 +94,7 @@ export function BaseInputContainer(props: BaseInputContainerProps) {
         htmlFor={id}
       />
       {children}
-      <HelperText>{errorText}</HelperText>
+      {errorText && <HelperText>{errorText}</HelperText>}
     </Container>
   );
 }
