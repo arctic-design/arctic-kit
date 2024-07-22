@@ -22,7 +22,7 @@ import {
   GridRow,
   Select,
   Autocomplete,
-  MultiSelect,
+  Avatar,
 } from '@arctic-kit/snow';
 import { UndoActionMenuItem } from '../ui/UndoActionMenuItem';
 import { MultipleCardStack } from '../ui/MultipleCardStack';
@@ -336,11 +336,31 @@ export default function Index() {
                       label="Search for an item"
                     />
                   </GridColumn>
-                  <GridColumn xs={12} sm={6}>
+                  <GridColumn xs={12}>
                     <MultiSelectView
                       options={options}
                       placeholder="Start typing a car name..."
                     />
+                  </GridColumn>
+                </GridRow>
+                <GridRow>
+                  <GridColumn xs={2}>
+                    <Avatar color="primary">B</Avatar>
+                  </GridColumn>
+                  <GridColumn xs={2}>
+                    <Avatar color="secondary">B</Avatar>
+                  </GridColumn>
+                  <GridColumn xs={2}>
+                    <Avatar color="success">B</Avatar>
+                  </GridColumn>
+                  <GridColumn xs={2}>
+                    <Avatar color="info">B</Avatar>
+                  </GridColumn>
+                  <GridColumn xs={2}>
+                    <Avatar color="warning">B</Avatar>
+                  </GridColumn>
+                  <GridColumn xs={2}>
+                    <Avatar color="error">B</Avatar>
                   </GridColumn>
                 </GridRow>
               </Grid>

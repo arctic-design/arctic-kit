@@ -2,6 +2,7 @@ export * from './Accordion';
 export * from './ActionMenu';
 export * from './Alert';
 export * from './Autocomplete';
+export * from './Avatar';
 export * from './Badge';
 export * from './Box';
 export * from './Button';
