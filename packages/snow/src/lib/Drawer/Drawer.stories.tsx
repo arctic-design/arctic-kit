@@ -4,7 +4,7 @@ import { Drawer } from './Drawer';
 import { useState } from 'react';
 import { TextInput } from '../TextInput';
 import { Button } from '../Button';
-import { Grid } from '../Grid';
+import { Grid, GridRow, GridColumn } from '../Grid';
 import { Select } from '../Select';
 import { Autocomplete } from '../Autocomplete';
 import { SegmentedControl, SegmentedControlButton } from '../SegmentedControl';
@@ -41,21 +41,21 @@ function DefaultRender(args: Story['args']) {
       <Button onClick={toggleDrawer}>Toggle Drawer</Button>
       <Drawer {...args} open={isDrawerOpen} onOpenChange={toggleDrawer}>
         <Grid spacing={1}>
-          <Grid.Row>
-            <Grid.Col xs={12} lg={6}>
+          <GridRow>
+            <GridColumn xs={12} lg={6}>
               <SegmentedControl>
                 <SegmentedControlButton>React</SegmentedControlButton>
                 <SegmentedControlButton>Angular</SegmentedControlButton>
                 <SegmentedControlButton>Vue</SegmentedControlButton>
               </SegmentedControl>
-            </Grid.Col>
-            <Grid.Col xs={12} lg={6}>
+            </GridColumn>
+            <GridColumn xs={12} lg={6}>
               <TextInput label="First name" />
-            </Grid.Col>
-            <Grid.Col xs={12} lg={6}>
+            </GridColumn>
+            <GridColumn xs={12} lg={6}>
               <TextInput label="Second name" />
-            </Grid.Col>
-            <Grid.Col xs={12} lg={6}>
+            </GridColumn>
+            <GridColumn xs={12} lg={6}>
               <Select
                 label="Fruit"
                 options={[
@@ -73,15 +73,15 @@ function DefaultRender(args: Story['args']) {
                 ]}
                 placeholder="Select a fruit"
               />
-            </Grid.Col>
-            <Grid.Col xs={12} lg={6}>
+            </GridColumn>
+            <GridColumn xs={12} lg={6}>
               <Autocomplete
                 label="Car"
                 options={['Audi', 'BMW', 'Chevrolet', 'Dodge']}
                 placeholder="Select a car"
               />
-            </Grid.Col>
-          </Grid.Row>
+            </GridColumn>
+          </GridRow>
         </Grid>
       </Drawer>
     </div>

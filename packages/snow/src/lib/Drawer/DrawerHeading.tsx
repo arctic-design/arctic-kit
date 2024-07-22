@@ -30,7 +30,7 @@ type DrawerHeadingProps = {
 export const DrawerHeading = React.forwardRef<
   HTMLHeadingElement,
   DrawerHeadingProps & React.HTMLProps<HTMLHeadingElement>
->(function ModalHeading(
+>(function DrawerHeading(
   { children, id = 'drawer-heading', onClose, footer },
   ref
 ) {
