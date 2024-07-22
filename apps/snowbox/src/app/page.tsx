@@ -23,6 +23,7 @@ import {
   Select,
   Autocomplete,
   Avatar,
+  Tag,
 } from '@arctic-kit/snow';
 import { UndoActionMenuItem } from '../ui/UndoActionMenuItem';
 import { MultipleCardStack } from '../ui/MultipleCardStack';
@@ -367,6 +368,37 @@ export default function Index() {
                 <GridRow>
                   <GridColumn xs={12}>
                     <TabsView />
+                  </GridColumn>
+                </GridRow>
+                <GridRow>
+                  <GridColumn xs={4}>
+                    <Tag>Default</Tag>
+                  </GridColumn>
+                  <GridColumn xs={4}>
+                    <Tag noFill color="primary">
+                      No Fill
+                    </Tag>
+                  </GridColumn>
+                  <GridColumn xs={4}>
+                    <Tag disabled>Disabled</Tag>
+                  </GridColumn>
+                  <GridColumn xs={4}>
+                    <Tag color="primary">Primary</Tag>
+                  </GridColumn>
+                  <GridColumn xs={4}>
+                    <Tag color="secondary">Secondary</Tag>
+                  </GridColumn>
+                  <GridColumn xs={4}>
+                    <Tag color="success">Success</Tag>
+                  </GridColumn>
+                  <GridColumn xs={4}>
+                    <Tag color="info">Info</Tag>
+                  </GridColumn>
+                  <GridColumn xs={4}>
+                    <Tag color="warning">Warning</Tag>
+                  </GridColumn>
+                  <GridColumn xs={4}>
+                    <Tag color="error">Error</Tag>
                   </GridColumn>
                 </GridRow>
               </Grid>

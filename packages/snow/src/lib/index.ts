@@ -27,6 +27,7 @@ export * from './Select';
 export * from './Skeleton';
 export * from './Switch';
 export * from './Tabs';
+export * from './Tag';
 export * from './TextArea';
 export * from './TextInput';
 export * from './Tooltip';
