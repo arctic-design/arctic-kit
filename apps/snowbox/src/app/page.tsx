@@ -41,6 +41,7 @@ import { CheckboxView } from '../ui/CheckboxView';
 import { ModalView } from '../ui/ModalView';
 import { DrawerView } from '../ui/DrawerView';
 import { MultiSelectView } from '../ui/MultiSelectView';
+import { TabsView } from '../ui/TabsView';
 
 const options = [
   { label: 'Ford Mustang', value: 'ford_mustang' },
@@ -361,6 +362,11 @@ export default function Index() {
                   </GridColumn>
                   <GridColumn xs={2}>
                     <Avatar color="error">B</Avatar>
+                  </GridColumn>
+                </GridRow>
+                <GridRow>
+                  <GridColumn xs={12}>
+                    <TabsView />
                   </GridColumn>
                 </GridRow>
               </Grid>

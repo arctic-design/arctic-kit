@@ -26,6 +26,7 @@ export * from './SegmentedControl';
 export * from './Select';
 export * from './Skeleton';
 export * from './Switch';
+export * from './Tabs';
 export * from './TextArea';
 export * from './TextInput';
 export * from './Tooltip';
