@@ -17,6 +17,7 @@ export * from './Grid';
 export * from './IconButton';
 export * from './Loader';
 export * from './Modals';
+export * from './MultiSelect';
 export * from './Paper';
 export * from './Popover';
 export * from './Radio';

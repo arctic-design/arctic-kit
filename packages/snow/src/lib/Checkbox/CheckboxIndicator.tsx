@@ -1,6 +1,6 @@
 'use client';
 import { motion } from 'framer-motion';
-import { DefaultSnowProps, ThemeSize } from '../types';
+import { DefaultSnowProps } from '../types';
 import { ELEVATION_STYLE } from '../constants';
 
 import {

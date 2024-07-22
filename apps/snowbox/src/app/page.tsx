@@ -22,6 +22,7 @@ import {
   GridRow,
   Select,
   Autocomplete,
+  MultiSelect,
 } from '@arctic-kit/snow';
 import { UndoActionMenuItem } from '../ui/UndoActionMenuItem';
 import { MultipleCardStack } from '../ui/MultipleCardStack';
@@ -39,6 +40,7 @@ import { RadioGroupView } from '../ui/RadioGroupView';
 import { CheckboxView } from '../ui/CheckboxView';
 import { ModalView } from '../ui/ModalView';
 import { DrawerView } from '../ui/DrawerView';
+import { MultiSelectView } from '../ui/MultiSelectView';
 
 const options = [
   { label: 'Ford Mustang', value: 'ford_mustang' },
@@ -321,10 +323,21 @@ export default function Index() {
                     <DrawerView />
                   </GridColumn>
                   <GridColumn xs={12} sm={6}>
-                    <Select options={options} placeholder="Select a car name" />
+                    <Select
+                      options={options}
+                      placeholder="Select a car name"
+                      label="Select an item"
+                    />
                   </GridColumn>
                   <GridColumn xs={12} sm={6}>
                     <Autocomplete
+                      options={options}
+                      placeholder="Start typing a car name..."
+                      label="Search for an item"
+                    />
+                  </GridColumn>
+                  <GridColumn xs={12} sm={6}>
+                    <MultiSelectView
                       options={options}
                       placeholder="Start typing a car name..."
                     />
