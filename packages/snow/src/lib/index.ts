@@ -13,6 +13,7 @@ export * from './Chip';
 export * from './DatePicker';
 export * from './IconButton';
 export * from './Loader';
+export * from './Modals';
 export * from './Paper';
 export * from './Popover';
 export * from './Radio';

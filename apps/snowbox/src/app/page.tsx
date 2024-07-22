@@ -32,6 +32,7 @@ import {
 import { ControlContainer } from '../ui/ControlContainer';
 import { RadioGroupView } from '../ui/RadioGroupView';
 import { CheckboxView } from '../ui/CheckboxView';
+import { ModalView } from '../ui/ModalView';
 
 const options = [
   { label: 'Ford Mustang', value: 'ford_mustang' },
@@ -297,6 +298,7 @@ export default function Index() {
                 options={largeRadioOptions}
               />
               <CheckboxView />
+              <ModalView />
             </ControlContainer>
           </div>
         </div>
