@@ -29,7 +29,7 @@ function SegmentedControl({
 
   useEffect(() => {
     if (refsArray.current[selectedIndex]) {
-      const { offsetLeft, clientWidth } = refsArray.current[selectedIndex]!;
+      const { offsetLeft, clientWidth } = refsArray.current[selectedIndex];
       setIndicatorStyle({ left: offsetLeft, width: clientWidth });
     }
   }, [selectedIndex]);

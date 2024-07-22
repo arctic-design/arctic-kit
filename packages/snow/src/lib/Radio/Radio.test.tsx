@@ -18,8 +18,8 @@ describe('Radio Component', () => {
       <Radio option={option} onClick={onClick} size={size} color="primary" />
     );
 
-    const radioOption = getByRole('radio');
-    const radioOptionCircle = getByRole('radio').querySelector('div');
+    const radioOption = getByRole('checkbox');
+    const radioOptionCircle = getByRole('checkbox').querySelector('div');
     const radioOptionLabel = getByText('Option 1');
 
     expect(radioOption).toBeInTheDocument();
@@ -32,7 +32,7 @@ describe('Radio Component', () => {
       <Radio option={option} onClick={onClick} size={size} stopPropagation />
     );
 
-    const radioOption = getByRole('radio');
+    const radioOption = getByRole('checkbox');
     expect(radioOption).toHaveAttribute('aria-checked', 'false');
     fireEvent.click(radioOption);
 
@@ -51,7 +51,7 @@ describe('Radio Component', () => {
       />
     );
 
-    const radioOption = getByRole('radio');
+    const radioOption = getByRole('checkbox');
     const radioOptionCircle = getByTestId('option1-circle');
 
     expect(radioOptionCircle).toBeInTheDocument();
@@ -77,7 +77,7 @@ describe('Radio Component', () => {
       />
     );
 
-    const radioOption = getByRole('radio');
+    const radioOption = getByRole('checkbox');
     const radioOptionCircle = getByTestId('option1-circle');
 
     expect(radioOptionCircle).toBeInTheDocument();
@@ -105,7 +105,7 @@ describe('Radio Component', () => {
       />
     );
 
-    const radioOption = getByRole('radio');
+    const radioOption = getByRole('checkbox');
     const radioOptionCircle = getByTestId('option1-circle');
 
     expect(radioOptionCircle).toBeInTheDocument();
@@ -132,7 +132,7 @@ describe('Radio Component', () => {
       />
     );
 
-    const radioOption = getByRole('radio');
+    const radioOption = getByRole('checkbox');
     const radioOptionCircle = getByTestId('option1-circle');
 
     expect(radioOptionCircle).toBeInTheDocument();

@@ -27,12 +27,6 @@ const tickVariants = {
   },
 };
 
-const CheckboxSizes = {
-  [ThemeSize.small]: 1,
-  [ThemeSize.medium]: 1.25,
-  [ThemeSize.large]: 1.5,
-};
-
 const CheckboxInput = motion(StyledCheckboxInput);
 
 type CheckboxIndicatorProps = DefaultSnowProps & {

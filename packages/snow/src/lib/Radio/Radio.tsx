@@ -151,7 +151,7 @@ export function Radio({
   return (
     <RadioOption
       id={option.value}
-      role="radio"
+      role="checkbox"
       aria-checked={isSelected}
       onClick={(event) => !disabled && !readOnly && onClickHandler(event)}
       aria-disabled={disabled}

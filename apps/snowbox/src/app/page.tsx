@@ -17,6 +17,11 @@ import {
   Skeleton,
   SegmentedControl,
   SegmentedControlButton,
+  Grid,
+  GridColumn,
+  GridRow,
+  Select,
+  Autocomplete,
 } from '@arctic-kit/snow';
 import { UndoActionMenuItem } from '../ui/UndoActionMenuItem';
 import { MultipleCardStack } from '../ui/MultipleCardStack';
@@ -33,6 +38,7 @@ import { ControlContainer } from '../ui/ControlContainer';
 import { RadioGroupView } from '../ui/RadioGroupView';
 import { CheckboxView } from '../ui/CheckboxView';
 import { ModalView } from '../ui/ModalView';
+import { DrawerView } from '../ui/DrawerView';
 
 const options = [
   { label: 'Ford Mustang', value: 'ford_mustang' },
@@ -292,13 +298,39 @@ export default function Index() {
               </SegmentedControl>
             </ControlContainer>
             <ControlContainer>
-              <RadioGroupView id="default_radio" options={options} />
-              <RadioGroupView
-                id="large_radio_options"
-                options={largeRadioOptions}
-              />
-              <CheckboxView />
-              <ModalView />
+              <Grid spacing={2}>
+                <GridRow>
+                  <GridColumn xs={12} md={6}>
+                    <RadioGroupView id="default_radio" options={options} />
+                  </GridColumn>
+                  <GridColumn xs={12} md={6}>
+                    <RadioGroupView
+                      id="large_radio_options"
+                      options={largeRadioOptions}
+                    />
+                  </GridColumn>
+                </GridRow>
+                <GridRow>
+                  <GridColumn xs={12}>
+                    <CheckboxView />
+                  </GridColumn>
+                  <GridColumn xs={6}>
+                    <ModalView />
+                  </GridColumn>
+                  <GridColumn xs={6}>
+                    <DrawerView />
+                  </GridColumn>
+                  <GridColumn xs={12} sm={6}>
+                    <Select options={options} placeholder="Select a car name" />
+                  </GridColumn>
+                  <GridColumn xs={12} sm={6}>
+                    <Autocomplete
+                      options={options}
+                      placeholder="Start typing a car name..."
+                    />
+                  </GridColumn>
+                </GridRow>
+              </Grid>
             </ControlContainer>
           </div>
         </div>

@@ -21,7 +21,7 @@ describe('RadioOptions Component', () => {
       />
     );
 
-    const radioOptions = screen.getAllByRole('radio');
+    const radioOptions = screen.getAllByRole('checkbox');
     expect(radioOptions).toHaveLength(options.length);
 
     radioOptions.forEach((radioOption, index) => {
@@ -48,7 +48,7 @@ describe('RadioOptions Component', () => {
       />
     );
 
-    const radioOptions = screen.getAllByRole('radio');
+    const radioOptions = screen.getAllByRole('checkbox');
     fireEvent.click(radioOptions[0]);
 
     expect(onClick).toHaveBeenCalledTimes(1);
