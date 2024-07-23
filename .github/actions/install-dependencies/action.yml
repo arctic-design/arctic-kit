@@ -9,5 +9,11 @@ runs:
         node-version: 20.12.2
         registry-url: https://registry.npmjs.org/
 
+    - run: corepack enable
+      shell: bash
+
+    - run: yarn set version 4.3.1
+      shell: bash
+
     - run: yarn
       shell: bash
