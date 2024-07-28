@@ -1,4 +1,4 @@
-name: Publish a new version
+name: Publish to npm
 on:
   workflow_dispatch:
     inputs:
@@ -32,7 +32,7 @@ jobs:
         run: npx nx report
         shell: bash
 
-      - name: Publish packages
+      - name: Publish packages to npm
         if: github.ref == 'refs/heads/main'
         run: npx nx release publish
         shell: bash

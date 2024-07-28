@@ -35,9 +35,9 @@ jobs:
         run: npx nx reset
         shell: bash
 
-      - name: Create a release and publish
+      - name: Create a github release
         if: github.ref == 'refs/heads/main'
-        run: npx nx release --yes
+        run: npx nx release --skip-publish
         shell: bash
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_ACCESS_TOKEN }} # needed for publish to npm
