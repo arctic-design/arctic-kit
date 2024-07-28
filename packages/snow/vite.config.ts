@@ -44,11 +44,32 @@ export default defineConfig({
       fileName: 'index',
       // Change this to the formats you want to support.
       // Don't forget to update your package.json as well.
-      formats: ['es', 'cjs'],
+      formats: ['es'],
     },
     rollupOptions: {
       // External packages that should not be bundled into your library.
-      external: ['react', 'react-dom', 'react/jsx-runtime', 'framer-motion'],
+      external: [
+        'react',
+        'react-dom',
+        'react/jsx-runtime',
+        'framer-motion',
+        '@pigment-css/react',
+      ],
+      output: {
+        preserveModules: true,
+        preserveModulesRoot: 'src',
+        // entryFileNames: '[name].js',
+        dir: '../../dist/packages/snow',
+        banner: `'use client';`,
+        // exports: 'named',
+        entryFileNames: (chunkInfo) => {
+          if (chunkInfo.name.includes('node_modules')) {
+            return chunkInfo.name.replace('node_modules', 'external') + '.js';
+          }
+
+          return '[name].js';
+        },
+      },
     },
   },
 
