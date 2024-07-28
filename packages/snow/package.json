@@ -7,7 +7,7 @@
   "exports": {
     ".": {
       "import": "./index.js",
-      "require": "./index.cjs"
+      "require": "./index.js"
     },
     "./style.css": "./style.css"
   },
@@ -21,7 +21,7 @@
     "url": "https://github.com/arctic-design/arctic-kit"
   },
   "peerDependencies": {
-    "framer-motion": "^11.2.13",
+    "framer-motion": "^11.3.19",
     "react": "^16.8.0 || ^17.0.0 || ^18.0.0",
     "react-dom": "^16.8.0 || ^17.0.0 || ^18.0.0"
   },

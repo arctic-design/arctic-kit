@@ -13,7 +13,7 @@ import {
   ExclamationCircleIcon,
   ChevronDownIcon,
 } from '@heroicons/react/20/solid';
-import clsx from 'clsx';
+import { clsx } from 'clsx';
 import { AccordionContext } from './AccordionContext';
 import { Box } from '../Box';
 import { HelperText } from '../HelperText';
