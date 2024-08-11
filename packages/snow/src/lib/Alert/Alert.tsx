@@ -61,14 +61,10 @@ const Container = styled.div<AlertProps>(({ theme }: SnowThemeArgs) => ({
   border: '1px solid transparent',
   boxShadow: 'none',
   variants: getVariantStyles(theme),
-  '.icon': {
-    display: 'inline-flex',
-    '& svg': {
-      width: 16,
-      height: 'auto',
-    },
+  '& svg': {
+    width: 16,
+    height: 'auto',
   },
-
   '.content': {
     display: 'flex',
     justifyContent: 'space-between',
@@ -99,7 +95,7 @@ const Alert = forwardRef<HTMLDivElement, PropsWithChildren<AlertProps>>(
         shadow={shadow}
         className={className}
       >
-        {!hideIcon && <div className="icon">{IconMap[severity]}</div>}
+        {!hideIcon && IconMap[severity]}
         {children}
       </Container>
     );
