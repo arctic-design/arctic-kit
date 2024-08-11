@@ -57,3 +57,4 @@ jobs:
           storybookBuildDir: 'packages/snow/storybook-static'
           autoAcceptChanges: true
           exitZeroOnChanges: true
+          exitOnceUploaded: true
