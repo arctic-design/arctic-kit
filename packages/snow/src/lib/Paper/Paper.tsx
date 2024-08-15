@@ -18,7 +18,7 @@ export type PaperProps = {
 
 type StyledBoxProps = {
   elevation?: number;
-  variant?: string;
+  variant?: PaperVariant;
   square?: boolean;
   color?: SnowColor;
 };
@@ -29,6 +29,14 @@ const StyledBox = styled.div<StyledBoxProps>(({ theme }: SnowThemeArgs) => ({
   padding: '0.75rem',
   cursor: 'default',
   variants: [
+    {
+      props: { variant: 'outlined' },
+      style: {
+        boxShadow: 'none',
+        border: `${theme.border.width.main} solid ${theme.colors.grey[400]}`,
+        backgroundColor: theme.colors.neutral[0],
+      },
+    },
     ...SnowColorValues.map((color) => ({
       props: { color },
       style: {
@@ -49,14 +57,7 @@ const StyledBox = styled.div<StyledBoxProps>(({ theme }: SnowThemeArgs) => ({
         },
       },
     })),
-    {
-      props: { variant: 'outlined', color: undefined },
-      style: {
-        boxShadow: 'none',
-        border: `${theme.border.width.main} solid ${theme.colors.grey[400]}`,
-        backgroundColor: theme.colors.neutral[0],
-      },
-    },
+
     {
       props: { square: true },
       style: {
