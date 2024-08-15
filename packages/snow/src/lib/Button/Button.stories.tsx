@@ -96,6 +96,7 @@ export const Outlined: Story = {
 export const WithIcons: Story = {
   args: {
     children: 'Button',
+    fillSvg: true,
   },
   render: WithIconsRender,
 };

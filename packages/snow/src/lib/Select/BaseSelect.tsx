@@ -370,7 +370,7 @@ const BaseSelect: React.FC<BaseSelectProps> = (props: BaseSelectProps) => {
           id={`${id}-indicators`}
           data-testid={`${id}-indicators`}
         >
-          {!multiple && selectedValue.length > 0 && clearable && (
+          {selectedValue.length > 0 && clearable && (
             <>
               <SelectIndicator
                 id={`${id}-indicator-clear-container`}

@@ -40,3 +40,12 @@ export const Primary: Story = {
   },
   render: DefaultRender,
 };
+export const Disabled: Story = {
+  args: {
+    rounded: false,
+    disabled: true,
+    size: 'medium',
+    color: 'primary',
+  },
+  render: DefaultRender,
+};

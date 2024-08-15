@@ -30,6 +30,7 @@ export function Autocomplete({
   value,
   onChange,
   disabled,
+  readOnly,
   ...otherProps
 }: AutocompleteProps) {
   const [open, setOpen] = useState(false);
@@ -125,6 +126,7 @@ export function Autocomplete({
           value: inputValue,
           placeholder,
           disabled,
+
           role: 'textbox',
           'aria-autocomplete': 'none',
           autoComplete: 'off',
@@ -145,11 +147,12 @@ export function Autocomplete({
           },
         })}
         size={inputSize}
+        readOnly={readOnly}
         {...otherProps}
       />
 
       <FloatingPortal>
-        {open && (
+        {open && !readOnly && (
           <FloatingFocusManager
             context={context}
             initialFocus={-1}

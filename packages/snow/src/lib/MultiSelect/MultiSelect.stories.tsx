@@ -42,6 +42,17 @@ export const Default: Story = {
   },
 };
 
+export const Clearable: Story = {
+  args: {
+    placeholder: 'Pick a value',
+    options,
+    clearable: true,
+    fullWidth: true,
+    onChange: (items) => console.log(items),
+    label: 'Select some value...',
+  },
+};
+
 export const StringValues: Story = {
   args: {
     placeholder: 'Pick a value',

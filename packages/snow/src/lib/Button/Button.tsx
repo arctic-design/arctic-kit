@@ -36,7 +36,7 @@ const getColorVariantStyles = (theme: SnowTheme) =>
 
       '&:disabled': {
         backgroundColor: theme.colors[color][300],
-        color: theme.colors[color][200],
+        color: theme.colors.grey[200],
       },
       '&.outlined, &.text': {
         border: `1px solid ${theme.colors[color][400]}`,
@@ -101,6 +101,7 @@ export interface ButtonProps extends DefaultSnowProps {
   leadingSection?: React.ReactNode;
   trailingSection?: React.ReactNode;
   loading?: boolean;
+  fillSvg?: boolean;
 }
 
 const StyledButton = styled.button<ButtonProps>(({ theme }: SnowThemeArgs) => ({
@@ -121,7 +122,12 @@ const StyledButton = styled.button<ButtonProps>(({ theme }: SnowThemeArgs) => ({
   cursor: 'pointer',
   outline: 'none',
   svg: {
-    fill: theme.colors.neutral[0],
+    width: 20,
+  },
+  '&[data-fill-svg="true"]': {
+    svg: {
+      fill: 'currentcolor',
+    },
   },
   '&:hover': {
     backgroundColor: theme.colors.primary[600],
@@ -144,9 +150,6 @@ const StyledButton = styled.button<ButtonProps>(({ theme }: SnowThemeArgs) => ({
     backgroundColor: theme.colors.neutral[0],
     border: `1px solid ${theme.colors.grey[400]}`,
     boxShadow: 'none',
-    svg: {
-      fill: theme.colors.grey[900],
-    },
     '&:hover': {
       backgroundColor: theme.colors.grey[50],
       borderColor: theme.colors.grey[700],
@@ -224,6 +227,7 @@ const Button = forwardRef<HTMLButtonElement, PropsWithChildren<ButtonProps>>(
       role = 'button',
       id = 'button',
       loading = false,
+      fillSvg,
       ...props
     }: PropsWithChildren<ButtonProps>,
     ref
@@ -254,6 +258,7 @@ const Button = forwardRef<HTMLButtonElement, PropsWithChildren<ButtonProps>>(
         id={id}
         data-testid={id}
         data-variant={isButtonGroupChild ? 'group' : 'button'}
+        data-fill-svg={fillSvg}
         role={role}
         {...props}
       >

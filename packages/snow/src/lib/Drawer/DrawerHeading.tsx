@@ -7,12 +7,8 @@ import { HeaderCloseButton } from '../Button/HeaderCloseButton';
 import { Box } from '../Box';
 import { SnowThemeArgs } from '../../core';
 const Container = styled.div(({ theme }: SnowThemeArgs) => ({
-  display: 'flex',
-  justifyContent: 'space-between',
-  alignItems: 'center',
-  width: 'calc(100% - 24px)',
+  width: '100%',
   borderBottom: `0.5px solid ${theme.colors.grey[300]}`,
-  padding: '8px 12px',
   h3: {
     padding: '0 1rem',
   },
@@ -53,32 +49,41 @@ export const DrawerHeading = React.forwardRef<
       <Box
         sx={{
           display: 'flex',
-          flexDirection: 'column',
-          justifyContent: 'flex-start',
+          padding: '8px 12px',
+          justifyContent: 'space-between',
+          alignItems: 'center',
         }}
       >
         <Box
           sx={{
-            fontWeight: 700,
-            fontSize: 20,
+            display: 'flex',
+            flexDirection: 'column',
+            justifyContent: 'flex-start',
           }}
-          id={`${id}-title`}
         >
-          {children}
+          <Box
+            sx={{
+              fontWeight: 700,
+              fontSize: 20,
+            }}
+            id={`${id}-title`}
+          >
+            {children}
+          </Box>
+          {footer}
         </Box>
-        {footer}
-      </Box>
 
-      {onClose && (
-        <HeaderCloseButton
-          type="button"
-          onClick={onCloseHandler}
-          id={`${id}-close-button`}
-          data-testid={`${id}-close-button`}
-        >
-          <XMarkIcon />
-        </HeaderCloseButton>
-      )}
+        {onClose && (
+          <HeaderCloseButton
+            type="button"
+            onClick={onCloseHandler}
+            id={`${id}-close-button`}
+            data-testid={`${id}-close-button`}
+          >
+            <XMarkIcon />
+          </HeaderCloseButton>
+        )}
+      </Box>
     </Container>
   );
 });
