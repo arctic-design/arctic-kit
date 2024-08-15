@@ -9,12 +9,7 @@ import {
   LoaderSize,
   LoaderSizeValues,
 } from './types';
-import {
-  DefaultSnowProps,
-  SnowColor,
-  SnowColorValues,
-  SnowSizeValues,
-} from '../types';
+import { DefaultSnowProps, SnowColor, SnowColorValues } from '../types';
 import { SnowThemeArgs } from '../../core';
 const loaderSizeExtraSmall = SnowHeights['small'] - 6;
 const loaderSizeSmall = SnowHeights['small'] - 4;
@@ -59,7 +54,7 @@ const Dot = styled.span<{
   disabled?: boolean;
 }>(({ theme }: SnowThemeArgs) => ({
   variants: [
-    ...SnowSizeValues.map((size) => ({
+    ...LoaderSizeValues.map((size) => ({
       props: { size: size },
       style: {
         width: `calc(${LoaderSizeMap[size]} / 3 - ${LoaderSizeMap[size]} / 15)`,

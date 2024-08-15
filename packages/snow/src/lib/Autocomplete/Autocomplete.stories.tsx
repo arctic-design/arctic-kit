@@ -36,3 +36,11 @@ export const WithObjectOptions: Story = {
     placeholder: 'Enter fruit name',
   },
 };
+
+export const ReadOnly: Story = {
+  args: {
+    options: data,
+    placeholder: 'Enter fruit name',
+    readOnly: true,
+  },
+};

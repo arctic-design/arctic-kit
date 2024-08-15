@@ -10,10 +10,11 @@ import {
 import { SnowHeights } from '../constants';
 import { SnowThemeArgs } from '../../core';
 
-export const Container = styled.div<{
+export const Container = styled.button<{
   rounded?: boolean;
   color?: SnowColor;
   size?: SnowSize;
+  disabled?: boolean;
 }>(({ theme }: SnowThemeArgs) => ({
   fontFamily: theme.font.family.base,
   fontSize: theme.font.size[100],
@@ -29,7 +30,7 @@ export const Container = styled.div<{
     fill: theme.colors.neutral[1000],
     width: 20,
   },
-  display: 'flex',
+  display: 'grid',
   justifyContent: 'center',
   alignItems: 'center',
   boxShadow: theme.shadow.main,
@@ -37,11 +38,13 @@ export const Container = styled.div<{
   outline: 'none',
 
   '&:hover': {
-    cursor: 'pointer',
-    backgroundColor: theme.colors.grey[50],
-    borderColor: theme.colors.grey[700],
-    svg: {
-      fill: theme.colors.neutral[1000],
+    '&:not(:disabled)': {
+      cursor: 'pointer',
+      backgroundColor: theme.colors.grey[50],
+      borderColor: theme.colors.grey[700],
+      svg: {
+        fill: theme.colors.neutral[1000],
+      },
     },
   },
   '&:focus': {
@@ -67,9 +70,11 @@ export const Container = styled.div<{
           fill: theme.colors[color].main,
         },
         '&:hover': {
-          borderColor: theme.colors[color][700],
-          svg: {
-            fill: theme.colors[color][700],
+          '&:not(:disabled)': {
+            borderColor: theme.colors[color][700],
+            svg: {
+              fill: theme.colors[color][700],
+            },
           },
         },
         '&:focus': {
@@ -97,19 +102,19 @@ export const Container = styled.div<{
 
 export type IconButtonProps = DefaultSnowProps & {
   rounded?: boolean;
-} & ComponentPropsWithoutRef<'div'>;
+} & ComponentPropsWithoutRef<'button'>;
 
 export const IconButton = forwardRef<
-  HTMLDivElement,
+  HTMLButtonElement,
   PropsWithChildren<IconButtonProps>
 >(({ children, disabled, size = 'medium', ...props }, ref) => {
   return (
     <Container
       ref={ref}
-      role="button"
       aria-label="icon-button"
       tabIndex={0}
       aria-disabled={disabled}
+      disabled={disabled}
       size={size}
       {...props}
     >

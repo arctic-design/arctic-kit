@@ -8,18 +8,21 @@ import { TooltipContent } from './TooltipContent';
 import { TooltipTrigger } from './TooltipTrigger';
 import { TooltipContext } from './TooltipContext';
 
+export type TooltipPlacement = Placement;
+
+export type TooltipProps = {
+  message: string;
+  placement?: TooltipPlacement;
+  id?: string;
+};
+
 export function Tooltip({
   message,
 
   children,
   placement,
   id = 'tooltip',
-}: PropsWithChildren<{
-  message: string;
-
-  placement?: Placement;
-  id?: string;
-}>) {
+}: PropsWithChildren<TooltipProps>) {
   return (
     <BaseTooltip placement={placement}>
       <TooltipTrigger id={`${id}-trigger`} asChild>

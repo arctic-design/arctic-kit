@@ -5,6 +5,7 @@ import { BaseInputProps, BaseInput, BaseInputContainer } from '../BaseInput';
 export type TextInputProps = Omit<BaseInputProps, 'multiline' | 'onChange'> & {
   onChange?: (event: ChangeEvent<HTMLInputElement>) => void;
   onBlur?: (event: ChangeEvent<HTMLInputElement>) => void;
+  type?: React.HTMLInputTypeAttribute | undefined;
 };
 
 const TextInput = forwardRef<HTMLInputElement, TextInputProps>(
@@ -19,6 +20,7 @@ const TextInput = forwardRef<HTMLInputElement, TextInputProps>(
       containerStyle,
       id = 'text-input',
       readOnly = false,
+      type = 'text',
       ...otherProps
     },
     ref
@@ -38,7 +40,7 @@ const TextInput = forwardRef<HTMLInputElement, TextInputProps>(
         <BaseInput
           as="input"
           inputsize={size}
-          type="text"
+          type={type}
           ref={ref}
           className={`${error ? 'error' : ''} ${className}`}
           id={`${id}`}
