@@ -15,6 +15,7 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
+      "@arctic-kit/colors": ["packages/colors/src/index.ts"],
       "@arctic-kit/snow": ["packages/snow/src/index.ts"]
     }
   },

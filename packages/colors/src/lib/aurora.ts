@@ -1,6 +1,6 @@
 import { ColorType } from './types';
 
-const aurora: ColorType = {
+export const aurora: ColorType = {
   50: '#e6edff',
   100: '#ccd9ff',
   200: '#99b3ff',
@@ -12,5 +12,3 @@ const aurora: ColorType = {
   800: '#2444b3',
   900: '#1f3999',
 };
-
-export default aurora;

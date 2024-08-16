@@ -1,6 +1,6 @@
 import { ColorType } from './types';
 
-const grey: ColorType = {
+export const grey: ColorType = {
   50: '#FAFAFA',
   100: '#F4F5F5',
   200: '#ECEDEE',
@@ -12,5 +12,3 @@ const grey: ColorType = {
   800: '#53565A',
   900: '#27292A',
 };
-
-export default grey;

@@ -1,0 +1,17 @@
+{
+  "name": "@arctic-kit/colors",
+  "version": "0.0.1",
+  "main": "./index.cjs",
+  "module": "./index.js",
+  "typings": "./index.d.ts",
+  "type": "module",
+  "author": "Barun Prasad",
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/arctic-design/arctic-kit"
+  }
+}

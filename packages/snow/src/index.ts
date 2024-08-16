@@ -1,5 +1,6 @@
 export * from './lib';
 export * from './theming';
 export * from './core';
+export * from './utils';
 
-export * from './colors/types';
+export type { ColorType, NeutralColorType } from '@arctic-kit/colors';

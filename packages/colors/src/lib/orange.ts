@@ -1,6 +1,6 @@
 import { ColorType } from './types';
 
-const orange: ColorType = {
+export const orange: ColorType = {
   50: '#fff4e6',
   100: '#ffe8cc',
   200: '#ffd8a8',
@@ -12,5 +12,3 @@ const orange: ColorType = {
   800: '#e8590c',
   900: '#d9480f',
 };
-
-export default orange;

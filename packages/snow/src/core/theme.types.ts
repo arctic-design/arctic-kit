@@ -1,4 +1,4 @@
-import { ColorType, NeutralColorType } from '../colors/types';
+import type { ColorType, NeutralColorType } from '@arctic-kit/colors';
 import type { ExtendTheme } from '@pigment-css/react/theme';
 
 export interface DefaultTokenTypeVariant {

@@ -1,5 +1,5 @@
 import { createTheme } from './createTheme';
-import green from '../colors/green';
+import { green } from '@arctic-kit/colors';
 import { SnowColorTheme } from '../core/theme.types';
 import { DEFAULT_THEME } from './theme';
 
