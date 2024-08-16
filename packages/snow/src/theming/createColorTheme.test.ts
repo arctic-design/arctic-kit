@@ -1,4 +1,4 @@
-import green from '../colors/green';
+import { green } from '@arctic-kit/colors';
 import { DEFAULT_THEME } from './theme';
 import { SnowColorThemeCustom } from '../core/theme.types';
 import { createColorTheme } from './createColorTheme';

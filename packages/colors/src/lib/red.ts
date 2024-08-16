@@ -1,6 +1,6 @@
 import { ColorType } from './types';
 
-const red: ColorType = {
+export const red: ColorType = {
   50: '#FEF5F5',
   100: '#FDE8E9',
   200: '#F9C7C8',
@@ -12,5 +12,3 @@ const red: ColorType = {
   800: '#8A0F14',
   900: '#610D10',
 };
-
-export default red;

@@ -1,6 +1,6 @@
 import { ColorType } from './types';
 
-const violet: ColorType = {
+export const violet: ColorType = {
   50: '#efe5ff',
   100: '#d5c0fe',
   200: '#b896ff',
@@ -12,5 +12,3 @@ const violet: ColorType = {
   800: '#0000ed',
   900: '#0000e9',
 };
-
-export default violet;

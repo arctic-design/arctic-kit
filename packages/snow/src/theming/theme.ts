@@ -9,15 +9,14 @@ import {
   neutral,
   violet,
   aurora,
-} from '../colors';
+} from './colors';
+
 import {
   borderRadius,
   borderWidths,
   shadows,
   spacings,
 } from '../core/constants';
-// import { SnowSize } from '../lib/types';
-// import { SnowSpacingMap } from '../lib/constants';
 
 export const DEFAULT_THEME: SnowTheme = {
   spacing: 1,

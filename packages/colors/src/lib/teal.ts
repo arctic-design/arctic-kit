@@ -1,6 +1,6 @@
 import { ColorType } from './types';
 
-const teal: ColorType = {
+export const teal: ColorType = {
   50: '#e0f2f1',
   100: '#b2dfdb',
   200: '#80cbc4',
@@ -12,5 +12,3 @@ const teal: ColorType = {
   800: '#00695c',
   900: '#004d40',
 };
-
-export default teal;
