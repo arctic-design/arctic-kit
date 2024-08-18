@@ -13,7 +13,7 @@ type StatusProps = {
   errorText?: string;
 };
 
-const Count = styled.span(({ theme }: SnowThemeArgs) => ({
+const Count = styled.span(({ theme: { vars: theme } }: SnowThemeArgs) => ({
   display: 'flex',
   padding: '4px 8px',
   justifyContent: 'center',

@@ -109,7 +109,16 @@ export interface SnowTheme extends SnowColorTheme {
   border: SnowBorder;
   font: SnowFont;
   lineHeight: SnowLineHeight;
-  getContrastText: (background: string) => string;
+  // getContrastText: (background: string) => string;
+}
+
+export interface SnowThemeOptionalParams extends SnowColorThemeCustom {
+  spacing?: number;
+  spacings?: SnowSpacings;
+  shadow?: ShadowType & DefaultTokenTypeVariant;
+  border?: SnowBorder;
+  font?: SnowFont;
+  lineHeight?: SnowLineHeight;
 }
 
 export interface SnowThemeArgs {

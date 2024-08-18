@@ -1,10 +1,10 @@
 //@ts-check
 
 import { composePlugins, withNx } from '@nx/next';
-import { withPigment } from '@pigment-css/nextjs-plugin';
+import { extendTheme, withPigment } from '@pigment-css/nextjs-plugin';
 
 //TODO: temp fix till the theme is moved to a separate npm module
-const theme = {
+const lightTheme = {
   spacing: 1,
   spacings: {
     0: 0,
@@ -143,6 +143,16 @@ const theme = {
   lineHeight: { 100: 1, 200: 1.25, 300: 1.5 },
 };
 
+const theme = extendTheme({
+  colorSchemes: {
+    light: lightTheme,
+    dark: lightTheme,
+  },
+  // getSelector: (colorScheme) =>
+  //   colorScheme ? `.theme-${colorScheme}` : ':root',
+  cssVarPrefix: 'snow',
+});
+
 /**
  * @type {import('@nx/next/plugins/with-nx').WithNxOptions}
  **/
@@ -163,5 +173,5 @@ const plugins = [
 
 export default withPigment(composePlugins(...plugins)(nextConfig), {
   theme,
-  transformLibraries: ['@arctic-kit/snow'],
+  // transformLibraries: ['@arctic-kit/snow'],
 });

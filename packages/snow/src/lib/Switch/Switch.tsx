@@ -12,7 +12,7 @@ const SwitchSizeMap = {
   large: DefaultSize + 4,
 };
 
-const Container = styled.div(({ theme }: SnowThemeArgs) => ({
+const Container = styled.div(({ theme: { vars: theme } }: SnowThemeArgs) => ({
   display: 'flex',
   justifyContent: 'center',
   alignItems: 'center',
@@ -24,7 +24,7 @@ const SwitchContainer = styled.div<{
   switched: boolean;
   height: number;
   color?: SnowColor;
-}>(({ theme }: SnowThemeArgs) => ({
+}>(({ theme: { vars: theme } }: SnowThemeArgs) => ({
   backgroundRepeat: 'no-repeat',
   display: 'flex',
   justifyContent: 'center',
@@ -101,7 +101,7 @@ const HandleElement = styled.div<{
   height: number;
   switched: boolean;
   color?: SnowColor;
-}>(({ theme }: SnowThemeArgs) => ({
+}>(({ theme: { vars: theme } }: SnowThemeArgs) => ({
   width: ({ height }) => height - 6,
   height: ({ height }) => height - 6,
   backgroundColor: theme.colors.grey[900],

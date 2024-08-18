@@ -9,7 +9,7 @@ export type HelperTextProps = {
 };
 
 const Container = styled.span<{ color?: SnowColor }>(
-  ({ theme }: SnowThemeArgs) => ({
+  ({ theme: { vars: theme } }: SnowThemeArgs) => ({
     paddingLeft: 2,
     fontSize: theme.font.size[25],
     lineHeight: '18px',

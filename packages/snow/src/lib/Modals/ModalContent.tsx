@@ -31,7 +31,7 @@ const ModalSizeVariants = {
 };
 
 const Container = styled.div<{ size?: ModalSize }>(
-  ({ theme }: SnowThemeArgs) => ({
+  ({ theme: { vars: theme } }: SnowThemeArgs) => ({
     fontFamily: theme.font.family.base,
     margin: 16,
     borderRadius: '0.3125rem',

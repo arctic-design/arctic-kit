@@ -23,52 +23,54 @@ type StyledBoxProps = {
   color?: SnowColor;
 };
 
-const StyledBox = styled.div<StyledBoxProps>(({ theme }: SnowThemeArgs) => ({
-  fontFamily: theme.font.family.base,
-  borderRadius: theme.border.radius.main,
-  padding: '0.75rem',
-  cursor: 'default',
-  variants: [
-    {
-      props: { variant: 'outlined' },
-      style: {
-        boxShadow: 'none',
-        border: `${theme.border.width.main} solid ${theme.colors.grey[400]}`,
-        backgroundColor: theme.colors.neutral[0],
-      },
-    },
-    ...SnowColorValues.map((color) => ({
-      props: { color },
-      style: {
-        "&[data-variant='outlined']": {
+const StyledBox = styled.div<StyledBoxProps>(
+  ({ theme: { vars: theme } }: SnowThemeArgs) => ({
+    fontFamily: theme.font.family.base,
+    borderRadius: theme.border.radius.main,
+    padding: '0.75rem',
+    cursor: 'default',
+    variants: [
+      {
+        props: { variant: 'outlined' },
+        style: {
           boxShadow: 'none',
-          border: `${theme.border.width.main} solid ${theme.colors[color][300]}`,
-          backgroundColor: theme.colors[color][50],
+          border: `${theme.border.width.main} solid ${theme.colors.grey[400]}`,
+          backgroundColor: theme.colors.neutral[0],
         },
       },
-    })),
-    ...PaperElevationValues.map((elevation) => ({
-      props: { elevation },
-      style: {
-        "&[data-variant='elevation']": {
-          boxShadow: `0px ${elevation * 1}px ${elevation * 2}px ${
-            theme.colors.grey[400]
-          }`,
+      ...SnowColorValues.map((color) => ({
+        props: { color },
+        style: {
+          "&[data-variant='outlined']": {
+            boxShadow: 'none',
+            border: `${theme.border.width.main} solid ${theme.colors[color][300]}`,
+            backgroundColor: theme.colors[color][50],
+          },
         },
-      },
-    })),
+      })),
+      ...PaperElevationValues.map((elevation) => ({
+        props: { elevation },
+        style: {
+          "&[data-variant='elevation']": {
+            boxShadow: `0px ${elevation * 1}px ${elevation * 2}px ${
+              theme.colors.grey[400]
+            }`,
+          },
+        },
+      })),
 
-    {
-      props: { square: true },
-      style: {
-        borderRadius: 0,
+      {
+        props: { square: true },
+        style: {
+          borderRadius: 0,
+        },
       },
+    ],
+    "&[data-clickable='true']": {
+      cursor: 'pointer',
     },
-  ],
-  "&[data-clickable='true']": {
-    cursor: 'pointer',
-  },
-}));
+  })
+);
 
 export const Paper = forwardRef<HTMLDivElement, PropsWithChildren<PaperProps>>(
   function Paper(props, ref) {

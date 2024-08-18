@@ -6,7 +6,7 @@ import { SnowThemeArgs } from '../../core';
 export const InputContainerRoot = styled.div<{
   color?: SnowColor;
   inputsize?: SnowSize;
-}>(({ theme }: SnowThemeArgs) => ({
+}>(({ theme: { vars: theme } }: SnowThemeArgs) => ({
   gap: '8px',
   flexShrink: 0,
   borderRadius: '5px',
@@ -40,16 +40,18 @@ export const InputContainerRoot = styled.div<{
   ],
 }));
 
-export const SelectContainer = styled.div(({ theme }: SnowThemeArgs) => ({
-  fontFamily: theme.font.family.base,
-  position: 'relative',
-  boxSizing: 'border-box',
-  textAlign: 'left',
-  '&[data-fullwidth="true"]': {
-    minWidth: '200px',
-    width: '100%',
-  },
-}));
+export const SelectContainer = styled.div(
+  ({ theme: { vars: theme } }: SnowThemeArgs) => ({
+    fontFamily: theme.font.family.base,
+    position: 'relative',
+    boxSizing: 'border-box',
+    textAlign: 'left',
+    '&[data-fullwidth="true"]': {
+      minWidth: '200px',
+      width: '100%',
+    },
+  })
+);
 
 export const SelectValueContainer = styled.div({
   alignItems: 'center',
@@ -98,7 +100,7 @@ export const SelectInput = styled.div({
 });
 
 export const SelectMenu = styled.div<{ inputsize?: SnowSize }>(
-  ({ theme }: SnowThemeArgs) => ({
+  ({ theme: { vars: theme } }: SnowThemeArgs) => ({
     fontFamily: theme.font.family.base,
     fontSize: theme.font.size[100],
     fontWeight: theme.font.weight.regular,
@@ -145,7 +147,7 @@ export const SelectInputTags = styled.div({
 });
 
 export const SelectInputTagItem = styled.div<{ inputsize?: SnowSize }>(
-  ({ theme }: SnowThemeArgs) => ({
+  ({ theme: { vars: theme } }: SnowThemeArgs) => ({
     background: theme.colors.grey[100],
     padding: '2px 8px',
     borderRadius: '2px',
@@ -174,26 +176,28 @@ export const SelectInputTagItem = styled.div<{ inputsize?: SnowSize }>(
   })
 );
 
-export const TagLabel = styled.div(({ theme }: SnowThemeArgs) => ({
-  overflow: 'hidden',
-  textOverflow: 'ellipsis',
-  whiteSpace: 'nowrap',
-  borderRadius: '2px',
-  color: theme.colors.grey[900],
-  fontSize: '14px',
-  boxSizing: 'border-box',
-  display: 'flex',
-  alignItems: 'center',
-  padding: '2px 2px',
+export const TagLabel = styled.div(
+  ({ theme: { vars: theme } }: SnowThemeArgs) => ({
+    overflow: 'hidden',
+    textOverflow: 'ellipsis',
+    whiteSpace: 'nowrap',
+    borderRadius: '2px',
+    color: theme.colors.grey[900],
+    fontSize: '14px',
+    boxSizing: 'border-box',
+    display: 'flex',
+    alignItems: 'center',
+    padding: '2px 2px',
 
-  '&.single': {
-    padding: '0 2px',
-  },
+    '&.single': {
+      padding: '0 2px',
+    },
 
-  '&.placeholder': {
-    color: theme.colors.grey[600],
-  },
-}));
+    '&.placeholder': {
+      color: theme.colors.grey[600],
+    },
+  })
+);
 
 export const SelectCloseContainer = styled.span({
   display: 'flex',

@@ -25,7 +25,7 @@ const animationVariants = {
 
 const Container = styled.div<{
   circle?: boolean;
-}>(({ theme }: SnowThemeArgs) => ({
+}>(({ theme: { vars: theme } }: SnowThemeArgs) => ({
   borderRadius: theme.border.radius.main,
   backgroundColor: theme.colors.grey[200],
   variants: [

@@ -15,17 +15,19 @@ export const Wrapper = styled.div({
   gap: 4,
 });
 
-export const Container = styled.ul(({ theme }: SnowThemeArgs) => ({
-  padding: 12,
-  margin: 0,
-  listStyle: 'none',
-  outline: 'none',
-  display: 'flex',
-  flexDirection: 'column',
-  gap: 12,
-  border: `1px solid ${theme.colors.grey[400]}`,
-  borderRadius: 4,
-}));
+export const Container = styled.ul(
+  ({ theme: { vars: theme } }: SnowThemeArgs) => ({
+    padding: 12,
+    margin: 0,
+    listStyle: 'none',
+    outline: 'none',
+    display: 'flex',
+    flexDirection: 'column',
+    gap: 12,
+    border: `1px solid ${theme.colors.grey[400]}`,
+    borderRadius: 4,
+  })
+);
 
 export type RadioGroupProps = DefaultSnowProps &
   OptionType & {

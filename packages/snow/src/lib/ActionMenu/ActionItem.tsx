@@ -6,7 +6,7 @@ import { SnowThemeArgs } from '../../core';
 export const ActionItem = styled.button<{
   itemSize?: SnowSize;
   color?: SnowColor;
-}>(({ theme }: SnowThemeArgs) => ({
+}>(({ theme: { vars: theme } }: SnowThemeArgs) => ({
   outline: 0,
   backgroundColor: 'transparent',
   border: 'none',
@@ -117,7 +117,7 @@ export const ActionItem = styled.button<{
       style: {
         '&.RootMenu': {
           height: `${SnowHeights[size]}px`,
-          padding: `${theme.spacings.main * SnowSpacingMap[size]}px`,
+          padding: `calc(${theme.spacings.main} * ${SnowSpacingMap[size]});`,
         },
       },
     })),

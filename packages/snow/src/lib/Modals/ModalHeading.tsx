@@ -6,7 +6,7 @@ import { ModalClose } from './ModalClose';
 import { Box } from '../Box';
 import { SnowThemeArgs } from '../../core';
 
-const Container = styled.div(({ theme }: SnowThemeArgs) => ({
+const Container = styled.div(({ theme: { vars: theme } }: SnowThemeArgs) => ({
   display: 'flex',
   padding: 12,
   gap: 24,

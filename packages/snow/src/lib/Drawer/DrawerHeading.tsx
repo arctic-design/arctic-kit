@@ -6,7 +6,7 @@ import { useModalContext } from '../Modals/useModalContext';
 import { HeaderCloseButton } from '../Button/HeaderCloseButton';
 import { Box } from '../Box';
 import { SnowThemeArgs } from '../../core';
-const Container = styled.div(({ theme }: SnowThemeArgs) => ({
+const Container = styled.div(({ theme: { vars: theme } }: SnowThemeArgs) => ({
   width: '100%',
   borderBottom: `0.5px solid ${theme.colors.grey[300]}`,
   h3: {

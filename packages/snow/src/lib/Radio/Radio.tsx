@@ -14,29 +14,31 @@ import { useRadioVariants } from './useRadioVariants';
 import { Box } from '../Box';
 import { SnowThemeArgs } from '../../core';
 
-export const RadioOption = styled.li(({ theme }: SnowThemeArgs) => ({
-  fontFamily: theme.font.family.base,
-  display: 'flex',
-  cursor: 'pointer',
-  alignItems: 'center',
-  justifyContent: 'flex-start',
-  gap: '8px',
-  color: theme.colors.neutral[1000],
-  '&[aria-disabled="true"]': {
-    cursor: 'not-allowed',
-    color: theme.colors.grey[500],
-  },
-  '&[aria-readonly="true"]': {
-    cursor: 'default',
-    color: theme.colors.grey[900],
-  },
-}));
+export const RadioOption = styled.li(
+  ({ theme: { vars: theme } }: SnowThemeArgs) => ({
+    fontFamily: theme.font.family.base,
+    display: 'flex',
+    cursor: 'pointer',
+    alignItems: 'center',
+    justifyContent: 'flex-start',
+    gap: '8px',
+    color: theme.colors.neutral[1000],
+    '&[aria-disabled="true"]': {
+      cursor: 'not-allowed',
+      color: theme.colors.grey[500],
+    },
+    '&[aria-readonly="true"]': {
+      cursor: 'default',
+      color: theme.colors.grey[900],
+    },
+  })
+);
 
 const StyledRadioOptionCircle = styled.div<{
   size?: SnowSize;
   selected?: boolean;
   color?: SnowColor;
-}>(({ theme }: SnowThemeArgs) => ({
+}>(({ theme: { vars: theme } }: SnowThemeArgs) => ({
   width: RadioSizes['medium'],
   height: RadioSizes['medium'],
   minWidth: RadioSizes['medium'],

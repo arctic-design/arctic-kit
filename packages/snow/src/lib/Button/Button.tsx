@@ -19,9 +19,6 @@ import { ButtonVariants } from './types';
 import { Loader } from '../Loader';
 import { SnowTheme, SnowThemeArgs } from '../../core';
 
-function Spacing(size: SnowSize, theme: SnowTheme) {
-  return theme.spacings.main * SnowSpacingMap[size];
-}
 const getColorVariantStyles = (theme: SnowTheme) =>
   SnowColorValues.map((color) => ({
     props: { color: color },
@@ -85,9 +82,9 @@ const getSizeVariantStyles = (theme: SnowTheme) =>
     props: { size: sizeItem },
     style: {
       height: `${SnowHeights[sizeItem]}px`,
-      padding: `${Spacing(sizeItem, theme)}px ${
-        Spacing(sizeItem, theme) * 2
-      }px`,
+      padding: `calc(${theme.spacings.main} * ${
+        SnowSpacingMap[sizeItem]
+      }) calc(${theme.spacings.main} * ${SnowSpacingMap[sizeItem] * 2});`,
     },
   }));
 
@@ -104,112 +101,114 @@ export interface ButtonProps extends DefaultSnowProps {
   fillSvg?: boolean;
 }
 
-const StyledButton = styled.button<ButtonProps>(({ theme }: SnowThemeArgs) => ({
-  fontFamily: theme.font.family.base,
-  fontSize: theme.font.size[100],
-  fontStyle: 'normal',
-  lineHeight: 'normal',
-  gap: '8px',
-  border: 'none',
-  borderRadius: '4px',
-  display: 'flex',
-  alignItems: 'center',
-  color: theme.colors.neutral[0],
-  backgroundColor: theme.colors.primary.main,
-  boxShadow: theme.shadow.main,
-  position: 'relative',
-  boxSizing: 'border-box',
-  cursor: 'pointer',
-  outline: 'none',
-  svg: {
-    width: 20,
-  },
-  '&[data-fill-svg="true"]': {
+const StyledButton = styled.button<ButtonProps>(
+  ({ theme: { vars: theme } }: SnowThemeArgs) => ({
+    fontFamily: theme.font.family.base,
+    fontSize: theme.font.size[100],
+    fontStyle: 'normal',
+    lineHeight: 'normal',
+    gap: '8px',
+    border: 'none',
+    borderRadius: '4px',
+    display: 'flex',
+    alignItems: 'center',
+    color: theme.colors.neutral[0],
+    backgroundColor: theme.colors.primary.main,
+    boxShadow: theme.shadow.main,
+    position: 'relative',
+    boxSizing: 'border-box',
+    cursor: 'pointer',
+    outline: 'none',
     svg: {
-      fill: 'currentcolor',
+      width: 20,
     },
-  },
-  '&:hover': {
-    backgroundColor: theme.colors.primary[600],
-  },
-
-  '&:active': {
-    backgroundColor: theme.colors.primary[700],
-  },
-
-  '&:focus': {
-    '&:not(:disabled)': {
-      outlineOffset: 2,
-      outlineWidth: 2,
-      outlineStyle: 'solid',
-      outlineColor: theme.colors.primary.main,
-    },
-  },
-  '&.outlined, &.text': {
-    color: theme.colors.grey[900],
-    backgroundColor: theme.colors.neutral[0],
-    border: `1px solid ${theme.colors.grey[400]}`,
-    boxShadow: 'none',
-    '&:hover': {
-      backgroundColor: theme.colors.grey[50],
-      borderColor: theme.colors.grey[700],
-    },
-    '&:active': {
-      backgroundColor: theme.colors.grey[400],
-    },
-    '&:disabled': {
-      backgroundColor: theme.colors.grey[100],
-      borderColor: theme.colors.grey[400],
-      color: theme.colors.grey[500],
+    '&[data-fill-svg="true"]': {
       svg: {
-        fill: theme.colors.grey[600],
+        fill: 'currentcolor',
       },
     },
+    '&:hover': {
+      backgroundColor: theme.colors.primary[600],
+    },
+
+    '&:active': {
+      backgroundColor: theme.colors.primary[700],
+    },
+
     '&:focus': {
       '&:not(:disabled)': {
-        outlineColor: theme.colors.grey[300],
+        outlineOffset: 2,
+        outlineWidth: 2,
+        outlineStyle: 'solid',
+        outlineColor: theme.colors.primary.main,
       },
     },
-
-    '&[data-variant="group"]': {
-      '&:not(:disabled)': {
-        '&:active': {
-          borderColor: theme.colors.grey[700],
-        },
-        '&:focus': {
-          borderColor: theme.colors.grey[600],
-        },
+    '&.outlined, &.text': {
+      color: theme.colors.grey[900],
+      backgroundColor: theme.colors.neutral[0],
+      border: `1px solid ${theme.colors.grey[400]}`,
+      boxShadow: 'none',
+      '&:hover': {
+        backgroundColor: theme.colors.grey[50],
+        borderColor: theme.colors.grey[700],
       },
-    },
-    '&.text': {
-      backgroundColor: 'transparent',
-      border: 'none',
-
-      '&:not(:disabled)': {
-        '&:hover, &:focus': {
-          backgroundColor: theme.colors.grey[100],
-        },
-
-        '&:active': {
-          backgroundColor: theme.colors.grey[200],
+      '&:active': {
+        backgroundColor: theme.colors.grey[400],
+      },
+      '&:disabled': {
+        backgroundColor: theme.colors.grey[100],
+        borderColor: theme.colors.grey[400],
+        color: theme.colors.grey[500],
+        svg: {
+          fill: theme.colors.grey[600],
         },
       },
       '&:focus': {
         '&:not(:disabled)': {
-          outlineColor: theme.colors.grey[100],
+          outlineColor: theme.colors.grey[300],
+        },
+      },
+
+      '&[data-variant="group"]': {
+        '&:not(:disabled)': {
+          '&:active': {
+            borderColor: theme.colors.grey[700],
+          },
+          '&:focus': {
+            borderColor: theme.colors.grey[600],
+          },
+        },
+      },
+      '&.text': {
+        backgroundColor: 'transparent',
+        border: 'none',
+
+        '&:not(:disabled)': {
+          '&:hover, &:focus': {
+            backgroundColor: theme.colors.grey[100],
+          },
+
+          '&:active': {
+            backgroundColor: theme.colors.grey[200],
+          },
+        },
+        '&:focus': {
+          '&:not(:disabled)': {
+            outlineColor: theme.colors.grey[100],
+          },
         },
       },
     },
-  },
-  variants: [
-    {
-      props: { disabled: true },
-      style: { cursor: 'not-allowed' },
-    },
-    ...getColorVariantStyles(theme),
-    ...getSizeVariantStyles(theme),
-  ],
-}));
+    variants: [
+      {
+        props: { disabled: true },
+        style: { cursor: 'not-allowed' },
+      },
+      ...getColorVariantStyles(theme),
+      ...getSizeVariantStyles(theme),
+    ],
+  })
+);
 
 const Button = forwardRef<HTMLButtonElement, PropsWithChildren<ButtonProps>>(
   (

@@ -15,7 +15,7 @@ export const Container = styled.button<{
   color?: SnowColor;
   size?: SnowSize;
   disabled?: boolean;
-}>(({ theme }: SnowThemeArgs) => ({
+}>(({ theme: { vars: theme } }: SnowThemeArgs) => ({
   fontFamily: theme.font.family.base,
   fontSize: theme.font.size[100],
   fontStyle: 'normal',

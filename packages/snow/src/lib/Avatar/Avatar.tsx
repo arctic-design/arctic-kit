@@ -4,7 +4,7 @@ import { forwardRef, ForwardedRef } from 'react';
 import { SnowThemeArgs } from '../../core';
 
 const AvatarContainer = styled.div<{ color?: SnowColor }>(
-  ({ theme }: SnowThemeArgs) => ({
+  ({ theme: { vars: theme } }: SnowThemeArgs) => ({
     fontFamily: theme.font.family.base,
     position: 'relative',
     display: 'flex',

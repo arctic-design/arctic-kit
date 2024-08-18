@@ -43,6 +43,7 @@ import { ModalView } from '../ui/ModalView';
 import { DrawerView } from '../ui/DrawerView';
 import { MultiSelectView } from '../ui/MultiSelectView';
 import { TabsView } from '../ui/TabsView';
+import { ToggleColorScheme } from '../ui/ToggleColorScheme';
 
 const options = [
   { label: 'Ford Mustang', value: 'ford_mustang' },
@@ -100,6 +101,8 @@ export default function Index() {
               <span> Hello there, </span>
               Welcome snowbox 👋
             </h1>
+            <ToggleColorScheme />
+
             <Box sx={{ display: 'flex', flexDirection: 'column', gap: 12 }}>
               <Box sx={{ display: 'flex', flexDirection: 'column', gap: 4 }}>
                 <Alert severity="success">

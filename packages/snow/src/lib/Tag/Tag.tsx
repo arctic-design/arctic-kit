@@ -19,7 +19,7 @@ const TagPaddingSize = {
 export type TagProps = { noFill?: boolean } & DefaultSnowProps;
 
 const TagContainer = styled.div<DefaultSnowProps>(
-  ({ theme }: SnowThemeArgs) => ({
+  ({ theme: { vars: theme } }: SnowThemeArgs) => ({
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',

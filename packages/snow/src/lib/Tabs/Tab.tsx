@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 import { useId } from 'react';
 import { SnowThemeArgs } from '../../core';
 
-const Container = styled.li(({ theme }: SnowThemeArgs) => ({
+const Container = styled.li(({ theme: { vars: theme } }: SnowThemeArgs) => ({
   textAlign: 'center',
   fontFamily: theme.font.family.base,
   fontSize: theme.font.size[100],
@@ -23,7 +23,7 @@ const Container = styled.li(({ theme }: SnowThemeArgs) => ({
   position: 'relative',
 
   cursor: 'pointer',
-  height: '24px',
+  // height: '24px',
   display: 'flex',
   justifyContent: 'center',
   alignItems: 'center',
