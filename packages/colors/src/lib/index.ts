@@ -11,3 +11,4 @@ export { indigo } from './indigo';
 export { electricBlue } from './electricBlue';
 export { violet } from './violet';
 export { aurora } from './aurora';
+export { polarNight } from './polorNight';
