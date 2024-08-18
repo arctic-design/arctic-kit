@@ -44,7 +44,7 @@ type CheckboxInputProps = {
 };
 
 export const StyledCheckboxInput = styled.input<CheckboxInputProps>(
-  ({ theme }: SnowThemeArgs) => ({
+  ({ theme: { vars: theme } }: SnowThemeArgs) => ({
     borderWidth: 1,
     borderRadius: 3,
     position: 'relative',
@@ -94,7 +94,7 @@ export const StyledCheckboxInput = styled.input<CheckboxInputProps>(
 );
 
 export const SvgContainer = styled.div<{ checked?: boolean }>(
-  ({ theme }: SnowThemeArgs) => ({
+  ({ theme: { vars: theme } }: SnowThemeArgs) => ({
     position: 'absolute',
     pointerEvents: 'none',
     color: 'rgb(255, 255, 255)',

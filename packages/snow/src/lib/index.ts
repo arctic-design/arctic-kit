@@ -15,6 +15,7 @@ export * from './DatePicker';
 export * from './Drawer';
 export * from './Grid';
 export * from './IconButton';
+export * from './Layout';
 export * from './Loader';
 export * from './Modals';
 export * from './MultiSelect';

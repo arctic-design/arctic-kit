@@ -4,7 +4,7 @@ import { SnowThemeArgs } from '../../core';
 import { SnowHeights } from '../constants';
 
 export const Container = styled.div<{ inputsize?: SnowSize }>(
-  ({ theme }: SnowThemeArgs) => ({
+  ({ theme: { vars: theme } }: SnowThemeArgs) => ({
     fontFamily: theme.font.family.base,
     padding: 7,
     width: '100%',

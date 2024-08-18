@@ -4,7 +4,7 @@ import { SnowThemeArgs } from '../../core';
 import { SnowHeights } from '../constants';
 
 export const RootContainer = styled.div<{ size?: SnowSize }>(
-  ({ theme }: SnowThemeArgs) => ({
+  ({ theme: { vars: theme } }: SnowThemeArgs) => ({
     display: 'flex',
     background: theme.colors.grey[200],
     borderRadius: '4px',
@@ -32,7 +32,7 @@ export const Container = styled.div({
 export const StyledIndicator = styled.div<{
   color?: SnowColor;
   hide?: boolean;
-}>(({ theme }: SnowThemeArgs) => ({
+}>(({ theme: { vars: theme } }: SnowThemeArgs) => ({
   boxSizing: 'border-box',
   position: 'absolute',
   margin: 0,
@@ -59,7 +59,7 @@ export const StyledIndicator = styled.div<{
 }));
 
 export const Button = styled.button<{ color?: SnowColor }>(
-  ({ theme }: SnowThemeArgs) => ({
+  ({ theme: { vars: theme } }: SnowThemeArgs) => ({
     flex: 1,
     display: 'flex',
     gap: '8px',

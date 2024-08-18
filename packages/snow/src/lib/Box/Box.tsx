@@ -16,7 +16,7 @@ export type BoxProps = {
   sx?: CSSProperties;
 } & React.HTMLProps<HTMLElement>;
 
-const Root = styled('div')(({ theme }: SnowThemeArgs) => ({
+const Root = styled('div')(({ theme: { vars: theme } }: SnowThemeArgs) => ({
   fontFamily: theme.font.family.base,
 }));
 

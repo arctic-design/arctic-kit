@@ -44,39 +44,41 @@ export type AlertProps = {
   id?: string;
 };
 
-const Container = styled.div<AlertProps>(({ theme }: SnowThemeArgs) => ({
-  fontFamily: theme.font.family.base,
-  fontSize: '0.875rem',
-  fontStyle: 'normal',
-  fontWeight: theme.font.weight.regular,
-  lineHeight: '1.225rem',
-  minWidth: '300px',
-  position: 'relative',
-  letterSpacing: '0.01071em',
-  alignItems: 'center',
-  padding: '0.75rem 1rem',
-  borderRadius: '0.3125rem',
-  gap: '0.25rem',
-  display: 'flex',
-  border: '1px solid transparent',
-  boxShadow: 'none',
-  variants: getVariantStyles(theme),
-  '.icon': {
-    display: 'inline-flex',
-    '& svg': {
-      width: 16,
-      height: 'auto',
-    },
-  },
-  '.content': {
+const Container = styled.div<AlertProps>(
+  ({ theme: { vars: theme } }: SnowThemeArgs) => ({
+    fontFamily: theme.font.family.base,
+    fontSize: '0.875rem',
+    fontStyle: 'normal',
+    fontWeight: theme.font.weight.regular,
+    lineHeight: '1.225rem',
+    minWidth: '300px',
+    position: 'relative',
+    letterSpacing: '0.01071em',
+    alignItems: 'center',
+    padding: '0.75rem 1rem',
+    borderRadius: '0.3125rem',
+    gap: '0.25rem',
     display: 'flex',
-    justifyContent: 'space-between',
-    '.message': {
-      display: 'flex',
-      alignItems: 'center',
+    border: '1px solid transparent',
+    boxShadow: 'none',
+    variants: getVariantStyles(theme),
+    '.icon': {
+      display: 'inline-flex',
+      '& svg': {
+        width: 16,
+        height: 'auto',
+      },
     },
-  },
-}));
+    '.content': {
+      display: 'flex',
+      justifyContent: 'space-between',
+      '.message': {
+        display: 'flex',
+        alignItems: 'center',
+      },
+    },
+  })
+);
 
 const Alert = forwardRef<HTMLDivElement, PropsWithChildren<AlertProps>>(
   (props: PropsWithChildren<AlertProps>, ref) => {

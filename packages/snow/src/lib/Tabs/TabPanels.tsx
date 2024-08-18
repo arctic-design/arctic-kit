@@ -2,7 +2,7 @@ import { styled } from '@pigment-css/react';
 import { PropsWithChildren, useId } from 'react';
 import { SnowThemeArgs } from '../../core';
 
-const Container = styled.div(({ theme }: SnowThemeArgs) => ({
+const Container = styled.div(({ theme: { vars: theme } }: SnowThemeArgs) => ({
   fontFamily: theme.font.family.base,
   padding: 8,
   flexGrow: 1,

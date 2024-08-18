@@ -34,15 +34,18 @@ import { ActionMenuProps } from './types';
 import { styled } from '@pigment-css/react';
 
 import { Box } from '../Box';
+import { SnowThemeArgs } from '../../core';
 
-const ActionMenuContainer = styled.div(({ theme }) => ({
-  background: 'rgba(255, 255, 255, 0.8)',
-  backdropFilter: 'blur(10px)',
-  padding: '4px',
-  outline: 0,
-  borderRadius: '4px',
-  boxShadow: theme.shadow[200],
-}));
+const ActionMenuContainer = styled.div(
+  ({ theme: { vars: theme } }: SnowThemeArgs) => ({
+    background: 'rgba(255, 255, 255, 0.8)',
+    backdropFilter: 'blur(10px)',
+    padding: '4px',
+    outline: 0,
+    borderRadius: '4px',
+    boxShadow: theme.shadow[200],
+  })
+);
 
 export const ActionMenuComponent = forwardRef<
   HTMLButtonElement,

@@ -5,7 +5,7 @@ import { SnowSize } from '../types';
 import { SnowFontSizes } from '../constants';
 import { SnowThemeArgs } from '../../core';
 
-const typographyStyles = css(({ theme }: SnowThemeArgs) => ({
+const typographyStyles = css(({ theme: { vars: theme } }: SnowThemeArgs) => ({
   display: 'inline-block',
   fontFamily: theme.font.family.base,
   fontWeight: theme.font.weight.regular,
@@ -21,7 +21,7 @@ const typographyStyles = css(({ theme }: SnowThemeArgs) => ({
 }));
 
 const TypographyComponent = styled.div<{ size?: SnowSize }>(
-  ({ theme }: SnowThemeArgs) => ({
+  ({ theme: { vars: theme } }: SnowThemeArgs) => ({
     '&.h3': {
       fontSize: `${SnowFontSizes.medium * 0.875}px`,
     },

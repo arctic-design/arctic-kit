@@ -52,7 +52,7 @@ const Dot = styled.span<{
   size?: LoaderSize;
   color?: SnowColor;
   disabled?: boolean;
-}>(({ theme }: SnowThemeArgs) => ({
+}>(({ theme: { vars: theme } }: SnowThemeArgs) => ({
   variants: [
     ...LoaderSizeValues.map((size) => ({
       props: { size: size },
@@ -102,7 +102,7 @@ const SpinnerContainer = styled.span<{
   size?: LoaderSize;
   color?: SnowColor;
   disabled?: boolean;
-}>(({ theme }: SnowThemeArgs) => ({
+}>(({ theme: { vars: theme } }: SnowThemeArgs) => ({
   display: 'inline-block',
   '&::after': {
     content: '""',

@@ -1,5 +1,5 @@
 import { SnowTheme } from '../core/theme.types';
-import { getContrastText } from '../utils/colorUtils';
+// import { getContrastText } from '../utils/colorUtils';
 import {
   blue,
   green,
@@ -75,7 +75,7 @@ export const DEFAULT_THEME: SnowTheme = {
     200: 1.25,
     300: 1.5,
   },
-  getContrastText,
+  // getContrastText,
   // verticalTextSpacing: function Spacing(size: SnowSize) {
   //   return this.spacings.main * SnowSpacingMap[size];
   // },

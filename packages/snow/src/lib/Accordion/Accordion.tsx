@@ -2,17 +2,20 @@
 import React from 'react';
 import { styled } from '@pigment-css/react';
 import { AccordionContext } from './AccordionContext';
+import { SnowThemeArgs } from '../../core';
 
-const Container = styled.div<{ spacing?: number }>(({ theme }) => ({
-  fontFamily: theme.font.family.base,
-  display: 'flex',
-  flexDirection: 'column',
-  width: '100%',
-  gap: ({ spacing = 0 }) => `${spacing}px`,
-  svg: {
-    width: 20,
-  },
-}));
+const Container = styled.div<{ spacing?: number }>(
+  ({ theme: { vars: theme } }: SnowThemeArgs) => ({
+    fontFamily: theme.font.family.base,
+    display: 'flex',
+    flexDirection: 'column',
+    width: '100%',
+    gap: ({ spacing = 0 }) => `${spacing}px`,
+    svg: {
+      width: 20,
+    },
+  })
+);
 
 export type AccordionProps = {
   children: React.ReactNode;

@@ -19,7 +19,7 @@ import { Box } from '../Box';
 import { HelperText } from '../HelperText';
 import { SnowThemeArgs } from '../../core';
 
-const Header = styled.div(({ theme }: SnowThemeArgs) => ({
+const Header = styled.div(({ theme: { vars: theme } }: SnowThemeArgs) => ({
   padding: 16,
   display: 'flex',
   alignItems: 'center',
@@ -58,57 +58,61 @@ const Content = styled.div({
   paddingTop: 2,
 });
 
-const AccordionItemContainer = styled.div(({ theme }: SnowThemeArgs) => ({
-  border: `1px solid ${theme.colors.grey[300]}`,
-  borderRadius: '6px',
-  background: theme.colors.neutral[0],
-  '&.active': {
-    border: `1px solid ${theme.colors.grey[900]}`,
-    boxShadow: '0px 1px 12px 0px rgba(0, 0, 0, 0.15)',
-  },
-  '[data-has-spacing="false"]': {
-    borderBottomWidth: 0,
-    '&:last-child': {
-      borderBottomWidth: '1px',
+const AccordionItemContainer = styled.div(
+  ({ theme: { vars: theme } }: SnowThemeArgs) => ({
+    border: `1px solid ${theme.colors.grey[300]}`,
+    borderRadius: '6px',
+    background: theme.colors.neutral[0],
+    '&.active': {
+      border: `1px solid ${theme.colors.grey[900]}`,
+      boxShadow: '0px 1px 12px 0px rgba(0, 0, 0, 0.15)',
     },
-  },
-  '&.hideVerticalBorder': {
-    borderLeftWidth: 0,
-    borderRightWidth: 0,
-    borderRadius: 0,
-  },
-}));
+    '[data-has-spacing="false"]': {
+      borderBottomWidth: 0,
+      '&:last-child': {
+        borderBottomWidth: '1px',
+      },
+    },
+    '&.hideVerticalBorder': {
+      borderLeftWidth: 0,
+      borderRightWidth: 0,
+      borderRadius: 0,
+    },
+  })
+);
 
-const TitleContainer = styled.div(({ theme }: SnowThemeArgs) => ({
-  display: 'flex',
-  justifyContent: 'flex-start',
-  gap: '8px',
-  alignItems: 'flex-start',
-  flexDirection: 'column',
-  '&.reverse': {
-    flexDirection: 'row-reverse',
-  },
-  '.title': {
-    color: theme.colors.grey[900],
-    fontWeight: theme.font.weight.medium,
-    '.subTitle': {
-      fontWeight: theme.font.weight.regular,
+const TitleContainer = styled.div(
+  ({ theme: { vars: theme } }: SnowThemeArgs) => ({
+    display: 'flex',
+    justifyContent: 'flex-start',
+    gap: '8px',
+    alignItems: 'flex-start',
+    flexDirection: 'column',
+    '&.reverse': {
+      flexDirection: 'row-reverse',
     },
-  },
-  '&.active': {
-    '.subTitle': {
+    '.title': {
+      color: theme.colors.grey[900],
       fontWeight: theme.font.weight.medium,
+      '.subTitle': {
+        fontWeight: theme.font.weight.regular,
+      },
     },
-  },
-  '.error': {
-    svg: {
-      color: theme.colors.error.main,
-      width: 16,
+    '&.active': {
+      '.subTitle': {
+        fontWeight: theme.font.weight.medium,
+      },
     },
-  },
-}));
+    '.error': {
+      svg: {
+        color: theme.colors.error.main,
+        width: 16,
+      },
+    },
+  })
+);
 
-const TitleFooter = styled.div(({ theme }: SnowThemeArgs) => ({
+const TitleFooter = styled.div(({ theme: { vars: theme } }: SnowThemeArgs) => ({
   color: theme.colors.grey[700],
   fontSize: theme.font.size[50],
   fontWeight: theme.font.weight.medium,

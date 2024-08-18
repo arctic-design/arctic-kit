@@ -45,7 +45,7 @@ const SelectControl = styled(InputContainer)<{
   color?: SnowColor;
   inputsize?: SnowSize;
   clearable?: boolean;
-}>(({ theme }: SnowThemeArgs) => ({
+}>(({ theme: { vars: theme } }: SnowThemeArgs) => ({
   alignItems: 'center',
   cursor: 'default',
   display: 'flex',

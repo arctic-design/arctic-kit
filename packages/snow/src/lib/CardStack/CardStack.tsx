@@ -26,7 +26,7 @@ const HEADER_HEIGHT = 50;
 const CARD_GAP = 3;
 const REDUCING_WIDTH = 8;
 
-const Container = styled.div(({ theme }: SnowThemeArgs) => ({
+const Container = styled.div(({ theme: { vars: theme } }: SnowThemeArgs) => ({
   borderRadius: 8,
   minWidth: 320,
   background: 'transparent',
@@ -35,7 +35,7 @@ const Container = styled.div(({ theme }: SnowThemeArgs) => ({
   },
 }));
 
-const Title = styled.span(({ theme }: SnowThemeArgs) => ({
+const Title = styled.span(({ theme: { vars: theme } }: SnowThemeArgs) => ({
   fontSize: theme.font.size[300],
   fontWeight: theme.font.weight.bold,
 }));
@@ -56,7 +56,7 @@ const EmptyCard = styled.div<{
   top: number;
   reducedWidth: number;
   left: number;
-}>(({ theme }: SnowThemeArgs) => ({
+}>(({ theme: { vars: theme } }: SnowThemeArgs) => ({
   display: 'flex',
   alignItems: 'center',
   justifyContent: 'flex-start',
@@ -75,7 +75,7 @@ const MotionEmptyCard = motion(EmptyCard);
 
 const HeaderCard = styled.div<{
   zindex: number;
-}>(({ theme }: SnowThemeArgs) => ({
+}>(({ theme: { vars: theme } }: SnowThemeArgs) => ({
   display: 'flex',
   alignItems: 'center',
   justifyContent: 'flex-start',

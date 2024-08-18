@@ -35,7 +35,7 @@ type DrawerContentProps = {
 };
 
 const Container = styled.div<DrawerContentProps>(
-  ({ theme }: SnowThemeArgs) => ({
+  ({ theme: { vars: theme } }: SnowThemeArgs) => ({
     background: theme.colors.neutral[0],
     boxShadow: theme.shadow.main,
     display: 'flex',

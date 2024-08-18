@@ -110,7 +110,7 @@ const getSizeVariantStyles = (theme: SnowTheme) =>
 export const BaseInput = styled.input<{
   inputsize?: SnowSize;
   multiline?: boolean;
-}>(({ theme }: SnowThemeArgs) => ({
+}>(({ theme: { vars: theme } }: SnowThemeArgs) => ({
   padding: 8,
   width: '100%',
   boxSizing: 'border-box',
