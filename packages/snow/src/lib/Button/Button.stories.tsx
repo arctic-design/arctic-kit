@@ -88,3 +88,11 @@ export const Rounded: Story = {
     rounded: true,
   },
 };
+
+export const RoundedWithIcons: Story = {
+  args: {
+    children: 'Button',
+    rounded: true,
+    prefix: <ArrowLeftIcon />,
+  },
+};
