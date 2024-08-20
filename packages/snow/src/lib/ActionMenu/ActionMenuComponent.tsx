@@ -35,7 +35,6 @@ import { styled } from '@pigment-css/react';
 
 import { Box } from '../Box';
 import { SnowThemeArgs } from '../../core';
-import { Center } from '../Layout';
 
 const ActionMenuContainer = styled.div(
   ({ theme: { vars: theme } }: SnowThemeArgs) => ({
@@ -50,7 +49,7 @@ const ActionMenuContainer = styled.div(
 
 export const ActionMenuComponent = forwardRef<
   HTMLButtonElement,
-  ActionMenuProps & Omit<React.HTMLProps<HTMLButtonElement>, 'prefix'>
+  ActionMenuProps & React.HTMLProps<HTMLButtonElement>
 >(
   (
     {
@@ -62,7 +61,6 @@ export const ActionMenuComponent = forwardRef<
       placement = 'bottom-start',
       itemSize,
       id = 'action-menu',
-      prefix,
       ...props
     },
     forwardedRef
@@ -202,10 +200,7 @@ export const ActionMenuComponent = forwardRef<
               <>
                 {label && (
                   <Box id={`${rootId}-content-label`} as="span">
-                    <Center>
-                      {prefix}
-                      {label}
-                    </Center>
+                    {label}
                   </Box>
                 )}
                 {!isNested && (

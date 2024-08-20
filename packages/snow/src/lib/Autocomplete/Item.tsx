@@ -14,15 +14,12 @@ export const Item = forwardRef<
   return (
     <div
       ref={ref}
-      role="option"
+      role='option'
       id={id}
       aria-selected={active}
-      className="select-menu-item"
+      className='select-menu-item'
       {...rest}
       style={{
-        background: active
-          ? 'var(--snow-colors-primary-50, lightblue)'
-          : 'none',
         ...rest.style,
       }}
     >

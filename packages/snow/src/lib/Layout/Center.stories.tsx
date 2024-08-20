@@ -27,14 +27,7 @@ type Story = StoryObj<typeof meta>;
 function Render(args: Story['args']) {
   const { children, ...otherProps } = args as PropsWithChildren<CenterProps>;
   return (
-    <Box
-      sx={{
-        minWidth: 450,
-        border: '1px var(--snow-colors-primary-main) dashed',
-        padding: 12,
-        borderRadius: 4,
-      }}
-    >
+    <Box sx={{ minWidth: 450 }}>
       <Center {...otherProps}>{children}</Center>
     </Box>
   );

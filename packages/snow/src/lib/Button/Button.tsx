@@ -7,7 +7,12 @@ import {
 } from 'react';
 import { styled } from '@pigment-css/react';
 
-import { DefaultSnowProps, SnowColorValues, SnowSizeValues } from '../types';
+import {
+  DefaultSnowProps,
+  SnowColorValues,
+  SnowSize,
+  SnowSizeValues,
+} from '../types';
 import { SnowHeights, SnowSpacingMap } from '../constants';
 import { ButtonGroupContext } from '../ButtonGroup/ButtonGroupContext';
 import { ButtonVariants } from './types';
@@ -90,11 +95,10 @@ export interface ButtonProps extends DefaultSnowProps {
   tabIndex?: number;
   role?: React.AriaRole;
   className?: string;
-  prefix?: React.ReactNode;
-  suffix?: React.ReactNode;
+  leadingSection?: React.ReactNode;
+  trailingSection?: React.ReactNode;
   loading?: boolean;
   fillSvg?: boolean;
-  rounded?: boolean;
 }
 
 const StyledButton = styled.button<ButtonProps>(
@@ -108,7 +112,6 @@ const StyledButton = styled.button<ButtonProps>(
     borderRadius: '4px',
     display: 'flex',
     alignItems: 'center',
-    justifyContent: 'center',
     color: theme.colors.neutral[0],
     backgroundColor: theme.colors.primary.main,
     boxShadow: theme.shadow.main,
@@ -117,7 +120,7 @@ const StyledButton = styled.button<ButtonProps>(
     cursor: 'pointer',
     outline: 'none',
     svg: {
-      width: 16,
+      width: 20,
     },
     '&[data-fill-svg="true"]': {
       svg: {
@@ -196,11 +199,6 @@ const StyledButton = styled.button<ButtonProps>(
         },
       },
     },
-    height: `${SnowHeights['medium']}px`,
-    padding: `calc(${theme.spacings.main} * ${SnowSpacingMap['medium']}) calc(${
-      theme.spacings.main
-    } * ${SnowSpacingMap['medium'] * 2});`,
-
     variants: [
       {
         props: { disabled: true },
@@ -208,12 +206,6 @@ const StyledButton = styled.button<ButtonProps>(
       },
       ...getColorVariantStyles(theme),
       ...getSizeVariantStyles(theme),
-      {
-        props: { rounded: true },
-        style: {
-          borderRadius: 100,
-        },
-      },
     ],
   })
 );
@@ -229,8 +221,8 @@ const Button = forwardRef<HTMLButtonElement, PropsWithChildren<ButtonProps>>(
       type = 'button',
       variant: btnVariant = 'filled',
       className = '',
-      prefix,
-      suffix,
+      leadingSection,
+      trailingSection,
       role = 'button',
       id = 'button',
       loading = false,
@@ -270,9 +262,9 @@ const Button = forwardRef<HTMLButtonElement, PropsWithChildren<ButtonProps>>(
         {...props}
       >
         {loading && <Loader size="extraSmall" disabled={disabled} />}
-        {prefix}
+        {leadingSection}
         {children}
-        {suffix}
+        {trailingSection}
       </StyledButton>
     );
   }
