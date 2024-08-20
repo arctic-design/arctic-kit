@@ -1,13 +1,13 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import { Center, CenterProps } from './Center';
-import { ChevronLeftIcon } from '@heroicons/react/20/solid';
+import { Stack, StackProps } from './Stack';
 import { PropsWithChildren } from 'react';
 import { Box } from '../Box';
+import { Button } from '../Button';
 
 // More on how to set up stories at: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
-const meta: Meta<typeof Center> = {
-  title: 'Layout/Center',
-  component: Center,
+const meta: Meta<typeof Stack> = {
+  title: 'Layout/Stack',
+  component: Stack,
   parameters: {
     // Optional parameter to center the component in the Canvas. More info: https://storybook.js.org/docs/react/configure/story-layout
     layout: 'centered',
@@ -18,14 +18,14 @@ const meta: Meta<typeof Center> = {
   argTypes: {
     // backgroundColor: { control: 'color' },
   },
-} satisfies Meta<typeof Center>;
+} satisfies Meta<typeof Stack>;
 
 export default meta;
 
 type Story = StoryObj<typeof meta>;
 
 function Render(args: Story['args']) {
-  const { children, ...otherProps } = args as PropsWithChildren<CenterProps>;
+  const { children, ...otherProps } = args as PropsWithChildren<StackProps>;
   return (
     <Box
       sx={{
@@ -35,14 +35,22 @@ function Render(args: Story['args']) {
         borderRadius: 4,
       }}
     >
-      <Center {...otherProps}>{children}</Center>
+      <Stack {...otherProps}>{children}</Stack>
     </Box>
   );
 }
 
 export const Default: Story = {
   args: {
-    children: 'This content will be center aligned with display flex',
+    children: (
+      <>
+        <Button>First</Button>
+        <Button>Second</Button>
+        <Button>Third</Button>
+        <Button>Fourth</Button>
+      </>
+    ),
+    spacing: 2,
   },
   render: Render,
 };
@@ -51,12 +59,14 @@ export const Inline: Story = {
   args: {
     children: (
       <>
-        <ChevronLeftIcon />
-        <div>Previous Screen</div>
+        <Button>First</Button>
+        <Button>Second</Button>
+        <Button>Third</Button>
+        <Button>Fourth</Button>
       </>
     ),
     inline: true,
-    spacing: 1,
+    spacing: 2,
   },
   render: Render,
 };

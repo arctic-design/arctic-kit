@@ -18,7 +18,7 @@ export const ActionItem = styled.button<{
     fontFamily: theme.font.family.base,
     color: theme.colors.neutral[1000],
     svg: {
-      width: 16,
+      width: 14,
     },
   },
   '&.RootMenu': {
@@ -115,9 +115,11 @@ export const ActionItem = styled.button<{
     ...SnowSizeValues.map((size) => ({
       props: { itemSize: size },
       style: {
-        '&.RootMenu': {
+        '&.RootMenu, &.MenuItem': {
           height: `${SnowHeights[size]}px`,
-          padding: `calc(${theme.spacings.main} * ${SnowSpacingMap[size]});`,
+          padding: `calc(${theme.spacings.main} * ${
+            SnowSpacingMap[size]
+          }) calc(${theme.spacings.main} * ${SnowSpacingMap[size] * 1.25});`,
         },
       },
     })),
