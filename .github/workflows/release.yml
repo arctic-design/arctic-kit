@@ -31,9 +31,9 @@ jobs:
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
 
-      - name: Clear the nx cache so the build happens again
-        run: npx nx reset
-        shell: bash
+      # - name: Clear the nx cache so the build happens again
+      #   run: npx nx reset
+      #   shell: bash
 
       - name: Create a github release
         if: github.ref == 'refs/heads/main'
