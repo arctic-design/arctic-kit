@@ -2,6 +2,7 @@ import type { Meta, StoryObj } from '@storybook/react';
 import { Button } from './Button';
 import { PropsWithChildren } from 'react';
 import { Box } from '../Box';
+import { ArrowLeftIcon, ArrowRightIcon } from '@heroicons/react/24/outline';
 
 const meta: Meta<typeof Button> = {
   title: 'Button',
@@ -34,10 +35,10 @@ function WithIconsRender(args: PropsWithChildren<Story['args']>) {
     <>
       Primary Buttons with Icons
       <Box sx={{ display: 'flex', gap: 10, margin: 6 }}>
-        <Button leadingSection={<DownIcon />} {...otherProps}>
+        <Button prefix={<ArrowLeftIcon />} {...otherProps}>
           {children}
         </Button>
-        <Button trailingSection={<DownIcon />} {...otherProps}>
+        <Button suffix={<ArrowRightIcon />} {...otherProps}>
           {children}
         </Button>
       </Box>
@@ -45,18 +46,10 @@ function WithIconsRender(args: PropsWithChildren<Story['args']>) {
       <br />
       Outlined Buttons with Icons
       <Box sx={{ display: 'flex', gap: 10, margin: 6 }}>
-        <Button
-          variant="outlined"
-          leadingSection={<DownIcon />}
-          {...otherProps}
-        >
+        <Button variant="outlined" prefix={<ArrowLeftIcon />} {...otherProps}>
           {children}
         </Button>
-        <Button
-          variant="outlined"
-          trailingSection={<DownIcon />}
-          {...otherProps}
-        >
+        <Button variant="outlined" suffix={<ArrowRightIcon />} {...otherProps}>
           {children}
         </Button>
       </Box>
@@ -99,4 +92,11 @@ export const WithIcons: Story = {
     fillSvg: true,
   },
   render: WithIconsRender,
+};
+
+export const Rounded: Story = {
+  args: {
+    children: 'Button',
+    rounded: true,
+  },
 };

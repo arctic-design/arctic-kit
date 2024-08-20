@@ -87,6 +87,13 @@ export function Autocomplete({
     }
   }, [open, inputValue, onChange, options]);
 
+  useEffect(() => {
+    if (!value) {
+      setInputValue('');
+      setOpen(false);
+    }
+  }, [value]);
+
   const onInputValueChange = useCallback((option: string | OptionType) => {
     const value = typeof option === 'string' ? option : option.value;
     setInputValue(value);

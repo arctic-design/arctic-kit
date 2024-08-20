@@ -11,9 +11,10 @@ const Container = styled.div<{
   color?: SnowColor;
 }>(({ theme: { vars: theme } }: SnowThemeArgs) => ({
   display: 'flex',
-  justifyContent: 'center',
-  alignItems: 'center',
-  gap: 8,
+  flexDirection: 'column',
+  justifyContent: 'flex-start',
+  alignItems: 'stretch',
+  gap: 0,
   svg: {
     width: 20,
   },
@@ -22,7 +23,7 @@ const Container = styled.div<{
     ...SpacingMap.map((spacing) => ({
       props: { spacing },
       style: {
-        padding: `${spacing * 0.5 * 16}px`,
+        gap: `${spacing * 4}px`,
       },
     })),
     ...SnowColorValues.map((color) => ({
@@ -36,16 +37,16 @@ const Container = styled.div<{
   ],
 }));
 
-export type CenterProps = LayoutType & {
+export type StackProps = LayoutType & {
   inline?: boolean;
 };
 
-export const Center = ({
+export const Stack = ({
   children,
   inline = false,
   spacing = 0,
   color,
-}: PropsWithChildren<CenterProps>) => {
+}: PropsWithChildren<StackProps>) => {
   return (
     <Container inline={inline} spacing={spacing} color={color}>
       {children}
