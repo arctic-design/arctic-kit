@@ -3,13 +3,16 @@ import * as path from 'path';
 import { mergeConfig, searchForWorkspaceRoot } from 'vite';
 
 const config: StorybookConfig = {
-  stories: ['../src/lib/**/*.stories.@(js|jsx|ts|tsx|mdx)'],
+  stories: ['../src/lib/**/*.@(mdx|stories.@(js|jsx|ts|tsx))'],
+
   addons: [
     '@storybook/addon-links',
     '@storybook/addon-essentials',
     '@storybook/addon-interactions',
     '@storybook/addon-a11y',
+    '@chromatic-com/storybook'
   ],
+
   framework: {
     name: '@storybook/react-vite',
     options: {
@@ -18,6 +21,7 @@ const config: StorybookConfig = {
       },
     },
   },
+
   viteFinal: async (config, { configType }) => {
     return mergeConfig(config, {
       resolve: {
@@ -39,6 +43,12 @@ const config: StorybookConfig = {
       },
     });
   },
+
+  docs: {},
+
+  typescript: {
+    reactDocgen: 'react-docgen-typescript'
+  }
 };
 
 export default config;
