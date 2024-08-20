@@ -3,7 +3,8 @@ import { styled } from '@pigment-css/react';
 import { LayoutType } from './types';
 import { SnowColor, SnowColorValues } from '../types';
 import { SnowThemeArgs } from '../../core';
-import { SpacingMap } from './constants';
+
+const SpacingMap = [1, 2, 3, 4, 5, 6, 7, 8];
 
 const Container = styled.div<{
   inline?: boolean;
@@ -13,7 +14,6 @@ const Container = styled.div<{
   display: 'flex',
   justifyContent: 'center',
   alignItems: 'center',
-  gap: 8,
   svg: {
     width: 20,
   },

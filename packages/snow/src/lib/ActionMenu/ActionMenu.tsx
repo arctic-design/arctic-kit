@@ -43,7 +43,6 @@ export const ActionMenu = forwardRef<HTMLButtonElement, ActionMenuProps>(
       <ActionMenuComponent
         id={`${id}-${parentId}`}
         data-testid={`${id}-${parentId}`}
-        itemSize={grpSize || itemSize}
         {...props}
         ref={ref}
       />

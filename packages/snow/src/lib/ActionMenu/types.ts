@@ -11,5 +11,4 @@ export interface ActionMenuProps {
   placement?: ActionMenuPlacement;
   itemSize?: SnowSize;
   id?: string;
-  prefix?: React.ReactNode;
 }

@@ -6,12 +6,12 @@ describe('DrawerContent', () => {
   it('renders without crashing', () => {
     render(
       <Drawer open>
-        <DrawerContent id="default-drawer-content" />
+        <DrawerContent />
       </Drawer>
     );
     expect(true).toBeTruthy();
     waitFor(() => {
-      const content = screen.getByTestId('default-drawer-content');
+      const content = screen.getByTestId('drawer-content');
       expect(content).toBeInTheDocument();
     });
   });
@@ -19,12 +19,12 @@ describe('DrawerContent', () => {
   it('renders with size medium prop', () => {
     render(
       <Drawer open>
-        <DrawerContent size="medium" id="medium-drawer-content" />
+        <DrawerContent size="medium" />
       </Drawer>
     );
 
     waitFor(() => {
-      const content = screen.getByTestId('medium-drawer-content');
+      const content = screen.getByTestId('drawer-content');
       expect(content).toHaveStyle(`width: ${DrawerSizeMap.medium}`);
     });
   });
@@ -32,12 +32,12 @@ describe('DrawerContent', () => {
   it('renders with size fullWidth prop', () => {
     render(
       <Drawer open>
-        <DrawerContent size="fullWidth" id="fullWidth-drawer-content" />
+        <DrawerContent size="fullWidth" />
       </Drawer>
     );
 
     waitFor(() => {
-      const content = screen.getByTestId('fullWidth-drawer-content');
+      const content = screen.getByTestId('drawer-content');
       expect(content).toHaveStyle(`width: ${DrawerSizeMap.fullWidth}`);
     });
   });
@@ -45,12 +45,12 @@ describe('DrawerContent', () => {
   it('renders with position prop', () => {
     render(
       <Drawer open>
-        <DrawerContent position="left" id="position-left-drawer-content" />
+        <DrawerContent position="left" />
       </Drawer>
     );
 
     waitFor(() => {
-      const content = screen.getByTestId('position-left-drawer-content');
+      const content = screen.getByTestId('drawer-content');
 
       expect(content).toHaveClass('left');
     });

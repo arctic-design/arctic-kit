@@ -6,10 +6,6 @@ export type TextInputProps = Omit<BaseInputProps, 'multiline' | 'onChange'> & {
   onChange?: (event: ChangeEvent<HTMLInputElement>) => void;
   onBlur?: (event: ChangeEvent<HTMLInputElement>) => void;
   type?: React.HTMLInputTypeAttribute | undefined;
-  prefix?: React.ReactNode;
-  suffix?: React.ReactNode;
-  prefixProps?: React.HTMLAttributes<'div'>;
-  suffixProps?: React.HTMLAttributes<'div'>;
 };
 
 const TextInput = forwardRef<HTMLInputElement, TextInputProps>(
@@ -17,7 +13,7 @@ const TextInput = forwardRef<HTMLInputElement, TextInputProps>(
     {
       errorText,
       label,
-      size = 'medium',
+      size,
       required,
       className,
       containerClassName,
@@ -25,10 +21,6 @@ const TextInput = forwardRef<HTMLInputElement, TextInputProps>(
       id = 'text-input',
       readOnly = false,
       type = 'text',
-      prefix,
-      suffix,
-      prefixProps,
-      suffixProps,
       ...otherProps
     },
     ref
@@ -44,11 +36,6 @@ const TextInput = forwardRef<HTMLInputElement, TextInputProps>(
         label={label}
         required={required}
         errorText={errorText}
-        prefix={prefix}
-        suffix={suffix}
-        prefixProps={prefixProps}
-        suffixProps={suffixProps}
-        inputsize={size}
       >
         <BaseInput
           as="input"
@@ -60,8 +47,6 @@ const TextInput = forwardRef<HTMLInputElement, TextInputProps>(
           data-testid={`${id}`}
           readOnly={readOnly}
           aria-readonly={readOnly ? 'true' : undefined}
-          data-leftsection={!!prefix}
-          data-rightsection={!!suffix}
           {...otherProps}
         />
       </BaseInputContainer>
