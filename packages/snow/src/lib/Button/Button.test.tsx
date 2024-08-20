@@ -37,10 +37,10 @@ describe('Button Component', () => {
     expect(onClickMock).toHaveBeenCalled();
   });
 
-  it('renders leadingSection', () => {
+  it('renders prefix', () => {
     const { getByTestId } = render(
       <Button
-        leadingSection={
+        prefix={
           <span data-testid="icon" role="img" aria-label="icon">
             🚀
           </span>
@@ -53,10 +53,10 @@ describe('Button Component', () => {
     expect(icon).toBeInTheDocument();
   });
 
-  it('renders trailingSection', () => {
+  it('renders suffix', () => {
     const { getByTestId } = render(
       <Button
-        trailingSection={
+        suffix={
           <span data-testid="icon" role="img" aria-label="icon">
             🚀
           </span>

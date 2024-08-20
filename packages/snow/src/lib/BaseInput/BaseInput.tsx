@@ -6,16 +6,55 @@ import { HelperText } from '../HelperText';
 import { RequiredIndicator } from '../Indicators';
 import { SnowTheme, SnowThemeArgs } from '../../core';
 import { SnowHeights } from '../constants';
+import { Box } from '../Box';
 
-const Container = styled.div`
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  text-align: left;
-  label {
-    font-weight: 500;
-  }
-`;
+const getSizeVariantStyles = (theme: SnowTheme) =>
+  SnowSizeValues.map((sizeItem) => ({
+    props: { inputsize: sizeItem },
+    style: {
+      height: `${SnowHeights[sizeItem]}px`,
+    },
+  }));
+
+const Container = styled.div({
+  display: 'flex',
+  flexDirection: 'column',
+  width: '100%',
+  textAlign: 'left',
+  label: {
+    fontWeight: 500,
+  },
+});
+
+type InputSectionType = React.HTMLAttributes<'div'> & { inputsize?: SnowSize };
+
+const InputSection = styled.div<InputSectionType>(
+  ({ theme: { vars: theme } }: SnowThemeArgs) => ({
+    position: 'absolute',
+    width: 32,
+    height: 32,
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+    color: theme.colors.grey[700],
+    svg: {
+      width: 14,
+    },
+    variants: [...getSizeVariantStyles(theme)],
+    "&[data-right='true']": {
+      right: 0,
+    },
+    "&[data-pointer-events='true']": {
+      '&:hover': {
+        svg: {
+          backgroundColor: theme.colors.grey[50],
+          padding: 4,
+          borderRadius: 2,
+        },
+      },
+    },
+  })
+);
 
 export type BaseInputProps = {
   label?: string;
@@ -71,6 +110,11 @@ type BaseInputContainerProps = {
   label?: string;
   id: string;
   multiline?: boolean;
+  prefix?: React.ReactNode;
+  inputsize?: SnowSize;
+  suffix?: React.ReactNode;
+  prefixProps?: React.HTMLAttributes<'div'>;
+  suffixProps?: React.HTMLAttributes<'div'>;
 };
 export function BaseInputContainer(props: BaseInputContainerProps) {
   const {
@@ -81,6 +125,11 @@ export function BaseInputContainer(props: BaseInputContainerProps) {
     label,
     id,
     required,
+    prefix,
+    suffix,
+    inputsize,
+    prefixProps = {},
+    suffixProps = {},
     // multiline = false,
   } = props;
   return (
@@ -93,19 +142,33 @@ export function BaseInputContainer(props: BaseInputContainerProps) {
         // multiline={multiline}
         htmlFor={id}
       />
-      {children}
+      <Box sx={{ position: 'relative' }}>
+        {prefix && (
+          <InputSection
+            {...prefixProps}
+            data-pointer-events={prefixProps.style?.pointerEvents === 'auto'}
+            inputsize={inputsize}
+          >
+            {prefix}
+          </InputSection>
+        )}
+        {suffix && (
+          <InputSection
+            {...suffixProps}
+            data-right={true}
+            data-pointer-events={suffixProps.style?.pointerEvents === 'auto'}
+            inputsize={inputsize}
+          >
+            {suffix}
+          </InputSection>
+        )}
+        {children}
+      </Box>
+
       {errorText && <HelperText>{errorText}</HelperText>}
     </Container>
   );
 }
-
-const getSizeVariantStyles = (theme: SnowTheme) =>
-  SnowSizeValues.map((sizeItem) => ({
-    props: { inputsize: sizeItem },
-    style: {
-      height: `${SnowHeights[sizeItem]}px`,
-    },
-  }));
 
 export const BaseInput = styled.input<{
   inputsize?: SnowSize;
@@ -156,5 +219,12 @@ export const BaseInput = styled.input<{
   },
   '&.error': {
     borderColor: theme.colors.error[500],
+  },
+
+  "&[data-leftsection='true']": {
+    paddingInlineStart: 30,
+  },
+  "&[data-rightsection='true']": {
+    paddingInlineEnd: 30,
   },
 }));
