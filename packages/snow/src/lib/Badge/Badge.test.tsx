@@ -4,8 +4,8 @@ import { Badge } from './Badge';
 
 describe('Badge Component', () => {
   it('renders with default color', () => {
-    const { container } = render(<Badge />);
-    const badge = container.firstChild as HTMLElement;
+    const { getByTestId } = render(<Badge id="default-badge" />);
+    const badge = getByTestId('default-badge');
     expect(badge).toBeInTheDocument();
     waitFor(() => {
       expect(badge).toHaveStyle(
@@ -15,8 +15,10 @@ describe('Badge Component', () => {
   });
 
   it('renders with specified color', () => {
-    const { container } = render(<Badge color="success" />);
-    const badge = container.firstChild as HTMLElement;
+    const { getByTestId } = render(
+      <Badge color="success" id="success-badge" />
+    );
+    const badge = getByTestId('success-badge');
     expect(badge).toBeInTheDocument();
 
     waitFor(() => {
