@@ -3,14 +3,6 @@
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
   "sourceRoot": "packages/colors/src",
   "projectType": "library",
-  "release": {
-    "version": {
-      "generatorOptions": {
-        "packageRoot": "packages/colors",
-        "currentVersionResolver": "git-tag"
-      }
-    }
-  },
   "tags": [],
   "targets": {
     "build": {
@@ -25,11 +17,6 @@
         "assets": [
           "packages/colors/*.md"
         ]
-      }
-    },
-    "nx-release-publish": {
-      "options": {
-        "packageRoot": "dist/{projectRoot}"
       }
     }
   }
