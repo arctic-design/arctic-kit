@@ -34,12 +34,20 @@ export const ArrowButton = styled.button(
     alignItems: 'center',
     backgroundColor: theme.colors.neutral[0],
     border: 'none',
+    '&:focus': {
+      '&:not(:disabled)': {
+        outlineOffset: 1.5,
+        outlineStyle: 'solid',
+        outlineWidth: 1,
+        outlineColor: theme.colors.primary.main,
+      },
+    },
     '&:hover': {
       backgroundColor: theme.colors.grey[100],
       cursor: 'pointer',
     },
     svg: {
-      width: 20,
+      width: 16,
     },
   })
 );
@@ -58,6 +66,16 @@ export const DayButton = styled.button(
     fontFamily: theme.font.family.base,
     backgroundColor: theme.colors.neutral[0],
     borderRadius: 6,
+
+    '&:focus': {
+      '&:not(:disabled)': {
+        outlineOffset: 1.5,
+        outlineStyle: 'solid',
+        outlineWidth: 1,
+        outlineColor: theme.colors.primary.main,
+      },
+    },
+
     '&:hover': {
       backgroundColor: theme.colors.grey[100],
       cursor: 'pointer',

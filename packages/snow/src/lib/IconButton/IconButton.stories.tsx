@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import { IconButton } from './IconButton';
-import { FaceSmileIcon } from '@heroicons/react/20/solid';
+import { FaceSmileIcon } from '@arctic-kit/icons';
 
 const meta: Meta<typeof IconButton> = {
   title: 'IconButton',

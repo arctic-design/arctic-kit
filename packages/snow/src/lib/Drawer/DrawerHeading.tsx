@@ -1,6 +1,6 @@
 'use client';
 import { styled } from '@pigment-css/react';
-import { XMarkIcon } from '@heroicons/react/20/solid';
+import { XMarkIcon } from '@arctic-kit/icons';
 import React from 'react';
 import { useModalContext } from '../Modals/useModalContext';
 import { HeaderCloseButton } from '../Button/HeaderCloseButton';

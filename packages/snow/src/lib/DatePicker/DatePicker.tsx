@@ -1,5 +1,5 @@
 'use client';
-import { CalendarDaysIcon } from '@heroicons/react/20/solid';
+import { CalendarDaysIcon } from '@arctic-kit/icons';
 import { Popover, PopoverContent, PopoverTrigger } from '../Popover';
 import { useState } from 'react';
 import { Calendar } from '../Calendar/Calendar';

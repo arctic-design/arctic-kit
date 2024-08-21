@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from '@storybook/react';
 import { Button } from './Button';
 import { PropsWithChildren } from 'react';
 import { Box } from '../Box';
-import { ArrowLeftIcon, ArrowRightIcon } from '@heroicons/react/24/outline';
+import { ArrowLeftIcon, ArrowRightIcon } from '@arctic-kit/icons';
 
 const meta: Meta<typeof Button> = {
   title: 'Button',

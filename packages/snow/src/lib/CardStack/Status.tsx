@@ -1,5 +1,5 @@
 import { styled } from '@pigment-css/react';
-import { CheckIcon, ExclamationTriangleIcon } from '@heroicons/react/20/solid';
+import { CheckIcon, ExclamationTriangleIcon } from '@arctic-kit/icons';
 
 import { Chip } from '../Chip';
 import { SnowThemeArgs } from '../../core';

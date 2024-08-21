@@ -12,7 +12,7 @@ const Container = styled.div<{ spacing?: number }>(
     width: '100%',
     gap: ({ spacing = 0 }) => `${spacing}px`,
     svg: {
-      width: 20,
+      width: 16,
     },
   })
 );

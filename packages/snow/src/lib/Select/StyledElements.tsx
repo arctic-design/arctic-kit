@@ -86,8 +86,7 @@ export const SelectIndicator = styled.div({
 
   '& svg': {
     '&:hover': {
-      fill: 'rgb(102, 102, 102)',
-      stroke: 'rgb(102, 102, 102)',
+      color: 'rgb(102, 102, 102)',
     },
   },
 });
@@ -158,8 +157,7 @@ export const SelectInputTagItem = styled.div<{ inputsize?: SnowSize }>(
     height: SnowHeights['medium'] - 8,
 
     svg: {
-      fill: '#3f4443',
-      stroke: '#3f4443',
+      color: '#3f4443',
       padding: '0px 2px',
       display: 'flex',
       justifyContent: 'center',

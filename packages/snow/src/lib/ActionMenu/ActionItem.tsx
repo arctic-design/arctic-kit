@@ -30,16 +30,13 @@ export const ActionItem = styled.button<{
     justifyContent: 'center',
     alignItems: 'center',
     boxShadow: theme.shadow.main,
-    svg: {
-      fill: theme.colors.neutral[1000],
-    },
 
     '&[data-open], &:hover': {
       cursor: 'pointer',
       backgroundColor: theme.colors.grey[50],
       borderColor: theme.colors.grey[700],
       svg: {
-        fill: theme.colors.neutral[1000],
+        color: theme.colors.neutral[1000],
       },
     },
     '&[aria-disabled="true"]': {
@@ -48,7 +45,7 @@ export const ActionItem = styled.button<{
       color: theme.colors.grey[600],
       cursor: 'not-allowed',
       svg: {
-        fill: theme.colors.grey[600],
+        color: theme.colors.grey[600],
       },
     },
     position: 'relative',
@@ -98,12 +95,12 @@ export const ActionItem = styled.button<{
         '&.RootMenu': {
           border: `1px solid ${theme.colors[color].main}`,
           svg: {
-            fill: theme.colors[color].main,
+            color: theme.colors[color].main,
           },
           '&[data-open], &:hover': {
             borderColor: theme.colors[color][700],
             svg: {
-              fill: theme.colors[color][700],
+              color: theme.colors[color][700],
             },
           },
           '&:focus::after': {

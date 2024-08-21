@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import { Center, CenterProps } from './Center';
-import { ChevronLeftIcon } from '@heroicons/react/20/solid';
+import { ChevronLeftIcon } from '@arctic-kit/icons';
 import { PropsWithChildren } from 'react';
 import { Box } from '../Box';
 
