@@ -31,7 +31,6 @@ __metadata:
     "@chromatic-com/storybook": "npm:^1"
     "@floating-ui/react": "npm:^0.26.19"
     "@fontsource/inter": "npm:^5.0.20"
-    "@heroicons/react": "npm:^2.1.5"
     "@nx/devkit": "npm:19.6.1"
     "@nx/eslint": "npm:19.6.1"
     "@nx/eslint-plugin": "npm:19.6.1"
@@ -85,6 +84,7 @@ __metadata:
     prettier: "npm:^2.8.8"
     react: "npm:18.3.1"
     react-dom: "npm:18.3.1"
+    sass: "npm:^1.55.0"
     storybook: "npm:^8.2.9"
     ts-node: "npm:10.9.2"
     tslib: "npm:^2.6.3"
@@ -2195,15 +2195,6 @@ __metadata:
   dependencies:
     "@hapi/hoek": "npm:^9.0.0"
   checksum: 10c0/b16b06d9357947149e032bdf10151eb71aea8057c79c4046bf32393cb89d0d0f7ca501c40c0f7534a5ceca078de0700d2257ac855c15e59fe4e00bba2f25c86f
-  languageName: node
-  linkType: hard
-
-"@heroicons/react@npm:^2.1.5":
-  version: 2.1.5
-  resolution: "@heroicons/react@npm:2.1.5"
-  peerDependencies:
-    react: ">= 16"
-  checksum: 10c0/d0ca2d017545da103ed8e90e9e6679d46329c1b09bb4c06ff509b0fe7cfbba7034409ea24b0469fabd2a0a9b144e8e717f58de924615e0b0a1bed7b51fcc5940
   languageName: node
   linkType: hard
 
@@ -17176,7 +17167,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"sass@npm:^1.42.1":
+"sass@npm:^1.42.1, sass@npm:^1.55.0":
   version: 1.77.8
   resolution: "sass@npm:1.77.8"
   dependencies:

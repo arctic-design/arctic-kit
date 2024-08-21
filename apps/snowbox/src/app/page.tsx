@@ -35,7 +35,7 @@ import {
   FaceSmileIcon,
   ForwardIcon,
   PauseIcon,
-} from '@heroicons/react/20/solid';
+} from '@arctic-kit/icons';
 import { ControlContainer } from '../ui/ControlContainer';
 import { RadioGroupView } from '../ui/RadioGroupView';
 import { CheckboxView } from '../ui/CheckboxView';

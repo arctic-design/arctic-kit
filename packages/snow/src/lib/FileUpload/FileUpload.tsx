@@ -1,11 +1,7 @@
 'use client';
 import { styled } from '@pigment-css/react';
 import { ChangeEvent, forwardRef, useRef } from 'react';
-import {
-  CloudArrowUpIcon,
-  PaperClipIcon,
-  TrashIcon,
-} from '@heroicons/react/24/outline';
+import { CloudArrowUpIcon, PaperClipIcon, TrashIcon } from '@arctic-kit/icons';
 
 import { HelperText } from '../HelperText';
 import { Box } from '../Box';
@@ -253,5 +249,3 @@ export const FileUpload = forwardRef<HTMLDivElement, FileUploadProps>(
     );
   }
 );
-
-FileUpload.displayName = 'FileUpload';

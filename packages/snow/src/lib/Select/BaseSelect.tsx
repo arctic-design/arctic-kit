@@ -16,7 +16,7 @@ import {
   FloatingPortal,
 } from '@floating-ui/react';
 
-import { XMarkIcon, ChevronDownIcon } from '@heroicons/react/20/solid';
+import { XMarkIcon, ChevronDownIcon } from '@arctic-kit/icons';
 import { SnowColor, SnowSize } from '../types';
 import InputContainer from './InputContainer';
 import { BaseSelectProps, SelectKeyValue } from './types';

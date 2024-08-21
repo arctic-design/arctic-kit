@@ -9,7 +9,7 @@ import {
   CheckIcon,
   PencilIcon,
   CreditCardIcon,
-} from '@heroicons/react/20/solid';
+} from '@arctic-kit/icons';
 import { SegmentedControlButton } from './SegmentedControlButton';
 import { Box } from '../Box';
 import { IconButton } from '../IconButton';

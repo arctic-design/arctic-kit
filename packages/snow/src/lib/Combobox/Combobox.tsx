@@ -2,7 +2,7 @@ import {
   ChevronUpDownIcon,
   MagnifyingGlassIcon,
   XMarkIcon,
-} from '@heroicons/react/24/outline';
+} from '@arctic-kit/icons';
 import { Autocomplete, AutocompleteProps } from '../Autocomplete';
 import { useCallback, useMemo } from 'react';
 

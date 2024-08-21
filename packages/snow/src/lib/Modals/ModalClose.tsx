@@ -1,7 +1,7 @@
 import React from 'react';
 import { useModalContext } from './useModalContext';
 
-import { XMarkIcon } from '@heroicons/react/20/solid';
+import { XMarkIcon } from '@arctic-kit/icons';
 import { HeaderCloseButton } from '../Button/HeaderCloseButton';
 
 export const ModalClose = React.forwardRef<

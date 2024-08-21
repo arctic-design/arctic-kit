@@ -22,7 +22,7 @@ const Container = styled.div<{
     ...SpacingMap.map((spacing) => ({
       props: { spacing },
       style: {
-        padding: `${spacing * 0.5 * 16}px`,
+        gap: `${spacing * 4}px`,
       },
     })),
     ...SnowColorValues.map((color) => ({
@@ -45,9 +45,10 @@ export const Center = ({
   inline = false,
   spacing = 0,
   color,
+  ...otherProps
 }: PropsWithChildren<CenterProps>) => {
   return (
-    <Container inline={inline} spacing={spacing} color={color}>
+    <Container inline={inline} spacing={spacing} color={color} {...otherProps}>
       {children}
     </Container>
   );

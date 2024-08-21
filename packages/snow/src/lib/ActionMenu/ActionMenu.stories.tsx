@@ -16,7 +16,7 @@ import {
   MicrophoneIcon,
   EnvelopeIcon,
   UserGroupIcon,
-} from '@heroicons/react/20/solid';
+} from '@arctic-kit/icons';
 
 // More on how to set up stories at: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
 const meta: Meta<typeof ActionMenu> = {

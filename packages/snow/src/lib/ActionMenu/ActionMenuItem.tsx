@@ -18,7 +18,8 @@ export interface ActionMenuItemProps {
 
 export const ActionMenuItem = forwardRef<
   HTMLButtonElement,
-  ActionMenuItemProps & React.ButtonHTMLAttributes<HTMLButtonElement>
+  ActionMenuItemProps &
+    Omit<React.ButtonHTMLAttributes<HTMLButtonElement>, 'prefix'>
 >(
   (
     {

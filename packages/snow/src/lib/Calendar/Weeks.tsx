@@ -1,3 +1,4 @@
+import { Stack } from '../Layout';
 import DateUtilities from './DateUtilities';
 import { Week } from './Week';
 
@@ -66,12 +67,13 @@ export function Weeks({ id = 'weeks', ...props }: Props) {
   const currentClassName = 'weeks current';
 
   return (
-    <div
+    <Stack
       className={currentClassName}
       id={`${id}-container`}
       data-testid={`${id}-container`}
+      spacing={1}
     >
       <WeeksRenderer {...props} />
-    </div>
+    </Stack>
   );
 }

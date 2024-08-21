@@ -46,9 +46,10 @@ export const Stack = ({
   inline = false,
   spacing = 0,
   color,
+  ...otherProps
 }: PropsWithChildren<StackProps>) => {
   return (
-    <Container inline={inline} spacing={spacing} color={color}>
+    <Container inline={inline} spacing={spacing} color={color} {...otherProps}>
       {children}
     </Container>
   );

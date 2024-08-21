@@ -6,7 +6,7 @@ import {
   CheckCircleIcon,
   ExclamationCircleIcon,
   ExclamationTriangleIcon,
-} from '@heroicons/react/16/solid';
+} from '@arctic-kit/icons';
 import { SnowTheme, SnowThemeArgs } from '../../core';
 
 const getVariantStyles = (theme: SnowTheme) => {

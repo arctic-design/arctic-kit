@@ -27,8 +27,7 @@ export const Container = styled.button<{
   borderRadius: 4,
   backgroundColor: theme.colors.neutral[0],
   svg: {
-    fill: theme.colors.neutral[1000],
-    width: 20,
+    width: 16,
   },
   display: 'grid',
   justifyContent: 'center',
@@ -42,9 +41,6 @@ export const Container = styled.button<{
       cursor: 'pointer',
       backgroundColor: theme.colors.grey[50],
       borderColor: theme.colors.grey[700],
-      svg: {
-        fill: theme.colors.neutral[1000],
-      },
     },
   },
   '&:focus': {
@@ -58,6 +54,9 @@ export const Container = styled.button<{
     backgroundColor: theme.colors.grey[100],
     borderColor: theme.colors.grey[400],
     cursor: 'default',
+    svg: {
+      color: theme.colors.grey[400],
+    },
   },
 
   variants: [
@@ -67,13 +66,13 @@ export const Container = styled.button<{
         border: `1px solid ${theme.colors[color][400]}`,
         outlineColor: theme.colors[color][200],
         svg: {
-          fill: theme.colors[color].main,
+          color: theme.colors[color].main,
         },
         '&:hover': {
           '&:not(:disabled)': {
             borderColor: theme.colors[color][700],
             svg: {
-              fill: theme.colors[color][700],
+              color: theme.colors[color][700],
             },
           },
         },

@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from '@storybook/react';
 
 import { TextInput } from './TextInput';
 import { useState } from 'react';
-import { AtSymbolIcon } from '@heroicons/react/24/outline';
+import { AtSymbolIcon } from '@arctic-kit/icons';
 // More on how to set up stories at: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
 const meta: Meta<typeof TextInput> = {
   title: 'TextInput',

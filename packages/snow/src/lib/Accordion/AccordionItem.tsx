@@ -9,10 +9,7 @@ import {
 } from 'react';
 import { motion } from 'framer-motion';
 import { styled } from '@pigment-css/react';
-import {
-  ExclamationCircleIcon,
-  ChevronDownIcon,
-} from '@heroicons/react/20/solid';
+import { ExclamationCircleIcon, ChevronDownIcon } from '@arctic-kit/icons';
 import { clsx } from 'clsx';
 import { AccordionContext } from './AccordionContext';
 import { Box } from '../Box';

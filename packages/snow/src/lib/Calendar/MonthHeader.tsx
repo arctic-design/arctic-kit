@@ -1,5 +1,5 @@
 import DateUtilities from './DateUtilities';
-import { ArrowLeftIcon, ArrowRightIcon } from '@heroicons/react/20/solid';
+import { ArrowLeftIcon, ArrowRightIcon } from '@arctic-kit/icons';
 import {
   ArrowButton,
   MonthHeaderContainer,

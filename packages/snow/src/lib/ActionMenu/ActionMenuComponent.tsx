@@ -24,7 +24,7 @@ import {
   FloatingFocusManager,
 } from '@floating-ui/react';
 
-import { ChevronRightIcon, ChevronDownIcon } from '@heroicons/react/20/solid';
+import { ChevronRightIcon, ChevronDownIcon } from '@arctic-kit/icons';
 import { forwardRef, useContext, useEffect, useRef, useState } from 'react';
 
 import { ActionMenuContext } from './ActionMenuContext';
