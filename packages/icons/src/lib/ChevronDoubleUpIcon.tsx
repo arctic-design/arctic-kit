@@ -1,6 +1,6 @@
 import { IconProps } from './types';
 
-export default function Index(props: IconProps) {
+export default function ChevronDoubleUpIcon(props: IconProps) {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -15,12 +15,7 @@ export default function Index(props: IconProps) {
       <path
         strokeLinecap="round"
         strokeLinejoin="round"
-        d="m4.5 18.75 7.5-7.5 7.5 7.5"
-      />
-      <path
-        strokeLinecap="round"
-        strokeLinejoin="round"
-        d="m4.5 12.75 7.5-7.5 7.5 7.5"
+        d="M4.5 18.75L12 11.25L19.5 18.75"
       />
     </svg>
   );
