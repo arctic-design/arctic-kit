@@ -1,6 +1,6 @@
 import { IconProps } from './types';
 
-export default function Index(props: IconProps) {
+export default function CheckIcon(props: IconProps) {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -15,7 +15,7 @@ export default function Index(props: IconProps) {
       <path
         strokeLinecap="round"
         strokeLinejoin="round"
-        d="m4.5 12.75 6 6 9-13.5"
+        d="M4.5 12.75L10.5 18.75L19.5 5.25"
       />
     </svg>
   );

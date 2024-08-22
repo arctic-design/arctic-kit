@@ -1,6 +1,6 @@
 import { IconProps } from './types';
 
-export default function Index(props: IconProps) {
+export default function MinusIcon(props: IconProps) {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -12,7 +12,11 @@ export default function Index(props: IconProps) {
       aria-label="minus"
       {...props}
     >
-      <path strokeLinecap="round" strokeLinejoin="round" d="M5 12h14" />
+      <path
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        d="M5 12H19"
+      />
     </svg>
   );
 }

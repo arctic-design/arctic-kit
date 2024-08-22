@@ -1,6 +1,6 @@
 import { IconProps } from './types';
 
-export default function Index(props: IconProps) {
+export default function ArrowDownLeftIcon(props: IconProps) {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -15,7 +15,7 @@ export default function Index(props: IconProps) {
       <path
         strokeLinecap="round"
         strokeLinejoin="round"
-        d="m19.5 4.5-15 15m0 0h11.25m-11.25 0V8.25"
+        d="M19.5 4.5L4.5 19.5M4.5 19.5L15.75 19.5M4.5 19.5L4.5 8.25"
       />
     </svg>
   );
