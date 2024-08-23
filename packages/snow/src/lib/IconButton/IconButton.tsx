@@ -32,9 +32,9 @@ export const Container = styled.button<{
   display: 'grid',
   justifyContent: 'center',
   alignItems: 'center',
-  boxShadow: theme.shadow.main,
-
   outline: 'none',
+  height: SnowHeights['medium'] - 2,
+  width: SnowHeights['medium'] - 2,
 
   '&:hover': {
     '&:not(:disabled)': {
@@ -96,11 +96,26 @@ export const Container = styled.button<{
         borderRadius: '50%',
       },
     },
+    {
+      props: { noBorder: true },
+      style: {
+        border: 'none',
+      },
+    },
+    {
+      props: { size: 'small' },
+      style: {
+        svg: {
+          width: '14px !important',
+        },
+      },
+    },
   ],
 }));
 
 export type IconButtonProps = DefaultSnowProps & {
   rounded?: boolean;
+  noBorder?: boolean;
 } & ComponentPropsWithoutRef<'button'>;
 
 export const IconButton = forwardRef<

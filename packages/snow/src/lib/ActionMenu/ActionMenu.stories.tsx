@@ -109,6 +109,7 @@ function WithIconsRender(args: Story['args']) {
 export const Default: Story = {
   args: {
     label: 'Edit',
+    noBorder: false,
   },
   render: DefaultRender,
 };
@@ -116,6 +117,7 @@ export const Default: Story = {
 export const WithIcons: Story = {
   args: {
     label: 'Edit with Icons',
+    noBorder: false,
   },
   render: WithIconsRender,
 };

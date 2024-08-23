@@ -9,6 +9,7 @@ const Container = styled.div<{
   inline?: boolean;
   spacing?: number;
   color?: SnowColor;
+  direction?: 'horizontal' | 'vertical';
 }>(({ theme: { vars: theme } }: SnowThemeArgs) => ({
   display: 'flex',
   flexDirection: 'column',
@@ -34,11 +35,19 @@ const Container = styled.div<{
         backgroundColor: theme.colors[color][50],
       },
     })),
+    {
+      props: { direction: 'horizontal' },
+      style: {
+        flexDirection: 'row',
+        justifyContent: 'center',
+      },
+    },
   ],
 }));
 
 export type StackProps = LayoutType & {
   inline?: boolean;
+  direction?: 'horizontal' | 'vertical';
 };
 
 export const Stack = ({
@@ -46,10 +55,17 @@ export const Stack = ({
   inline = false,
   spacing = 0,
   color,
+  direction = 'vertical',
   ...otherProps
 }: PropsWithChildren<StackProps>) => {
   return (
-    <Container inline={inline} spacing={spacing} color={color} {...otherProps}>
+    <Container
+      inline={inline}
+      spacing={spacing}
+      color={color}
+      direction={direction}
+      {...otherProps}
+    >
       {children}
     </Container>
   );

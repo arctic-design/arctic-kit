@@ -2,7 +2,7 @@
 
 // https://github.com/sindresorhus/is-plain-obj/blob/main/index.js
 export function isPlainObject(
-  item: unknown,
+  item: unknown
 ): item is Record<keyof any, unknown> {
   if (typeof item !== 'object' || item === null) {
     return false;
@@ -39,7 +39,7 @@ function deepClone<T>(source: T): T | Record<keyof any, unknown> {
 export function deepmerge<T>(
   target: T,
   source: unknown,
-  options: DeepmergeOptions = { clone: true },
+  options: DeepmergeOptions = { clone: true }
 ): T {
   const output = options.clone ? { ...target } : target;
 
@@ -59,7 +59,7 @@ export function deepmerge<T>(
         (output as Record<keyof any, unknown>)[key] = deepmerge(
           target[key],
           source[key],
-          options,
+          options
         );
       } else if (options.clone) {
         (output as Record<keyof any, unknown>)[key] = isPlainObject(source[key])
