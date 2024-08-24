@@ -74,6 +74,14 @@ export interface TreeViewItemProps {
   currentItemId?: string;
 }
 
+const isItemInTree = (item: TreeItem, itemId: string): boolean => {
+  if (item.id === itemId) return true;
+  if (item.children) {
+    return item.children.some((child) => isItemInTree(child, itemId));
+  }
+  return false;
+};
+
 export const TreeViewItem: React.FC<TreeViewItemProps> = ({
   item,
   depth,
@@ -97,14 +105,6 @@ export const TreeViewItem: React.FC<TreeViewItemProps> = ({
     onToggle(item.id);
   };
 
-  const isItemInTree = (item: TreeItem, itemId: string): boolean => {
-    if (item.id === itemId) return true;
-    if (item.children) {
-      return item.children.some((child) => isItemInTree(child, itemId));
-    }
-    return false;
-  };
-
   return (
     <TreeList>
       <LeafItem
@@ -117,14 +117,14 @@ export const TreeViewItem: React.FC<TreeViewItemProps> = ({
       >
         {item.prefix ? (
           item.prefix?.(isExpanded)
+        ) : item.children && item.children.length > 0 ? (
+          isExpanded ? (
+            <ChevronDownIcon />
+          ) : (
+            <ChevronRightIcon />
+          )
         ) : (
-          <>
-            {item.children && item.children.length > 0 ? (
-              <>{isExpanded ? <ChevronDownIcon /> : <ChevronRightIcon />}</>
-            ) : (
-              <EmptySpan />
-            )}
-          </>
+          <EmptySpan />
         )}
 
         <Box
