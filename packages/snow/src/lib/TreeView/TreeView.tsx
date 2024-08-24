@@ -53,6 +53,10 @@ const TreeList = styled.li(({ theme: { vars: theme } }: SnowThemeArgs) => ({
   listStyle: 'none',
 }));
 
+const EmptySpan = styled.span({
+  width: 16,
+});
+
 export type TreeItem = {
   id: string;
   label: string;
@@ -111,14 +115,18 @@ export const TreeViewItem: React.FC<TreeViewItemProps> = ({
           paddingLeft: depth * 10,
         }}
       >
-        {/* Prefix Element */}
         {item.prefix ? (
           item.prefix?.(isExpanded)
         ) : (
-          <>{isExpanded ? <ChevronDownIcon /> : <ChevronRightIcon />}</>
+          <>
+            {item.children && item.children.length > 0 ? (
+              <>{isExpanded ? <ChevronDownIcon /> : <ChevronRightIcon />}</>
+            ) : (
+              <EmptySpan />
+            )}
+          </>
         )}
 
-        {/* Label */}
         <Box
           as="span"
           sx={{ marginLeft: item.prefix ? 4 : 0, flex: 1, paddingLeft: 2 }}
@@ -126,7 +134,6 @@ export const TreeViewItem: React.FC<TreeViewItemProps> = ({
           {item.label}
         </Box>
 
-        {/* Suffix Element */}
         {item.suffix && (
           <Box as="span" sx={{ marginLeft: 4 }}>
             {item.suffix?.(isExpanded)}
@@ -134,7 +141,6 @@ export const TreeViewItem: React.FC<TreeViewItemProps> = ({
         )}
       </LeafItem>
 
-      {/* Render Children with Motion Effect */}
       <motion.div
         initial={false}
         animate={{
