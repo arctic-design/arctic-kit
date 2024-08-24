@@ -33,6 +33,7 @@ export * from './Tag';
 export * from './TextArea';
 export * from './TextInput';
 export * from './Tooltip';
+export * from './TreeView';
 export * from './Typography';
 
 export * from './types';

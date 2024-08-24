@@ -70,3 +70,20 @@ export const Inline: Story = {
   },
   render: Render,
 };
+
+export const Horizontal: Story = {
+  args: {
+    children: (
+      <>
+        <Button>First</Button>
+        <Button>Second</Button>
+        <Button>Third</Button>
+        <Button>Fourth</Button>
+      </>
+    ),
+    inline: true,
+    spacing: 2,
+    direction: 'horizontal',
+  },
+  render: Render,
+};

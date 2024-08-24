@@ -5,3 +5,8 @@
 /.nx/workspace-data
 
 .yarn
+
+tmp
+
+.next
+storybook-static

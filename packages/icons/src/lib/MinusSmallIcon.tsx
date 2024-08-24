@@ -12,11 +12,7 @@ export default function MinusSmallIcon(props: IconProps) {
       aria-label="minus-small"
       {...props}
     >
-      <path
-        strokeLinecap="round"
-        strokeLinejoin="round"
-        d="M18 12L6 12"
-      />
+      <path strokeLinecap="round" strokeLinejoin="round" d="M18 12L6 12" />
     </svg>
   );
 }

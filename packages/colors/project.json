@@ -7,16 +7,12 @@
   "targets": {
     "build": {
       "executor": "@nx/vite:build",
-      "outputs": [
-        "{options.outputPath}"
-      ],
+      "outputs": ["{options.outputPath}"],
       "options": {
         "outputPath": "dist/packages/colors",
         "main": "packages/colors/src/index.ts",
         "tsConfig": "packages/colors/tsconfig.lib.json",
-        "assets": [
-          "packages/colors/*.md"
-        ]
+        "assets": ["packages/colors/*.md"]
       }
     }
   }

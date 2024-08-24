@@ -63,6 +63,7 @@ export const ActionMenuComponent = forwardRef<
       itemSize,
       id = 'action-menu',
       prefix,
+      noBorder,
       ...props
     },
     forwardedRef
@@ -176,6 +177,7 @@ export const ActionMenuComponent = forwardRef<
           aria-disabled={disabled}
           color={color}
           itemSize={itemSize}
+          data-no-border={noBorder}
           {...getReferenceProps(
             parent.getItemProps?.({
               ...props,

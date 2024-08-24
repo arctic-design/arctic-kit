@@ -29,7 +29,6 @@ export const ActionItem = styled.button<{
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',
-    boxShadow: theme.shadow.main,
 
     '&[data-open], &:hover': {
       cursor: 'pointer',
@@ -59,6 +58,9 @@ export const ActionItem = styled.button<{
       borderRadius: '6px',
       zIndex: 1,
       pointerEvents: 'none', // Ensure clicks pass through to the button
+    },
+    "&[data-no-border='true']": {
+      border: 'none',
     },
   },
 

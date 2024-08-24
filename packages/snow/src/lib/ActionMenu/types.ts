@@ -12,4 +12,5 @@ export interface ActionMenuProps {
   itemSize?: SnowSize;
   id?: string;
   prefix?: React.ReactNode;
+  noBorder?: boolean;
 }
