@@ -9,12 +9,15 @@ type DefaultColProps = {
   md?: number;
   lg?: number;
   xl?: number;
+  xxl?: number;
 };
 type ColProps = DefaultColProps & {
   gutterWidth?: number;
   halfGutterWidth?: number;
   spacing?: number;
 };
+
+const GridSizeMap = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
 
 const Col = styled.div<ColProps>({
   boxSizing: 'border-box',
@@ -30,14 +33,14 @@ const Col = styled.div<ColProps>({
   },
 
   variants: [
-    ...[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12].map((xs) => ({
+    ...GridSizeMap.map((xs) => ({
       props: { xs },
       style: {
         flexBasis: `calc(${(100 / 12) * xs}%)`,
         maxWidth: `calc(${(100 / 12) * xs}%)`,
       },
     })),
-    ...[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12].map((sm) => ({
+    ...GridSizeMap.map((sm) => ({
       props: { sm },
       style: {
         [`${mq('sm')}`]: {
@@ -46,7 +49,7 @@ const Col = styled.div<ColProps>({
         },
       },
     })),
-    ...[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12].map((md) => ({
+    ...GridSizeMap.map((md) => ({
       props: { md },
       style: {
         [`${mq('md')}`]: {
@@ -55,7 +58,7 @@ const Col = styled.div<ColProps>({
         },
       },
     })),
-    ...[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12].map((lg) => ({
+    ...GridSizeMap.map((lg) => ({
       props: { lg },
       style: {
         [`${mq('lg')}`]: {
@@ -64,12 +67,21 @@ const Col = styled.div<ColProps>({
         },
       },
     })),
-    ...[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12].map((xl) => ({
+    ...GridSizeMap.map((xl) => ({
       props: { xl },
       style: {
         [`${mq('xl')}`]: {
           flexBasis: `calc(${(100 / 12) * xl}%)`,
           maxWidth: `calc(${(100 / 12) * xl}%)`,
+        },
+      },
+    })),
+    ...GridSizeMap.map((xxl) => ({
+      props: { xxl },
+      style: {
+        [`${mq('xxl')}`]: {
+          flexBasis: `calc(${(100 / 12) * xxl}%)`,
+          maxWidth: `calc(${(100 / 12) * xxl}%)`,
         },
       },
     })),
