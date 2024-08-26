@@ -9,9 +9,9 @@ export const ELEVATION_STYLE = {
 
 // Snow font-size in px based on size
 export const SnowFontSizes = {
-  [ThemeSize.small]: 14,
-  [ThemeSize.medium]: 16,
-  [ThemeSize.large]: 18,
+  [ThemeSize.small]: 12,
+  [ThemeSize.medium]: 14,
+  [ThemeSize.large]: 16,
 };
 
 // Snow heights in px based on size
@@ -47,4 +47,5 @@ export const ZIndex = {
   Modal: 100,
   Drawer: 1000,
   Select: 1001,
+  Tooltip: 2,
 };

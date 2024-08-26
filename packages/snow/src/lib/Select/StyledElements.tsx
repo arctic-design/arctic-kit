@@ -1,6 +1,6 @@
 import { styled } from '@pigment-css/react';
 import { SnowColor, SnowColorValues, SnowSize } from '../types';
-import { SnowHeights, ZIndex } from '../constants';
+import { SnowFontSizes, SnowHeights, ZIndex } from '../constants';
 import { SnowThemeArgs } from '../../core';
 
 export const InputContainerRoot = styled.div<{
@@ -133,6 +133,7 @@ export const SelectMenu = styled.div<{ inputsize?: SnowSize }>(
       style: {
         '.select-menu-item': {
           height: SnowHeights[size as SnowSize],
+          fontSize: SnowFontSizes[size as SnowSize],
         },
       },
     })),
@@ -168,13 +169,14 @@ export const SelectInputTagItem = styled.div<{ inputsize?: SnowSize }>(
       style: {
         '.select-menu-item': {
           height: SnowHeights[size as SnowSize] - 8,
+          fontSize: SnowFontSizes[size as SnowSize],
         },
       },
     })),
   })
 );
 
-export const TagLabel = styled.div(
+export const TagLabel = styled.div<{ inputsize?: SnowSize }>(
   ({ theme: { vars: theme } }: SnowThemeArgs) => ({
     overflow: 'hidden',
     textOverflow: 'ellipsis',
@@ -186,6 +188,14 @@ export const TagLabel = styled.div(
     display: 'flex',
     alignItems: 'center',
     padding: '2px 2px',
+    variants: [
+      ...['small', 'medium', 'large'].map((size) => ({
+        props: { inputsize: size as SnowSize },
+        style: {
+          fontSize: SnowFontSizes[size as SnowSize],
+        },
+      })),
+    ],
 
     '&.single': {
       padding: '0 2px',

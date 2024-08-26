@@ -4,6 +4,7 @@ import { styled } from '@pigment-css/react';
 import { DefaultSnowProps, SnowColor, SnowColorValues } from '../types';
 import { ELEVATION_STYLE } from '../constants';
 import { SnowThemeArgs } from '../../core';
+import { Typography } from '../Typography';
 
 const DefaultSize = 20;
 const SwitchSizeMap = {
@@ -18,6 +19,7 @@ const Container = styled.div(({ theme: { vars: theme } }: SnowThemeArgs) => ({
   alignItems: 'center',
   fontFamily: theme.font.family.base,
   fontSize: theme.font.size[100],
+  gap: 8,
 }));
 
 const SwitchContainer = styled.div<{
@@ -33,8 +35,6 @@ const SwitchContainer = styled.div<{
   width: ({ height }) => height * 2,
   height: ({ height }) => height,
   borderRadius: ({ height }) => height / 2,
-
-  margin: 8,
   border: 'none',
 
   '&:hover': {
@@ -182,9 +182,14 @@ function Switch({
         </SwitchElement>
       </MotionSwitchContainer>
       {label && (
-        <span data-testid={`${id}-label`} id={`${id}-label`}>
+        <Typography
+          data-testid={`${id}-label`}
+          id={`${id}-label`}
+          className="label"
+          size={size}
+        >
           {label}
-        </span>
+        </Typography>
       )}
     </Container>
   );

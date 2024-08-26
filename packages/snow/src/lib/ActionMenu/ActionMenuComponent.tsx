@@ -206,7 +206,11 @@ export const ActionMenuComponent = forwardRef<
             ) : (
               <>
                 {label && (
-                  <Box id={`${rootId}-content-label`} as="span">
+                  <Box
+                    data-testid={`${rootId}-content-label`}
+                    id={`${rootId}-content-label`}
+                    fontSize={itemSize}
+                  >
                     <Center>
                       {prefix}
                       {label}
@@ -225,6 +229,7 @@ export const ActionMenuComponent = forwardRef<
                     <ChevronDownIcon
                       data-testid={`${rootId}-content-label-icon`}
                       id={`${rootId}-content-label-icon`}
+                      strokeWidth={2}
                     />
                   </Box>
                 )}
@@ -246,6 +251,7 @@ export const ActionMenuComponent = forwardRef<
               <ChevronRightIcon
                 data-testid={`${rootId}-content-icon`}
                 id={`${rootId}-content-icon`}
+                strokeWidth={2}
               />
             </Box>
           )}

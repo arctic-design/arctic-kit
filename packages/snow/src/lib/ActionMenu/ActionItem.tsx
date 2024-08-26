@@ -130,7 +130,7 @@ export const ActionItem = styled.button<{
                 color: theme.colors[color][700],
               },
               '&.filled': {
-                backgroundColor: theme.colors[color][700],
+                backgroundColor: theme.colors[color][600],
                 color: theme.colors.neutral[0],
                 svg: {
                   color: 'inherit',

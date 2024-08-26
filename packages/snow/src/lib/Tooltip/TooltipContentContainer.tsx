@@ -1,6 +1,7 @@
 import { styled } from '@pigment-css/react';
 import { SnowThemeArgs } from '../../core';
 import { FloatingArrow as FloatingUIArrow } from '@floating-ui/react';
+import { ZIndex } from '../constants';
 
 export const TooltipContentContainer = styled.div(
   ({ theme: { vars: theme } }: SnowThemeArgs) => ({
@@ -16,10 +17,11 @@ export const TooltipContentContainer = styled.div(
     alignItems: 'flex-start',
     alignSelf: 'stretch',
     fontFamily: theme.font.family.base,
-    fontSize: theme.font.size[100],
+    fontSize: theme.font.size[25],
     fontStyle: 'normal',
     fontWeight: theme.font.weight.regular,
     lineHeight: 'normal',
+    zIndex: ZIndex.Tooltip,
   })
 );
 
