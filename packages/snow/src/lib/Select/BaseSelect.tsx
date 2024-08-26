@@ -154,7 +154,11 @@ const BaseSelect: React.FC<BaseSelectProps> = (props: BaseSelectProps) => {
 
   const getDisplay = () => {
     if (!selectedValue || selectedValue.length === 0) {
-      return <TagLabel className="single placeholder">{placeholder}</TagLabel>;
+      return (
+        <TagLabel className="single placeholder" inputsize={SelectSize}>
+          {placeholder}
+        </TagLabel>
+      );
     }
 
     if (multiple) {
@@ -165,7 +169,9 @@ const BaseSelect: React.FC<BaseSelectProps> = (props: BaseSelectProps) => {
               key={TypeComparer(option, 'value')}
               inputsize={SelectSize}
             >
-              <TagLabel>{TypeComparer(option, 'label')}</TagLabel>
+              <TagLabel inputsize={SelectSize}>
+                {TypeComparer(option, 'label')}
+              </TagLabel>
               <SelectCloseContainer
                 className="multiple"
                 onClick={(e) => onTagRemove(e, option)}
@@ -179,7 +185,7 @@ const BaseSelect: React.FC<BaseSelectProps> = (props: BaseSelectProps) => {
     }
 
     return (
-      <TagLabel className="single">
+      <TagLabel className="single" inputsize={SelectSize}>
         {TypeComparer(selectedValue[0], 'label')}
       </TagLabel>
     );
@@ -262,7 +268,7 @@ const BaseSelect: React.FC<BaseSelectProps> = (props: BaseSelectProps) => {
       data-testid={`${id}-container`}
     >
       {label && (
-        <Typography id={controlId} as="label">
+        <Typography id={controlId} as="label" size={SelectSize}>
           {label} <RequiredIndicator required={required} />
         </Typography>
       )}

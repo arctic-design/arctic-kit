@@ -23,21 +23,21 @@ const typographyStyles = css(({ theme: { vars: theme } }: SnowThemeArgs) => ({
 const TypographyComponent = styled.div<{ size?: SnowSize }>(
   ({ theme: { vars: theme } }: SnowThemeArgs) => ({
     '&.h3': {
-      fontSize: `${SnowFontSizes.medium * 0.875}px`,
+      fontSize: `${SnowFontSizes.medium}px`,
     },
     '&.label': {
       color: theme.colors.neutral[1000],
-      fontSize: `${SnowFontSizes.medium * 0.875}px`,
+      fontSize: `${SnowFontSizes.medium}px`,
 
       lineHeight: '150%',
     },
-    fontSize: `${SnowFontSizes.medium * 0.875}px`,
+    fontSize: `${SnowFontSizes.medium}px`,
     variants: [
       ...['small', 'medium', 'large'].map((size) => ({
         props: { size: size as SnowSize },
         style: {
           '&.label, &.h3': {
-            fontSize: `${SnowFontSizes[size as SnowSize] * 0.875}px`,
+            fontSize: `${SnowFontSizes[size as SnowSize]}px`,
           },
         },
       })),
@@ -62,12 +62,12 @@ export function Typography({
   htmlFor,
   id,
   size,
-
+  className,
   ...otherProps
 }: PropsWithChildren<TypographyProps & HTMLAttributes<HTMLElement>>) {
   return (
     <TypographyComponent
-      className={`${typographyStyles} ${as}`}
+      className={`${typographyStyles} ${as} ${className}`}
       as={as}
       htmlFor={htmlFor}
       id={id}

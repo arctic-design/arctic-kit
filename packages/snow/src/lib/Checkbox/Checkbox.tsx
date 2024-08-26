@@ -50,7 +50,7 @@ export function Checkbox({
         as="label"
         aria-disabled={disabled}
         aria-readonly={readOnly ? true : undefined}
-        fontWeight={400}
+        size={size}
       >
         {label}
       </Typography>

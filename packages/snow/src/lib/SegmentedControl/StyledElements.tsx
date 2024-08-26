@@ -3,6 +3,12 @@ import { SnowColor, SnowColorValues, SnowSize } from '../types';
 import { SnowThemeArgs } from '../../core';
 import { SnowHeights } from '../constants';
 
+export const RootContainerWithLabel = styled.div({
+  display: 'flex',
+  flexDirection: 'column',
+  width: 'fit-content',
+});
+
 export const RootContainer = styled.div<{ size?: SnowSize }>(
   ({ theme: { vars: theme } }: SnowThemeArgs) => ({
     display: 'flex',

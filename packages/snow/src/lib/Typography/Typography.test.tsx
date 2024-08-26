@@ -36,9 +36,7 @@ describe('Typography Component', () => {
     expect(spanElement).toBeInTheDocument();
 
     waitFor(() => {
-      expect(spanElement).toHaveStyle(
-        `font-size: ${SnowFontSizes.large * 0.875}px`
-      );
+      expect(spanElement).toHaveStyle(`font-size: ${SnowFontSizes.large}px`);
     });
   });
 });

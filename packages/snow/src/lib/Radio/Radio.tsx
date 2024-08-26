@@ -11,8 +11,8 @@ import {
 import { RadioSizes } from './types';
 
 import { useRadioVariants } from './useRadioVariants';
-import { Box } from '../Box';
 import { SnowThemeArgs } from '../../core';
+import { Typography } from '../Typography';
 
 export const RadioOption = styled.li(
   ({ theme: { vars: theme } }: SnowThemeArgs) => ({
@@ -173,15 +173,14 @@ export function Radio({
         aria-readonly={readOnly ? 'true' : undefined}
         selected={isSelected}
       />
-      <Box
-        as="span"
-        sx={{
-          fontSize: 14,
-          fontWeight: 400,
-        }}
+      <Typography
+        data-testid={`${option.value}-label`}
+        id={`${option.value}-label`}
+        className="label"
+        size={size}
       >
         {option.label}
-      </Box>
+      </Typography>
     </RadioOption>
   );
 }

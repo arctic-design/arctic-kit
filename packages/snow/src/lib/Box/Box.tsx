@@ -6,6 +6,8 @@ import {
 } from 'react';
 import { styled } from '@pigment-css/react';
 import { SnowThemeArgs } from '../../core';
+import { SnowSize, SnowSizeValues } from '../types';
+import { SnowFontSizes } from '../constants';
 
 export type BoxProps = {
   as?: React.ElementType<any>; // eslint-disable-line @typescript-eslint/no-explicit-any
@@ -14,11 +16,22 @@ export type BoxProps = {
   'aria-describedby'?: string; // to fix tooltip passing these props
   'data-state'?: string; // to fix tooltip passing these props
   sx?: CSSProperties;
+  fontSize?: SnowSize;
 } & React.HTMLProps<HTMLElement>;
 
-const Root = styled('div')(({ theme: { vars: theme } }: SnowThemeArgs) => ({
-  fontFamily: theme.font.family.base,
-}));
+const Root = styled.div<{ fontSize?: SnowSize }>(
+  ({ theme: { vars: theme } }: SnowThemeArgs) => ({
+    fontFamily: theme.font.family.base,
+    variants: [
+      ...SnowSizeValues.map((size) => ({
+        props: { fontSize: size },
+        style: {
+          fontSize: SnowFontSizes[size],
+        },
+      })),
+    ],
+  })
+);
 
 const Box = forwardRef(
   (

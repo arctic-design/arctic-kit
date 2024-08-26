@@ -1,10 +1,7 @@
 import { ChangeEvent, forwardRef } from 'react';
 import { BaseInputProps, BaseInput, BaseInputContainer } from '../BaseInput';
 
-export type TextAreaProps = Omit<
-  BaseInputProps,
-  'multiline' | 'onChange' | 'size'
-> & {
+export type TextAreaProps = Omit<BaseInputProps, 'multiline' | 'onChange'> & {
   onChange?: (event: ChangeEvent<HTMLTextAreaElement>) => void;
   onBlur?: (event: ChangeEvent<HTMLTextAreaElement>) => void;
 };
@@ -14,6 +11,7 @@ const TextArea = forwardRef<HTMLTextAreaElement, TextAreaProps>(
     {
       errorText,
       label,
+      size = 'medium',
       required,
       maxLength,
       style,
@@ -37,8 +35,10 @@ const TextArea = forwardRef<HTMLTextAreaElement, TextAreaProps>(
         required={required}
         multiline
         errorText={errorText}
+        inputsize={size}
       >
         <BaseInput
+          inputsize={size}
           as="textarea"
           ref={ref}
           className={`${error ? 'error' : ''} ${className}`}

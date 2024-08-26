@@ -8,7 +8,7 @@ import {
 import { styled } from '@pigment-css/react';
 
 import { DefaultSnowProps, SnowColorValues, SnowSizeValues } from '../types';
-import { SnowHeights, SnowSpacingMap } from '../constants';
+import { SnowFontSizes, SnowHeights, SnowSpacingMap } from '../constants';
 import { ButtonGroupContext } from '../ButtonGroup/ButtonGroupContext';
 import { ButtonVariants } from './types';
 import { Loader } from '../Loader';
@@ -85,6 +85,7 @@ const getSizeVariantStyles = (theme: SnowTheme) =>
       padding: `calc(${theme.spacings.main} * ${
         SnowSpacingMap[sizeItem]
       }) calc(${theme.spacings.main} * ${SnowSpacingMap[sizeItem] * 2});`,
+      fontSize: SnowFontSizes[sizeItem],
     },
   }));
 

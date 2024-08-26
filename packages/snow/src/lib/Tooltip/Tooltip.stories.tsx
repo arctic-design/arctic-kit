@@ -42,6 +42,8 @@ export const WithSpan: Story = {
           border: '1px solid #ddd',
         }}
         onClick={() => console.log('clicked me')}
+        aria-label="tooltip for span"
+        fontSize="medium"
       >
         Trigger Span
       </Box>
@@ -53,9 +55,13 @@ export const WithDiv: Story = {
   args: {
     message: 'This is div content of tooltip',
     children: (
-      <div style={{ padding: '4px 8px', border: '1px solid #ddd' }}>
+      <Box
+        sx={{ padding: '4px 8px', border: '1px solid #ddd' }}
+        aria-label="tooltip for div"
+        fontSize="medium"
+      >
         Trigger Div
-      </div>
+      </Box>
     ),
   },
 };

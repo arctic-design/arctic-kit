@@ -191,6 +191,14 @@ export const Default: Story = {
   render: DefaultRender,
 };
 
+export const WithLabel: Story = {
+  args: {
+    initialSelectedIndex: 1,
+    label: 'Frontend stack',
+  },
+  render: DefaultRender,
+};
+
 export const TextAndIcon: Story = {
   args: {},
   render: TextAndIconRender,

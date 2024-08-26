@@ -5,7 +5,7 @@ import { Typography } from '../Typography';
 import { HelperText } from '../HelperText';
 import { RequiredIndicator } from '../Indicators';
 import { SnowTheme, SnowThemeArgs } from '../../core';
-import { SnowHeights } from '../constants';
+import { SnowFontSizes, SnowHeights } from '../constants';
 import { Box } from '../Box';
 
 const getSizeVariantStyles = (theme: SnowTheme) =>
@@ -13,6 +13,7 @@ const getSizeVariantStyles = (theme: SnowTheme) =>
     props: { inputsize: sizeItem },
     style: {
       height: `${SnowHeights[sizeItem]}px`,
+      fontSize: SnowFontSizes[sizeItem],
     },
   }));
 
@@ -86,16 +87,18 @@ export function InputLabel({
   // multiline = false,
   id,
   htmlFor,
+  size,
 }: {
   label?: string;
   required?: boolean;
   // multiline?: boolean;
   id: string;
   htmlFor: string;
+  size?: SnowSize;
 }) {
   return (
     label && (
-      <Typography htmlFor={htmlFor} id={id} as="label">
+      <Typography htmlFor={htmlFor} id={id} as="label" size={size}>
         {label} <RequiredIndicator required={required} />
       </Typography>
     )
@@ -141,6 +144,7 @@ export function BaseInputContainer(props: BaseInputContainerProps) {
         required={required}
         // multiline={multiline}
         htmlFor={id}
+        size={inputsize}
       />
       <Box sx={{ position: 'relative' }}>
         {prefix && (
