@@ -29,16 +29,16 @@ const treeData: TreeItem[] = [
 
 // Test Suite
 describe('TreeView Component', () => {
-  test('renders the tree view with root and children', () => {
+  it('renders the tree view with root and children', () => {
     const { getByText } = render(<TreeView items={treeData} />);
 
     waitFor(() => {
       // Check root node
       expect(getByText('Root')).toBeInTheDocument();
 
-      // Check child nodes (collapsed initially)
-      expect(getByText('Child 1')).toBeInTheDocument();
-      expect(getByText('Child 2')).toBeInTheDocument();
+      // Check child nodes should not be present
+      expect(() => getByText('Child 1')).toThrow();
+      expect(() => getByText('Child 2')).toThrow();
 
       // Grandchildren should not be visible initially
       expect(() => getByText('Grandchild 1-1-1')).toThrow();
@@ -46,17 +46,30 @@ describe('TreeView Component', () => {
     });
   });
 
-  test('expands and collapses on click', () => {
+  it('expands and collapses on click', () => {
     const { getByText, queryByText } = render(<TreeView items={treeData} />);
 
     waitFor(() => {
       // Expand first child
+      const root = getByText('Root');
+      fireEvent.click(root);
+
       const child1 = getByText('Child 1');
+
+      // Check if child nodes are rendered
+      expect(getByText('Child 1')).toBeInTheDocument();
+      expect(getByText('Child 2')).toBeInTheDocument();
+
+      // Check if grandchildren are not rendered
+      expect(queryByText('Grandchild 1-1-1')).not.toBeInTheDocument();
+      expect(queryByText('Grandchild 1-1-2')).not.toBeInTheDocument();
+
+      // Expand the first child
       fireEvent.click(child1);
 
-      // Check if grandchildren are rendered
-      expect(getByText('Grandchild 1-1-1')).toBeInTheDocument();
-      expect(getByText('Grandchild 1-1-2')).toBeInTheDocument();
+      // Check if grandchildren are collapsed
+      expect(queryByText('Grandchild 1-1-1')).toBeInTheDocument();
+      expect(queryByText('Grandchild 1-1-2')).toBeInTheDocument();
 
       // Collapse the first child
       fireEvent.click(child1);
@@ -67,7 +80,7 @@ describe('TreeView Component', () => {
     });
   });
 
-  test('selects an item when clicked', () => {
+  it('selects an item when clicked', () => {
     const mockOnSelect = vi.fn();
     const { getByText } = render(
       <TreeView items={treeData} onSelect={mockOnSelect} />
@@ -83,7 +96,7 @@ describe('TreeView Component', () => {
     });
   });
 
-  test('highlights the selected item', () => {
+  it('highlights the selected item', () => {
     const { getByText } = render(
       <TreeView items={treeData} currentItemId="1-1" />
     );
@@ -95,7 +108,7 @@ describe('TreeView Component', () => {
     });
   });
 
-  test('expands parent nodes when currentItemId is passed', () => {
+  it('expands parent nodes when currentItemId is passed', () => {
     const { getByText } = render(
       <TreeView items={treeData} currentItemId="1-1-2" />
     );
