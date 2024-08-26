@@ -1,7 +1,8 @@
 import { PropsWithChildren, forwardRef } from 'react';
-import { DefaultSnowProps, SnowColorValues, SnowSize } from '../types';
+import { DefaultSnowProps, SnowColorValues, SnowSizeValues } from '../types';
 import { styled } from '@pigment-css/react';
 import { SnowThemeArgs } from '../../core';
+import { SnowFontSizes } from '../constants';
 const TagPaddingSize = {
   small: {
     padding: '2px 4px',
@@ -30,7 +31,7 @@ const TagContainer = styled.div<DefaultSnowProps>(
     padding: TagPaddingSize.medium.padding,
 
     fontFamily: theme.font.family.base,
-    fontSize: theme.font.size[50],
+    fontSize: SnowFontSizes.medium,
     fontWeight: theme.font.weight.regular,
     borderRadius: TagPaddingSize.medium.borderRadius,
 
@@ -44,11 +45,12 @@ const TagContainer = styled.div<DefaultSnowProps>(
     },
 
     variants: [
-      ...['small', 'medium', 'large'].map((size) => ({
-        props: { size: size as SnowSize },
+      ...SnowSizeValues.map((size) => ({
+        props: { size: size },
         style: {
-          padding: TagPaddingSize[size as SnowSize].padding,
-          borderRadius: TagPaddingSize[size as SnowSize].borderRadius,
+          padding: TagPaddingSize[size].padding,
+          borderRadius: TagPaddingSize[size].borderRadius,
+          fontSize: SnowFontSizes[size],
         },
       })),
       ...SnowColorValues.map((color) => ({

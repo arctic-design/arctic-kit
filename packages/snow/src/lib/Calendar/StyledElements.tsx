@@ -4,7 +4,8 @@ import { SnowThemeArgs } from '../../core';
 export const CalendarContainer = styled.div(
   ({ theme: { vars: theme } }: SnowThemeArgs) => ({
     display: 'flex',
-    maxWidth: 300,
+    maxWidth: 320,
+    minWidth: 280,
     minHeight: 305,
     overflowX: 'hidden',
     flexDirection: 'column',

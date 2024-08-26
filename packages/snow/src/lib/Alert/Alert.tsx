@@ -30,10 +30,10 @@ const getVariantStyles = (theme: SnowTheme) => {
 };
 
 const IconMap: Record<SnowFeedbackColor, JSX.Element> = {
-  success: <CheckCircleIcon />,
-  info: <InformationCircleIcon />,
-  warning: <ExclamationTriangleIcon />,
-  error: <ExclamationCircleIcon />,
+  success: <CheckCircleIcon strokeWidth={2} />,
+  info: <InformationCircleIcon strokeWidth={2} />,
+  warning: <ExclamationTriangleIcon strokeWidth={2} />,
+  error: <ExclamationCircleIcon strokeWidth={2} />,
 };
 
 export type AlertProps = {

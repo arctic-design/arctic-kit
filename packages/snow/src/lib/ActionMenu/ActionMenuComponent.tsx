@@ -45,6 +45,7 @@ const ActionMenuContainer = styled.div(
     outline: 0,
     borderRadius: '4px',
     boxShadow: theme.shadow[200],
+    zIndex: 1,
   })
 );
 
