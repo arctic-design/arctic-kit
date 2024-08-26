@@ -33,7 +33,7 @@ export const ActionItem = styled.button<{
     '&[data-open], &:hover': {
       cursor: 'pointer',
       backgroundColor: theme.colors.grey[50],
-      borderColor: theme.colors.grey[700],
+
       svg: {
         color: theme.colors.neutral[1000],
       },
@@ -51,13 +51,15 @@ export const ActionItem = styled.button<{
     '&:focus::after': {
       content: '""',
       position: 'absolute',
-      top: '-5px',
-      left: '-5px',
-      right: '-5px',
-      bottom: '-5px',
+      top: '-4px',
+      left: '-4px',
+      right: '-4px',
+      bottom: '-4px',
       borderRadius: '6px',
       zIndex: 1,
       pointerEvents: 'none', // Ensure clicks pass through to the button
+      borderStyle: 'solid',
+      borderColor: theme.colors.grey[300],
     },
     "&[data-no-border='true']": {
       border: 'none',
@@ -99,10 +101,41 @@ export const ActionItem = styled.button<{
           svg: {
             color: theme.colors[color].main,
           },
-          '&[data-open], &:hover': {
-            borderColor: theme.colors[color][700],
+
+          '&.filled': {
+            backgroundColor: theme.colors[color].main,
+            color: theme.colors.neutral[0],
             svg: {
-              color: theme.colors[color][700],
+              color: 'inherit',
+            },
+          },
+          '&.text': {
+            border: 'none',
+            '&:not(:disabled):hover, &:not(:disabled):focus': {
+              backgroundColor: theme.colors[color][100],
+            },
+
+            '&:not(:disabled):active': {
+              backgroundColor: theme.colors[color][200],
+            },
+
+            svg: {
+              color: 'inherit',
+            },
+          },
+          '&[data-open], &:hover': {
+            '&:not(:disabled)': {
+              backgroundColor: theme.colors[color][50],
+              svg: {
+                color: theme.colors[color][700],
+              },
+              '&.filled': {
+                backgroundColor: theme.colors[color][700],
+                color: theme.colors.neutral[0],
+                svg: {
+                  color: 'inherit',
+                },
+              },
             },
           },
           '&:focus::after': {

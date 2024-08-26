@@ -10,31 +10,45 @@ export type ButtonGroupProps = ButtonGroupContextProps & {
 
 const ButtonGroupContainer = styled.div<ButtonGroupProps>({
   display: 'flex',
-  '[data-orientation="horizontal"]': {
+  '&[data-orientation="horizontal"]': {
     button: {
-      borderRadius: 0,
+      borderLeftWidth: 0,
+      '&:not(:last-child)': {
+        borderRightWidth: 1,
+      },
       '&:first-of-type': {
-        borderTopLeftRadius: '4px',
-        borderBottomLeftRadius: '4px',
+        borderLeftWidth: 1,
+        borderTopLeftRadius: 4,
+        borderBottomLeftRadius: 4,
+        borderTopRightRadius: 0,
+        borderBottomRightRadius: 0,
       },
       '&:last-of-type': {
-        borderTopRightRadius: '4px',
-        borderBottomRightRadius: '4px',
+        borderRightWidth: 1, // Add borderRight for the last child
+        borderTopRightRadius: 4,
+        borderBottomRightRadius: 4,
+        borderTopLeftRadius: 0,
+        borderBottomLeftRadius: 0,
+      },
+      '&:not(:first-of-type):not(:last-of-type)': {
+        borderRadius: 0,
       },
     },
   },
-  '[data-orientation="vertical"]': {
+  '&[data-orientation="vertical"]': {
     flexDirection: 'column',
     button: {
       borderRadius: 0,
+      borderBottomWidth: 0,
       margin: 0,
       '&:first-of-type': {
-        borderTopLeftRadius: '4px',
-        borderTopRightRadius: '4px',
+        borderTopLeftRadius: 4,
+        borderTopRightRadius: 4,
       },
       '&:last-of-type': {
-        borderBottomLeftRadius: '4px',
-        borderBottomRightRadius: '4px',
+        borderBottomLeftRadius: 4,
+        borderBottomRightRadius: 4,
+        borderBottomWidth: 1,
       },
     },
   },

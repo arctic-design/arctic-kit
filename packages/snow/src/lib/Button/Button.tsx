@@ -19,44 +19,49 @@ const getColorVariantStyles = (theme: SnowTheme) =>
     props: { color: color },
     style: {
       backgroundColor: theme.colors[color].main,
-      '&:hover': {
-        backgroundColor: theme.colors[color][600],
-      },
-      '&:active': {
-        backgroundColor: theme.colors[color][700],
-      },
 
       '&:disabled': {
         backgroundColor: theme.colors[color][300],
         color: theme.colors.grey[200],
       },
-      '&.outlined, &.text': {
-        border: `1px solid ${theme.colors[color][400]}`,
 
-        '&:hover': {
-          backgroundColor: theme.colors[color][50],
-          borderColor: theme.colors[color][700],
+      '&:not(:disabled)': {
+        '&:focus::after': {
+          borderColor: theme.colors[color][300],
         },
-
+        '&:hover': {
+          backgroundColor: theme.colors[color][600],
+        },
         '&:active': {
-          backgroundColor: theme.colors[color][400],
+          backgroundColor: theme.colors[color][700],
+        },
+      },
+
+      '&.outlined, &.text': {
+        border: `1px solid ${theme.colors[color][500]}`,
+
+        '&:not(:disabled)': {
+          '&:focus::after': {
+            borderColor: theme.colors[color][300],
+          },
+          '&:hover': {
+            backgroundColor: theme.colors[color][50],
+          },
+
+          '&:active': {
+            backgroundColor: theme.colors[color][400],
+          },
         },
 
         '&:disabled': {
-          backgroundColor: theme.colors[color][100],
           borderColor: theme.colors[color][400],
           color: theme.colors.grey[500],
           svg: {
             fill: theme.colors.grey[600],
           },
-        },
-
-        '&[data-variant="group"]:not(:disabled):active': {
-          borderColor: theme.colors[color][700],
-        },
-
-        '&[data-variant="group"]:not(:disabled):focus': {
-          borderColor: theme.colors[color][600],
+          '&:hover': {
+            cursor: 'not-allowed',
+          },
         },
 
         '&.text': {
@@ -124,22 +129,36 @@ const StyledButton = styled.button<ButtonProps>(
         fill: 'currentcolor',
       },
     },
-    '&:hover': {
-      backgroundColor: theme.colors.primary[600],
-    },
 
-    '&:active': {
-      backgroundColor: theme.colors.primary[700],
-    },
+    '&:not(:disabled)': {
+      '&:focus::after': {
+        content: '""',
+        position: 'absolute',
+        top: '-4px',
+        left: '-4px',
+        right: '-4px',
+        bottom: '-4px',
+        borderRadius: '6px',
+        zIndex: 1,
+        pointerEvents: 'none', // Ensure clicks pass through to the button
+        borderColor: theme.colors.primary[300],
+        borderStyle: 'solid',
+      },
+      '&:hover': {
+        backgroundColor: theme.colors.primary[600],
+      },
 
-    '&:focus': {
-      '&:not(:disabled)': {
-        outlineOffset: 2,
-        outlineWidth: 2,
-        outlineStyle: 'solid',
-        outlineColor: theme.colors.primary.main,
+      '&:active': {
+        backgroundColor: theme.colors.primary[700],
       },
     },
+
+    '&:disabled': {
+      backgroundColor: theme.colors.primary[300],
+      color: theme.colors.grey[200],
+      cursor: 'not-allowed',
+    },
+
     '&.outlined, &.text': {
       color: theme.colors.grey[900],
       backgroundColor: theme.colors.neutral[0],
@@ -147,7 +166,6 @@ const StyledButton = styled.button<ButtonProps>(
       boxShadow: 'none',
       '&:hover': {
         backgroundColor: theme.colors.grey[50],
-        borderColor: theme.colors.grey[700],
       },
       '&:active': {
         backgroundColor: theme.colors.grey[400],
@@ -160,22 +178,12 @@ const StyledButton = styled.button<ButtonProps>(
           fill: theme.colors.grey[600],
         },
       },
-      '&:focus': {
-        '&:not(:disabled)': {
-          outlineColor: theme.colors.grey[300],
+      '&:not(:disabled)': {
+        '&:focus::after': {
+          borderColor: theme.colors.grey[300],
         },
       },
 
-      '&[data-variant="group"]': {
-        '&:not(:disabled)': {
-          '&:active': {
-            borderColor: theme.colors.grey[700],
-          },
-          '&:focus': {
-            borderColor: theme.colors.grey[600],
-          },
-        },
-      },
       '&.text': {
         backgroundColor: 'transparent',
         border: 'none',
@@ -189,11 +197,6 @@ const StyledButton = styled.button<ButtonProps>(
             backgroundColor: theme.colors.grey[200],
           },
         },
-        '&:focus': {
-          '&:not(:disabled)': {
-            outlineColor: theme.colors.grey[100],
-          },
-        },
       },
     },
     height: `${SnowHeights['medium']}px`,
@@ -202,16 +205,17 @@ const StyledButton = styled.button<ButtonProps>(
     } * ${SnowSpacingMap['medium'] * 2});`,
 
     variants: [
-      {
-        props: { disabled: true },
-        style: { cursor: 'not-allowed' },
-      },
       ...getColorVariantStyles(theme),
       ...getSizeVariantStyles(theme),
       {
         props: { rounded: true },
         style: {
           borderRadius: 100,
+          '&:not(:disabled)': {
+            '&:focus::after': {
+              borderRadius: 100,
+            },
+          },
         },
       },
     ],
@@ -266,6 +270,7 @@ const Button = forwardRef<HTMLButtonElement, PropsWithChildren<ButtonProps>>(
         data-testid={id}
         data-variant={isButtonGroupChild ? 'group' : 'button'}
         data-fill-svg={fillSvg}
+        data-disabled={disabled}
         role={role}
         {...props}
       >

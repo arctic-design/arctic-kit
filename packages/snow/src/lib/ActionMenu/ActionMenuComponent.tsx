@@ -64,6 +64,7 @@ export const ActionMenuComponent = forwardRef<
       id = 'action-menu',
       prefix,
       noBorder,
+      variant = 'outlined',
       ...props
     },
     forwardedRef
@@ -172,7 +173,9 @@ export const ActionMenuComponent = forwardRef<
           data-focus-inside={hasFocusInside ? '' : undefined}
           id={rootId}
           data-testid={rootId}
-          className={isNested ? 'MenuItem' : !renderContent ? 'RootMenu' : ''}
+          className={`${
+            isNested ? 'MenuItem' : !renderContent ? 'RootMenu' : ''
+          } ${variant}`}
           disabled={disabled}
           aria-disabled={disabled}
           color={color}
