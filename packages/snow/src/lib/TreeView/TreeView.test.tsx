@@ -6,11 +6,11 @@ const treeData: TreeItem[] = [
   {
     id: '1',
     label: 'Root',
-    children: [
+    items: [
       {
         id: '1-1',
         label: 'Child 1',
-        children: [
+        items: [
           { id: '1-1-1', label: 'Grandchild 1-1-1' },
           { id: '1-1-2', label: 'Grandchild 1-1-2' },
         ],
@@ -18,7 +18,7 @@ const treeData: TreeItem[] = [
       {
         id: '1-2',
         label: 'Child 2',
-        children: [
+        items: [
           { id: '1-2-1', label: 'Grandchild 1-2-1' },
           { id: '1-2-2', label: 'Grandchild 1-2-2' },
         ],
@@ -29,7 +29,7 @@ const treeData: TreeItem[] = [
 
 // Test Suite
 describe('TreeView Component', () => {
-  it('renders the tree view with root and children', () => {
+  it('renders the tree view with root and items', () => {
     const { getByText } = render(<TreeView items={treeData} />);
 
     waitFor(() => {
