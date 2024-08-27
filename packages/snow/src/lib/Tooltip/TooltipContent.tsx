@@ -7,6 +7,7 @@ import {
   FloatingArrow,
   TooltipContentContainer,
 } from './TooltipContentContainer';
+import { ZIndex } from '../constants';
 
 const TooltipContent = forwardRef<
   HTMLDivElement,
@@ -24,6 +25,7 @@ const TooltipContent = forwardRef<
         style={{
           ...context.floatingStyles,
           ...style,
+          zIndex: ZIndex.Tooltip,
         }}
         {...context.getFloatingProps(props)}
       >
