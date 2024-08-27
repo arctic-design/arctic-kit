@@ -71,6 +71,7 @@ const Container = styled.div<AlertProps>(
     },
     '.content': {
       display: 'flex',
+      maxWidth: 350,
       justifyContent: 'space-between',
       '.message': {
         display: 'flex',
