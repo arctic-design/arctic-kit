@@ -57,10 +57,24 @@ const EmptySpan = styled.span({
   width: 16,
 });
 
+const TreeLabel = styled.span<{ hasMarginLeft?: boolean }>({
+  flex: 1,
+  paddingLeft: 2,
+  marginLeft: 0,
+  variants: [
+    {
+      props: { hasMarginLeft: true },
+      style: {
+        marginLeft: 4,
+      },
+    },
+  ],
+});
+
 export type TreeItem = {
   id: string;
   label: string;
-  children?: TreeItem[];
+  items?: TreeItem[];
   prefix?: (expanded?: boolean) => React.ReactNode;
   suffix?: (expanded?: boolean) => React.ReactNode;
   isExpanded?: boolean;
@@ -76,8 +90,8 @@ export interface TreeViewItemProps {
 
 const isItemInTree = (item: TreeItem, itemId: string): boolean => {
   if (item.id === itemId) return true;
-  if (item.children) {
-    return item.children.some((child) => isItemInTree(child, itemId));
+  if (item.items) {
+    return item.items.some((child) => isItemInTree(child, itemId));
   }
   return false;
 };
@@ -98,26 +112,27 @@ export const TreeViewItem: React.FC<TreeViewItemProps> = ({
   }, [currentItemId, item]);
 
   const handleToggle = () => {
-    if (item.children && item.children.length > 0) {
+    if (item.items && item.items.length > 0) {
       setIsExpanded(!isExpanded);
     }
 
     onToggle(item.id);
   };
 
+  const hasMarginLeft = !!item.prefix;
+
   return (
     <TreeList>
       <LeafItem
-        data-has-children={!!item.children}
         onClick={handleToggle}
         selected={selectedId === item.id}
-        sx={{
+        style={{
           paddingLeft: depth * 10,
         }}
       >
         {item.prefix ? (
           item.prefix?.(isExpanded)
-        ) : item.children && item.children.length > 0 ? (
+        ) : item.items && item.items.length > 0 ? (
           isExpanded ? (
             <ChevronDownIcon />
           ) : (
@@ -127,12 +142,7 @@ export const TreeViewItem: React.FC<TreeViewItemProps> = ({
           <EmptySpan />
         )}
 
-        <Box
-          as="span"
-          sx={{ marginLeft: item.prefix ? 4 : 0, flex: 1, paddingLeft: 2 }}
-        >
-          {item.label}
-        </Box>
+        <TreeLabel hasMarginLeft={hasMarginLeft}>{item.label}</TreeLabel>
 
         {item.suffix && (
           <Box as="span" sx={{ marginLeft: 4 }}>
@@ -149,9 +159,9 @@ export const TreeViewItem: React.FC<TreeViewItemProps> = ({
         }}
         style={{ overflow: 'hidden' }}
       >
-        {isExpanded && item.children && (
+        {isExpanded && item.items && (
           <ul>
-            {item.children.map((childItem) => (
+            {item.items.map((childItem) => (
               <TreeViewItem
                 key={childItem.id}
                 item={childItem}
@@ -182,7 +192,8 @@ const TreeView: React.FC<TreeViewProps> = ({
   currentItemId,
   sx,
   onSelect,
-  ...props
+  style,
+  className,
 }) => {
   const [selectedItem, setSelectedItem] = useState(currentItemId || '');
 
@@ -198,7 +209,7 @@ const TreeView: React.FC<TreeViewProps> = ({
   };
 
   return (
-    <Container sx={sx} {...props}>
+    <Container sx={sx} style={style} className={className}>
       <ul>
         {items?.map((item) => (
           <TreeViewItem

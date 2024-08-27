@@ -173,5 +173,5 @@ const plugins = [
 
 export default withPigment(composePlugins(...plugins)(nextConfig), {
   theme,
-  transformLibraries: ['@arctic-kit/snow'],
+  // transformLibraries: ['@arctic-kit/snow'],
 });

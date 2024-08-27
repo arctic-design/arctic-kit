@@ -83,7 +83,7 @@ const data: TreeItem[] = [
       <PrefixRender expanded={expanded} type="folder" name="src" />
     ),
     suffix: () => <FolderArrowDownIcon />,
-    children: [
+    items: [
       {
         id: '1-1',
         label: 'components',
@@ -91,7 +91,7 @@ const data: TreeItem[] = [
           <PrefixRender expanded={expanded} type="folder" name="components" />
         ),
         suffix: () => <FolderArrowDownIcon />,
-        children: [
+        items: [
           {
             id: '1-1-1',
             label: 'Accordion.tsx',
@@ -123,7 +123,7 @@ const data: TreeItem[] = [
       <PrefixRender expanded={expanded} type="folder" name="node_modules" />
     ),
     suffix: () => <FolderArrowDownIcon />,
-    children: [
+    items: [
       {
         id: '2-1',
         label: 'react',
@@ -131,7 +131,7 @@ const data: TreeItem[] = [
           <PrefixRender expanded={expanded} type="folder" name="react" />
         ),
         suffix: () => <FolderArrowDownIcon />,
-        children: [
+        items: [
           {
             id: '2-1-1',
             label: 'index.d.ts',
@@ -151,7 +151,7 @@ const data: TreeItem[] = [
           <PrefixRender expanded={expanded} type="folder" name="@arctic-kit" />
         ),
         suffix: () => <FolderArrowDownIcon />,
-        children: [
+        items: [
           {
             id: '2-2-1',
             label: 'core',
@@ -159,7 +159,7 @@ const data: TreeItem[] = [
               <PrefixRender expanded={expanded} type="folder" name="core" />
             ),
             suffix: () => <FolderArrowDownIcon />,
-            children: [
+            items: [
               {
                 id: '2-2-1-1',
                 label: 'index.d.ts',
@@ -179,7 +179,7 @@ const data: TreeItem[] = [
             prefix: (expanded) => (
               <PrefixRender expanded={expanded} type="folder" name="hooks" />
             ),
-            children: [
+            items: [
               {
                 id: '2-2-2-1',
                 label: 'index.d.ts',
@@ -199,7 +199,7 @@ const data: TreeItem[] = [
               <PrefixRender expanded={expanded} type="folder" name="form" />
             ),
             suffix: () => <FolderArrowDownIcon />,
-            children: [
+            items: [
               {
                 id: '2-2-3-1',
                 label: 'index.d.ts',
@@ -242,11 +242,11 @@ const treeData: TreeItem[] = [
   {
     id: '1',
     label: 'Parent 1',
-    children: [
+    items: [
       {
         id: '1-1',
         label: 'Child 1',
-        children: [
+        items: [
           { id: '1-1-1', label: 'Grandchild 1-1-1' },
           { id: '1-1-2', label: 'Grandchild 1-1-2' },
         ],
@@ -254,7 +254,7 @@ const treeData: TreeItem[] = [
       {
         id: '1-2',
         label: 'Child 2',
-        children: [
+        items: [
           { id: '1-2-1', label: 'Grandchild 1-2-1' },
           { id: '1-2-2', label: 'Grandchild 1-2-2' },
         ],
