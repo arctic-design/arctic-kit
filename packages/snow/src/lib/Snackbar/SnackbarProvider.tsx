@@ -119,7 +119,7 @@ function SnackbarProvider(props: PropsWithChildren) {
     return id;
   };
 
-  const closeSnackbar = (key: SnackbarKey) => {
+  const closeSnackbar = (key?: SnackbarKey) => {
     const shouldCloseAll = key === undefined;
 
     const updatedNotifications = snacks
