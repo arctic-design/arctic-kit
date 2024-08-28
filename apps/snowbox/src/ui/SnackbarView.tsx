@@ -13,6 +13,7 @@ function ButtonStacks() {
         onClick={() =>
           enqueueSnackbar({
             variant: 'success',
+            title: 'Arctic snow',
             message: 'Your changes have been saved.',
           })
         }
@@ -24,6 +25,7 @@ function ButtonStacks() {
         onClick={() =>
           enqueueSnackbar({
             variant: 'info',
+            title: 'Arctic snow',
             message: 'Reminder: The meeting starts in 10 minutes.',
           })
         }
@@ -35,6 +37,7 @@ function ButtonStacks() {
         onClick={() =>
           enqueueSnackbar({
             variant: 'warning',
+            title: 'Arctic snow',
             message: 'Storage space is running low.',
           })
         }
@@ -46,6 +49,7 @@ function ButtonStacks() {
         onClick={() =>
           enqueueSnackbar({
             variant: 'error',
+            title: 'Arctic snow',
             message: 'Failed to save data. Check your connection.',
           })
         }

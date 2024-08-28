@@ -107,16 +107,16 @@ export default function Index() {
 
             <Box sx={{ display: 'flex', flexDirection: 'column', gap: 12 }}>
               <Box sx={{ display: 'flex', flexDirection: 'column', gap: 4 }}>
-                <Alert severity="success">
+                <Alert severity="success" title="Arctic snow">
                   Snowflakes were collected in the snowbox
                 </Alert>
-                <Alert severity="info">
+                <Alert severity="info" title="Arctic snow">
                   Snowflakes were collected in the snowbox
                 </Alert>
-                <Alert severity="warning">
+                <Alert severity="warning" title="Arctic snow">
                   Snowflakes were collected in the snowbox
                 </Alert>
-                <Alert severity="error">
+                <Alert severity="error" title="Arctic snow">
                   Snowflakes were collected in the snowbox
                 </Alert>
               </Box>
