@@ -45,6 +45,7 @@ import { MultiSelectView } from '../ui/MultiSelectView';
 import { TabsView } from '../ui/TabsView';
 import { ToggleColorScheme } from '../ui/ToggleColorScheme';
 import { TreeViewExample } from '../ui/TreeViewExample';
+import { SnackbarView } from '../ui/SnackbarView';
 
 const options = [
   { label: 'Ford Mustang', value: 'ford_mustang' },
@@ -406,6 +407,9 @@ export default function Index() {
                   </GridColumn>
                 </GridRow>
               </Grid>
+            </ControlContainer>
+            <ControlContainer>
+              <SnackbarView />
             </ControlContainer>
             <ControlContainer>
               <TreeViewExample />

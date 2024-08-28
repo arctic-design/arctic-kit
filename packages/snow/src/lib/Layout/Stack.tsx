@@ -40,6 +40,7 @@ const Container = styled.div<{
       style: {
         flexDirection: 'row',
         justifyContent: 'center',
+        flexWrap: 'wrap',
       },
     },
   ],

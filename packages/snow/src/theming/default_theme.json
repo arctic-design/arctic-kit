@@ -135,7 +135,7 @@
     },
     "font": {
         "family": {
-            "base": "'Inter', sans-serif"
+            "base": "'Inter', inherit, sans-serif"
         },
         "weight": {
             "regular": 400,

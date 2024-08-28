@@ -29,6 +29,7 @@ export * from './Radio';
 export * from './SegmentedControl';
 export * from './Select';
 export * from './Skeleton';
+export * from './Snackbar';
 export * from './Switch';
 export * from './Tabs';
 export * from './Tag';

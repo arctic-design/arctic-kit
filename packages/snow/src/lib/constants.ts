@@ -43,9 +43,9 @@ export const KeyboardEventKey = {
 };
 
 export const ZIndex = {
-  SnackBar: 1400,
   Modal: 100,
   Drawer: 1000,
   Select: 1001,
-  Tooltip: 2,
+  SnackBar: 1400,
+  Tooltip: 1401,
 };

@@ -17,6 +17,8 @@ type Story = StoryObj<typeof meta>;
 
 export const Default: Story = {
   args: {
-    children: 'This is the alert message',
+    children:
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed dod eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+    title: 'Changes will affect all warehouses',
   },
 };
