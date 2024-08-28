@@ -4,8 +4,9 @@
 import { PropsWithChildren, isValidElement, useState } from 'react';
 import SnackbarContext from './SnackbarContext';
 import {
+  EnqueueSnackbarProps,
   InternalSnack,
-  OptionsObject,
+  SnackbarOptionsObject,
   SnackbarKey,
   SnackbarMessage,
 } from './types';
@@ -18,7 +19,7 @@ const defaults = {
   hideIconVariant: false,
   disableWindowBlurListener: false,
   //   variant: 'default',
-  autoHideDuration: 50000,
+  autoHideDuration: 5000,
   anchorOrigin: { vertical: 'bottom', horizontal: 'left' },
 };
 
@@ -26,10 +27,11 @@ export const isDefined = (value: string | null | undefined | number): boolean =>
   !!value || value === 0;
 
 const isOptions = (
-  messageOrOptions:
-    | SnackbarMessage
-    | (OptionsObject & { message?: SnackbarMessage })
-): messageOrOptions is OptionsObject & { message?: SnackbarMessage } => {
+  messageOrOptions: EnqueueSnackbarProps
+): messageOrOptions is SnackbarOptionsObject & {
+  title?: SnackbarMessage;
+  message?: SnackbarMessage;
+} => {
   const isMessage =
     typeof messageOrOptions === 'string' || isValidElement(messageOrOptions);
   return !isMessage;
@@ -68,10 +70,8 @@ function SnackbarProvider(props: PropsWithChildren) {
   const { children } = props;
 
   const enqueueSnackbar = (
-    messageOrOptions:
-      | SnackbarMessage
-      | (OptionsObject & { message?: SnackbarMessage }),
-    optsOrUndefined: OptionsObject = {}
+    messageOrOptions: EnqueueSnackbarProps,
+    optsOrUndefined: SnackbarOptionsObject = {}
   ) => {
     if (messageOrOptions === undefined || messageOrOptions === null) {
       throw new Error('enqueueSnackbar called with invalid argument');
@@ -81,8 +81,14 @@ function SnackbarProvider(props: PropsWithChildren) {
       ? messageOrOptions
       : optsOrUndefined;
 
+    const title: SnackbarMessage | undefined = isOptions(messageOrOptions)
+      ? messageOrOptions.title
+      : messageOrOptions;
+
     const message: SnackbarMessage | undefined = isOptions(messageOrOptions)
       ? messageOrOptions.message
+      : title
+      ? undefined
       : messageOrOptions;
 
     const { key, ...options } = opts;
@@ -96,6 +102,7 @@ function SnackbarProvider(props: PropsWithChildren) {
     const snack: InternalSnack = {
       id,
       ...options,
+      title,
       message,
       persist: merger('persist'),
       action: merger('action'),

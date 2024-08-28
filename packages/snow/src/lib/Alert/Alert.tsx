@@ -8,17 +8,21 @@ import {
   ExclamationTriangleIcon,
 } from '@arctic-kit/icons';
 import { SnowTheme, SnowThemeArgs } from '../../core';
+import { Box } from '../Box';
 
 const getVariantStyles = (theme: SnowTheme) => {
   return [
     ...SnowFeedbackColorValues.map((severity) => ({
       props: { severity: severity as SnowFeedbackColor },
       style: {
-        backgroundColor: theme.colors[severity as SnowFeedbackColor][100],
-        borderColor: theme.colors[severity as SnowFeedbackColor][200],
+        backgroundColor: theme.colors[severity as SnowFeedbackColor][50],
+        borderColor: theme.colors[severity as SnowFeedbackColor][500],
         color: theme.colors[severity as SnowFeedbackColor][700],
         '& svg': {
           color: theme.colors[severity as SnowFeedbackColor].main,
+        },
+        '.children': {
+          color: theme.colors.grey[800],
         },
       },
     })),
@@ -42,26 +46,30 @@ export type AlertProps = {
   shadow?: boolean;
   className?: string;
   id?: string;
+  title?: React.ReactNode;
+  action?: React.ReactNode;
+  hideChildren?: boolean;
+  childClassName?: string;
 };
 
 const Container = styled.div<AlertProps>(
   ({ theme: { vars: theme } }: SnowThemeArgs) => ({
     fontFamily: theme.font.family.base,
-    fontSize: '0.875rem',
+    fontSize: theme.font.size[100],
     fontStyle: 'normal',
     fontWeight: theme.font.weight.regular,
     lineHeight: '1.225rem',
     minWidth: '300px',
     position: 'relative',
     letterSpacing: '0.01071em',
-    alignItems: 'center',
+    alignItems: 'flex-start',
     padding: '0.75rem 1rem',
     borderRadius: '0.3125rem',
-    gap: '0.25rem',
+    gap: 6,
     display: 'flex',
     border: '1px solid transparent',
     boxShadow: 'none',
-    variants: getVariantStyles(theme),
+
     '.icon': {
       display: 'inline-flex',
       '& svg': {
@@ -69,17 +77,38 @@ const Container = styled.div<AlertProps>(
         height: 'auto',
       },
     },
-    '.content': {
-      display: 'flex',
-      maxWidth: 350,
-      justifyContent: 'space-between',
-      '.message': {
-        display: 'flex',
-        alignItems: 'center',
-      },
+    '.title': {
+      fontWeight: 500,
     },
+
+    svg: {
+      marginTop: 1,
+    },
+
+    variants: getVariantStyles(theme),
   })
 );
+
+const ChildContainer = styled.span<{
+  hideChildren?: boolean;
+  hasVariant?: boolean;
+}>(({ theme: { vars: theme } }: SnowThemeArgs) => ({
+  fontSize: theme.font.size[50],
+  variants: [
+    {
+      props: { hideChildren: true },
+      style: {
+        display: 'none',
+      },
+    },
+    {
+      props: { hasVariant: true },
+      style: {
+        color: theme.colors.grey[800],
+      },
+    },
+  ],
+}));
 
 const Alert = forwardRef<HTMLDivElement, PropsWithChildren<AlertProps>>(
   (props: PropsWithChildren<AlertProps>, ref) => {
@@ -90,6 +119,10 @@ const Alert = forwardRef<HTMLDivElement, PropsWithChildren<AlertProps>>(
       shadow = false,
       className = '',
       id = 'alert',
+      title,
+      action,
+      hideChildren = false,
+      childClassName,
     } = props;
 
     return (
@@ -102,7 +135,35 @@ const Alert = forwardRef<HTMLDivElement, PropsWithChildren<AlertProps>>(
         className={className}
       >
         {!hideIcon && <div className="icon">{IconMap[severity]}</div>}
-        {children}
+        <Box
+          sx={{
+            display: 'flex',
+            justifyContent: 'space-between',
+            gap: 4,
+            flex: 1,
+          }}
+        >
+          <Box
+            sx={{
+              display: 'flex',
+              flexDirection: 'column',
+              alignItems: 'flex-start',
+              gap: 4,
+            }}
+          >
+            {title && <span className="title">{title}</span>}
+            {children && (
+              <ChildContainer
+                hideChildren={hideChildren}
+                hasVariant={!!severity}
+                className={childClassName}
+              >
+                {children}
+              </ChildContainer>
+            )}
+          </Box>
+          {action}
+        </Box>
       </Container>
     );
   }

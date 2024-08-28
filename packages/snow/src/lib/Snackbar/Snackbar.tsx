@@ -18,8 +18,7 @@ export function useEventCallback<Args extends unknown[], Return>(
 
 interface SnackbarProps extends Required<Pick<SharedProps, 'onClose'>> {
   id: SnackbarKey;
-
-  children: JSX.Element;
+  children: React.ReactNode;
   autoHideDuration: number | null | undefined;
 }
 
@@ -66,6 +65,10 @@ const Snackbar = React.forwardRef<HTMLDivElement, SnackbarProps>(
         }
       };
     }, [autoHideDuration, setAutoHideTimer]);
+
+    if (!children) {
+      return null;
+    }
 
     return (
       <Box sx={{ flex: 1 }} ref={ref}>

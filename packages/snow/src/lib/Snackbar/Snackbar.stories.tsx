@@ -26,7 +26,7 @@ type Story = StoryObj<typeof meta>;
 // More on writing stories with args: https://storybook.js.org/docs/react/writing-stories/args
 
 function ButtonStacks() {
-  const { enqueueSnackbar } = useSnackbar();
+  const { enqueueSnackbar, closeSnackbar } = useSnackbar();
   return (
     <Stack spacing={4} direction="horizontal">
       <Button
@@ -37,10 +37,22 @@ function ButtonStacks() {
       </Button>
       <Button
         variant="filled"
+        onClick={() =>
+          enqueueSnackbar({
+            title: 'Notification received.',
+            message: 'Your changes have been saved.',
+          })
+        }
+      >
+        Title and message
+      </Button>
+      <Button
+        variant="filled"
         color="success"
         onClick={() =>
           enqueueSnackbar({
             variant: 'success',
+            title: 'Saved',
             message: 'Your changes have been saved.',
           })
         }
@@ -53,7 +65,8 @@ function ButtonStacks() {
         onClick={() =>
           enqueueSnackbar({
             variant: 'info',
-            message: 'Reminder: The meeting starts in 10 minutes.',
+            title: 'Reminder',
+            message: 'The meeting starts in 10 minutes.',
           })
         }
       >
@@ -65,6 +78,7 @@ function ButtonStacks() {
         onClick={() =>
           enqueueSnackbar({
             variant: 'warning',
+            title: 'Storage limitations',
             message: 'Storage space is running low.',
           })
         }
@@ -77,11 +91,15 @@ function ButtonStacks() {
         onClick={() =>
           enqueueSnackbar({
             variant: 'error',
+            title: 'Save failed',
             message: 'Failed to save data. Check your connection.',
           })
         }
       >
         Error
+      </Button>
+      <Button variant="outlined" onClick={() => closeSnackbar()}>
+        Close All
       </Button>
     </Stack>
   );
@@ -96,8 +114,6 @@ function DefaultRender() {
 }
 
 export const Default: Story = {
-  args: {
-    children: 'Button',
-  },
+  args: {},
   render: DefaultRender,
 };

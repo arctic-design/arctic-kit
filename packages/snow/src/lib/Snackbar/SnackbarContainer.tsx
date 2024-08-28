@@ -19,7 +19,7 @@ const SnackbarContent = styled.div({
   alignItems: 'flex-start',
   flexDirection: 'column-reverse',
   zIndex: ZIndex.SnackBar,
-  gap: 16,
+  gap: 12,
   maxHeight: '100vh',
   overflowY: 'auto',
 });
@@ -35,6 +35,11 @@ const StyledAlert = styled(Alert)<{
     color: theme.colors.neutral[0],
     svg: {
       color: theme.colors.neutral[0],
+    },
+
+    '.snack-child': {
+      color: theme.colors.neutral[0],
+      opacity: 0.8,
     },
   },
 }));
@@ -62,18 +67,17 @@ const CloseIconButton = styled.button<{ hasSeverity?: boolean }>(
       alignItems: 'center',
       padding: '8px 0',
     },
-
-    // position: 'absolute',
-    // top: 15,
-    // right: 10,
     background: 'inherit',
     border: 'none',
     padding: 0,
     svg: {
       width: '1rem',
       height: '1rem',
-      padding: '0rem 0.1875rem',
+      margin: '0rem 0.1875rem',
       color: theme.colors.neutral[0],
+      '&:hover': {
+        strokeWidth: 2,
+      },
     },
     variants: [
       {
@@ -129,22 +133,25 @@ export function SnackbarContainer() {
             severity={item.variant}
             hideIcon={item.hideIconVariant}
             className={item.variant ?? 'default'}
+            title={item.title}
+            action={
+              <CloseButton
+                severity={item.variant}
+                close={() => {
+                  item.onClose?.(item.id);
+                  closeSnackbar(item.id);
+                }}
+              />
+            }
+            hideChildren={!item.message}
+            childClassName="snack-child"
           >
             <Snackbar
               id={item.id}
               autoHideDuration={item.autoHideDuration}
               onClose={() => closeSnackbar(item.id)}
             >
-              <div className="content">
-                <div className="message">{item.message}</div>
-                <CloseButton
-                  severity={item.variant}
-                  close={() => {
-                    item.onClose?.(item.id);
-                    closeSnackbar(item.id);
-                  }}
-                />
-              </div>
+              {item.message}
             </Snackbar>
           </SnackbarItem>
         ))}

@@ -49,7 +49,11 @@ export type SnackbarAction =
   | ((key: SnackbarKey) => React.ReactNode);
 export type SnackbarContentCallback =
   | React.ReactNode
-  | ((key: SnackbarKey, message?: SnackbarMessage) => React.ReactNode);
+  | ((
+      key: SnackbarKey,
+      title?: SnackbarMessage,
+      message?: SnackbarMessage
+    ) => React.ReactNode);
 
 export interface SnackbarOrigin {
   vertical: 'top' | 'bottom';
@@ -113,7 +117,7 @@ export interface SharedProps<V extends VariantType = VariantType> {
   onClose?: (key?: SnackbarKey) => void;
 }
 
-export interface OptionsObject<V extends VariantType = VariantType>
+export interface SnackbarOptionsObject<V extends VariantType = VariantType>
   extends SharedProps<V> {
   /**
    * Unique identifier to reference a snackbar.
@@ -131,20 +135,24 @@ type NeededByInternalSnack = 'persist' | 'variant' | 'anchorOrigin';
 
 export interface InternalSnack
   extends RequiredBy<
-    Omit<OptionsObject, 'key' | 'preventDuplicate'>,
+    Omit<SnackbarOptionsObject, 'key' | 'preventDuplicate'>,
     NeededByInternalSnack
   > {
   id: SnackbarKey;
   message?: SnackbarMessage;
+  title?: SnackbarMessage;
   iconVariant?: Record<string, React.ReactNode>;
 }
 
+export type EnqueueSnackbarProps =
+  | SnackbarMessage
+  | (SnackbarOptionsObject & {
+      title?: SnackbarMessage;
+      message?: SnackbarMessage;
+    });
+
 export type SnackbarContextProps = {
   snacks: InternalSnack[];
-  enqueueSnackbar: (
-    messageOrOptions:
-      | SnackbarMessage
-      | (OptionsObject & { message?: SnackbarMessage })
-  ) => SnackbarKey;
+  enqueueSnackbar: (messageOrOptions: EnqueueSnackbarProps) => SnackbarKey;
   closeSnackbar: (key?: SnackbarKey) => void;
 };
