@@ -127,7 +127,7 @@ const lightTheme = {
     },
   },
   font: {
-    family: { base: "'Inter', sans-serif;" },
+    family: { base: "'Inter', inherit, sans-serif" },
     weight: { regular: 400, medium: 500, semibold: 600, bold: 700 },
     size: {
       25: '12px',

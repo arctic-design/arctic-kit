@@ -39,7 +39,12 @@ function DefaultRender(args: Story['args']) {
   return (
     <div>
       <Button onClick={toggleDrawer}>Toggle Drawer</Button>
-      <Drawer {...args} open={isDrawerOpen} onOpenChange={toggleDrawer}>
+      <Drawer
+        {...args}
+        open={isDrawerOpen}
+        onOpenChange={toggleDrawer}
+        onCancel={toggleDrawer}
+      >
         <Grid spacing={1}>
           <GridRow>
             <GridColumn xs={12} lg={6}>

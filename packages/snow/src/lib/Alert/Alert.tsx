@@ -62,7 +62,7 @@ const Container = styled.div<AlertProps>(
     fontStyle: 'normal',
     fontWeight: theme.font.weight.regular,
     lineHeight: '1.225rem',
-    minWidth: '300px',
+    minWidth: 250,
     position: 'relative',
     letterSpacing: '0.01071em',
     alignItems: 'flex-start',
