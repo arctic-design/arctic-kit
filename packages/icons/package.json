@@ -8,6 +8,11 @@
       "import": "./index.mjs",
       "require": "./index.js",
       "types": "./index.d.ts"
+    },
+    "./solid": {
+      "import": "./solid/index.mjs",
+      "require": "./solid/index.js",
+      "types": "./solid/index.d.ts"
     }
   },
   "author": "Barun Prasad",

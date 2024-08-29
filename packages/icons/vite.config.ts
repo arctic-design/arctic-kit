@@ -32,18 +32,32 @@ export default defineConfig({
     commonjsOptions: {
       transformMixedEsModules: true,
     },
-    lib: {
-      // Could also be a dictionary or array of multiple entry points.
-      entry: 'src/index.ts',
-      name: 'icons',
-      fileName: 'index',
-      // Change this to the formats you want to support.
-      // Don't forget to update your package.json as well.
-      formats: ['es', 'cjs'],
-    },
     rollupOptions: {
-      // External packages that should not be bundled into your library.
+      input: {
+        index: path.resolve(__dirname, 'src/index.ts'),
+        'solid/index': path.resolve(__dirname, 'src/solid/index.ts'),
+      },
+      output: [
+        {
+          dir: '../../dist/packages/icons',
+          format: 'es',
+          entryFileNames: '[name].mjs',
+          chunkFileNames: '[name]-[hash].mjs',
+          assetFileNames: '[name]-[hash][extname]',
+        },
+        {
+          dir: '../../dist/packages/icons',
+          format: 'cjs',
+          entryFileNames: '[name].js',
+          chunkFileNames: '[name]-[hash].js',
+          assetFileNames: '[name]-[hash][extname]',
+        },
+      ],
       external: ['react', 'react-dom', 'react/jsx-runtime'],
+    },
+    lib: {
+      entry: '', // This is effectively ignored due to the custom rollupOptions.input
+      name: 'icons',
     },
   },
 
