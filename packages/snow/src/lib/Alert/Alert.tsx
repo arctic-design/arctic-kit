@@ -6,7 +6,7 @@ import {
   CheckCircleIcon,
   ExclamationCircleIcon,
   ExclamationTriangleIcon,
-} from '@arctic-kit/icons';
+} from '@arctic-kit/icons/solid';
 import { SnowTheme, SnowThemeArgs } from '../../core';
 import { Box } from '../Box';
 
@@ -37,10 +37,10 @@ const getVariantStyles = (theme: SnowTheme) => {
 };
 
 const IconMap: Record<SnowFeedbackColor, JSX.Element> = {
-  success: <CheckCircleIcon strokeWidth={2} />,
-  info: <InformationCircleIcon strokeWidth={2} />,
-  warning: <ExclamationTriangleIcon strokeWidth={2} />,
-  error: <ExclamationCircleIcon strokeWidth={2} />,
+  success: <CheckCircleIcon />,
+  info: <InformationCircleIcon />,
+  warning: <ExclamationTriangleIcon />,
+  error: <ExclamationCircleIcon />,
 };
 
 export type AlertProps = {
