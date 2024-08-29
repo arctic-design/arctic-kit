@@ -47,9 +47,10 @@ const InputSection = styled.div<InputSectionType>(
     },
     "&[data-pointer-events='true']": {
       '&:hover': {
+        cursor: 'pointer',
         svg: {
           backgroundColor: theme.colors.grey[50],
-          padding: 4,
+          margin: 4,
           borderRadius: 2,
         },
       },
