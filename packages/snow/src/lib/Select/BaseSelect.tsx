@@ -176,7 +176,7 @@ const BaseSelect: React.FC<BaseSelectProps> = (props: BaseSelectProps) => {
                 className="multiple"
                 onClick={(e) => onTagRemove(e, option)}
               >
-                <XMarkIcon />
+                <XMarkIcon strokeWidth={2} />
               </SelectCloseContainer>
             </SelectInputTagItem>
           ))}
@@ -392,6 +392,7 @@ const BaseSelect: React.FC<BaseSelectProps> = (props: BaseSelectProps) => {
                   <XMarkIcon
                     id={`${id}-indicator-clear-icon`}
                     data-testid={`${id}-indicator-clear-icon`}
+                    strokeWidth={2}
                   />
                 </SelectCloseContainer>
               </SelectIndicator>
@@ -406,6 +407,7 @@ const BaseSelect: React.FC<BaseSelectProps> = (props: BaseSelectProps) => {
             <ChevronDownIcon
               id={`${id}-indicator-down-icon`}
               data-testid={`${id}-indicator-down-icon`}
+              strokeWidth={2}
             />
           </SelectIndicator>
         </SelectIndicators>

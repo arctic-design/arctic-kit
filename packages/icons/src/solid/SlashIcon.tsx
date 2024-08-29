@@ -11,7 +11,6 @@ export default function SlashIcon(props: IconProps) {
       {...props}
     >
       <path
-        fill="#000"
         fillRule="evenodd"
         d="M15.256 3.042a.75.75 0 0 1 .449.962l-6 16.5a.75.75 0 1 1-1.41-.513l6-16.5a.75.75 0 0 1 .961-.449"
         clipRule="evenodd"
