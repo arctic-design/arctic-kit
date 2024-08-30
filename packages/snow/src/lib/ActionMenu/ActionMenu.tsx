@@ -11,6 +11,9 @@ export const ActionMenu = forwardRef<HTMLButtonElement, ActionMenuProps>(
       placement = 'bottom-start',
       itemSize = 'medium',
       id = 'action-menu',
+      variant,
+      disabled,
+      color,
       ...props
     }: ActionMenuProps,
     ref
@@ -20,6 +23,7 @@ export const ActionMenu = forwardRef<HTMLButtonElement, ActionMenuProps>(
       disabled: grpDisabled,
       size: grpSize,
       color: grpColor,
+      variant: grpVariant,
     } = useContext(ButtonGroupContext);
 
     if (parentId === null) {
@@ -28,10 +32,11 @@ export const ActionMenu = forwardRef<HTMLButtonElement, ActionMenuProps>(
           <ActionMenuComponent
             placement={placement}
             itemSize={grpSize || itemSize}
-            color={grpColor}
-            disabled={grpDisabled}
+            color={grpColor || color}
+            disabled={grpDisabled || disabled}
             id={id}
             data-testid={id}
+            variant={grpVariant || variant}
             {...props}
             ref={ref}
           />
@@ -44,6 +49,9 @@ export const ActionMenu = forwardRef<HTMLButtonElement, ActionMenuProps>(
         id={`${id}-${parentId}`}
         data-testid={`${id}-${parentId}`}
         itemSize={grpSize || itemSize}
+        disabled={disabled}
+        color={color}
+        variant={variant}
         {...props}
         ref={ref}
       />

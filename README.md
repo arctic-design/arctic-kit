@@ -1,3 +1,18 @@
+![Build Status](https://github.com/arctic-design/arctic-kit/actions/workflows/release.yml/badge.svg)
+[![storybook](https://raw.githubusercontent.com/storybooks/brand/master/badge/badge-storybook.svg)](https://main--6698d2827829aaad6dc5d14f.chromatic.com)
+[![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square)](https://github.com/prettier/prettier)
+
+# Packages
+
+- **@arctic-kit/snow**  
+  [![NPM](https://img.shields.io/npm/v/@arctic-kit/snow.svg)](https://www.npmjs.com/package/@arctic-kit/snow)
+
+- **@arctic-kit/colors**  
+  [![NPM](https://img.shields.io/npm/v/@arctic-kit/colors.svg)](https://www.npmjs.com/package/@arctic-kit/colors)
+
+- **@arctic-kit/icons**  
+  [![NPM](https://img.shields.io/npm/v/@arctic-kit/icons.svg)](https://www.npmjs.com/package/@arctic-kit/icons)
+
 # ArcticKit
 
 <a alt="Nx logo" href="https://nx.dev" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/nrwl/nx/master/images/nx-logo.png" width="45"></a>
