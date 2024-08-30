@@ -54,7 +54,7 @@ const getColorVariantStyles = (theme: SnowTheme) =>
         },
 
         '&:disabled': {
-          borderColor: theme.colors[color][400],
+          borderColor: theme.colors.grey[400],
           color: theme.colors.grey[500],
           svg: {
             fill: theme.colors.grey[600],

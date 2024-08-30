@@ -37,6 +37,16 @@ export const ActionItem = styled.button<{
       svg: {
         color: theme.colors.neutral[1000],
       },
+
+      '&:not(:disabled)': {
+        '&.filled': {
+          backgroundColor: theme.colors.primary[600],
+          color: theme.colors.neutral[0],
+          svg: {
+            color: 'inherit',
+          },
+        },
+      },
     },
     '&[aria-disabled="true"]': {
       backgroundColor: theme.colors.grey[100],
@@ -63,6 +73,34 @@ export const ActionItem = styled.button<{
     },
     "&[data-no-border='true']": {
       border: 'none',
+    },
+
+    '&.filled': {
+      backgroundColor: theme.colors.primary.main,
+      color: theme.colors.neutral[0],
+      border: `1px solid ${theme.colors.primary.main}`,
+
+      svg: {
+        color: 'inherit',
+      },
+
+      '&:focus::after': {
+        border: `1px solid ${theme.colors.primary[300]}`,
+      },
+    },
+    '&.text': {
+      border: 'none',
+      '&:not(:disabled):hover, &:not(:disabled):focus': {
+        backgroundColor: theme.colors.grey[100],
+      },
+
+      '&:not(:disabled):active': {
+        backgroundColor: theme.colors.grey[200],
+      },
+
+      svg: {
+        color: 'inherit',
+      },
     },
   },
 
@@ -105,8 +143,12 @@ export const ActionItem = styled.button<{
           '&.filled': {
             backgroundColor: theme.colors[color].main,
             color: theme.colors.neutral[0],
+            borderColor: theme.colors[color].main,
             svg: {
               color: 'inherit',
+            },
+            '&:focus::after': {
+              border: `1px solid ${theme.colors[color][300]}`,
             },
           },
           '&.text': {

@@ -27,16 +27,10 @@ type Story = StoryObj<typeof meta>;
 // More on writing stories with args: https://storybook.js.org/docs/react/writing-stories/args
 
 function SplitButtonRender(args: Story['args']) {
-  const { variant, color, ...otherArgs } = args as ButtonGroupContextProps;
   return (
-    <ButtonGroup variant={variant} color={color} {...otherArgs}>
+    <ButtonGroup {...args}>
       <Button onClick={() => console.log('button')}>Button</Button>
-      <ActionMenu
-        variant={variant}
-        color={color}
-        placement="bottom-end"
-        disabled={args?.disabled}
-      >
+      <ActionMenu placement="bottom-end">
         <ActionMenuItem label="Undo" onClick={() => console.log('Undo')} />
         <ActionMenuItem
           label="Redo"
