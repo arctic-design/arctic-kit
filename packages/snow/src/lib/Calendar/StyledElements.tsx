@@ -34,6 +34,7 @@ export const ArrowButton = styled.button(
     justifyContent: 'center',
     alignItems: 'center',
     backgroundColor: theme.colors.neutral[0],
+    color: theme.colors.neutral[1000],
     border: 'none',
     '&:focus': {
       '&:not(:disabled)': {
@@ -67,6 +68,7 @@ export const DayButton = styled.button(
     fontFamily: theme.font.family.base,
     backgroundColor: theme.colors.neutral[0],
     borderRadius: 6,
+    color: theme.colors.neutral[1000],
 
     '&:focus': {
       '&:not(:disabled)': {
