@@ -13,6 +13,7 @@ export * from './CardStack';
 export * from './Checkbox';
 export * from './Chip';
 export * from './Collapse';
+export * from './Combobox';
 export * from './DatePicker';
 export * from './Drawer';
 export * from './FileUpload';
