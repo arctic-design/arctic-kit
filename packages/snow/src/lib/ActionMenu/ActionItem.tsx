@@ -41,7 +41,7 @@ export const ActionItem = styled.button<{
       '&:not(:disabled)': {
         '&.filled': {
           backgroundColor: theme.colors.primary[600],
-          color: theme.colors.neutral[0],
+          color: theme.colors.white,
           svg: {
             color: 'inherit',
           },
@@ -77,7 +77,7 @@ export const ActionItem = styled.button<{
 
     '&.filled': {
       backgroundColor: theme.colors.primary.main,
-      color: theme.colors.neutral[0],
+      color: theme.colors.white,
       border: `1px solid ${theme.colors.primary.main}`,
 
       svg: {
@@ -142,7 +142,7 @@ export const ActionItem = styled.button<{
 
           '&.filled': {
             backgroundColor: theme.colors[color].main,
-            color: theme.colors.neutral[0],
+            color: theme.colors.white,
             borderColor: theme.colors[color].main,
             svg: {
               color: 'inherit',
@@ -173,7 +173,7 @@ export const ActionItem = styled.button<{
               },
               '&.filled': {
                 backgroundColor: theme.colors[color][600],
-                color: theme.colors.neutral[0],
+                color: theme.colors.white,
                 svg: {
                   color: 'inherit',
                 },

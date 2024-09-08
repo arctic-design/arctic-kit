@@ -7,7 +7,9 @@ const Container = styled.div(({ theme: { vars: theme } }: SnowThemeArgs) => ({
   padding: 8,
   flexGrow: 1,
   userSelect: 'none',
-  width: '100%',
+  backgroundColor: theme.colors.neutral[0],
+  color: theme.colors.neutral[1000],
+  // width: '100%',
 }));
 
 export type TabPanelsProps = {

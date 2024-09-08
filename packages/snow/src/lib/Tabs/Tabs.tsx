@@ -11,22 +11,21 @@ export type TabsProps = {
 
 const Container = styled.div({
   width: '100%',
+  padding: '2px 0',
 });
 
 const Nav = styled.div<TabsProps>(
   ({ theme: { vars: theme } }: SnowThemeArgs) => ({
-    padding: '5px 5px 0',
     borderRadius: '10px',
     borderBottomLeftRadius: '0',
     borderBottomRightRadius: '0',
-    borderBottom: '0.5px solid #eeeeee',
+    borderBottom: `0.5px solid ${theme.colors.grey[100]}`,
     height: '44px',
     display: 'flex',
-    width: '100%',
 
     ul: {
       listStyle: 'none',
-      padding: '0',
+      padding: 4,
       margin: '0 !important',
       display: 'flex',
       width: 'auto',
@@ -42,7 +41,7 @@ const Nav = styled.div<TabsProps>(
       left: '0',
       bottom: '0',
       width: '300px',
-      background: '#fff',
+      background: theme.colors.neutral[0],
     },
 
     '.add-item': {

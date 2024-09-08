@@ -19,6 +19,7 @@ export const Container = styled.div<{ inputsize?: SnowSize }>(
     borderRadius: 4,
     border: `1px solid ${theme.colors.grey[400]}`,
     background: theme.colors.neutral[0],
+    color: theme.colors.neutral[1000],
     transition: 'border-color 0.3s ease',
     fontSize: theme.font.size[50],
     fontWeight: 400,

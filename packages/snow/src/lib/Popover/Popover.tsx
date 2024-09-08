@@ -19,19 +19,23 @@ import {
 import { styled } from '@pigment-css/react';
 import { Button } from '../Button';
 import { DefaultSnowProps } from '../types';
+import { SnowThemeArgs } from '../../core';
 
-const PopoverContentElement = styled.div({
-  backgroundColor: '#fff',
-  boxShadow:
-    'rgba(0, 0, 0, 0.05) 0px 1px 3px 0px, rgba(0, 0, 0, 0.05) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px',
-  border: '1px solid rgb(233, 236, 239)',
-  fontSize: '90%',
-  padding: '4px 8px',
-  borderRadius: 4,
-  boxSizing: 'border-box',
-  width: 'max-content',
-  maxWidth: 'calc(100vw - 10px)',
-});
+const PopoverContentElement = styled.div(
+  ({ theme: { vars: theme } }: SnowThemeArgs) => ({
+    backgroundColor: theme.colors.neutral[0],
+    color: theme.colors.neutral[1000],
+    boxShadow:
+      'rgba(0, 0, 0, 0.05) 0px 1px 3px 0px, rgba(0, 0, 0, 0.05) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px',
+    border: `1px solid ${theme.colors.grey[300]}`,
+    fontSize: '90%',
+    padding: '4px 8px',
+    borderRadius: 4,
+    boxSizing: 'border-box',
+    width: 'max-content',
+    maxWidth: 'calc(100vw - 10px)',
+  })
+);
 
 export type PopoverPlacement = Placement;
 export interface PopoverOptions {

@@ -31,6 +31,7 @@ function Render(args: Story['args']) {
       sx={{
         minWidth: 450,
         border: '1px var(--snow-colors-primary-main) dashed',
+        color: 'var(--snow-colors-grey-900)',
         padding: 12,
         borderRadius: 4,
       }}

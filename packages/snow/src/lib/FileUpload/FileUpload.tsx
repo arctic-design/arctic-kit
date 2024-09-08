@@ -34,6 +34,8 @@ const Container = styled.div<{ color?: FileUploadColor }>(
     svg: {
       width: 16,
     },
+    background: theme.colors.neutral[0],
+    color: theme.colors.neutral[1000],
 
     'input[type="file"]': {
       display: 'none',
@@ -53,7 +55,7 @@ const Container = styled.div<{ color?: FileUploadColor }>(
       '&:hover, &.active': {
         "&[aria-disabled='false']": {
           border: `1px dashed ${theme.colors.primary[300]}`,
-          background: theme.colors.primary[100],
+          background: theme.colors.grey[100],
         },
       },
       '.clickable': {
@@ -72,7 +74,7 @@ const Container = styled.div<{ color?: FileUploadColor }>(
       alignItems: 'center',
       padding: '0 8px',
       justifyContent: 'center',
-      border: '1px solid rgba(149, 147, 146, 0.25)',
+      border: `1px solid ${theme.colors.grey[200]}`,
       background: theme.colors.neutral[0],
       '.clear-container': {
         display: 'flex',
@@ -100,7 +102,7 @@ const Container = styled.div<{ color?: FileUploadColor }>(
             '&:hover, &.active': {
               "&[aria-disabled='false']": {
                 border: `1px dashed ${theme.colors[color][300]}`,
-                background: theme.colors[color][100],
+                background: theme.colors.grey[100],
               },
             },
             '.clickable': {

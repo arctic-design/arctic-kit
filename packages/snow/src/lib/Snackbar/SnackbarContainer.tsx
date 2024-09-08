@@ -29,14 +29,13 @@ const StyledAlert = styled(Alert)<{
 }>(({ theme: { vars: theme } }: SnowThemeArgs) => ({
   '&.default': {
     backgroundColor: theme.colors.info[900],
-    border: 'none',
-    color: theme.colors.neutral[0],
+    color: theme.colors.white,
     svg: {
-      color: theme.colors.neutral[0],
+      color: theme.colors.white,
     },
 
     '.snack-child': {
-      color: theme.colors.neutral[0],
+      color: theme.colors.white,
       opacity: 0.8,
     },
   },
@@ -72,7 +71,7 @@ const CloseIconButton = styled.button<{ hasSeverity?: boolean }>(
       width: '1rem',
       height: '1rem',
       margin: '0rem 0.1875rem',
-      color: theme.colors.neutral[0],
+      color: theme.colors.white,
       '&:hover': {
         strokeWidth: 2,
       },
@@ -82,11 +81,11 @@ const CloseIconButton = styled.button<{ hasSeverity?: boolean }>(
         props: { hasSeverity: true },
         style: {
           svg: {
-            color: theme.colors.grey[800],
+            color: theme.colors.grey[700],
           },
           '&:hover': {
             svg: {
-              color: theme.colors.neutral[1000],
+              color: theme.colors.black,
             },
           },
         },

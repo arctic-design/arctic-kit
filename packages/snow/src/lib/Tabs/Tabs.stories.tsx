@@ -5,7 +5,7 @@ import { PropsWithChildren, useState } from 'react';
 import { Tab } from './Tab';
 import { TabPanels } from './TabPanels';
 import { TabPanel } from './TabPanel';
-import { Box } from '../Box';
+import { Paper } from '../Paper';
 
 const meta: Meta<typeof Tabs> = {
   title: 'Tabs',
@@ -25,7 +25,7 @@ export default meta;
 type Story = StoryObj<typeof meta>;
 
 function Container({ children }: PropsWithChildren) {
-  return <Box sx={{ marginBottom: 20, width: '100%' }}>{children}</Box>;
+  return <Paper variant="outlined">{children}</Paper>;
 }
 
 function Render(args: Story['args']) {

@@ -1,10 +1,14 @@
 import { SnowThemeOptionalParams } from '../core/theme.types';
 import { deepmerge } from './deepmerge';
-import { DEFAULT_THEME } from './theme';
+import { DEFAULT_DARK_THEME, DEFAULT_THEME } from './theme';
 
-export const createTheme = (options?: SnowThemeOptionalParams) => {
+export const createTheme = (
+  options?: SnowThemeOptionalParams,
+  darkScheme?: boolean
+) => {
+  const currentTheme = darkScheme ? DEFAULT_DARK_THEME : DEFAULT_THEME;
   if (!options) {
-    return DEFAULT_THEME;
+    return currentTheme;
   }
-  return deepmerge(DEFAULT_THEME, { ...options });
+  return deepmerge(currentTheme, { ...options });
 };

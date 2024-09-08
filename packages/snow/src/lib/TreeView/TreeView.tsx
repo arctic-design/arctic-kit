@@ -9,6 +9,8 @@ import { Box } from '../Box';
 const Container = styled.div(({ theme: { vars: theme } }: SnowThemeArgs) => ({
   fontFamily: theme.font.family.base,
   fontSize: theme.font.size[100],
+  backgroundColor: theme.colors.neutral[0],
+  color: theme.colors.neutral[1000],
   width: '100%',
   minWidth: 240,
   svg: {
@@ -38,10 +40,11 @@ const LeafItem = styled.div<{ selected?: boolean }>(
       {
         props: { selected: true },
         style: {
-          backgroundColor: theme.colors.primary[50],
+          backgroundColor: theme.colors.grey[300],
+
           fontWeight: 700,
           '&:hover': {
-            backgroundColor: theme.colors.primary[50],
+            backgroundColor: theme.colors.grey[400],
           },
         },
       },

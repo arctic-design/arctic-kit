@@ -50,6 +50,8 @@ export interface SnowColorTheme {
     error: ColorType & DefaultTokenTypeVariant;
     neutral: NeutralColorType;
     grey: SnowColorType;
+    white: string;
+    black: string;
   };
 }
 
@@ -63,6 +65,8 @@ export type SnowColorThemeCustom = {
     error?: ColorType & DefaultTokenTypeVariant;
     neutral?: NeutralColorType;
     grey?: SnowColorType;
+    white?: string;
+    black?: string;
   };
 };
 

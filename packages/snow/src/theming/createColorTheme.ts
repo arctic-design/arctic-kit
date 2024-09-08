@@ -1,11 +1,12 @@
 import { SnowColorTheme, SnowColorThemeCustom } from '../core/theme.types';
 import { deepmerge } from './deepmerge';
-import { DEFAULT_THEME } from './theme';
+import { DEFAULT_DARK_THEME, DEFAULT_THEME } from './theme';
 
 export const createColorTheme = (
-  options?: SnowColorThemeCustom
+  options?: SnowColorThemeCustom,
+  darkScheme?: boolean
 ): SnowColorTheme => {
-  const { colors } = DEFAULT_THEME;
+  const { colors } = darkScheme ? DEFAULT_DARK_THEME : DEFAULT_THEME;
   if (!options) {
     return { colors };
   }

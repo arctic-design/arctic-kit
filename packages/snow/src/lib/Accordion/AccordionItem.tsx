@@ -60,6 +60,7 @@ const AccordionItemContainer = styled.div(
     border: `1px solid ${theme.colors.grey[300]}`,
     borderRadius: '6px',
     background: theme.colors.neutral[0],
+    color: theme.colors.neutral[1000],
     '&.active': {
       border: `1px solid ${theme.colors.grey[900]}`,
       boxShadow: '0px 1px 12px 0px rgba(0, 0, 0, 0.15)',

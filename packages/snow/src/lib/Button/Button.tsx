@@ -26,6 +26,7 @@ const getColorVariantStyles = (theme: SnowTheme) =>
       },
 
       '&:not(:disabled)': {
+        color: theme.colors.white,
         '&:focus::after': {
           borderColor: theme.colors[color][300],
         },
@@ -39,17 +40,18 @@ const getColorVariantStyles = (theme: SnowTheme) =>
 
       '&.outlined, &.text': {
         border: `1px solid ${theme.colors[color][500]}`,
+        color: theme.colors.neutral[1000],
 
         '&:not(:disabled)': {
           '&:focus::after': {
             borderColor: theme.colors[color][300],
           },
           '&:hover': {
-            backgroundColor: theme.colors[color][50],
+            backgroundColor: theme.colors.grey[50],
           },
 
           '&:active': {
-            backgroundColor: theme.colors[color][400],
+            backgroundColor: theme.colors.grey[400],
           },
         },
 
@@ -66,11 +68,11 @@ const getColorVariantStyles = (theme: SnowTheme) =>
 
         '&.text': {
           '&:not(:disabled):hover, &:not(:disabled):focus': {
-            backgroundColor: theme.colors[color][100],
+            backgroundColor: theme.colors.grey[100],
           },
 
           '&:not(:disabled):active': {
-            backgroundColor: theme.colors[color][200],
+            backgroundColor: theme.colors.grey[200],
           },
         },
       },
@@ -115,7 +117,7 @@ const StyledButton = styled.button<ButtonProps>(
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'center',
-    color: theme.colors.neutral[0],
+    color: theme.colors.white,
     backgroundColor: theme.colors.primary.main,
     boxShadow: theme.shadow.main,
     position: 'relative',
@@ -161,7 +163,7 @@ const StyledButton = styled.button<ButtonProps>(
     },
 
     '&.outlined, &.text': {
-      color: theme.colors.grey[900],
+      color: theme.colors.neutral[1000],
       backgroundColor: theme.colors.neutral[0],
       border: `1px solid ${theme.colors.grey[400]}`,
       boxShadow: 'none',

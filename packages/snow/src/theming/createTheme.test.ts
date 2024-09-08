@@ -39,6 +39,8 @@ describe('createTheme', () => {
           ...green,
           main: green[700],
         },
+        white: '#fff',
+        black: '#000',
       },
     };
 

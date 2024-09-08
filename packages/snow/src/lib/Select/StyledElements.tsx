@@ -106,8 +106,8 @@ export const SelectMenu = styled.div<{ inputsize?: SnowSize }>(
     borderRadius: '8px',
     overflowY: 'auto',
     backgroundColor: theme.colors.neutral[0],
-    boxShadow:
-      '0 0 0 1px hsla(0, 0%, 0%, 0.1), 0 4px 11px hsla(0, 0%, 0%, 0.1)',
+    color: theme.colors.neutral[1000],
+    boxShadow: theme.shadow[100],
     zIndex: ZIndex.Select,
     maxHeight: '360px !important',
 
@@ -125,7 +125,7 @@ export const SelectMenu = styled.div<{ inputsize?: SnowSize }>(
 
       '&.selected': {
         backgroundColor: theme.colors.info[400],
-        color: '#fff',
+        color: theme.colors.neutral[0],
       },
     },
     variants: ['small', 'medium', 'large'].map((size) => ({
@@ -220,18 +220,23 @@ export const SelectCloseContainer = styled.span({
   },
 });
 
-export const SearchBox = styled.div({
-  padding: '5px',
-  backgroundColor: '#eee',
-
-  input: {
-    width: '100%',
-    boxSizing: 'border-box',
+export const SearchBox = styled.div(
+  ({ theme: { vars: theme } }: SnowThemeArgs) => ({
     padding: '5px',
-    border: '1px solid #ccc',
-    borderRadius: '5px',
-  },
-});
+    backgroundColor: theme.colors.grey[300],
+    color: theme.colors.neutral[1000],
+
+    input: {
+      width: '100%',
+      boxSizing: 'border-box',
+      padding: '5px',
+      border: `1px solid ${theme.colors.grey[200]}`,
+      borderRadius: '5px',
+      backgroundColor: 'inherit',
+      color: 'inherit',
+    },
+  })
+);
 
 export const IconSeparator = styled.span({
   alignSelf: 'stretch',

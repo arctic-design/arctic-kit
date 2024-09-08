@@ -11,9 +11,8 @@ const Container = styled.li(({ theme: { vars: theme } }: SnowThemeArgs) => ({
   fontStyle: 'normal',
   fontWeight: 500,
   lineHeight: 'normal',
-
   listStyle: 'none',
-  padding: '0.5rem 1rem',
+  padding: 16,
   margin: '0 !important',
   borderRadius: '5px',
   borderBottomLeftRadius: '0',
@@ -21,31 +20,27 @@ const Container = styled.li(({ theme: { vars: theme } }: SnowThemeArgs) => ({
   color: theme.colors.grey[900],
   background: theme.colors.neutral[0],
   position: 'relative',
-
   cursor: 'pointer',
-  // height: '24px',
   display: 'flex',
   justifyContent: 'center',
   alignItems: 'center',
-
   minWidth: 0,
   userSelect: 'none',
-
   '&:hover': {
-    background: '#eee',
+    background: theme.colors.grey[200],
   },
 
   button: {
-    width: '20px',
-    height: '20px',
-    border: '0',
-    background: '#fff',
-    borderRadius: '3px',
+    width: 20,
+    height: 20,
+    border: 0,
+    background: theme.colors.neutral[0],
+    borderRadius: 3,
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',
     stroke: '#000',
-    marginLeft: '10px',
+    marginLeft: 10,
     cursor: 'pointer',
     flexShrink: 0,
   },
@@ -55,9 +50,9 @@ const Container = styled.li(({ theme: { vars: theme } }: SnowThemeArgs) => ({
     bottom: '-4px',
     left: '0',
     right: '0',
-    height: '0.1875rem',
+    height: 3,
     alignSelf: 'stretch',
-    borderRadius: '0.125rem 0.125rem 0 0',
+    borderRadius: '2px 2px 0 0',
   },
 }));
 
