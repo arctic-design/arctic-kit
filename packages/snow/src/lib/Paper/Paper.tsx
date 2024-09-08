@@ -29,6 +29,8 @@ const StyledBox = styled.div<StyledBoxProps>(
     borderRadius: theme.border.radius.main,
     padding: '0.75rem',
     cursor: 'default',
+    color: theme.colors.neutral[1000],
+    backgroundColor: theme.colors.neutral[0],
     variants: [
       {
         props: { variant: 'outlined' },
@@ -41,11 +43,10 @@ const StyledBox = styled.div<StyledBoxProps>(
       ...SnowColorValues.map((color) => ({
         props: { color },
         style: {
-          "&[data-variant='outlined']": {
-            boxShadow: 'none',
-            border: `${theme.border.width.main} solid ${theme.colors[color][300]}`,
-            backgroundColor: theme.colors[color][50],
-          },
+          boxShadow: 'none',
+          border: `${theme.border.width.main} solid ${theme.colors[color][300]}`,
+          backgroundColor: theme.colors[color].main,
+          color: theme.colors.white,
         },
       })),
       ...PaperElevationValues.map((elevation) => ({

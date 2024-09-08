@@ -85,6 +85,7 @@ const HeaderCard = styled.div<{
   left: 0,
   width: '100%',
   background: theme.colors.neutral[0],
+  color: theme.colors.neutral[1000],
   "&[aria-expanded='true']": {
     background: theme.colors.grey[200],
     borderColor: 'transparent',
@@ -179,6 +180,7 @@ const CardStack = forwardRef<HTMLDivElement, CardStackProps>(function CardStack(
               justifyContent: 'space-between',
               alignItems: 'center',
               flex: 1,
+              background: 'transparent',
             }}
             id={`${id}-header`}
             data-testid={`${id}-header`}

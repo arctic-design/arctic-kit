@@ -1,6 +1,6 @@
 import { SnowTheme } from '../core';
-import { DEFAULT_THEME } from './theme';
+import { DEFAULT_DARK_THEME, DEFAULT_THEME } from './theme';
 
-export const createDefaultTheme = (): SnowTheme => {
-  return DEFAULT_THEME;
+export const createDefaultTheme = (darkScheme?: boolean): SnowTheme => {
+  return darkScheme ? DEFAULT_DARK_THEME : DEFAULT_THEME;
 };

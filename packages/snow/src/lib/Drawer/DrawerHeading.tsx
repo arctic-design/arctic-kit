@@ -9,6 +9,8 @@ import { SnowThemeArgs } from '../../core';
 const Container = styled.div(({ theme: { vars: theme } }: SnowThemeArgs) => ({
   width: '100%',
   borderBottom: `0.5px solid ${theme.colors.grey[300]}`,
+  color: theme.colors.neutral[1000],
+  backgroundColor: theme.colors.neutral[0],
   h3: {
     padding: '0 1rem',
   },

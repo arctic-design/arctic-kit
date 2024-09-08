@@ -20,9 +20,7 @@ export const Item = forwardRef<
       className="select-menu-item"
       {...rest}
       style={{
-        background: active
-          ? 'var(--snow-colors-primary-50, lightblue)'
-          : 'none',
+        background: active ? 'var(--snow-colors-grey-100, lightblue)' : 'none',
         ...rest.style,
       }}
     >

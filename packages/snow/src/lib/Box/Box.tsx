@@ -22,6 +22,8 @@ export type BoxProps = {
 const Root = styled.div<{ fontSize?: SnowSize }>(
   ({ theme: { vars: theme } }: SnowThemeArgs) => ({
     fontFamily: theme.font.family.base,
+    color: 'inherit',
+    backgroundColor: 'inherit',
     variants: [
       ...SnowSizeValues.map((size) => ({
         props: { fontSize: size },

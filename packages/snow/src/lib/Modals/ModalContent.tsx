@@ -36,6 +36,7 @@ const Container = styled.div<{ size?: ModalSize }>(
     margin: 16,
     borderRadius: '0.3125rem',
     background: theme.colors.neutral[0],
+    color: theme.colors.neutral[1000],
     boxShadow: theme.shadow.main,
     display: 'flex',
     flexDirection: 'column',

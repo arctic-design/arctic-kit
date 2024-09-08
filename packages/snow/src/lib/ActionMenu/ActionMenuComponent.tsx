@@ -39,12 +39,12 @@ import { Center } from '../Layout';
 
 const ActionMenuContainer = styled.div(
   ({ theme: { vars: theme } }: SnowThemeArgs) => ({
-    background: 'rgba(255, 255, 255, 0.8)',
+    background: theme.colors.neutral[0],
     backdropFilter: 'blur(10px)',
     padding: '4px',
     outline: 0,
     borderRadius: '4px',
-    boxShadow: theme.shadow[200],
+    boxShadow: theme.shadow[100],
     zIndex: 1,
   })
 );

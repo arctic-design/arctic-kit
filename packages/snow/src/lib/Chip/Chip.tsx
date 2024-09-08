@@ -55,7 +55,7 @@ const ChipContainer = styled.button<ChipProps>(
         props: { color },
         style: {
           backgroundColor: theme.colors[color].main,
-          color: theme.colors.neutral[0],
+          color: theme.colors.white,
           '&:disabled': {
             backgroundColor: theme.colors[color][300],
             color: theme.colors.grey[200],
@@ -89,7 +89,7 @@ const ChipContainer = styled.button<ChipProps>(
 
             "&[aria-selected='true']": {
               backgroundColor: theme.colors[color].main,
-              color: theme.colors.neutral[0],
+              color: theme.colors.white,
               '&:hover': {
                 '&:not(:disabled)': {
                   backgroundColor: theme.colors[color][700],
@@ -102,10 +102,10 @@ const ChipContainer = styled.button<ChipProps>(
 
               "&[aria-readonly='true']": {
                 backgroundColor: theme.colors[color][400],
-                color: theme.colors.neutral[0],
+                color: theme.colors.white,
                 '&:hover': {
                   backgroundColor: theme.colors[color][400],
-                  color: theme.colors.neutral[0],
+                  color: theme.colors.white,
                   cursor: 'inherit',
                 },
               },

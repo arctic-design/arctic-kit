@@ -36,6 +36,7 @@ const AvatarContainer = styled.div<{ color?: SnowColor }>(
       style: {
         '&.fill': {
           backgroundColor: theme.colors[color].main,
+          color: theme.colors.white,
         },
       },
     })),

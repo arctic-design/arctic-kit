@@ -4,8 +4,8 @@ import { FloatingArrow as FloatingUIArrow } from '@floating-ui/react';
 
 export const TooltipContentContainer = styled.div(
   ({ theme: { vars: theme } }: SnowThemeArgs) => ({
-    backgroundColor: theme.colors.info[900],
-    color: theme.colors.neutral[0],
+    backgroundColor: theme.colors.grey[900],
+    color: theme.colors.grey[50],
     borderRadius: 4,
     boxSizing: 'border-box',
     width: 'max-content',
@@ -25,6 +25,6 @@ export const TooltipContentContainer = styled.div(
 
 export const FloatingArrow = styled(FloatingUIArrow)(
   ({ theme: { vars: theme } }: SnowThemeArgs) => ({
-    fill: theme.colors.info[900],
+    fill: theme.colors.grey[900],
   })
 );

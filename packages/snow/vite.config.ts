@@ -5,12 +5,12 @@ import dts from 'vite-plugin-dts';
 import * as path from 'path';
 import { nxViteTsPaths } from '@nx/vite/plugins/nx-tsconfig-paths.plugin';
 import { extendTheme, pigment } from '@pigment-css/vite-plugin';
-import { DEFAULT_THEME } from './src/theming/theme';
+import { DEFAULT_THEME, DEFAULT_DARK_THEME } from './src/theming/theme';
 
 const theme = extendTheme({
   colorSchemes: {
     light: DEFAULT_THEME,
-    dark: DEFAULT_THEME,
+    dark: DEFAULT_DARK_THEME,
   },
   cssVarPrefix: 'snow',
 });

@@ -114,7 +114,7 @@ const HandleElement = styled.div<{
     {
       props: { switched: true },
       style: {
-        backgroundColor: theme.colors.neutral[0],
+        backgroundColor: theme.colors.white,
         "&[aria-disabled='true']": {
           borderColor: theme.colors.grey[100],
         },

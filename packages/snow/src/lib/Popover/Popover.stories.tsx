@@ -10,6 +10,7 @@ import {
 } from './Popover';
 import { useState } from 'react';
 import { Button } from '../Button';
+import { Paper } from '../Paper';
 
 const meta: Meta<typeof Popover> = {
   title: 'Popover',
@@ -32,7 +33,7 @@ type Story = StoryObj<typeof meta>;
 function Render(args: Story['args']) {
   const [open, setOpen] = useState(false);
   return (
-    <div>
+    <Paper variant="outlined">
       <h1>Popover Example</h1>
       <Popover {...args} open={open} onOpenChange={setOpen}>
         <PopoverTrigger onClick={() => setOpen((v) => !v)}>
@@ -44,7 +45,7 @@ function Render(args: Story['args']) {
           <PopoverClose>Close</PopoverClose>
         </PopoverContent>
       </Popover>
-    </div>
+    </Paper>
   );
 }
 
@@ -52,7 +53,7 @@ function CustomTriggerRender(args: Story['args']) {
   const [open, setOpen] = useState(false);
 
   return (
-    <div>
+    <Paper variant="outlined">
       <h1>Popover Example</h1>
       <Popover {...args} open={open} onOpenChange={setOpen}>
         <PopoverTrigger onClick={() => setOpen((v) => !v)} asChild>
@@ -64,7 +65,7 @@ function CustomTriggerRender(args: Story['args']) {
           <PopoverClose>Close</PopoverClose>
         </PopoverContent>
       </Popover>
-    </div>
+    </Paper>
   );
 }
 

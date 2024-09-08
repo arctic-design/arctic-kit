@@ -89,7 +89,7 @@ export const DayButton = styled.button(
     },
     '&.selected': {
       backgroundColor: theme.colors.primary.main,
-      color: theme.colors.neutral[0],
+      color: theme.colors.white,
     },
     '&.otherMonth': {
       color: '#AAA',

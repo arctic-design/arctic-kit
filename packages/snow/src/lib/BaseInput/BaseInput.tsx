@@ -179,6 +179,7 @@ export const BaseInput = styled.input<{
   inputsize?: SnowSize;
   multiline?: boolean;
 }>(({ theme: { vars: theme } }: SnowThemeArgs) => ({
+  color: theme.colors.neutral[1000],
   padding: 8,
   width: '100%',
   boxSizing: 'border-box',

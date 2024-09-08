@@ -97,7 +97,7 @@ export const SvgContainer = styled.div<{ checked?: boolean }>(
   ({ theme: { vars: theme } }: SnowThemeArgs) => ({
     position: 'absolute',
     pointerEvents: 'none',
-    color: 'rgb(255, 255, 255)',
+    color: 'transparent',
     transform:
       'translate(-50%, -50%) rotate(0) skewX(0) skewY(0) scaleX(1) scaleY(1)',
     top: '50%',
@@ -116,6 +116,7 @@ export const SvgContainer = styled.div<{ checked?: boolean }>(
       {
         props: { checked: true },
         style: {
+          color: theme.colors.white,
           '&[aria-readonly="true"], &[aria-disabled="true"] svg': {
             color: theme.colors.grey[200],
           },

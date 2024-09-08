@@ -97,6 +97,7 @@ const ChildContainer = styled.span<{
   hasVariant?: boolean;
 }>(({ theme: { vars: theme } }: SnowThemeArgs) => ({
   fontSize: theme.font.size[50],
+  color: theme.colors.black,
   variants: [
     {
       props: { hideChildren: true },
@@ -107,7 +108,7 @@ const ChildContainer = styled.span<{
     {
       props: { hasVariant: true },
       style: {
-        color: theme.colors.grey[800],
+        color: theme.colors.black,
       },
     },
   ],
