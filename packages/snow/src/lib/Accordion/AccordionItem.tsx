@@ -17,7 +17,7 @@ import { HelperText } from '../HelperText';
 import { SnowThemeArgs } from '../../core';
 
 const Header = styled.div(({ theme: { vars: theme } }: SnowThemeArgs) => ({
-  padding: 16,
+  padding: 12,
   display: 'flex',
   alignItems: 'center',
   justifyContent: 'space-between',
@@ -32,6 +32,7 @@ const Header = styled.div(({ theme: { vars: theme } }: SnowThemeArgs) => ({
     flexDirection: 'row-reverse',
   },
   '.accordion-icon': {
+    display: 'inline-flex',
     svg: {
       color: theme.colors.grey[900],
     },
