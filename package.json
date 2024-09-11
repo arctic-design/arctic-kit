@@ -10,7 +10,7 @@
     "upgrade": "yarn upgrade-interactive"
   },
   "dependencies": {
-    "@pigment-css/react": "^0.0.21",
+    "@pigment-css/react": "^0.0.22",
     "next": "14.2.7",
     "react": "18.3.1",
     "react-dom": "18.3.1",
@@ -32,8 +32,8 @@
     "@nx/vite": "19.7.2",
     "@nx/web": "19.7.2",
     "@nx/workspace": "19.7.2",
-    "@pigment-css/nextjs-plugin": "^0.0.21",
-    "@pigment-css/vite-plugin": "^0.0.21",
+    "@pigment-css/nextjs-plugin": "^0.0.22",
+    "@pigment-css/vite-plugin": "^0.0.22",
     "@playwright/test": "^1.36.0",
     "@storybook/addon-a11y": "^8.3.0",
     "@storybook/addon-essentials": "^8.3.0",

@@ -41,9 +41,9 @@ __metadata:
     "@nx/vite": "npm:19.7.2"
     "@nx/web": "npm:19.7.2"
     "@nx/workspace": "npm:19.7.2"
-    "@pigment-css/nextjs-plugin": "npm:^0.0.21"
-    "@pigment-css/react": "npm:^0.0.21"
-    "@pigment-css/vite-plugin": "npm:^0.0.21"
+    "@pigment-css/nextjs-plugin": "npm:^0.0.22"
+    "@pigment-css/react": "npm:^0.0.22"
+    "@pigment-css/vite-plugin": "npm:^0.0.22"
     "@playwright/test": "npm:^1.36.0"
     "@storybook/addon-a11y": "npm:^8.3.0"
     "@storybook/addon-essentials": "npm:^8.3.0"
@@ -3700,20 +3700,20 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@pigment-css/nextjs-plugin@npm:^0.0.21":
-  version: 0.0.21
-  resolution: "@pigment-css/nextjs-plugin@npm:0.0.21"
+"@pigment-css/nextjs-plugin@npm:^0.0.22":
+  version: 0.0.22
+  resolution: "@pigment-css/nextjs-plugin@npm:0.0.22"
   dependencies:
-    "@pigment-css/unplugin": "npm:^0.0.21"
+    "@pigment-css/unplugin": "npm:^0.0.22"
   peerDependencies:
     next: ^12.0.0 || ^13.0.0 || ^14.0.0
-  checksum: 10c0/964fa3aea9af58cf37b80d77d8a24a122fa7b61a0671706708c44c3188407dd1aa668714378bf2440e264ad1b58a5b8a8a933aba4197063dac4eee7b0a00cb3a
+  checksum: 10c0/ea4add69b8bd53e78f7eb11e32be555e6009487fbce156eb78a852070cd6037ae29f1bfac455bd9a6a590f3d1d6c1938e8d9b8bb2ca7b3acbc8e4958c6c0b06c
   languageName: node
   linkType: hard
 
-"@pigment-css/react@npm:^0.0.21":
-  version: 0.0.21
-  resolution: "@pigment-css/react@npm:0.0.21"
+"@pigment-css/react@npm:^0.0.22":
+  version: 0.0.22
+  resolution: "@pigment-css/react@npm:0.0.22"
   dependencies:
     "@babel/core": "npm:^7.24.4"
     "@babel/helper-module-imports": "npm:^7.24.3"
@@ -3738,37 +3738,37 @@ __metadata:
     stylis-plugin-rtl: "npm:^2.1.1"
   peerDependencies:
     react: ^17.0.0 || ^18.0.0
-  checksum: 10c0/02d2a7a7e45349a406af4f0826f5415c2a46a2ab738495602701728397e2ef50d2673abd5508c28d706a1d08ca363dde7b06044b69b453e5efc2b6c5e11f07ae
+  checksum: 10c0/3348cc91f0e50bf568f37acadcbf5fdeabb7788d2d244ee5c8c9e8bbdd6a3159c1562b5e6f46588a80e65abc6afa329d3543a8f2d9251d7e901552ad852508ca
   languageName: node
   linkType: hard
 
-"@pigment-css/unplugin@npm:^0.0.21":
-  version: 0.0.21
-  resolution: "@pigment-css/unplugin@npm:0.0.21"
+"@pigment-css/unplugin@npm:^0.0.22":
+  version: 0.0.22
+  resolution: "@pigment-css/unplugin@npm:0.0.22"
   dependencies:
     "@babel/core": "npm:^7.24.4"
-    "@pigment-css/react": "npm:^0.0.21"
+    "@pigment-css/react": "npm:^0.0.22"
     "@wyw-in-js/shared": "npm:^0.5.4"
     "@wyw-in-js/transform": "npm:^0.5.4"
     babel-plugin-define-var: "npm:^0.1.0"
     unplugin: "npm:^1.7.1"
-  checksum: 10c0/8b1bb8f4a0a86ba4a3f57a200bedd7323f979cd31d509c4763c20828f93b1f10956b580784830f1730681d38bea66c11d9886bce6c7eec30f1680ec07c277aad
+  checksum: 10c0/02988743a2d284cc0577de3e59f35133965cb07313b03c57421a55840127e23058d1587878214d1fb806ace796a2693f4742739df676610fd874bee84e5e3dbf
   languageName: node
   linkType: hard
 
-"@pigment-css/vite-plugin@npm:^0.0.21":
-  version: 0.0.21
-  resolution: "@pigment-css/vite-plugin@npm:0.0.21"
+"@pigment-css/vite-plugin@npm:^0.0.22":
+  version: 0.0.22
+  resolution: "@pigment-css/vite-plugin@npm:0.0.22"
   dependencies:
     "@babel/core": "npm:^7.24.4"
     "@babel/preset-typescript": "npm:^7.24.1"
-    "@pigment-css/react": "npm:^0.0.21"
+    "@pigment-css/react": "npm:^0.0.22"
     "@wyw-in-js/shared": "npm:^0.5.4"
     "@wyw-in-js/transform": "npm:^0.5.4"
     babel-plugin-define-var: "npm:^0.1.0"
   peerDependencies:
     vite: ^4.0.0 || ^5.0.0
-  checksum: 10c0/2a54429b0f2f8e30bfb9a72b2dd13a3eec6694bee087b2512f8ba5ed96b8ee65e3fac8a18900fc35058158993fd3f5785caf04f71d577f10342fce7a608cc78f
+  checksum: 10c0/7de91949a936d5157c60f588aa80c91b59d80137c3c597288d9d06afdceee2aca4e7408741a0c3af0c115abf15b1d7ee5b09bb68235ded9d5b09412804f1bb96
   languageName: node
   linkType: hard
 
