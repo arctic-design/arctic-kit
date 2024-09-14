@@ -27,7 +27,7 @@ const tickVariants = {
   },
 };
 
-const CheckboxInput = motion(StyledCheckboxInput);
+const CheckboxInput = motion.create(StyledCheckboxInput);
 
 type CheckboxIndicatorProps = DefaultSnowProps & {
   name: string;

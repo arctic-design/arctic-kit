@@ -49,7 +49,7 @@ const StyledContentContainer = styled.div({
   overflow: 'hidden',
 });
 
-const ContentContainer = motion(StyledContentContainer);
+const ContentContainer = motion.create(StyledContentContainer);
 
 const Content = styled.div({
   padding: 16,

@@ -11,7 +11,7 @@ const CollapseContainer = styled.div(
   })
 );
 
-const MotionCollapseContainer = motion(CollapseContainer);
+const MotionCollapseContainer = motion.create(CollapseContainer);
 
 export interface CollapseProps {
   expanded: boolean;

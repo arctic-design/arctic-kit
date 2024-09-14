@@ -123,8 +123,8 @@ const HandleElement = styled.div<{
   ],
 }));
 
-const MotionSwitchContainer = motion(SwitchContainer);
-const MotionHandleElement = motion(HandleElement);
+const MotionSwitchContainer = motion.create(SwitchContainer);
+const MotionHandleElement = motion.create(HandleElement);
 
 const noOp = () => {
   return '';

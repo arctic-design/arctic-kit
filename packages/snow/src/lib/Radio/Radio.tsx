@@ -99,7 +99,7 @@ const StyledRadioOptionCircle = styled.div<{
   ],
 }));
 
-export const RadioOptionCircle = motion(StyledRadioOptionCircle);
+export const RadioOptionCircle = motion.create(StyledRadioOptionCircle);
 
 const determineVariant = (
   isSelected: boolean,

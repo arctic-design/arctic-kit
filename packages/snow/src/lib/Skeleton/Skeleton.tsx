@@ -38,7 +38,7 @@ const Container = styled.div<{
   ],
 }));
 
-const MotionContainer = motion(Container);
+const MotionContainer = motion.create(Container);
 
 const Skeleton: React.FC<SkeletonProps> = ({
   height,

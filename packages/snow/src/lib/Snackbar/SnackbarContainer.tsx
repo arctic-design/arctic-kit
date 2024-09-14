@@ -41,7 +41,7 @@ const StyledAlert = styled(Alert)<{
   },
 }));
 
-const SnackbarItem = motion(StyledAlert);
+const SnackbarItem = motion.create(StyledAlert);
 
 const CloseIconButton = styled.button<{ hasSeverity?: boolean }>(
   ({ theme: { vars: theme } }: SnowThemeArgs) => ({
