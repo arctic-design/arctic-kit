@@ -71,7 +71,7 @@ const EmptyCard = styled.div<{
   background: theme.colors.neutral[0],
 }));
 
-const MotionEmptyCard = motion(EmptyCard);
+const MotionEmptyCard = motion.create(EmptyCard);
 
 const HeaderCard = styled.div<{
   zindex: number;
@@ -106,13 +106,13 @@ const HeaderCard = styled.div<{
   },
 }));
 
-const MotionHeaderCard = motion(HeaderCard);
+const MotionHeaderCard = motion.create(HeaderCard);
 
 const ExpandedBox = styled.div({
   marginTop: HEADER_HEIGHT,
 });
 
-const MotionExpandedBox = motion(ExpandedBox);
+const MotionExpandedBox = motion.create(ExpandedBox);
 
 const CardStack = forwardRef<HTMLDivElement, CardStackProps>(function CardStack(
   {

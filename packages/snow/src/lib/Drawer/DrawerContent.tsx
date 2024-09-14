@@ -128,7 +128,7 @@ const drawerPositionVariants = {
   bottom: drawerBottomVariants,
 };
 
-const MotionContainer = motion(Container);
+const MotionContainer = motion.create(Container);
 
 export const DrawerContent = forwardRef<
   HTMLDivElement,

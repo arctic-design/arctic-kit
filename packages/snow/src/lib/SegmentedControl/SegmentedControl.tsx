@@ -23,7 +23,7 @@ export interface SegmentedControlProps {
   required?: boolean;
 }
 
-const AnimatedIndicator = motion(StyledIndicator);
+const AnimatedIndicator = motion.create(StyledIndicator);
 
 function SegmentedControl({
   children,

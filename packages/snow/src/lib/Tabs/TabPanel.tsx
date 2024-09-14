@@ -6,7 +6,7 @@ import { PropsWithChildren, useId } from 'react';
 const StyledContent = styled.div({
   padding: '2px 8px',
 });
-const Content = motion(StyledContent);
+const Content = motion.create(StyledContent);
 
 export type TabPanelProps = {
   selected: boolean;
