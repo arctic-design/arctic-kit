@@ -39,6 +39,10 @@ function SegmentedControl({
   const [indicatorStyle, setIndicatorStyle] = useState({ left: 0, width: 0 });
 
   useEffect(() => {
+    setSelectedIndex(initialSelectedIndex);
+  }, [initialSelectedIndex]);
+
+  useEffect(() => {
     if (refsArray.current[selectedIndex]) {
       const { offsetLeft, clientWidth } = refsArray.current[selectedIndex];
       setIndicatorStyle({ left: offsetLeft, width: clientWidth });
