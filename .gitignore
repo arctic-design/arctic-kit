@@ -62,3 +62,4 @@ doctor-storybook.log
 # Next.js
 .next
 out
+vite.config.*.timestamp*
