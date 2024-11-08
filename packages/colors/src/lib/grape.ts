@@ -1,6 +1,4 @@
-import { ColorType } from './types';
-
-export const grape: ColorType = {
+export const grape = {
   50: '#f8f0fc',
   100: '#f3d9fa',
   200: '#eebefa',

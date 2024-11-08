@@ -1,6 +1,4 @@
-import { ColorType } from './types';
-
-export const grey: ColorType = {
+export const grey = {
   50: '#FAFAFA',
   100: '#F4F5F5',
   200: '#ECEDEE',

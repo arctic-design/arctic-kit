@@ -1,5 +1,4 @@
-import type { ColorType } from '@arctic-kit/colors';
-import { DefaultTokenTypeVariant } from '../core';
+import { DefaultTokenTypeVariant, ColorType } from '../core';
 
 export const contrastThreshold = 3;
 
