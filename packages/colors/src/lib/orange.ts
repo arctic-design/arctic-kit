@@ -1,6 +1,4 @@
-import { ColorType } from './types';
-
-export const orange: ColorType = {
+export const orange = {
   50: '#fff4e6',
   100: '#ffe8cc',
   200: '#ffd8a8',

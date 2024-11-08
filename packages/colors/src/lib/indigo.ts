@@ -1,6 +1,4 @@
-import { ColorType } from './types';
-
-export const indigo: ColorType = {
+export const indigo = {
   50: '#edf2ff',
   100: '#dbe4ff',
   200: '#bac8ff',

@@ -1,6 +1,4 @@
-import { ColorType } from './types';
-
-export const polarNight: ColorType = {
+export const polarNight = {
   50: '#d0d6e3',
   100: '#b4bbcc',
   200: '#97a0b5',

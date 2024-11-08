@@ -1,6 +1,4 @@
-import { ColorType } from './types';
-
-export const electricBlue: ColorType = {
+export const electricBlue = {
   50: '#e9e8ff',
   100: '#c7c6ff',
   200: '#9ea1ff',

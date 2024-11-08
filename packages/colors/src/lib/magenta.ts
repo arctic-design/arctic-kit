@@ -1,6 +1,4 @@
-import { ColorType } from './types';
-
-export const magenta: ColorType = {
+export const magenta = {
   50: '#FFEBF7',
   100: '#FFD7EF',
   200: '#FEB3E1',
