@@ -153,12 +153,16 @@ export const ActionItem = styled.button<{
           },
           '&.text': {
             border: 'none',
+            backgroundColor: 'transparent',
+            color: theme.colors[color][700],
             '&:not(:disabled):hover, &:not(:disabled):focus': {
-              backgroundColor: theme.colors[color][100],
+              backgroundColor: theme.colors[color][50],
+              color: theme.colors[color][900],
             },
 
             '&:not(:disabled):active': {
-              backgroundColor: theme.colors[color][200],
+              backgroundColor: theme.colors[color][100],
+              color: theme.colors[color][900],
             },
 
             svg: {
