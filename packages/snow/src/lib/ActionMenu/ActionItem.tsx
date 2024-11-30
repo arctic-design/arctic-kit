@@ -90,6 +90,7 @@ export const ActionItem = styled.button<{
     },
     '&.text': {
       border: 'none',
+      backgroundColor: 'transparent',
       '&:not(:disabled):hover, &:not(:disabled):focus': {
         backgroundColor: theme.colors.grey[100],
       },
