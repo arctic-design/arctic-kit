@@ -61,7 +61,7 @@ __metadata:
     "@storybook/preview-api": "npm:^8.4.6"
     "@storybook/react-vite": "npm:^8.4.6"
     "@storybook/test": "npm:^8.4.6"
-    "@storybook/test-runner": "npm:^0.19.1"
+    "@storybook/test-runner": "npm:^0.20.0"
     "@swc-node/register": "npm:~1.9.1"
     "@swc/core": "npm:~1.5.7"
     "@swc/helpers": "npm:~0.5.11"
@@ -4964,15 +4964,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@storybook/core-common@npm:^8.0.0":
-  version: 8.2.5
-  resolution: "@storybook/core-common@npm:8.2.5"
-  peerDependencies:
-    storybook: ^8.2.5
-  checksum: 10c0/501a36a76218a49f712db85dde46f5934c28f701555248a6517ebf47c7f0d6731f2117c009028fc38dda3f9a099a629dd212bc25e800437dd781828d53c559a8
-  languageName: node
-  linkType: hard
-
 "@storybook/core-server@npm:^8.4.6":
   version: 8.4.6
   resolution: "@storybook/core-server@npm:8.4.6"
@@ -5014,15 +5005,6 @@ __metadata:
   peerDependencies:
     storybook: ^8.4.6
   checksum: 10c0/d771f36ee768c6ff62ecd930c6ff64a4ba45bdbb7f7fb41e5f4ffd02204e3f54b17ed091049b265a6d371922bf599bfe749eb9deabfcd7e2b4fb5a5444655241
-  languageName: node
-  linkType: hard
-
-"@storybook/csf-tools@npm:^8.0.0":
-  version: 8.2.5
-  resolution: "@storybook/csf-tools@npm:8.2.5"
-  peerDependencies:
-    storybook: ^8.2.5
-  checksum: 10c0/e16ae476a55610bc1ca7ca4470102f3885f8bef04d2b00f8a1cda939d99f5197500049c39c51561854c94f02d8b37a234db20056b1008f6ccd91967433e1ef23
   languageName: node
   linkType: hard
 
@@ -5079,15 +5061,6 @@ __metadata:
   peerDependencies:
     storybook: ^8.2.0 || ^8.3.0-0 || ^8.4.0-0 || ^8.5.0-0 || ^8.6.0-0
   checksum: 10c0/63967f4813c75e410634bff20189b5a670a061cfeeaa601ec07f0de82e2b4955af292836030d5a8432c3c7e48968285e121ed2bb55d2b5c70d17dbb4ada3c051
-  languageName: node
-  linkType: hard
-
-"@storybook/preview-api@npm:^8.0.0":
-  version: 8.2.5
-  resolution: "@storybook/preview-api@npm:8.2.5"
-  peerDependencies:
-    storybook: ^8.2.5
-  checksum: 10c0/e3cb3cb3bc99e0faf145a11fa294745812dde307e7f02d3b73346920a5fe3e9d4502eda355261779cfb39c4f1b386b7948371b5833535a48a5786edeb7ef8792
   languageName: node
   linkType: hard
 
@@ -5149,19 +5122,16 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@storybook/test-runner@npm:^0.19.1":
-  version: 0.19.1
-  resolution: "@storybook/test-runner@npm:0.19.1"
+"@storybook/test-runner@npm:^0.20.0":
+  version: 0.20.0
+  resolution: "@storybook/test-runner@npm:0.20.0"
   dependencies:
     "@babel/core": "npm:^7.22.5"
     "@babel/generator": "npm:^7.22.5"
     "@babel/template": "npm:^7.22.5"
     "@babel/types": "npm:^7.22.5"
     "@jest/types": "npm:^29.6.3"
-    "@storybook/core-common": "npm:^8.0.0"
     "@storybook/csf": "npm:^0.1.11"
-    "@storybook/csf-tools": "npm:^8.0.0"
-    "@storybook/preview-api": "npm:^8.0.0"
     "@swc/core": "npm:^1.5.22"
     "@swc/jest": "npm:^0.2.23"
     expect-playwright: "npm:^0.8.0"
@@ -5175,9 +5145,11 @@ __metadata:
     jest-watch-typeahead: "npm:^2.0.0"
     nyc: "npm:^15.1.0"
     playwright: "npm:^1.14.0"
+  peerDependencies:
+    storybook: ^8.2.0 || ^8.3.0-0 || ^8.4.0-0 || ^8.5.0-0 || ^8.6.0-0
   bin:
     test-storybook: dist/test-storybook.js
-  checksum: 10c0/728a23cb7952e52433b21addc4b916fc0a6e0fb7c74ff560489e35f5fc831d73a25dcbc2812f62dfe3d3adb067d1cb16dd0a4141428b71bd080b6da46e63abfd
+  checksum: 10c0/757353ddce87929d7d021d986c9c7615a32f0c9267cad7049c16d4ccd2a03c65510b62141678ebf222200988c9584c6e6e794a3eff5f891d0bb846a9ad0ea99d
   languageName: node
   linkType: hard
 
