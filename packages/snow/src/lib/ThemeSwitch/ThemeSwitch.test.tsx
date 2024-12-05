@@ -1,4 +1,4 @@
-import { render, fireEvent, screen, waitFor } from '../../utils/test-utils';
+import { render, fireEvent, waitFor } from '../../utils/test-utils';
 import { ThemeSwitch } from './ThemeSwitch';
 
 describe('ThemeSwitch', () => {
@@ -41,29 +41,29 @@ describe('ThemeSwitch', () => {
   });
 
   test('renders without crashing', () => {
-    render(<ThemeSwitch />);
+    const { getByTestId } = render(<ThemeSwitch />);
     // Check if the buttons are rendered
-    expect(screen.getByTestId('theme-light-icon')).toBeInTheDocument();
-    expect(screen.getByTestId('theme-dark-icon')).toBeInTheDocument();
-    expect(screen.getByTestId('theme-system-icon')).toBeInTheDocument();
+    expect(getByTestId('theme-light-icon')).toBeInTheDocument();
+    expect(getByTestId('theme-dark-icon')).toBeInTheDocument();
+    expect(getByTestId('theme-system-icon')).toBeInTheDocument();
   });
 
   test('initial themeMode is system if localStorage is empty', () => {
-    render(<ThemeSwitch />);
+    const { getByTestId } = render(<ThemeSwitch />);
     // Since we can't access themeMode directly, we can check the 'active' prop on the buttons
     waitFor(() => {
-      const systemButton = screen.getByTestId('theme-system-icon');
+      const systemButton = getByTestId('theme-system-icon');
       expect(systemButton).toHaveAttribute('active');
     });
   });
 
   test('uses theme from localStorage on initial render', () => {
     localStorage.setItem('theme', 'dark');
-    render(<ThemeSwitch />);
+    const { getByTestId } = render(<ThemeSwitch />);
 
     waitFor(() => {
       // Check that the 'dark' button is active
-      const darkButton = screen.getByTestId('theme-dark-icon');
+      const darkButton = getByTestId('theme-dark-icon');
       expect(darkButton).toHaveAttribute('active');
       // Check that document.documentElement has 'theme-dark' class
       expect(document.documentElement.classList.contains('theme-dark')).toBe(
@@ -73,10 +73,10 @@ describe('ThemeSwitch', () => {
   });
 
   test('clicking light button sets theme to light', () => {
-    render(<ThemeSwitch />);
+    const { getByTestId } = render(<ThemeSwitch />);
 
     waitFor(() => {
-      const lightButton = screen.getByTestId('theme-light-icon');
+      const lightButton = getByTestId('theme-light-icon');
       fireEvent.click(lightButton);
       // Check that localStorage is updated
       expect(localStorage.getItem('theme')).toBe('light');
@@ -93,9 +93,9 @@ describe('ThemeSwitch', () => {
   });
 
   test('clicking dark button sets theme to dark', () => {
-    render(<ThemeSwitch />);
+    const { getByTestId } = render(<ThemeSwitch />);
     waitFor(() => {
-      const darkButton = screen.getByTestId('theme-dark-icon');
+      const darkButton = getByTestId('theme-dark-icon');
       fireEvent.click(darkButton);
       // Check that localStorage is updated
       expect(localStorage.getItem('theme')).toBe('dark');
@@ -112,9 +112,9 @@ describe('ThemeSwitch', () => {
   });
 
   test('clicking system button sets theme to system', () => {
-    render(<ThemeSwitch />);
+    const { getByTestId } = render(<ThemeSwitch />);
     waitFor(() => {
-      const systemButton = screen.getByTestId('theme-system-icon');
+      const systemButton = getByTestId('theme-system-icon');
       fireEvent.click(systemButton);
       // Check that localStorage is updated
       expect(localStorage.getItem('theme')).toBe('system');
@@ -134,22 +134,22 @@ describe('ThemeSwitch', () => {
 
   test('onChange callback is called with correct value', () => {
     const onChange = vi.fn();
-    render(<ThemeSwitch onChange={onChange} />);
+    const { getByTestId } = render(<ThemeSwitch onChange={onChange} />);
     waitFor(() => {
-      const darkButton = screen.getByTestId('theme-dark-icon');
+      const darkButton = getByTestId('theme-dark-icon');
       fireEvent.click(darkButton);
       expect(onChange).toHaveBeenCalledWith(true); // true for dark mode
-      const lightButton = screen.getByTestId('theme-light-icon');
+      const lightButton = getByTestId('theme-light-icon');
       fireEvent.click(lightButton);
       expect(onChange).toHaveBeenCalledWith(false); // false for light mode
     });
   });
 
   test('applies preferred theme when system preference changes', () => {
-    render(<ThemeSwitch />);
+    const { getByTestId } = render(<ThemeSwitch />);
 
     waitFor(() => {
-      const systemButton = screen.getByTestId('theme-system-icon');
+      const systemButton = getByTestId('theme-system-icon');
       fireEvent.click(systemButton);
 
       // Initially, prefers dark mode
@@ -177,8 +177,8 @@ describe('ThemeSwitch', () => {
   });
 
   test('removes event listener on unmount', () => {
-    const { unmount } = render(<ThemeSwitch />);
-    const systemButton = screen.getByTestId('theme-system-icon');
+    const { unmount, getByTestId } = render(<ThemeSwitch />);
+    const systemButton = getByTestId('theme-system-icon');
     fireEvent.click(systemButton);
 
     // Ensure listener was added

@@ -82,9 +82,10 @@ describe('SegmentedControl', () => {
       </SegmentedControl>
     );
 
+    const indicator = getByTestId('segmented-control-indicator'); // Assume the first div is the indicator
+    const rootContainer = getByTestId('segmented-control-root');
+
     waitFor(() => {
-      const indicator = getByTestId('segmented-control-indicator'); // Assume the first div is the indicator
-      const rootContainer = getByTestId('segmented-control-root');
       expect(indicator).toHaveStyle(`height: 100%`);
       expect(indicator).toHaveStyle(`border: none`);
       expect(rootContainer).toHaveStyle(
@@ -100,8 +101,9 @@ describe('SegmentedControl', () => {
       </SegmentedControl>
     );
 
+    const rootContainer = getByTestId('segmented-control-root');
+
     waitFor(() => {
-      const rootContainer = getByTestId('segmented-control-root');
       expect(rootContainer).toHaveStyle(
         `height: ${SnowHeights[ThemeSize.medium] - 2}px`
       );
@@ -117,8 +119,9 @@ describe('SegmentedControl', () => {
       </SegmentedControl>
     );
 
+    const rootContainer = getByTestId('segmented-control-root');
+
     waitFor(() => {
-      const rootContainer = getByTestId('segmented-control-root');
       expect(rootContainer).toHaveStyle(
         `height: ${SnowHeights[ThemeSize.large] - 2}px`
       );

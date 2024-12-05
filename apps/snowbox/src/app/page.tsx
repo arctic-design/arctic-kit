@@ -44,7 +44,6 @@ import { ModalView } from '../ui/ModalView';
 import { DrawerView } from '../ui/DrawerView';
 import { MultiSelectView } from '../ui/MultiSelectView';
 import { TabsView } from '../ui/TabsView';
-import { ToggleColorScheme } from '../ui/ToggleColorScheme';
 import { TreeViewExample } from '../ui/TreeViewExample';
 import { SnackbarView } from '../ui/SnackbarView';
 
