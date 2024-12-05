@@ -24,6 +24,7 @@ import {
   Autocomplete,
   Avatar,
   Tag,
+  ThemeSwitch,
 } from '@arctic-kit/snow';
 import { UndoActionMenuItem } from '../ui/UndoActionMenuItem';
 import { MultipleCardStack } from '../ui/MultipleCardStack';
@@ -43,7 +44,6 @@ import { ModalView } from '../ui/ModalView';
 import { DrawerView } from '../ui/DrawerView';
 import { MultiSelectView } from '../ui/MultiSelectView';
 import { TabsView } from '../ui/TabsView';
-import { ToggleColorScheme } from '../ui/ToggleColorScheme';
 import { TreeViewExample } from '../ui/TreeViewExample';
 import { SnackbarView } from '../ui/SnackbarView';
 
@@ -99,13 +99,16 @@ export default function Index() {
       <div className="wrapper">
         <div className="container">
           <div id="welcome">
-            <h1>
+            <Box as="h1" sx={{ color: 'var(--snow-colors-neutral-1000)' }}>
               <span> Hello there, </span>
               Welcome snowbox 👋
-            </h1>
-            <ToggleColorScheme />
+            </Box>
 
             <Box sx={{ display: 'flex', flexDirection: 'column', gap: 12 }}>
+              <div>
+                <ThemeSwitch />
+              </div>
+
               <Box sx={{ display: 'flex', flexDirection: 'column', gap: 4 }}>
                 <Alert severity="success" title="Arctic snow">
                   Snowflakes were collected in the snowbox

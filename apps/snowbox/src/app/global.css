@@ -8,6 +8,7 @@ html {
 body {
   line-height: inherit;
   margin: 0;
+  background-color: var(--snow-colors-neutral-0);
 }
 
 .container {
