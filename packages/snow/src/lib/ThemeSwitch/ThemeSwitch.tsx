@@ -92,9 +92,11 @@ export function ThemeSwitch({ onChange, size }: ThemeSwitchProps) {
         );
         if (prefersDarkScheme.matches) {
           root.classList.add('theme-dark');
+          root.classList.remove('theme-light');
           onChange?.(true);
         } else {
           root.classList.add('theme-light');
+          root.classList.remove('theme-dark');
           onChange?.(false);
         }
       };
