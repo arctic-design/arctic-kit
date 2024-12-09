@@ -27,11 +27,6 @@
           "packages/docs/src/*.json"
         ]
       }
-    },
-    "nx-release-publish": {
-      "options": {
-        "packageRoot": "dist/{projectRoot}"
-      }
     }
   }
 }
