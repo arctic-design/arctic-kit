@@ -25,6 +25,15 @@ jobs:
       - name: Generate Snow Docs
         run: npx nx run snow:generate-docs
 
+      - name: Print Environment Info
+        run: npx nx report
+        shell: bash
+
+      - name: Set up GitHub username and email
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+
       # If the docs file changed, commit and push the changes
       - name: Commit updated docs
         run: |
@@ -36,15 +45,6 @@ jobs:
           else
             echo "No changes in snow-component-docs.json"
           fi
-
-      - name: Print Environment Info
-        run: npx nx report
-        shell: bash
-
-      - name: Set up GitHub username and email
-        run: |
-          git config --global user.name "github-actions[bot]"
-          git config --global user.email "github-actions[bot]@users.noreply.github.com"
 
       # - name: Clear the nx cache so the build happens again
       #   run: npx nx reset
