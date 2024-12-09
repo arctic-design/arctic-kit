@@ -22,7 +22,13 @@ export const SnowColorValues: SnowColor[] = [
 ];
 
 export type DefaultSnowProps = {
+  /**
+   * @default "primary"
+   */
   color?: SnowColor;
+  /**
+   * @default "medium"
+   */
   size?: SnowSize;
   disabled?: boolean;
   id?: string;
