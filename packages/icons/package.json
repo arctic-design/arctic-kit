@@ -1,6 +1,6 @@
 {
   "name": "@arctic-kit/icons",
-  "version": "0.24.0",
+  "version": "0.24.1",
   "main": "./index.js",
   "types": "./index.d.ts",
   "exports": {
