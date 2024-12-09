@@ -93,6 +93,10 @@ const getSizeVariantStyles = (theme: SnowTheme) =>
 
 export interface ButtonProps extends DefaultSnowProps {
   onClick?: MouseEventHandler<HTMLButtonElement>;
+  /**
+   * Variant of the button
+   * @default "filled"
+   */
   variant?: ButtonVariants;
   type?: 'button' | 'submit' | 'reset';
   tabIndex?: number;

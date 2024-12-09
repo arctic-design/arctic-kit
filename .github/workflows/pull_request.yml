@@ -29,3 +29,6 @@ jobs:
           echo "HEAD: ${{ steps.setSHAs.outputs.head }}"
 
       - run: npx nx affected -t lint test build
+
+      - name: Generate Snow Docs
+        run: npx nx run snow:generate-docs

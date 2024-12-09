@@ -16,6 +16,7 @@
     "baseUrl": ".",
     "paths": {
       "@arctic-kit/colors": ["packages/colors/src/index.ts"],
+      "@arctic-kit/docs": ["packages/docs/src/index.ts"],
       "@arctic-kit/icons": ["packages/icons/src/index.ts"],
       "@arctic-kit/icons/solid": ["packages/icons/src/solid/index.ts"],
       "@arctic-kit/snow": ["packages/snow/src/index.ts"]

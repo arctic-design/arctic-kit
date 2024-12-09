@@ -22,6 +22,21 @@ jobs:
 
       - run: npx nx run-many -t lint test build
 
+      - name: Generate Snow Docs
+        run: npx nx run snow:generate-docs
+
+      # If the docs file changed, commit and push the changes
+      - name: Commit updated docs
+        run: |
+          # Check if there are any changes in the docs file
+          if ! git diff --exit-code packages/docs/src/snow-component-docs.json; then
+            git add packages/docs/src/snow-component-docs.json
+            git commit -m "chore: update snow docs [skip ci]"
+            git push
+          else
+            echo "No changes in snow-component-docs.json"
+          fi
+
       - name: Print Environment Info
         run: npx nx report
         shell: bash
