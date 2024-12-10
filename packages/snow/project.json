@@ -9,7 +9,7 @@
     "generate-docs": {
       "executor": "nx:run-commands",
       "options": {
-        "command": "npx ts-node scripts/generate-docs.ts"
+        "command": "npx ts-node scripts/generate-docs.js"
       }
     }
   }
