@@ -74,6 +74,7 @@ __metadata:
     "@vitejs/plugin-react": "npm:^4.3.4"
     "@vitest/coverage-v8": "npm:^2.1.6"
     "@vitest/ui": "npm:^2.1.6"
+    chalk: "npm:^4"
     clsx: "npm:^2.1.1"
     eslint: "npm:~8.57.1"
     eslint-config-next: "npm:14.2.18"
@@ -8474,7 +8475,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"chalk@npm:^4.0.0, chalk@npm:^4.0.2, chalk@npm:^4.1.0, chalk@npm:^4.1.2":
+"chalk@npm:^4, chalk@npm:^4.0.0, chalk@npm:^4.0.2, chalk@npm:^4.1.0, chalk@npm:^4.1.2":
   version: 4.1.2
   resolution: "chalk@npm:4.1.2"
   dependencies:
