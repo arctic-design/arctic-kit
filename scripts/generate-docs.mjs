@@ -1,12 +1,8 @@
 import * as fs from 'fs';
 import * as path from 'path';
-import {
-  ComponentDoc,
-  PropItem,
-  withCustomConfig,
-} from 'react-docgen-typescript';
+import { withCustomConfig } from 'react-docgen-typescript';
 import { sync } from 'glob';
-import { log, styledLogInfo, styledLogSuccess } from './logger';
+import { log, styledLogInfo, styledLogSuccess } from './logger.mjs';
 
 (async function generateDocs() {
   try {
@@ -19,7 +15,7 @@ import { log, styledLogInfo, styledLogSuccess } from './logger';
       //   skipPropsWithName: ['as', 'id', 'role', 'ref', 'sx', 'key'],
       //   skipPropsWithoutDoc: false,
       // },
-      propFilter: (prop: PropItem, _component) => {
+      propFilter: (prop, _component) => {
         if (['as', 'id', 'role', 'ref', 'sx', 'key'].includes(prop.name)) {
           return false;
         }
@@ -56,10 +52,10 @@ import { log, styledLogInfo, styledLogSuccess } from './logger';
     });
 
     // Now, instead of passing the pattern, pass the matched files array directly
-    const docs: ComponentDoc[] = parser.parse(matchedFiles);
+    const docs = parser.parse(matchedFiles);
 
     // Post-processing: Remove unwanted attributes
-    const cleanedDocs: Partial<ComponentDoc>[] = docs.map((doc) => {
+    const cleanedDocs = docs.map((doc) => {
       const { filePath, ...rest } = doc; // Destructure to exclude filePath
       return rest;
     });
