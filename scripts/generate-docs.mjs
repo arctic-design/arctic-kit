@@ -2,7 +2,7 @@ import * as fs from 'fs';
 import * as path from 'path';
 import { withCustomConfig } from 'react-docgen-typescript';
 import { sync } from 'glob';
-import { log, styledLogInfo, styledLogSuccess } from './logger.js';
+import { log, styledLogInfo, styledLogSuccess } from './logger.mjs';
 
 (async function generateDocs() {
   try {
