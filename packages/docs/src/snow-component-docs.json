@@ -10621,6 +10621,208 @@
   {
     "tags": {},
     "description": "",
+    "displayName": "Table",
+    "methods": [],
+    "props": {
+      "size": {
+        "defaultValue": {
+          "value": "medium"
+        },
+        "description": "",
+        "name": "size",
+        "parent": {
+          "fileName": "arctic-kit/packages/snow/src/lib/Table/types.ts",
+          "name": "TableRootProps"
+        },
+        "declarations": [
+          {
+            "fileName": "arctic-kit/packages/snow/src/lib/Table/types.ts",
+            "name": "TableRootProps"
+          }
+        ],
+        "required": false,
+        "type": {
+          "name": "enum",
+          "raw": "\"small\" | \"medium\" | \"large\" | undefined",
+          "value": [
+            {
+              "value": "undefined"
+            },
+            {
+              "value": "\"small\""
+            },
+            {
+              "value": "\"medium\""
+            },
+            {
+              "value": "\"large\""
+            }
+          ]
+        }
+      },
+      "variant": {
+        "defaultValue": {
+          "value": "surface"
+        },
+        "description": "",
+        "name": "variant",
+        "parent": {
+          "fileName": "arctic-kit/packages/snow/src/lib/Table/types.ts",
+          "name": "TableRootProps"
+        },
+        "declarations": [
+          {
+            "fileName": "arctic-kit/packages/snow/src/lib/Table/types.ts",
+            "name": "TableRootProps"
+          }
+        ],
+        "required": false,
+        "type": {
+          "name": "enum",
+          "raw": "TableVariant | undefined",
+          "value": [
+            {
+              "value": "undefined"
+            },
+            {
+              "value": "\"ghost\""
+            },
+            {
+              "value": "\"surface\""
+            }
+          ]
+        }
+      },
+      "layout": {
+        "defaultValue": {
+          "value": "responsive"
+        },
+        "description": "",
+        "name": "layout",
+        "parent": {
+          "fileName": "arctic-kit/packages/snow/src/lib/Table/types.ts",
+          "name": "TableRootProps"
+        },
+        "declarations": [
+          {
+            "fileName": "arctic-kit/packages/snow/src/lib/Table/types.ts",
+            "name": "TableRootProps"
+          }
+        ],
+        "required": false,
+        "type": {
+          "name": "enum",
+          "raw": "TableLayout | undefined",
+          "value": [
+            {
+              "value": "undefined"
+            },
+            {
+              "value": "\"fixed\""
+            },
+            {
+              "value": "\"responsive\""
+            }
+          ]
+        }
+      },
+      "color": {
+        "defaultValue": null,
+        "description": "",
+        "name": "color",
+        "parent": {
+          "fileName": "arctic-kit/packages/snow/src/lib/Table/types.ts",
+          "name": "TableRootProps"
+        },
+        "declarations": [
+          {
+            "fileName": "arctic-kit/packages/snow/src/lib/Table/types.ts",
+            "name": "TableRootProps"
+          }
+        ],
+        "required": false,
+        "type": {
+          "name": "enum",
+          "raw": "SnowColor | undefined",
+          "value": [
+            {
+              "value": "undefined"
+            },
+            {
+              "value": "\"success\""
+            },
+            {
+              "value": "\"error\""
+            },
+            {
+              "value": "\"warning\""
+            },
+            {
+              "value": "\"info\""
+            },
+            {
+              "value": "\"primary\""
+            },
+            {
+              "value": "\"secondary\""
+            }
+          ]
+        }
+      }
+    }
+  },
+  {
+    "tags": {},
+    "description": "",
+    "displayName": "StyledTableRoot",
+    "methods": [],
+    "props": {}
+  },
+  {
+    "tags": {},
+    "description": "",
+    "displayName": "StyledTableHeader",
+    "methods": [],
+    "props": {}
+  },
+  {
+    "tags": {},
+    "description": "",
+    "displayName": "StyledTableBody",
+    "methods": [],
+    "props": {}
+  },
+  {
+    "tags": {},
+    "description": "",
+    "displayName": "StyledTableRow",
+    "methods": [],
+    "props": {}
+  },
+  {
+    "tags": {},
+    "description": "",
+    "displayName": "StyledColumnHeaderCell",
+    "methods": [],
+    "props": {}
+  },
+  {
+    "tags": {},
+    "description": "",
+    "displayName": "StyledRowHeaderCell",
+    "methods": [],
+    "props": {}
+  },
+  {
+    "tags": {},
+    "description": "",
+    "displayName": "StyledCell",
+    "methods": [],
+    "props": {}
+  },
+  {
+    "tags": {},
+    "description": "",
     "displayName": "Switch",
     "methods": [],
     "props": {
