@@ -32,6 +32,7 @@ export * from './Select';
 export * from './Skeleton';
 export * from './Snackbar';
 export * from './Switch';
+export * from './Table';
 export * from './Tabs';
 export * from './Tag';
 export * from './TextArea';

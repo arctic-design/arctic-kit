@@ -92,10 +92,10 @@ export interface SnowFont {
     base: string;
   };
   weight: {
-    regular: number;
-    medium: number;
-    semibold: number;
-    bold: number;
+    regular: number | string;
+    medium: number | string;
+    semibold: number | string;
+    bold: number | string;
   };
   size: {
     25: string;
