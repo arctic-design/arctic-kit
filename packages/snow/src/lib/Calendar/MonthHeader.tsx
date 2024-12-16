@@ -64,9 +64,11 @@ export function MonthHeader({
         data-testid={`${id}-icon-left-container`}
         disabled={isMoveLeftDisabled}
         onClick={moveBackward}
+        size="small"
       >
         <ArrowLeftIcon id={`${id}-icon-left`} data-testid={`${id}-icon-left`} />
       </ArrowButton>
+
       <MonthYearView id={`${id}-year-view`} data-testid={`${id}-year-view`}>
         {monthYearView}
       </MonthYearView>
@@ -75,6 +77,7 @@ export function MonthHeader({
         data-testid={`${id}-icon-right-container`}
         onClick={moveForward}
         disabled={isMoveRightDisabled}
+        size="small"
       >
         <ArrowRightIcon
           id={`${id}-icon-right`}

@@ -1,37 +1,47 @@
 import { styled } from '@pigment-css/react';
-import { SnowColor, SnowColorValues } from '../types';
+import { SnowColor, SnowColorValues, SnowSize, SnowSizeValues } from '../types';
 import { forwardRef, ForwardedRef } from 'react';
 import { SnowThemeArgs } from '../../core';
+import { SnowHeights } from '../constants';
 
-const AvatarContainer = styled.div<{ color?: SnowColor }>(
-  ({ theme: { vars: theme } }: SnowThemeArgs) => ({
-    fontFamily: theme.font.family.base,
-    position: 'relative',
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'center',
-    flexShrink: 0,
-    width: '40px',
-    height: '40px',
-    fontSize: '1.25rem',
-    lineHeight: 1,
-    borderRadius: '50%',
-    overflow: 'hidden',
-    userSelect: 'none',
+const AvatarContainer = styled.div<{
+  color?: SnowColor;
+  size?: SnowSize;
+  bgColor?: SnowColor;
+}>(({ theme: { vars: theme } }: SnowThemeArgs) => ({
+  fontFamily: theme.font.family.base,
+  position: 'relative',
+  display: 'flex',
+  alignItems: 'center',
+  justifyContent: 'center',
+  flexShrink: 0,
+  width: SnowHeights['medium'],
+  height: SnowHeights['medium'],
+  fontSize: '1.25rem',
+  lineHeight: 1,
+  borderRadius: '50%',
+  overflow: 'hidden',
+  userSelect: 'none',
 
-    img: {
-      width: '100%',
-    },
+  img: {
+    width: '100%',
+  },
 
-    '&.fill': {
-      backgroundColor: theme.colors.grey[500],
-      color: theme.colors.neutral[0],
-    },
+  '&.fill': {
+    backgroundColor: theme.colors.grey[500],
+    color: theme.colors.neutral[0],
+  },
 
-    '&.clickable': {
-      cursor: 'pointer',
-    },
-    variants: SnowColorValues.map((color) => ({
+  '&.clickable': {
+    cursor: 'pointer',
+  },
+
+  "&[data-img='true']": {
+    backgroundColor: theme.colors.grey[100],
+  },
+
+  variants: [
+    ...SnowColorValues.map((color) => ({
       props: { color },
       style: {
         '&.fill': {
@@ -40,8 +50,23 @@ const AvatarContainer = styled.div<{ color?: SnowColor }>(
         },
       },
     })),
-  })
-);
+    ...SnowColorValues.map((bgColor) => ({
+      props: { bgColor },
+      style: {
+        "&[data-img='true']": {
+          backgroundColor: theme.colors[bgColor as SnowColor][100],
+        },
+      },
+    })),
+    ...SnowSizeValues.map((size) => ({
+      props: { size },
+      style: {
+        height: `${SnowHeights[size]}px`,
+        width: `${SnowHeights[size]}px`,
+      },
+    })),
+  ],
+}));
 
 export type AvatarProps = {
   src?: string;
@@ -50,6 +75,8 @@ export type AvatarProps = {
   children?: string;
   color?: SnowColor;
   id?: string;
+  size?: SnowSize;
+  bgColor?: SnowColor;
 };
 
 const Avatar = forwardRef(
@@ -61,6 +88,8 @@ const Avatar = forwardRef(
       children: childrenProp,
       color,
       id = 'avatar',
+      size = 'medium',
+      bgColor,
     } = props;
     let children = null;
     const hasImage = !!src;
@@ -85,6 +114,9 @@ const Avatar = forwardRef(
         ref={ref}
         id={id}
         data-testid={id}
+        data-img={hasImage ? true : undefined}
+        size={size}
+        bgColor={bgColor}
       >
         {children}
       </AvatarContainer>

@@ -9,7 +9,7 @@ import { Box } from '../Box';
 const Container = styled.div(({ theme: { vars: theme } }: SnowThemeArgs) => ({
   fontFamily: theme.font.family.base,
   fontSize: theme.font.size[100],
-  backgroundColor: theme.colors.neutral[0],
+  backgroundColor: 'inherit',
   color: theme.colors.neutral[1000],
   width: '100%',
   minWidth: 240,

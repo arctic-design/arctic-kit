@@ -11,7 +11,7 @@ export const ActionItem = styled.button<{
   backgroundColor: 'transparent',
   border: 'none',
   '&:hover': {
-    cursor: 'pointer',
+    cursor: 'default',
   },
   '&.RootMenu, &.MenuItem': {
     fontSize: theme.font.size[100],
@@ -115,7 +115,7 @@ export const ActionItem = styled.button<{
     borderRadius: '4px',
     textAlign: 'left',
     lineHeight: 1.8,
-    minWidth: '110px',
+    minWidth: 224,
     margin: 0,
     outline: 0,
     '&:focus, &[data-nested][data-open]:not([data-focus-inside]), &[data-focus-inside][data-open]':

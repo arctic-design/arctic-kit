@@ -3,7 +3,7 @@ import { SnowSize, SnowSizeValues } from '../types';
 import { SnowThemeArgs } from '../../core';
 import { SnowHeights } from '../constants';
 
-export const Container = styled.div<{ inputsize?: SnowSize }>(
+export const Container = styled.div<{ size?: SnowSize }>(
   ({ theme: { vars: theme } }: SnowThemeArgs) => ({
     fontFamily: theme.font.family.base,
     padding: 7,
@@ -46,7 +46,7 @@ export const Container = styled.div<{ inputsize?: SnowSize }>(
     },
     variants: [
       ...SnowSizeValues.map((size) => ({
-        props: { inputsize: size },
+        props: { size },
         style: {
           height: SnowHeights[size],
         },

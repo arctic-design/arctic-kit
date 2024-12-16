@@ -124,13 +124,6 @@ const generateEmployees = (count: number): Employee[] => {
     'Sydney',
   ];
   const statuses = ['Active', 'On Leave', 'Inactive'];
-  const managers = [
-    'Alice Johnson',
-    'Bob Smith',
-    'Charlie Davis',
-    'Diana Prince',
-  ];
-  const performanceRatings = ['Excellent', 'Good', 'Average', 'Below Average'];
 
   const newEmployees: Employee[] = [];
 

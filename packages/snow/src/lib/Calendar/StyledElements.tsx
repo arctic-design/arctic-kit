@@ -1,11 +1,12 @@
 import { styled } from '@pigment-css/react';
 import { SnowThemeArgs } from '../../core';
+import { IconButton } from '../IconButton';
 
 export const CalendarContainer = styled.div(
   ({ theme: { vars: theme } }: SnowThemeArgs) => ({
     display: 'flex',
-    maxWidth: 320,
-    minWidth: 280,
+    maxWidth: 280,
+    minWidth: 250,
     minHeight: 305,
     overflowX: 'hidden',
     flexDirection: 'column',
@@ -24,32 +25,15 @@ export const MonthHeaderContainer = styled.div({
   padding: 4,
 });
 
-export const ArrowButton = styled.button(
+export const ArrowButton = styled(IconButton)(
   ({ theme: { vars: theme } }: SnowThemeArgs) => ({
-    padding: '0.25rem 0.5rem',
-    height: '1.5rem',
-    width: 'auto',
-    borderRadius: '0.25rem',
-    display: 'flex',
-    justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: theme.colors.neutral[0],
-    color: theme.colors.neutral[1000],
-    border: 'none',
+    outline: 'none',
+    width: 28,
+    height: 28,
     '&:focus': {
       '&:not(:disabled)': {
-        outlineOffset: 1.5,
-        outlineStyle: 'solid',
-        outlineWidth: 1,
-        outlineColor: theme.colors.primary.main,
+        outline: 'none',
       },
-    },
-    '&:hover': {
-      backgroundColor: theme.colors.grey[100],
-      cursor: 'pointer',
-    },
-    svg: {
-      width: 16,
     },
   })
 );
@@ -69,15 +53,7 @@ export const DayButton = styled.button(
     backgroundColor: theme.colors.neutral[0],
     borderRadius: 6,
     color: theme.colors.neutral[1000],
-
-    '&:focus': {
-      '&:not(:disabled)': {
-        outlineOffset: 1.5,
-        outlineStyle: 'solid',
-        outlineWidth: 1,
-        outlineColor: theme.colors.primary.main,
-      },
-    },
+    outline: 'none',
 
     '&:hover': {
       backgroundColor: theme.colors.grey[100],

@@ -47,3 +47,27 @@ export const Default: Story = {
   },
   render: DefaultRender,
 };
+
+export const DefaultWithLabel: Story = {
+  args: {
+    value: currentDate,
+    label: 'Start date',
+  },
+  render: DefaultRender,
+};
+export const Small: Story = {
+  args: {
+    value: currentDate,
+    label: 'Start date',
+    size: 'small',
+  },
+  render: DefaultRender,
+};
+export const Large: Story = {
+  args: {
+    value: currentDate,
+    label: 'Start date',
+    size: 'large',
+  },
+  render: DefaultRender,
+};

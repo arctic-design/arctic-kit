@@ -9,7 +9,7 @@ export const InputContainerRoot = styled.div<{
 }>(({ theme: { vars: theme } }: SnowThemeArgs) => ({
   gap: '8px',
   flexShrink: 0,
-  borderRadius: '5px',
+  borderRadius: 4,
   border: `1px solid ${theme.colors.grey[400]}`,
   background: theme.colors.neutral[0],
   boxShadow: theme.shadow.main,
@@ -103,13 +103,14 @@ export const SelectMenu = styled.div<{ inputsize?: SnowSize }>(
     fontFamily: theme.font.family.base,
     fontSize: theme.font.size[100],
     fontWeight: theme.font.weight.regular,
-    borderRadius: '8px',
+    borderRadius: 4,
     overflowY: 'auto',
     backgroundColor: theme.colors.neutral[0],
     color: theme.colors.neutral[1000],
     boxShadow: theme.shadow[100],
     zIndex: ZIndex.Select,
     maxHeight: '360px !important',
+    padding: 4,
 
     '.select-menu-item': {
       height: SnowHeights['medium'],
@@ -117,7 +118,8 @@ export const SelectMenu = styled.div<{ inputsize?: SnowSize }>(
       outline: '0px',
       display: 'flex',
       alignItems: 'center',
-      cursor: 'pointer',
+      cursor: 'default',
+      borderRadius: 4,
 
       '&:hover': {
         backgroundColor: theme.colors.grey[100],
@@ -222,18 +224,29 @@ export const SelectCloseContainer = styled.span({
 
 export const SearchBox = styled.div(
   ({ theme: { vars: theme } }: SnowThemeArgs) => ({
-    padding: '5px',
-    backgroundColor: theme.colors.grey[300],
+    backgroundColor: theme.colors.neutral[0],
     color: theme.colors.neutral[1000],
+    borderBottom: `1px solid ${theme.colors.grey[500]}`,
+    display: 'flex',
+    gap: 4,
+    marginBottom: 4,
+
+    svg: {
+      width: 18,
+    },
 
     input: {
       width: '100%',
       boxSizing: 'border-box',
-      padding: '5px',
-      border: `1px solid ${theme.colors.grey[200]}`,
-      borderRadius: '5px',
+      padding: '8px 4px',
+      border: 'none',
+      borderRadius: 4,
       backgroundColor: 'inherit',
       color: 'inherit',
+
+      '&:focus': {
+        outline: 'none',
+      },
     },
   })
 );

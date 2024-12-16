@@ -4,9 +4,10 @@ import { SnowColor, SnowColorValues } from '../types';
 import { SnowThemeArgs } from '../../core';
 
 export type PaperVariant = 'elevation' | 'outlined';
-export const PaperElevationValues = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+export const PaperElevationValues = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10] as const;
+export type Elevation = (typeof PaperElevationValues)[number];
 export type PaperProps = {
-  elevation?: number;
+  elevation?: Elevation;
   square?: boolean;
   variant?: PaperVariant;
   style?: React.CSSProperties;
@@ -14,14 +15,13 @@ export type PaperProps = {
   color?: SnowColor;
   onClick?: () => void;
   id?: string;
+  noPadding?: boolean;
 };
 
-type StyledBoxProps = {
-  elevation?: number;
-  variant?: PaperVariant;
-  square?: boolean;
-  color?: SnowColor;
-};
+type StyledBoxProps = Omit<
+  PaperProps,
+  'style' | 'className' | 'onClick' | 'id'
+>;
 
 const StyledBox = styled.div<StyledBoxProps>(
   ({ theme: { vars: theme } }: SnowThemeArgs) => ({
@@ -59,11 +59,16 @@ const StyledBox = styled.div<StyledBoxProps>(
           },
         },
       })),
-
       {
         props: { square: true },
         style: {
           borderRadius: 0,
+        },
+      },
+      {
+        props: { noPadding: true },
+        style: {
+          padding: 0,
         },
       },
     ],
