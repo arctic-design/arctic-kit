@@ -40,6 +40,7 @@ export * from './Tag';
 export * from './TextArea';
 export * from './TextInput';
 export * from './ThemeSwitch';
+export * from './ToggleGroup';
 export * from './Tooltip';
 export * from './TreeView';
 export * from './Typography';

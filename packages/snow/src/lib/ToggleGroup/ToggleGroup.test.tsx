@@ -199,9 +199,7 @@ describe('ToggleGroup Component', () => {
 
   test('throws error when ToggleGroupItem is used outside of ToggleGroup', () => {
     // Suppress error logs for this test
-    const consoleError = vi
-      .spyOn(console, 'error')
-      .mockImplementation(() => {});
+    const consoleError = vi.spyOn(console, 'error').mockImplementation(vi.fn());
 
     expect(() => {
       render(
