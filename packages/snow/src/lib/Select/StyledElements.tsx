@@ -47,7 +47,7 @@ export const SelectContainer = styled.div(
     boxSizing: 'border-box',
     textAlign: 'left',
     '&[data-fullwidth="true"]': {
-      minWidth: '200px',
+      // minWidth: '200px',
       width: '100%',
     },
   })
@@ -204,7 +204,7 @@ export const TagLabel = styled.div<{ inputsize?: SnowSize }>(
     },
 
     '&.placeholder': {
-      color: theme.colors.grey[600],
+      color: theme.colors.grey[500],
     },
   })
 );

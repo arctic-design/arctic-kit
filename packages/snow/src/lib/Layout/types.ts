@@ -1,3 +1,4 @@
+import { SxProp } from '@pigment-css/react';
 import { SnowColor } from '../types';
 import { SpacingMap } from './constants';
 
@@ -9,4 +10,8 @@ export type LayoutType = {
   style?: React.CSSProperties;
   className?: string;
   id?: string;
+  onClick?: () => void;
+  onKeyPress?: (e: React.KeyboardEvent<HTMLDivElement>) => void;
+  tabIndex?: number;
+  sx?: SxProp;
 };

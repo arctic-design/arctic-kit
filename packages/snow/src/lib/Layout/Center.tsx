@@ -1,5 +1,5 @@
 import { PropsWithChildren } from 'react';
-import { styled } from '@pigment-css/react';
+import { styled, SxProp } from '@pigment-css/react';
 import { LayoutType, LayoutSpacingType } from './types';
 import { SnowColor, SnowColorValues } from '../types';
 import { SnowThemeArgs } from '../../core';
@@ -9,6 +9,7 @@ const Container = styled.div<{
   inline?: boolean;
   spacing?: LayoutSpacingType;
   color?: SnowColor;
+  sx?: SxProp;
 }>(({ theme: { vars: theme } }: SnowThemeArgs) => ({
   display: 'flex',
   justifyContent: 'center',

@@ -11,6 +11,7 @@ const Container = styled.div<{
   color?: SnowColor;
   direction?: 'horizontal' | 'vertical';
   sx?: SxProp;
+  noWrap?: boolean;
 }>(({ theme: { vars: theme } }: SnowThemeArgs) => ({
   display: 'flex',
   flexDirection: 'column',
@@ -48,14 +49,28 @@ const Container = styled.div<{
         justifyContent: 'space-between',
       },
     },
+    {
+      props: { centerAlign: true },
+      style: {
+        alignItems: 'center',
+        justifyContent: 'center',
+      },
+    },
+    {
+      props: { noWrap: true },
+      style: {
+        flexWrap: 'nowrap',
+      },
+    },
   ],
 }));
 
 export type StackProps = LayoutType & {
   inline?: boolean;
   direction?: 'horizontal' | 'vertical';
+  centerAlign?: boolean;
   justifyBetween?: boolean;
-  sx?: SxProp;
+  noWrap?: boolean;
 };
 
 export const Stack = ({
