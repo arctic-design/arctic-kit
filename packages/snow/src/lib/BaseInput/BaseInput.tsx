@@ -204,6 +204,10 @@ export const BaseInput = styled.input<{
   fontSize: theme.font.size[100],
   fontWeight: theme.font.weight.regular,
   fontFamily: theme.font.family.base,
+  '&::placeholder': {
+    opacity: 1,
+    color: theme.colors.grey[500],
+  },
   '&:focus': {
     borderColor: theme.colors.grey[900],
     outline: 'none',

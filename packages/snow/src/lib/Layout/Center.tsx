@@ -1,22 +1,20 @@
 import { PropsWithChildren } from 'react';
-import { styled } from '@pigment-css/react';
-import { LayoutType } from './types';
+import { styled, SxProp } from '@pigment-css/react';
+import { LayoutType, LayoutSpacingType } from './types';
 import { SnowColor, SnowColorValues } from '../types';
 import { SnowThemeArgs } from '../../core';
 import { SpacingMap } from './constants';
 
 const Container = styled.div<{
   inline?: boolean;
-  spacing?: number;
+  spacing?: LayoutSpacingType;
   color?: SnowColor;
+  sx?: SxProp;
 }>(({ theme: { vars: theme } }: SnowThemeArgs) => ({
   display: 'flex',
   justifyContent: 'center',
   alignItems: 'center',
   gap: 8,
-  svg: {
-    width: 20,
-  },
   variants: [
     { props: { inline: true }, style: { display: 'inline-flex' } },
     ...SpacingMap.map((spacing) => ({

@@ -20,6 +20,7 @@ import { styled } from '@pigment-css/react';
 import { Button } from '../Button';
 import { DefaultSnowProps } from '../types';
 import { SnowThemeArgs } from '../../core';
+import { ZIndex } from '../constants';
 
 const PopoverContentElement = styled.div(
   ({ theme: { vars: theme } }: SnowThemeArgs) => ({
@@ -29,7 +30,6 @@ const PopoverContentElement = styled.div(
       'rgba(0, 0, 0, 0.05) 0px 1px 3px 0px, rgba(0, 0, 0, 0.05) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px',
     border: `1px solid ${theme.colors.grey[300]}`,
     fontSize: '90%',
-    padding: '4px 8px',
     borderRadius: 4,
     boxSizing: 'border-box',
     width: 'max-content',
@@ -170,7 +170,8 @@ export const PopoverTrigger = React.forwardRef<
 
   return (
     <Button
-      variant="filled"
+      variant="outlined"
+      noHighlights
       ref={ref}
       // The user can style the trigger based on the state
       data-state={context.open ? 'open' : 'closed'}
@@ -195,7 +196,11 @@ export const PopoverContent = React.forwardRef<
       <FloatingFocusManager context={floatingContext} modal={context.modal}>
         <PopoverContentElement
           ref={ref}
-          style={{ ...context.floatingStyles, ...style }}
+          style={{
+            ...context.floatingStyles,
+            ...style,
+            zIndex: ZIndex.Popover,
+          }}
           aria-labelledby={context.labelId}
           aria-describedby={context.descriptionId}
           {...context.getFloatingProps(props)}

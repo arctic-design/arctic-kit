@@ -1,24 +1,23 @@
 import { PropsWithChildren } from 'react';
-import { styled } from '@pigment-css/react';
-import { LayoutType } from './types';
+import { styled, SxProp } from '@pigment-css/react';
+import { LayoutType, LayoutSpacingType } from './types';
 import { SnowColor, SnowColorValues } from '../types';
 import { SnowThemeArgs } from '../../core';
 import { SpacingMap } from './constants';
 
 const Container = styled.div<{
   inline?: boolean;
-  spacing?: number;
+  spacing?: LayoutSpacingType;
   color?: SnowColor;
   direction?: 'horizontal' | 'vertical';
+  sx?: SxProp;
+  noWrap?: boolean;
 }>(({ theme: { vars: theme } }: SnowThemeArgs) => ({
   display: 'flex',
   flexDirection: 'column',
   justifyContent: 'flex-start',
   alignItems: 'stretch',
   gap: 0,
-  svg: {
-    width: 20,
-  },
   variants: [
     { props: { inline: true }, style: { display: 'inline-flex' } },
     ...SpacingMap.map((spacing) => ({
@@ -41,6 +40,26 @@ const Container = styled.div<{
         flexDirection: 'row',
         justifyContent: 'center',
         flexWrap: 'wrap',
+        alignItems: 'center',
+      },
+    },
+    {
+      props: { justifyBetween: true },
+      style: {
+        justifyContent: 'space-between',
+      },
+    },
+    {
+      props: { centerAlign: true },
+      style: {
+        alignItems: 'center',
+        justifyContent: 'center',
+      },
+    },
+    {
+      props: { noWrap: true },
+      style: {
+        flexWrap: 'nowrap',
       },
     },
   ],
@@ -49,6 +68,9 @@ const Container = styled.div<{
 export type StackProps = LayoutType & {
   inline?: boolean;
   direction?: 'horizontal' | 'vertical';
+  centerAlign?: boolean;
+  justifyBetween?: boolean;
+  noWrap?: boolean;
 };
 
 export const Stack = ({

@@ -5,7 +5,7 @@ import {
   forwardRef,
   useContext,
 } from 'react';
-import { styled } from '@pigment-css/react';
+import { styled, SxProp } from '@pigment-css/react';
 
 import { DefaultSnowProps, SnowColorValues, SnowSizeValues } from '../types';
 import { SnowFontSizes, SnowHeights, SnowSpacingMap } from '../constants';
@@ -107,6 +107,9 @@ export interface ButtonProps extends DefaultSnowProps {
   loading?: boolean;
   fillSvg?: boolean;
   rounded?: boolean;
+  style?: React.CSSProperties;
+  sx?: SxProp;
+  noHighlights?: boolean;
 }
 
 const StyledButton = styled.button<ButtonProps>(
@@ -225,6 +228,21 @@ const StyledButton = styled.button<ButtonProps>(
           },
         },
       },
+      {
+        props: { noHighlights: true },
+        style: {
+          '&.outlined, &.text': {
+            '&:not(:disabled)': {
+              '&:focus::after': {
+                borderWidth: 0,
+              },
+              '&:active': {
+                backgroundColor: 'inherit',
+              },
+            },
+          },
+        },
+      },
     ],
   })
 );
@@ -246,6 +264,7 @@ const Button = forwardRef<HTMLButtonElement, PropsWithChildren<ButtonProps>>(
       id = 'button',
       loading = false,
       fillSvg,
+      noHighlights = false,
       ...props
     }: PropsWithChildren<ButtonProps>,
     ref
@@ -279,6 +298,8 @@ const Button = forwardRef<HTMLButtonElement, PropsWithChildren<ButtonProps>>(
         data-fill-svg={fillSvg}
         data-disabled={disabled}
         role={role}
+        data-highlights={!noHighlights ? true : undefined}
+        noHighlights={noHighlights}
         {...props}
       >
         {loading && <Loader size="extraSmall" disabled={disabled} />}

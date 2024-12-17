@@ -16,7 +16,11 @@ import {
   FloatingPortal,
 } from '@floating-ui/react';
 
-import { XMarkIcon, ChevronDownIcon } from '@arctic-kit/icons';
+import {
+  XMarkIcon,
+  ChevronDownIcon,
+  MagnifyingGlassIcon,
+} from '@arctic-kit/icons';
 import { SnowColor, SnowSize } from '../types';
 import InputContainer from './InputContainer';
 import { BaseSelectProps, SelectKeyValue } from './types';
@@ -47,7 +51,7 @@ const SelectControl = styled(InputContainer)<{
   clearable?: boolean;
 }>(({ theme: { vars: theme } }: SnowThemeArgs) => ({
   alignItems: 'center',
-  cursor: 'default',
+  cursor: 'pointer',
   display: 'flex',
   flexWrap: 'wrap',
   justifyContent: 'space-between',
@@ -320,6 +324,7 @@ const BaseSelect: React.FC<BaseSelectProps> = (props: BaseSelectProps) => {
                     id={`${id}-menu-search-box`}
                     data-testid={`${id}-menu-search-box`}
                   >
+                    <MagnifyingGlassIcon />
                     <input
                       onChange={onSearch}
                       value={searchValue}

@@ -52,7 +52,7 @@ export const Inline: Story = {
   args: {
     children: (
       <>
-        <ChevronLeftIcon />
+        <ChevronLeftIcon width={16} />
         <div>Previous Screen</div>
       </>
     ),
