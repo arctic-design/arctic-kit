@@ -33,6 +33,7 @@ const Container = styled.div<
   '.item': {
     cursor: 'pointer',
     borderRadius: theme.border.radius.main,
+    boxSizing: 'content-box',
     '&:hover': {
       backgroundColor: theme.colors.grey[200],
     },

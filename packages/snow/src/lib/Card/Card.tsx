@@ -7,7 +7,7 @@ const CardPaper = styled(Paper)(() => ({
   flexDirection: 'column',
 }));
 
-export type CardProps = Omit<PaperProps, 'noPadding'> & {
+export type CardProps = Omit<PaperProps, 'noPadding' | 'color'> & {
   children: React.ReactNode;
   sx?: SxProp;
 };
