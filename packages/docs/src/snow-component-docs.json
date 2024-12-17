@@ -1348,6 +1348,75 @@
             }
           ]
         }
+      },
+      "size": {
+        "defaultValue": null,
+        "description": "",
+        "name": "size",
+        "declarations": [
+          {
+            "fileName": "arctic-kit/packages/snow/src/lib/Avatar/Avatar.tsx",
+            "name": "TypeLiteral"
+          }
+        ],
+        "required": false,
+        "type": {
+          "name": "enum",
+          "raw": "\"small\" | \"medium\" | \"large\" | undefined",
+          "value": [
+            {
+              "value": "undefined"
+            },
+            {
+              "value": "\"small\""
+            },
+            {
+              "value": "\"medium\""
+            },
+            {
+              "value": "\"large\""
+            }
+          ]
+        }
+      },
+      "bgColor": {
+        "defaultValue": null,
+        "description": "",
+        "name": "bgColor",
+        "declarations": [
+          {
+            "fileName": "arctic-kit/packages/snow/src/lib/Avatar/Avatar.tsx",
+            "name": "TypeLiteral"
+          }
+        ],
+        "required": false,
+        "type": {
+          "name": "enum",
+          "raw": "SnowColor | undefined",
+          "value": [
+            {
+              "value": "undefined"
+            },
+            {
+              "value": "\"success\""
+            },
+            {
+              "value": "\"error\""
+            },
+            {
+              "value": "\"warning\""
+            },
+            {
+              "value": "\"info\""
+            },
+            {
+              "value": "\"primary\""
+            },
+            {
+              "value": "\"secondary\""
+            }
+          ]
+        }
       }
     }
   },
@@ -1830,6 +1899,46 @@
           "name": "boolean | undefined"
         }
       },
+      "style": {
+        "defaultValue": null,
+        "description": "",
+        "name": "style",
+        "parent": {
+          "fileName": "arctic-kit/packages/snow/src/lib/Button/Button.tsx",
+          "name": "ButtonProps"
+        },
+        "declarations": [
+          {
+            "fileName": "arctic-kit/packages/snow/src/lib/Button/Button.tsx",
+            "name": "ButtonProps"
+          }
+        ],
+        "required": false,
+        "type": {
+          "name": "CSSProperties | undefined"
+        }
+      },
+      "noHighlights": {
+        "defaultValue": {
+          "value": "false"
+        },
+        "description": "",
+        "name": "noHighlights",
+        "parent": {
+          "fileName": "arctic-kit/packages/snow/src/lib/Button/Button.tsx",
+          "name": "ButtonProps"
+        },
+        "declarations": [
+          {
+            "fileName": "arctic-kit/packages/snow/src/lib/Button/Button.tsx",
+            "name": "ButtonProps"
+          }
+        ],
+        "required": false,
+        "type": {
+          "name": "boolean | undefined"
+        }
+      },
       "color": {
         "defaultValue": {
           "value": "\"primary\""
@@ -2229,6 +2338,345 @@
         "required": false,
         "type": {
           "name": "((month: number) => void) | undefined"
+        }
+      }
+    }
+  },
+  {
+    "tags": {},
+    "description": "",
+    "displayName": "Card",
+    "methods": [],
+    "props": {
+      "className": {
+        "defaultValue": null,
+        "description": "",
+        "name": "className",
+        "declarations": [
+          {
+            "fileName": "arctic-kit/packages/snow/src/lib/Paper/Paper.tsx",
+            "name": "TypeLiteral"
+          }
+        ],
+        "required": false,
+        "type": {
+          "name": "string | undefined"
+        }
+      },
+      "style": {
+        "defaultValue": null,
+        "description": "",
+        "name": "style",
+        "declarations": [
+          {
+            "fileName": "arctic-kit/packages/snow/src/lib/Paper/Paper.tsx",
+            "name": "TypeLiteral"
+          }
+        ],
+        "required": false,
+        "type": {
+          "name": "CSSProperties | undefined"
+        }
+      },
+      "variant": {
+        "defaultValue": null,
+        "description": "",
+        "name": "variant",
+        "declarations": [
+          {
+            "fileName": "arctic-kit/packages/snow/src/lib/Paper/Paper.tsx",
+            "name": "TypeLiteral"
+          }
+        ],
+        "required": false,
+        "type": {
+          "name": "enum",
+          "raw": "PaperVariant | undefined",
+          "value": [
+            {
+              "value": "undefined"
+            },
+            {
+              "value": "\"outlined\""
+            },
+            {
+              "value": "\"elevation\""
+            }
+          ]
+        }
+      },
+      "onClick": {
+        "defaultValue": null,
+        "description": "",
+        "name": "onClick",
+        "declarations": [
+          {
+            "fileName": "arctic-kit/packages/snow/src/lib/Paper/Paper.tsx",
+            "name": "TypeLiteral"
+          }
+        ],
+        "required": false,
+        "type": {
+          "name": "(() => void) | undefined"
+        }
+      },
+      "elevation": {
+        "defaultValue": null,
+        "description": "",
+        "name": "elevation",
+        "declarations": [
+          {
+            "fileName": "arctic-kit/packages/snow/src/lib/Paper/Paper.tsx",
+            "name": "TypeLiteral"
+          }
+        ],
+        "required": false,
+        "type": {
+          "name": "enum",
+          "raw": "0 | 4 | 1 | 2 | 3 | 5 | 6 | 7 | 8 | 9 | 10 | undefined",
+          "value": [
+            {
+              "value": "undefined"
+            },
+            {
+              "value": "0"
+            },
+            {
+              "value": "4"
+            },
+            {
+              "value": "1"
+            },
+            {
+              "value": "2"
+            },
+            {
+              "value": "3"
+            },
+            {
+              "value": "5"
+            },
+            {
+              "value": "6"
+            },
+            {
+              "value": "7"
+            },
+            {
+              "value": "8"
+            },
+            {
+              "value": "9"
+            },
+            {
+              "value": "10"
+            }
+          ]
+        }
+      },
+      "square": {
+        "defaultValue": null,
+        "description": "",
+        "name": "square",
+        "declarations": [
+          {
+            "fileName": "arctic-kit/packages/snow/src/lib/Paper/Paper.tsx",
+            "name": "TypeLiteral"
+          }
+        ],
+        "required": false,
+        "type": {
+          "name": "boolean | undefined"
+        }
+      }
+    }
+  },
+  {
+    "tags": {},
+    "description": "",
+    "displayName": "CardHeader",
+    "methods": [],
+    "props": {
+      "className": {
+        "defaultValue": null,
+        "description": "",
+        "name": "className",
+        "declarations": [
+          {
+            "fileName": "arctic-kit/packages/snow/src/lib/Card/CardHeader.tsx",
+            "name": "TypeLiteral"
+          }
+        ],
+        "required": false,
+        "type": {
+          "name": "string | undefined"
+        }
+      },
+      "style": {
+        "defaultValue": null,
+        "description": "",
+        "name": "style",
+        "declarations": [
+          {
+            "fileName": "arctic-kit/packages/snow/src/lib/Card/CardHeader.tsx",
+            "name": "TypeLiteral"
+          }
+        ],
+        "required": false,
+        "type": {
+          "name": "CSSProperties | undefined"
+        }
+      }
+    }
+  },
+  {
+    "tags": {},
+    "description": "",
+    "displayName": "CardTitle",
+    "methods": [],
+    "props": {
+      "className": {
+        "defaultValue": null,
+        "description": "",
+        "name": "className",
+        "declarations": [
+          {
+            "fileName": "arctic-kit/packages/snow/src/lib/Card/CardTitle.tsx",
+            "name": "TypeLiteral"
+          }
+        ],
+        "required": false,
+        "type": {
+          "name": "string | undefined"
+        }
+      },
+      "style": {
+        "defaultValue": null,
+        "description": "",
+        "name": "style",
+        "declarations": [
+          {
+            "fileName": "arctic-kit/packages/snow/src/lib/Card/CardTitle.tsx",
+            "name": "TypeLiteral"
+          }
+        ],
+        "required": false,
+        "type": {
+          "name": "CSSProperties | undefined"
+        }
+      }
+    }
+  },
+  {
+    "tags": {},
+    "description": "",
+    "displayName": "CardDescription",
+    "methods": [],
+    "props": {
+      "className": {
+        "defaultValue": null,
+        "description": "",
+        "name": "className",
+        "declarations": [
+          {
+            "fileName": "arctic-kit/packages/snow/src/lib/Card/CardDescription.tsx",
+            "name": "TypeLiteral"
+          }
+        ],
+        "required": false,
+        "type": {
+          "name": "string | undefined"
+        }
+      },
+      "style": {
+        "defaultValue": null,
+        "description": "",
+        "name": "style",
+        "declarations": [
+          {
+            "fileName": "arctic-kit/packages/snow/src/lib/Card/CardDescription.tsx",
+            "name": "TypeLiteral"
+          }
+        ],
+        "required": false,
+        "type": {
+          "name": "CSSProperties | undefined"
+        }
+      }
+    }
+  },
+  {
+    "tags": {},
+    "description": "",
+    "displayName": "CardContent",
+    "methods": [],
+    "props": {
+      "className": {
+        "defaultValue": null,
+        "description": "",
+        "name": "className",
+        "declarations": [
+          {
+            "fileName": "arctic-kit/packages/snow/src/lib/Card/CardContent.tsx",
+            "name": "TypeLiteral"
+          }
+        ],
+        "required": false,
+        "type": {
+          "name": "string | undefined"
+        }
+      },
+      "style": {
+        "defaultValue": null,
+        "description": "",
+        "name": "style",
+        "declarations": [
+          {
+            "fileName": "arctic-kit/packages/snow/src/lib/Card/CardContent.tsx",
+            "name": "TypeLiteral"
+          }
+        ],
+        "required": false,
+        "type": {
+          "name": "CSSProperties | undefined"
+        }
+      }
+    }
+  },
+  {
+    "tags": {},
+    "description": "",
+    "displayName": "CardFooter",
+    "methods": [],
+    "props": {
+      "className": {
+        "defaultValue": null,
+        "description": "",
+        "name": "className",
+        "declarations": [
+          {
+            "fileName": "arctic-kit/packages/snow/src/lib/Card/CardFooter.tsx",
+            "name": "TypeLiteral"
+          }
+        ],
+        "required": false,
+        "type": {
+          "name": "string | undefined"
+        }
+      },
+      "style": {
+        "defaultValue": null,
+        "description": "",
+        "name": "style",
+        "declarations": [
+          {
+            "fileName": "arctic-kit/packages/snow/src/lib/Card/CardFooter.tsx",
+            "name": "TypeLiteral"
+          }
+        ],
+        "required": false,
+        "type": {
+          "name": "CSSProperties | undefined"
         }
       }
     }
@@ -3121,6 +3569,96 @@
         "type": {
           "name": "Date | undefined"
         }
+      },
+      "label": {
+        "defaultValue": null,
+        "description": "",
+        "name": "label",
+        "declarations": [
+          {
+            "fileName": "arctic-kit/packages/snow/src/lib/DatePicker/DatePicker.tsx",
+            "name": "TypeLiteral"
+          }
+        ],
+        "required": false,
+        "type": {
+          "name": "string | undefined"
+        }
+      },
+      "disabled": {
+        "defaultValue": null,
+        "description": "",
+        "name": "disabled",
+        "declarations": [
+          {
+            "fileName": "arctic-kit/packages/snow/src/lib/DatePicker/DatePicker.tsx",
+            "name": "TypeLiteral"
+          }
+        ],
+        "required": false,
+        "type": {
+          "name": "boolean | undefined"
+        }
+      },
+      "readOnly": {
+        "defaultValue": null,
+        "description": "",
+        "name": "readOnly",
+        "declarations": [
+          {
+            "fileName": "arctic-kit/packages/snow/src/lib/DatePicker/DatePicker.tsx",
+            "name": "TypeLiteral"
+          }
+        ],
+        "required": false,
+        "type": {
+          "name": "boolean | undefined"
+        }
+      },
+      "placeholder": {
+        "defaultValue": null,
+        "description": "",
+        "name": "placeholder",
+        "declarations": [
+          {
+            "fileName": "arctic-kit/packages/snow/src/lib/DatePicker/DatePicker.tsx",
+            "name": "TypeLiteral"
+          }
+        ],
+        "required": false,
+        "type": {
+          "name": "string | undefined"
+        }
+      },
+      "size": {
+        "defaultValue": null,
+        "description": "",
+        "name": "size",
+        "declarations": [
+          {
+            "fileName": "arctic-kit/packages/snow/src/lib/DatePicker/DatePicker.tsx",
+            "name": "TypeLiteral"
+          }
+        ],
+        "required": false,
+        "type": {
+          "name": "enum",
+          "raw": "\"small\" | \"medium\" | \"large\" | undefined",
+          "value": [
+            {
+              "value": "undefined"
+            },
+            {
+              "value": "\"small\""
+            },
+            {
+              "value": "\"medium\""
+            },
+            {
+              "value": "\"large\""
+            }
+          ]
+        }
       }
     }
   },
@@ -3911,7 +4449,46 @@
         ],
         "required": false,
         "type": {
-          "name": "number | undefined"
+          "name": "enum",
+          "raw": "0 | 4 | 1 | 2 | 3 | 5 | 6 | 7 | 8 | 9 | 10 | undefined",
+          "value": [
+            {
+              "value": "undefined"
+            },
+            {
+              "value": "0"
+            },
+            {
+              "value": "4"
+            },
+            {
+              "value": "1"
+            },
+            {
+              "value": "2"
+            },
+            {
+              "value": "3"
+            },
+            {
+              "value": "5"
+            },
+            {
+              "value": "6"
+            },
+            {
+              "value": "7"
+            },
+            {
+              "value": "8"
+            },
+            {
+              "value": "9"
+            },
+            {
+              "value": "10"
+            }
+          ]
         }
       },
       "color": {
@@ -3981,6 +4558,51 @@
         "required": false,
         "type": {
           "name": "string | undefined"
+        }
+      },
+      "onClick": {
+        "defaultValue": null,
+        "description": "",
+        "name": "onClick",
+        "declarations": [
+          {
+            "fileName": "arctic-kit/packages/snow/src/lib/Layout/types.ts",
+            "name": "TypeLiteral"
+          }
+        ],
+        "required": false,
+        "type": {
+          "name": "(() => void) | undefined"
+        }
+      },
+      "onKeyPress": {
+        "defaultValue": null,
+        "description": "",
+        "name": "onKeyPress",
+        "declarations": [
+          {
+            "fileName": "arctic-kit/packages/snow/src/lib/Layout/types.ts",
+            "name": "TypeLiteral"
+          }
+        ],
+        "required": false,
+        "type": {
+          "name": "((e: KeyboardEvent<HTMLDivElement>) => void) | undefined"
+        }
+      },
+      "tabIndex": {
+        "defaultValue": null,
+        "description": "",
+        "name": "tabIndex",
+        "declarations": [
+          {
+            "fileName": "arctic-kit/packages/snow/src/lib/Layout/types.ts",
+            "name": "TypeLiteral"
+          }
+        ],
+        "required": false,
+        "type": {
+          "name": "number | undefined"
         }
       },
       "inline": {
@@ -4022,7 +4644,46 @@
         ],
         "required": false,
         "type": {
-          "name": "number | undefined"
+          "name": "enum",
+          "raw": "0 | 4 | 1 | 2 | 3 | 5 | 6 | 7 | 8 | 9 | 10 | undefined",
+          "value": [
+            {
+              "value": "undefined"
+            },
+            {
+              "value": "0"
+            },
+            {
+              "value": "4"
+            },
+            {
+              "value": "1"
+            },
+            {
+              "value": "2"
+            },
+            {
+              "value": "3"
+            },
+            {
+              "value": "5"
+            },
+            {
+              "value": "6"
+            },
+            {
+              "value": "7"
+            },
+            {
+              "value": "8"
+            },
+            {
+              "value": "9"
+            },
+            {
+              "value": "10"
+            }
+          ]
         }
       },
       "color": {
@@ -4092,6 +4753,51 @@
         "required": false,
         "type": {
           "name": "string | undefined"
+        }
+      },
+      "onClick": {
+        "defaultValue": null,
+        "description": "",
+        "name": "onClick",
+        "declarations": [
+          {
+            "fileName": "arctic-kit/packages/snow/src/lib/Layout/types.ts",
+            "name": "TypeLiteral"
+          }
+        ],
+        "required": false,
+        "type": {
+          "name": "(() => void) | undefined"
+        }
+      },
+      "onKeyPress": {
+        "defaultValue": null,
+        "description": "",
+        "name": "onKeyPress",
+        "declarations": [
+          {
+            "fileName": "arctic-kit/packages/snow/src/lib/Layout/types.ts",
+            "name": "TypeLiteral"
+          }
+        ],
+        "required": false,
+        "type": {
+          "name": "((e: KeyboardEvent<HTMLDivElement>) => void) | undefined"
+        }
+      },
+      "tabIndex": {
+        "defaultValue": null,
+        "description": "",
+        "name": "tabIndex",
+        "declarations": [
+          {
+            "fileName": "arctic-kit/packages/snow/src/lib/Layout/types.ts",
+            "name": "TypeLiteral"
+          }
+        ],
+        "required": false,
+        "type": {
+          "name": "number | undefined"
         }
       },
       "inline": {
@@ -4139,6 +4845,51 @@
             }
           ]
         }
+      },
+      "centerAlign": {
+        "defaultValue": null,
+        "description": "",
+        "name": "centerAlign",
+        "declarations": [
+          {
+            "fileName": "arctic-kit/packages/snow/src/lib/Layout/Stack.tsx",
+            "name": "TypeLiteral"
+          }
+        ],
+        "required": false,
+        "type": {
+          "name": "boolean | undefined"
+        }
+      },
+      "justifyBetween": {
+        "defaultValue": null,
+        "description": "",
+        "name": "justifyBetween",
+        "declarations": [
+          {
+            "fileName": "arctic-kit/packages/snow/src/lib/Layout/Stack.tsx",
+            "name": "TypeLiteral"
+          }
+        ],
+        "required": false,
+        "type": {
+          "name": "boolean | undefined"
+        }
+      },
+      "noWrap": {
+        "defaultValue": null,
+        "description": "",
+        "name": "noWrap",
+        "declarations": [
+          {
+            "fileName": "arctic-kit/packages/snow/src/lib/Layout/Stack.tsx",
+            "name": "TypeLiteral"
+          }
+        ],
+        "required": false,
+        "type": {
+          "name": "boolean | undefined"
+        }
       }
     }
   },
@@ -4148,6 +4899,184 @@
     "displayName": "Link",
     "methods": [],
     "props": {}
+  },
+  {
+    "tags": {},
+    "description": "",
+    "displayName": "List",
+    "methods": [],
+    "props": {
+      "spacing": {
+        "defaultValue": {
+          "value": "6"
+        },
+        "description": "",
+        "name": "spacing",
+        "declarations": [
+          {
+            "fileName": "arctic-kit/packages/snow/src/lib/List/List.tsx",
+            "name": "TypeLiteral"
+          }
+        ],
+        "required": false,
+        "type": {
+          "name": "enum",
+          "raw": "0 | 4 | 1 | 2 | 3 | 5 | 6 | 7 | 8 | 9 | 10 | undefined",
+          "value": [
+            {
+              "value": "undefined"
+            },
+            {
+              "value": "0"
+            },
+            {
+              "value": "4"
+            },
+            {
+              "value": "1"
+            },
+            {
+              "value": "2"
+            },
+            {
+              "value": "3"
+            },
+            {
+              "value": "5"
+            },
+            {
+              "value": "6"
+            },
+            {
+              "value": "7"
+            },
+            {
+              "value": "8"
+            },
+            {
+              "value": "9"
+            },
+            {
+              "value": "10"
+            }
+          ]
+        }
+      }
+    }
+  },
+  {
+    "tags": {},
+    "description": "",
+    "displayName": "ListItem",
+    "methods": [],
+    "props": {
+      "prefix": {
+        "defaultValue": null,
+        "description": "",
+        "name": "prefix",
+        "declarations": [
+          {
+            "fileName": "arctic-kit/packages/snow/src/lib/List/ListItem.tsx",
+            "name": "TypeLiteral"
+          }
+        ],
+        "required": false,
+        "type": {
+          "name": "ReactNode"
+        }
+      },
+      "suffix": {
+        "defaultValue": null,
+        "description": "",
+        "name": "suffix",
+        "declarations": [
+          {
+            "fileName": "arctic-kit/packages/snow/src/lib/List/ListItem.tsx",
+            "name": "TypeLiteral"
+          }
+        ],
+        "required": false,
+        "type": {
+          "name": "ReactNode"
+        }
+      }
+    }
+  },
+  {
+    "tags": {},
+    "description": "",
+    "displayName": "ListItemTitle",
+    "methods": [],
+    "props": {
+      "fontSize": {
+        "defaultValue": null,
+        "description": "",
+        "name": "fontSize",
+        "declarations": [
+          {
+            "fileName": "arctic-kit/packages/snow/src/lib/List/ListItemTitle.tsx",
+            "name": "TypeLiteral"
+          }
+        ],
+        "required": false,
+        "type": {
+          "name": "enum",
+          "raw": "\"small\" | \"medium\" | \"large\" | undefined",
+          "value": [
+            {
+              "value": "undefined"
+            },
+            {
+              "value": "\"small\""
+            },
+            {
+              "value": "\"medium\""
+            },
+            {
+              "value": "\"large\""
+            }
+          ]
+        }
+      }
+    }
+  },
+  {
+    "tags": {},
+    "description": "",
+    "displayName": "ListItemDescription",
+    "methods": [],
+    "props": {
+      "fontSize": {
+        "defaultValue": null,
+        "description": "",
+        "name": "fontSize",
+        "declarations": [
+          {
+            "fileName": "arctic-kit/packages/snow/src/lib/List/ListItemDescription.tsx",
+            "name": "TypeLiteral"
+          }
+        ],
+        "required": false,
+        "type": {
+          "name": "enum",
+          "raw": "\"small\" | \"medium\" | \"large\" | undefined",
+          "value": [
+            {
+              "value": "undefined"
+            },
+            {
+              "value": "\"small\""
+            },
+            {
+              "value": "\"medium\""
+            },
+            {
+              "value": "\"large\""
+            }
+          ]
+        }
+      }
+    }
   },
   {
     "tags": {},
@@ -4905,7 +5834,46 @@
         ],
         "required": false,
         "type": {
-          "name": "number | undefined"
+          "name": "enum",
+          "raw": "0 | 4 | 1 | 2 | 3 | 5 | 6 | 7 | 8 | 9 | 10 | undefined",
+          "value": [
+            {
+              "value": "undefined"
+            },
+            {
+              "value": "0"
+            },
+            {
+              "value": "4"
+            },
+            {
+              "value": "1"
+            },
+            {
+              "value": "2"
+            },
+            {
+              "value": "3"
+            },
+            {
+              "value": "5"
+            },
+            {
+              "value": "6"
+            },
+            {
+              "value": "7"
+            },
+            {
+              "value": "8"
+            },
+            {
+              "value": "9"
+            },
+            {
+              "value": "10"
+            }
+          ]
         }
       },
       "square": {
@@ -5032,6 +6000,21 @@
         "required": false,
         "type": {
           "name": "(() => void) | undefined"
+        }
+      },
+      "noPadding": {
+        "defaultValue": null,
+        "description": "",
+        "name": "noPadding",
+        "declarations": [
+          {
+            "fileName": "arctic-kit/packages/snow/src/lib/Paper/Paper.tsx",
+            "name": "TypeLiteral"
+          }
+        ],
+        "required": false,
+        "type": {
+          "name": "boolean | undefined"
         }
       }
     }
@@ -7487,6 +8470,179 @@
   {
     "tags": {},
     "description": "",
+    "displayName": "ToggleGroup",
+    "methods": [],
+    "props": {
+      "spacing": {
+        "defaultValue": {
+          "value": "1"
+        },
+        "description": "",
+        "name": "spacing",
+        "declarations": [
+          {
+            "fileName": "arctic-kit/packages/snow/src/lib/ToggleGroup/ToggleGroup.tsx",
+            "name": "TypeLiteral"
+          }
+        ],
+        "required": false,
+        "type": {
+          "name": "enum",
+          "raw": "0 | 4 | 1 | 2 | 3 | 5 | 6 | 7 | 8 | 9 | 10 | undefined",
+          "value": [
+            {
+              "value": "undefined"
+            },
+            {
+              "value": "0"
+            },
+            {
+              "value": "4"
+            },
+            {
+              "value": "1"
+            },
+            {
+              "value": "2"
+            },
+            {
+              "value": "3"
+            },
+            {
+              "value": "5"
+            },
+            {
+              "value": "6"
+            },
+            {
+              "value": "7"
+            },
+            {
+              "value": "8"
+            },
+            {
+              "value": "9"
+            },
+            {
+              "value": "10"
+            }
+          ]
+        }
+      },
+      "withBorder": {
+        "defaultValue": null,
+        "description": "",
+        "name": "withBorder",
+        "declarations": [
+          {
+            "fileName": "arctic-kit/packages/snow/src/lib/ToggleGroup/ToggleGroup.tsx",
+            "name": "TypeLiteral"
+          }
+        ],
+        "required": false,
+        "type": {
+          "name": "boolean | undefined"
+        }
+      },
+      "singleSelect": {
+        "defaultValue": {
+          "value": "false"
+        },
+        "description": "",
+        "name": "singleSelect",
+        "declarations": [
+          {
+            "fileName": "arctic-kit/packages/snow/src/lib/ToggleGroup/ToggleGroup.tsx",
+            "name": "TypeLiteral"
+          }
+        ],
+        "required": false,
+        "type": {
+          "name": "boolean | undefined"
+        }
+      }
+    }
+  },
+  {
+    "tags": {},
+    "description": "",
+    "displayName": "ToggleGroupItem",
+    "methods": [],
+    "props": {
+      "spacing": {
+        "defaultValue": null,
+        "description": "",
+        "name": "spacing",
+        "declarations": [
+          {
+            "fileName": "arctic-kit/packages/snow/src/lib/ToggleGroup/ToggleGroup.tsx",
+            "name": "TypeLiteral"
+          }
+        ],
+        "required": false,
+        "type": {
+          "name": "enum",
+          "raw": "0 | 4 | 1 | 2 | 3 | 5 | 6 | 7 | 8 | 9 | 10 | undefined",
+          "value": [
+            {
+              "value": "undefined"
+            },
+            {
+              "value": "0"
+            },
+            {
+              "value": "4"
+            },
+            {
+              "value": "1"
+            },
+            {
+              "value": "2"
+            },
+            {
+              "value": "3"
+            },
+            {
+              "value": "5"
+            },
+            {
+              "value": "6"
+            },
+            {
+              "value": "7"
+            },
+            {
+              "value": "8"
+            },
+            {
+              "value": "9"
+            },
+            {
+              "value": "10"
+            }
+          ]
+        }
+      },
+      "value": {
+        "defaultValue": null,
+        "description": "",
+        "name": "value",
+        "declarations": [
+          {
+            "fileName": "arctic-kit/packages/snow/src/lib/ToggleGroup/ToggleGroup.tsx",
+            "name": "TypeLiteral"
+          }
+        ],
+        "required": true,
+        "type": {
+          "name": "string"
+        }
+      }
+    }
+  },
+  {
+    "tags": {},
+    "description": "",
     "displayName": "Tooltip",
     "methods": [],
     "props": {
@@ -8636,6 +9792,352 @@
               "value": "\"left-end\""
             }
           ]
+        }
+      }
+    }
+  },
+  {
+    "tags": {},
+    "description": "",
+    "displayName": "ToggleGroup",
+    "methods": [],
+    "props": {
+      "spacing": {
+        "defaultValue": {
+          "value": "1"
+        },
+        "description": "",
+        "name": "spacing",
+        "declarations": [
+          {
+            "fileName": "arctic-kit/packages/snow/src/lib/ToggleGroup/ToggleGroup.tsx",
+            "name": "TypeLiteral"
+          }
+        ],
+        "required": false,
+        "type": {
+          "name": "enum",
+          "raw": "0 | 4 | 1 | 2 | 3 | 5 | 6 | 7 | 8 | 9 | 10 | undefined",
+          "value": [
+            {
+              "value": "undefined"
+            },
+            {
+              "value": "0"
+            },
+            {
+              "value": "4"
+            },
+            {
+              "value": "1"
+            },
+            {
+              "value": "2"
+            },
+            {
+              "value": "3"
+            },
+            {
+              "value": "5"
+            },
+            {
+              "value": "6"
+            },
+            {
+              "value": "7"
+            },
+            {
+              "value": "8"
+            },
+            {
+              "value": "9"
+            },
+            {
+              "value": "10"
+            }
+          ]
+        }
+      },
+      "withBorder": {
+        "defaultValue": null,
+        "description": "",
+        "name": "withBorder",
+        "declarations": [
+          {
+            "fileName": "arctic-kit/packages/snow/src/lib/ToggleGroup/ToggleGroup.tsx",
+            "name": "TypeLiteral"
+          }
+        ],
+        "required": false,
+        "type": {
+          "name": "boolean | undefined"
+        }
+      },
+      "singleSelect": {
+        "defaultValue": {
+          "value": "false"
+        },
+        "description": "",
+        "name": "singleSelect",
+        "declarations": [
+          {
+            "fileName": "arctic-kit/packages/snow/src/lib/ToggleGroup/ToggleGroup.tsx",
+            "name": "TypeLiteral"
+          }
+        ],
+        "required": false,
+        "type": {
+          "name": "boolean | undefined"
+        }
+      }
+    }
+  },
+  {
+    "tags": {},
+    "description": "",
+    "displayName": "ToggleGroupItem",
+    "methods": [],
+    "props": {
+      "spacing": {
+        "defaultValue": null,
+        "description": "",
+        "name": "spacing",
+        "declarations": [
+          {
+            "fileName": "arctic-kit/packages/snow/src/lib/ToggleGroup/ToggleGroup.tsx",
+            "name": "TypeLiteral"
+          }
+        ],
+        "required": false,
+        "type": {
+          "name": "enum",
+          "raw": "0 | 4 | 1 | 2 | 3 | 5 | 6 | 7 | 8 | 9 | 10 | undefined",
+          "value": [
+            {
+              "value": "undefined"
+            },
+            {
+              "value": "0"
+            },
+            {
+              "value": "4"
+            },
+            {
+              "value": "1"
+            },
+            {
+              "value": "2"
+            },
+            {
+              "value": "3"
+            },
+            {
+              "value": "5"
+            },
+            {
+              "value": "6"
+            },
+            {
+              "value": "7"
+            },
+            {
+              "value": "8"
+            },
+            {
+              "value": "9"
+            },
+            {
+              "value": "10"
+            }
+          ]
+        }
+      },
+      "value": {
+        "defaultValue": null,
+        "description": "",
+        "name": "value",
+        "declarations": [
+          {
+            "fileName": "arctic-kit/packages/snow/src/lib/ToggleGroup/ToggleGroup.tsx",
+            "name": "TypeLiteral"
+          }
+        ],
+        "required": true,
+        "type": {
+          "name": "string"
+        }
+      }
+    }
+  },
+  {
+    "tags": {},
+    "description": "",
+    "displayName": "ToggleGroup",
+    "methods": [],
+    "props": {
+      "spacing": {
+        "defaultValue": {
+          "value": "1"
+        },
+        "description": "",
+        "name": "spacing",
+        "declarations": [
+          {
+            "fileName": "arctic-kit/packages/snow/src/lib/ToggleGroup/ToggleGroup.tsx",
+            "name": "TypeLiteral"
+          }
+        ],
+        "required": false,
+        "type": {
+          "name": "enum",
+          "raw": "0 | 4 | 1 | 2 | 3 | 5 | 6 | 7 | 8 | 9 | 10 | undefined",
+          "value": [
+            {
+              "value": "undefined"
+            },
+            {
+              "value": "0"
+            },
+            {
+              "value": "4"
+            },
+            {
+              "value": "1"
+            },
+            {
+              "value": "2"
+            },
+            {
+              "value": "3"
+            },
+            {
+              "value": "5"
+            },
+            {
+              "value": "6"
+            },
+            {
+              "value": "7"
+            },
+            {
+              "value": "8"
+            },
+            {
+              "value": "9"
+            },
+            {
+              "value": "10"
+            }
+          ]
+        }
+      },
+      "withBorder": {
+        "defaultValue": null,
+        "description": "",
+        "name": "withBorder",
+        "declarations": [
+          {
+            "fileName": "arctic-kit/packages/snow/src/lib/ToggleGroup/ToggleGroup.tsx",
+            "name": "TypeLiteral"
+          }
+        ],
+        "required": false,
+        "type": {
+          "name": "boolean | undefined"
+        }
+      },
+      "singleSelect": {
+        "defaultValue": {
+          "value": "false"
+        },
+        "description": "",
+        "name": "singleSelect",
+        "declarations": [
+          {
+            "fileName": "arctic-kit/packages/snow/src/lib/ToggleGroup/ToggleGroup.tsx",
+            "name": "TypeLiteral"
+          }
+        ],
+        "required": false,
+        "type": {
+          "name": "boolean | undefined"
+        }
+      }
+    }
+  },
+  {
+    "tags": {},
+    "description": "",
+    "displayName": "ToggleGroupItem",
+    "methods": [],
+    "props": {
+      "spacing": {
+        "defaultValue": null,
+        "description": "",
+        "name": "spacing",
+        "declarations": [
+          {
+            "fileName": "arctic-kit/packages/snow/src/lib/ToggleGroup/ToggleGroup.tsx",
+            "name": "TypeLiteral"
+          }
+        ],
+        "required": false,
+        "type": {
+          "name": "enum",
+          "raw": "0 | 4 | 1 | 2 | 3 | 5 | 6 | 7 | 8 | 9 | 10 | undefined",
+          "value": [
+            {
+              "value": "undefined"
+            },
+            {
+              "value": "0"
+            },
+            {
+              "value": "4"
+            },
+            {
+              "value": "1"
+            },
+            {
+              "value": "2"
+            },
+            {
+              "value": "3"
+            },
+            {
+              "value": "5"
+            },
+            {
+              "value": "6"
+            },
+            {
+              "value": "7"
+            },
+            {
+              "value": "8"
+            },
+            {
+              "value": "9"
+            },
+            {
+              "value": "10"
+            }
+          ]
+        }
+      },
+      "value": {
+        "defaultValue": null,
+        "description": "",
+        "name": "value",
+        "declarations": [
+          {
+            "fileName": "arctic-kit/packages/snow/src/lib/ToggleGroup/ToggleGroup.tsx",
+            "name": "TypeLiteral"
+          }
+        ],
+        "required": true,
+        "type": {
+          "name": "string"
         }
       }
     }
@@ -17194,7 +18696,46 @@
         ],
         "required": false,
         "type": {
-          "name": "number | undefined"
+          "name": "enum",
+          "raw": "0 | 4 | 1 | 2 | 3 | 5 | 6 | 7 | 8 | 9 | 10 | undefined",
+          "value": [
+            {
+              "value": "undefined"
+            },
+            {
+              "value": "0"
+            },
+            {
+              "value": "4"
+            },
+            {
+              "value": "1"
+            },
+            {
+              "value": "2"
+            },
+            {
+              "value": "3"
+            },
+            {
+              "value": "5"
+            },
+            {
+              "value": "6"
+            },
+            {
+              "value": "7"
+            },
+            {
+              "value": "8"
+            },
+            {
+              "value": "9"
+            },
+            {
+              "value": "10"
+            }
+          ]
         }
       },
       "square": {
@@ -17321,6 +18862,21 @@
         "required": false,
         "type": {
           "name": "(() => void) | undefined"
+        }
+      },
+      "noPadding": {
+        "defaultValue": null,
+        "description": "",
+        "name": "noPadding",
+        "declarations": [
+          {
+            "fileName": "arctic-kit/packages/snow/src/lib/Paper/Paper.tsx",
+            "name": "TypeLiteral"
+          }
+        ],
+        "required": false,
+        "type": {
+          "name": "boolean | undefined"
         }
       }
     }
@@ -17343,7 +18899,46 @@
         ],
         "required": false,
         "type": {
-          "name": "number | undefined"
+          "name": "enum",
+          "raw": "0 | 4 | 1 | 2 | 3 | 5 | 6 | 7 | 8 | 9 | 10 | undefined",
+          "value": [
+            {
+              "value": "undefined"
+            },
+            {
+              "value": "0"
+            },
+            {
+              "value": "4"
+            },
+            {
+              "value": "1"
+            },
+            {
+              "value": "2"
+            },
+            {
+              "value": "3"
+            },
+            {
+              "value": "5"
+            },
+            {
+              "value": "6"
+            },
+            {
+              "value": "7"
+            },
+            {
+              "value": "8"
+            },
+            {
+              "value": "9"
+            },
+            {
+              "value": "10"
+            }
+          ]
         }
       },
       "square": {
@@ -17470,6 +19065,21 @@
         "required": false,
         "type": {
           "name": "(() => void) | undefined"
+        }
+      },
+      "noPadding": {
+        "defaultValue": null,
+        "description": "",
+        "name": "noPadding",
+        "declarations": [
+          {
+            "fileName": "arctic-kit/packages/snow/src/lib/Paper/Paper.tsx",
+            "name": "TypeLiteral"
+          }
+        ],
+        "required": false,
+        "type": {
+          "name": "boolean | undefined"
         }
       }
     }
@@ -19316,6 +20926,362 @@
   {
     "tags": {},
     "description": "",
+    "displayName": "List",
+    "methods": [],
+    "props": {
+      "spacing": {
+        "defaultValue": {
+          "value": "6"
+        },
+        "description": "",
+        "name": "spacing",
+        "declarations": [
+          {
+            "fileName": "arctic-kit/packages/snow/src/lib/List/List.tsx",
+            "name": "TypeLiteral"
+          }
+        ],
+        "required": false,
+        "type": {
+          "name": "enum",
+          "raw": "0 | 4 | 1 | 2 | 3 | 5 | 6 | 7 | 8 | 9 | 10 | undefined",
+          "value": [
+            {
+              "value": "undefined"
+            },
+            {
+              "value": "0"
+            },
+            {
+              "value": "4"
+            },
+            {
+              "value": "1"
+            },
+            {
+              "value": "2"
+            },
+            {
+              "value": "3"
+            },
+            {
+              "value": "5"
+            },
+            {
+              "value": "6"
+            },
+            {
+              "value": "7"
+            },
+            {
+              "value": "8"
+            },
+            {
+              "value": "9"
+            },
+            {
+              "value": "10"
+            }
+          ]
+        }
+      }
+    }
+  },
+  {
+    "tags": {},
+    "description": "",
+    "displayName": "ListItem",
+    "methods": [],
+    "props": {
+      "prefix": {
+        "defaultValue": null,
+        "description": "",
+        "name": "prefix",
+        "declarations": [
+          {
+            "fileName": "arctic-kit/packages/snow/src/lib/List/ListItem.tsx",
+            "name": "TypeLiteral"
+          }
+        ],
+        "required": false,
+        "type": {
+          "name": "ReactNode"
+        }
+      },
+      "suffix": {
+        "defaultValue": null,
+        "description": "",
+        "name": "suffix",
+        "declarations": [
+          {
+            "fileName": "arctic-kit/packages/snow/src/lib/List/ListItem.tsx",
+            "name": "TypeLiteral"
+          }
+        ],
+        "required": false,
+        "type": {
+          "name": "ReactNode"
+        }
+      }
+    }
+  },
+  {
+    "tags": {},
+    "description": "",
+    "displayName": "ListItemTitle",
+    "methods": [],
+    "props": {
+      "fontSize": {
+        "defaultValue": null,
+        "description": "",
+        "name": "fontSize",
+        "declarations": [
+          {
+            "fileName": "arctic-kit/packages/snow/src/lib/List/ListItemTitle.tsx",
+            "name": "TypeLiteral"
+          }
+        ],
+        "required": false,
+        "type": {
+          "name": "enum",
+          "raw": "\"small\" | \"medium\" | \"large\" | undefined",
+          "value": [
+            {
+              "value": "undefined"
+            },
+            {
+              "value": "\"small\""
+            },
+            {
+              "value": "\"medium\""
+            },
+            {
+              "value": "\"large\""
+            }
+          ]
+        }
+      }
+    }
+  },
+  {
+    "tags": {},
+    "description": "",
+    "displayName": "ListItemDescription",
+    "methods": [],
+    "props": {
+      "fontSize": {
+        "defaultValue": null,
+        "description": "",
+        "name": "fontSize",
+        "declarations": [
+          {
+            "fileName": "arctic-kit/packages/snow/src/lib/List/ListItemDescription.tsx",
+            "name": "TypeLiteral"
+          }
+        ],
+        "required": false,
+        "type": {
+          "name": "enum",
+          "raw": "\"small\" | \"medium\" | \"large\" | undefined",
+          "value": [
+            {
+              "value": "undefined"
+            },
+            {
+              "value": "\"small\""
+            },
+            {
+              "value": "\"medium\""
+            },
+            {
+              "value": "\"large\""
+            }
+          ]
+        }
+      }
+    }
+  },
+  {
+    "tags": {},
+    "description": "",
+    "displayName": "ListItemTitle",
+    "methods": [],
+    "props": {
+      "fontSize": {
+        "defaultValue": null,
+        "description": "",
+        "name": "fontSize",
+        "declarations": [
+          {
+            "fileName": "arctic-kit/packages/snow/src/lib/List/ListItemTitle.tsx",
+            "name": "TypeLiteral"
+          }
+        ],
+        "required": false,
+        "type": {
+          "name": "enum",
+          "raw": "\"small\" | \"medium\" | \"large\" | undefined",
+          "value": [
+            {
+              "value": "undefined"
+            },
+            {
+              "value": "\"small\""
+            },
+            {
+              "value": "\"medium\""
+            },
+            {
+              "value": "\"large\""
+            }
+          ]
+        }
+      }
+    }
+  },
+  {
+    "tags": {},
+    "description": "",
+    "displayName": "ListItemDescription",
+    "methods": [],
+    "props": {
+      "fontSize": {
+        "defaultValue": null,
+        "description": "",
+        "name": "fontSize",
+        "declarations": [
+          {
+            "fileName": "arctic-kit/packages/snow/src/lib/List/ListItemDescription.tsx",
+            "name": "TypeLiteral"
+          }
+        ],
+        "required": false,
+        "type": {
+          "name": "enum",
+          "raw": "\"small\" | \"medium\" | \"large\" | undefined",
+          "value": [
+            {
+              "value": "undefined"
+            },
+            {
+              "value": "\"small\""
+            },
+            {
+              "value": "\"medium\""
+            },
+            {
+              "value": "\"large\""
+            }
+          ]
+        }
+      }
+    }
+  },
+  {
+    "tags": {},
+    "description": "",
+    "displayName": "ListItem",
+    "methods": [],
+    "props": {
+      "prefix": {
+        "defaultValue": null,
+        "description": "",
+        "name": "prefix",
+        "declarations": [
+          {
+            "fileName": "arctic-kit/packages/snow/src/lib/List/ListItem.tsx",
+            "name": "TypeLiteral"
+          }
+        ],
+        "required": false,
+        "type": {
+          "name": "ReactNode"
+        }
+      },
+      "suffix": {
+        "defaultValue": null,
+        "description": "",
+        "name": "suffix",
+        "declarations": [
+          {
+            "fileName": "arctic-kit/packages/snow/src/lib/List/ListItem.tsx",
+            "name": "TypeLiteral"
+          }
+        ],
+        "required": false,
+        "type": {
+          "name": "ReactNode"
+        }
+      }
+    }
+  },
+  {
+    "tags": {},
+    "description": "",
+    "displayName": "List",
+    "methods": [],
+    "props": {
+      "spacing": {
+        "defaultValue": {
+          "value": "6"
+        },
+        "description": "",
+        "name": "spacing",
+        "declarations": [
+          {
+            "fileName": "arctic-kit/packages/snow/src/lib/List/List.tsx",
+            "name": "TypeLiteral"
+          }
+        ],
+        "required": false,
+        "type": {
+          "name": "enum",
+          "raw": "0 | 4 | 1 | 2 | 3 | 5 | 6 | 7 | 8 | 9 | 10 | undefined",
+          "value": [
+            {
+              "value": "undefined"
+            },
+            {
+              "value": "0"
+            },
+            {
+              "value": "4"
+            },
+            {
+              "value": "1"
+            },
+            {
+              "value": "2"
+            },
+            {
+              "value": "3"
+            },
+            {
+              "value": "5"
+            },
+            {
+              "value": "6"
+            },
+            {
+              "value": "7"
+            },
+            {
+              "value": "8"
+            },
+            {
+              "value": "9"
+            },
+            {
+              "value": "10"
+            }
+          ]
+        }
+      }
+    }
+  },
+  {
+    "tags": {},
+    "description": "",
     "displayName": "Link",
     "methods": [],
     "props": {}
@@ -19347,7 +21313,46 @@
         ],
         "required": false,
         "type": {
-          "name": "number | undefined"
+          "name": "enum",
+          "raw": "0 | 4 | 1 | 2 | 3 | 5 | 6 | 7 | 8 | 9 | 10 | undefined",
+          "value": [
+            {
+              "value": "undefined"
+            },
+            {
+              "value": "0"
+            },
+            {
+              "value": "4"
+            },
+            {
+              "value": "1"
+            },
+            {
+              "value": "2"
+            },
+            {
+              "value": "3"
+            },
+            {
+              "value": "5"
+            },
+            {
+              "value": "6"
+            },
+            {
+              "value": "7"
+            },
+            {
+              "value": "8"
+            },
+            {
+              "value": "9"
+            },
+            {
+              "value": "10"
+            }
+          ]
         }
       },
       "color": {
@@ -19417,6 +21422,51 @@
         "required": false,
         "type": {
           "name": "string | undefined"
+        }
+      },
+      "onClick": {
+        "defaultValue": null,
+        "description": "",
+        "name": "onClick",
+        "declarations": [
+          {
+            "fileName": "arctic-kit/packages/snow/src/lib/Layout/types.ts",
+            "name": "TypeLiteral"
+          }
+        ],
+        "required": false,
+        "type": {
+          "name": "(() => void) | undefined"
+        }
+      },
+      "onKeyPress": {
+        "defaultValue": null,
+        "description": "",
+        "name": "onKeyPress",
+        "declarations": [
+          {
+            "fileName": "arctic-kit/packages/snow/src/lib/Layout/types.ts",
+            "name": "TypeLiteral"
+          }
+        ],
+        "required": false,
+        "type": {
+          "name": "((e: KeyboardEvent<HTMLDivElement>) => void) | undefined"
+        }
+      },
+      "tabIndex": {
+        "defaultValue": null,
+        "description": "",
+        "name": "tabIndex",
+        "declarations": [
+          {
+            "fileName": "arctic-kit/packages/snow/src/lib/Layout/types.ts",
+            "name": "TypeLiteral"
+          }
+        ],
+        "required": false,
+        "type": {
+          "name": "number | undefined"
         }
       },
       "inline": {
@@ -19458,7 +21508,46 @@
         ],
         "required": false,
         "type": {
-          "name": "number | undefined"
+          "name": "enum",
+          "raw": "0 | 4 | 1 | 2 | 3 | 5 | 6 | 7 | 8 | 9 | 10 | undefined",
+          "value": [
+            {
+              "value": "undefined"
+            },
+            {
+              "value": "0"
+            },
+            {
+              "value": "4"
+            },
+            {
+              "value": "1"
+            },
+            {
+              "value": "2"
+            },
+            {
+              "value": "3"
+            },
+            {
+              "value": "5"
+            },
+            {
+              "value": "6"
+            },
+            {
+              "value": "7"
+            },
+            {
+              "value": "8"
+            },
+            {
+              "value": "9"
+            },
+            {
+              "value": "10"
+            }
+          ]
         }
       },
       "color": {
@@ -19530,6 +21619,51 @@
           "name": "string | undefined"
         }
       },
+      "onClick": {
+        "defaultValue": null,
+        "description": "",
+        "name": "onClick",
+        "declarations": [
+          {
+            "fileName": "arctic-kit/packages/snow/src/lib/Layout/types.ts",
+            "name": "TypeLiteral"
+          }
+        ],
+        "required": false,
+        "type": {
+          "name": "(() => void) | undefined"
+        }
+      },
+      "onKeyPress": {
+        "defaultValue": null,
+        "description": "",
+        "name": "onKeyPress",
+        "declarations": [
+          {
+            "fileName": "arctic-kit/packages/snow/src/lib/Layout/types.ts",
+            "name": "TypeLiteral"
+          }
+        ],
+        "required": false,
+        "type": {
+          "name": "((e: KeyboardEvent<HTMLDivElement>) => void) | undefined"
+        }
+      },
+      "tabIndex": {
+        "defaultValue": null,
+        "description": "",
+        "name": "tabIndex",
+        "declarations": [
+          {
+            "fileName": "arctic-kit/packages/snow/src/lib/Layout/types.ts",
+            "name": "TypeLiteral"
+          }
+        ],
+        "required": false,
+        "type": {
+          "name": "number | undefined"
+        }
+      },
       "inline": {
         "defaultValue": {
           "value": "false"
@@ -19574,6 +21708,51 @@
               "value": "\"vertical\""
             }
           ]
+        }
+      },
+      "centerAlign": {
+        "defaultValue": null,
+        "description": "",
+        "name": "centerAlign",
+        "declarations": [
+          {
+            "fileName": "arctic-kit/packages/snow/src/lib/Layout/Stack.tsx",
+            "name": "TypeLiteral"
+          }
+        ],
+        "required": false,
+        "type": {
+          "name": "boolean | undefined"
+        }
+      },
+      "justifyBetween": {
+        "defaultValue": null,
+        "description": "",
+        "name": "justifyBetween",
+        "declarations": [
+          {
+            "fileName": "arctic-kit/packages/snow/src/lib/Layout/Stack.tsx",
+            "name": "TypeLiteral"
+          }
+        ],
+        "required": false,
+        "type": {
+          "name": "boolean | undefined"
+        }
+      },
+      "noWrap": {
+        "defaultValue": null,
+        "description": "",
+        "name": "noWrap",
+        "declarations": [
+          {
+            "fileName": "arctic-kit/packages/snow/src/lib/Layout/Stack.tsx",
+            "name": "TypeLiteral"
+          }
+        ],
+        "required": false,
+        "type": {
+          "name": "boolean | undefined"
         }
       }
     }
@@ -19598,7 +21777,46 @@
         ],
         "required": false,
         "type": {
-          "name": "number | undefined"
+          "name": "enum",
+          "raw": "0 | 4 | 1 | 2 | 3 | 5 | 6 | 7 | 8 | 9 | 10 | undefined",
+          "value": [
+            {
+              "value": "undefined"
+            },
+            {
+              "value": "0"
+            },
+            {
+              "value": "4"
+            },
+            {
+              "value": "1"
+            },
+            {
+              "value": "2"
+            },
+            {
+              "value": "3"
+            },
+            {
+              "value": "5"
+            },
+            {
+              "value": "6"
+            },
+            {
+              "value": "7"
+            },
+            {
+              "value": "8"
+            },
+            {
+              "value": "9"
+            },
+            {
+              "value": "10"
+            }
+          ]
         }
       },
       "color": {
@@ -19668,6 +21886,51 @@
         "required": false,
         "type": {
           "name": "string | undefined"
+        }
+      },
+      "onClick": {
+        "defaultValue": null,
+        "description": "",
+        "name": "onClick",
+        "declarations": [
+          {
+            "fileName": "arctic-kit/packages/snow/src/lib/Layout/types.ts",
+            "name": "TypeLiteral"
+          }
+        ],
+        "required": false,
+        "type": {
+          "name": "(() => void) | undefined"
+        }
+      },
+      "onKeyPress": {
+        "defaultValue": null,
+        "description": "",
+        "name": "onKeyPress",
+        "declarations": [
+          {
+            "fileName": "arctic-kit/packages/snow/src/lib/Layout/types.ts",
+            "name": "TypeLiteral"
+          }
+        ],
+        "required": false,
+        "type": {
+          "name": "((e: KeyboardEvent<HTMLDivElement>) => void) | undefined"
+        }
+      },
+      "tabIndex": {
+        "defaultValue": null,
+        "description": "",
+        "name": "tabIndex",
+        "declarations": [
+          {
+            "fileName": "arctic-kit/packages/snow/src/lib/Layout/types.ts",
+            "name": "TypeLiteral"
+          }
+        ],
+        "required": false,
+        "type": {
+          "name": "number | undefined"
         }
       },
       "inline": {
@@ -19715,6 +21978,51 @@
             }
           ]
         }
+      },
+      "centerAlign": {
+        "defaultValue": null,
+        "description": "",
+        "name": "centerAlign",
+        "declarations": [
+          {
+            "fileName": "arctic-kit/packages/snow/src/lib/Layout/Stack.tsx",
+            "name": "TypeLiteral"
+          }
+        ],
+        "required": false,
+        "type": {
+          "name": "boolean | undefined"
+        }
+      },
+      "justifyBetween": {
+        "defaultValue": null,
+        "description": "",
+        "name": "justifyBetween",
+        "declarations": [
+          {
+            "fileName": "arctic-kit/packages/snow/src/lib/Layout/Stack.tsx",
+            "name": "TypeLiteral"
+          }
+        ],
+        "required": false,
+        "type": {
+          "name": "boolean | undefined"
+        }
+      },
+      "noWrap": {
+        "defaultValue": null,
+        "description": "",
+        "name": "noWrap",
+        "declarations": [
+          {
+            "fileName": "arctic-kit/packages/snow/src/lib/Layout/Stack.tsx",
+            "name": "TypeLiteral"
+          }
+        ],
+        "required": false,
+        "type": {
+          "name": "boolean | undefined"
+        }
       }
     }
   },
@@ -19738,7 +22046,46 @@
         ],
         "required": false,
         "type": {
-          "name": "number | undefined"
+          "name": "enum",
+          "raw": "0 | 4 | 1 | 2 | 3 | 5 | 6 | 7 | 8 | 9 | 10 | undefined",
+          "value": [
+            {
+              "value": "undefined"
+            },
+            {
+              "value": "0"
+            },
+            {
+              "value": "4"
+            },
+            {
+              "value": "1"
+            },
+            {
+              "value": "2"
+            },
+            {
+              "value": "3"
+            },
+            {
+              "value": "5"
+            },
+            {
+              "value": "6"
+            },
+            {
+              "value": "7"
+            },
+            {
+              "value": "8"
+            },
+            {
+              "value": "9"
+            },
+            {
+              "value": "10"
+            }
+          ]
         }
       },
       "color": {
@@ -19808,6 +22155,51 @@
         "required": false,
         "type": {
           "name": "string | undefined"
+        }
+      },
+      "onClick": {
+        "defaultValue": null,
+        "description": "",
+        "name": "onClick",
+        "declarations": [
+          {
+            "fileName": "arctic-kit/packages/snow/src/lib/Layout/types.ts",
+            "name": "TypeLiteral"
+          }
+        ],
+        "required": false,
+        "type": {
+          "name": "(() => void) | undefined"
+        }
+      },
+      "onKeyPress": {
+        "defaultValue": null,
+        "description": "",
+        "name": "onKeyPress",
+        "declarations": [
+          {
+            "fileName": "arctic-kit/packages/snow/src/lib/Layout/types.ts",
+            "name": "TypeLiteral"
+          }
+        ],
+        "required": false,
+        "type": {
+          "name": "((e: KeyboardEvent<HTMLDivElement>) => void) | undefined"
+        }
+      },
+      "tabIndex": {
+        "defaultValue": null,
+        "description": "",
+        "name": "tabIndex",
+        "declarations": [
+          {
+            "fileName": "arctic-kit/packages/snow/src/lib/Layout/types.ts",
+            "name": "TypeLiteral"
+          }
+        ],
+        "required": false,
+        "type": {
+          "name": "number | undefined"
         }
       },
       "inline": {
@@ -21567,6 +23959,96 @@
         "type": {
           "name": "Date | undefined"
         }
+      },
+      "label": {
+        "defaultValue": null,
+        "description": "",
+        "name": "label",
+        "declarations": [
+          {
+            "fileName": "arctic-kit/packages/snow/src/lib/DatePicker/DatePicker.tsx",
+            "name": "TypeLiteral"
+          }
+        ],
+        "required": false,
+        "type": {
+          "name": "string | undefined"
+        }
+      },
+      "disabled": {
+        "defaultValue": null,
+        "description": "",
+        "name": "disabled",
+        "declarations": [
+          {
+            "fileName": "arctic-kit/packages/snow/src/lib/DatePicker/DatePicker.tsx",
+            "name": "TypeLiteral"
+          }
+        ],
+        "required": false,
+        "type": {
+          "name": "boolean | undefined"
+        }
+      },
+      "readOnly": {
+        "defaultValue": null,
+        "description": "",
+        "name": "readOnly",
+        "declarations": [
+          {
+            "fileName": "arctic-kit/packages/snow/src/lib/DatePicker/DatePicker.tsx",
+            "name": "TypeLiteral"
+          }
+        ],
+        "required": false,
+        "type": {
+          "name": "boolean | undefined"
+        }
+      },
+      "placeholder": {
+        "defaultValue": null,
+        "description": "",
+        "name": "placeholder",
+        "declarations": [
+          {
+            "fileName": "arctic-kit/packages/snow/src/lib/DatePicker/DatePicker.tsx",
+            "name": "TypeLiteral"
+          }
+        ],
+        "required": false,
+        "type": {
+          "name": "string | undefined"
+        }
+      },
+      "size": {
+        "defaultValue": null,
+        "description": "",
+        "name": "size",
+        "declarations": [
+          {
+            "fileName": "arctic-kit/packages/snow/src/lib/DatePicker/DatePicker.tsx",
+            "name": "TypeLiteral"
+          }
+        ],
+        "required": false,
+        "type": {
+          "name": "enum",
+          "raw": "\"small\" | \"medium\" | \"large\" | undefined",
+          "value": [
+            {
+              "value": "undefined"
+            },
+            {
+              "value": "\"small\""
+            },
+            {
+              "value": "\"medium\""
+            },
+            {
+              "value": "\"large\""
+            }
+          ]
+        }
       }
     }
   },
@@ -21648,6 +24130,96 @@
         "required": false,
         "type": {
           "name": "Date | undefined"
+        }
+      },
+      "label": {
+        "defaultValue": null,
+        "description": "",
+        "name": "label",
+        "declarations": [
+          {
+            "fileName": "arctic-kit/packages/snow/src/lib/DatePicker/DatePicker.tsx",
+            "name": "TypeLiteral"
+          }
+        ],
+        "required": false,
+        "type": {
+          "name": "string | undefined"
+        }
+      },
+      "disabled": {
+        "defaultValue": null,
+        "description": "",
+        "name": "disabled",
+        "declarations": [
+          {
+            "fileName": "arctic-kit/packages/snow/src/lib/DatePicker/DatePicker.tsx",
+            "name": "TypeLiteral"
+          }
+        ],
+        "required": false,
+        "type": {
+          "name": "boolean | undefined"
+        }
+      },
+      "readOnly": {
+        "defaultValue": null,
+        "description": "",
+        "name": "readOnly",
+        "declarations": [
+          {
+            "fileName": "arctic-kit/packages/snow/src/lib/DatePicker/DatePicker.tsx",
+            "name": "TypeLiteral"
+          }
+        ],
+        "required": false,
+        "type": {
+          "name": "boolean | undefined"
+        }
+      },
+      "placeholder": {
+        "defaultValue": null,
+        "description": "",
+        "name": "placeholder",
+        "declarations": [
+          {
+            "fileName": "arctic-kit/packages/snow/src/lib/DatePicker/DatePicker.tsx",
+            "name": "TypeLiteral"
+          }
+        ],
+        "required": false,
+        "type": {
+          "name": "string | undefined"
+        }
+      },
+      "size": {
+        "defaultValue": null,
+        "description": "",
+        "name": "size",
+        "declarations": [
+          {
+            "fileName": "arctic-kit/packages/snow/src/lib/DatePicker/DatePicker.tsx",
+            "name": "TypeLiteral"
+          }
+        ],
+        "required": false,
+        "type": {
+          "name": "enum",
+          "raw": "\"small\" | \"medium\" | \"large\" | undefined",
+          "value": [
+            {
+              "value": "undefined"
+            },
+            {
+              "value": "\"small\""
+            },
+            {
+              "value": "\"medium\""
+            },
+            {
+              "value": "\"large\""
+            }
+          ]
         }
       }
     }
@@ -23591,6 +26163,684 @@
   {
     "tags": {},
     "description": "",
+    "displayName": "Card",
+    "methods": [],
+    "props": {
+      "className": {
+        "defaultValue": null,
+        "description": "",
+        "name": "className",
+        "declarations": [
+          {
+            "fileName": "arctic-kit/packages/snow/src/lib/Paper/Paper.tsx",
+            "name": "TypeLiteral"
+          }
+        ],
+        "required": false,
+        "type": {
+          "name": "string | undefined"
+        }
+      },
+      "style": {
+        "defaultValue": null,
+        "description": "",
+        "name": "style",
+        "declarations": [
+          {
+            "fileName": "arctic-kit/packages/snow/src/lib/Paper/Paper.tsx",
+            "name": "TypeLiteral"
+          }
+        ],
+        "required": false,
+        "type": {
+          "name": "CSSProperties | undefined"
+        }
+      },
+      "variant": {
+        "defaultValue": null,
+        "description": "",
+        "name": "variant",
+        "declarations": [
+          {
+            "fileName": "arctic-kit/packages/snow/src/lib/Paper/Paper.tsx",
+            "name": "TypeLiteral"
+          }
+        ],
+        "required": false,
+        "type": {
+          "name": "enum",
+          "raw": "PaperVariant | undefined",
+          "value": [
+            {
+              "value": "undefined"
+            },
+            {
+              "value": "\"outlined\""
+            },
+            {
+              "value": "\"elevation\""
+            }
+          ]
+        }
+      },
+      "onClick": {
+        "defaultValue": null,
+        "description": "",
+        "name": "onClick",
+        "declarations": [
+          {
+            "fileName": "arctic-kit/packages/snow/src/lib/Paper/Paper.tsx",
+            "name": "TypeLiteral"
+          }
+        ],
+        "required": false,
+        "type": {
+          "name": "(() => void) | undefined"
+        }
+      },
+      "elevation": {
+        "defaultValue": null,
+        "description": "",
+        "name": "elevation",
+        "declarations": [
+          {
+            "fileName": "arctic-kit/packages/snow/src/lib/Paper/Paper.tsx",
+            "name": "TypeLiteral"
+          }
+        ],
+        "required": false,
+        "type": {
+          "name": "enum",
+          "raw": "0 | 4 | 1 | 2 | 3 | 5 | 6 | 7 | 8 | 9 | 10 | undefined",
+          "value": [
+            {
+              "value": "undefined"
+            },
+            {
+              "value": "0"
+            },
+            {
+              "value": "4"
+            },
+            {
+              "value": "1"
+            },
+            {
+              "value": "2"
+            },
+            {
+              "value": "3"
+            },
+            {
+              "value": "5"
+            },
+            {
+              "value": "6"
+            },
+            {
+              "value": "7"
+            },
+            {
+              "value": "8"
+            },
+            {
+              "value": "9"
+            },
+            {
+              "value": "10"
+            }
+          ]
+        }
+      },
+      "square": {
+        "defaultValue": null,
+        "description": "",
+        "name": "square",
+        "declarations": [
+          {
+            "fileName": "arctic-kit/packages/snow/src/lib/Paper/Paper.tsx",
+            "name": "TypeLiteral"
+          }
+        ],
+        "required": false,
+        "type": {
+          "name": "boolean | undefined"
+        }
+      }
+    }
+  },
+  {
+    "tags": {},
+    "description": "",
+    "displayName": "CardHeader",
+    "methods": [],
+    "props": {
+      "className": {
+        "defaultValue": null,
+        "description": "",
+        "name": "className",
+        "declarations": [
+          {
+            "fileName": "arctic-kit/packages/snow/src/lib/Card/CardHeader.tsx",
+            "name": "TypeLiteral"
+          }
+        ],
+        "required": false,
+        "type": {
+          "name": "string | undefined"
+        }
+      },
+      "style": {
+        "defaultValue": null,
+        "description": "",
+        "name": "style",
+        "declarations": [
+          {
+            "fileName": "arctic-kit/packages/snow/src/lib/Card/CardHeader.tsx",
+            "name": "TypeLiteral"
+          }
+        ],
+        "required": false,
+        "type": {
+          "name": "CSSProperties | undefined"
+        }
+      }
+    }
+  },
+  {
+    "tags": {},
+    "description": "",
+    "displayName": "CardTitle",
+    "methods": [],
+    "props": {
+      "className": {
+        "defaultValue": null,
+        "description": "",
+        "name": "className",
+        "declarations": [
+          {
+            "fileName": "arctic-kit/packages/snow/src/lib/Card/CardTitle.tsx",
+            "name": "TypeLiteral"
+          }
+        ],
+        "required": false,
+        "type": {
+          "name": "string | undefined"
+        }
+      },
+      "style": {
+        "defaultValue": null,
+        "description": "",
+        "name": "style",
+        "declarations": [
+          {
+            "fileName": "arctic-kit/packages/snow/src/lib/Card/CardTitle.tsx",
+            "name": "TypeLiteral"
+          }
+        ],
+        "required": false,
+        "type": {
+          "name": "CSSProperties | undefined"
+        }
+      }
+    }
+  },
+  {
+    "tags": {},
+    "description": "",
+    "displayName": "CardDescription",
+    "methods": [],
+    "props": {
+      "className": {
+        "defaultValue": null,
+        "description": "",
+        "name": "className",
+        "declarations": [
+          {
+            "fileName": "arctic-kit/packages/snow/src/lib/Card/CardDescription.tsx",
+            "name": "TypeLiteral"
+          }
+        ],
+        "required": false,
+        "type": {
+          "name": "string | undefined"
+        }
+      },
+      "style": {
+        "defaultValue": null,
+        "description": "",
+        "name": "style",
+        "declarations": [
+          {
+            "fileName": "arctic-kit/packages/snow/src/lib/Card/CardDescription.tsx",
+            "name": "TypeLiteral"
+          }
+        ],
+        "required": false,
+        "type": {
+          "name": "CSSProperties | undefined"
+        }
+      }
+    }
+  },
+  {
+    "tags": {},
+    "description": "",
+    "displayName": "CardContent",
+    "methods": [],
+    "props": {
+      "className": {
+        "defaultValue": null,
+        "description": "",
+        "name": "className",
+        "declarations": [
+          {
+            "fileName": "arctic-kit/packages/snow/src/lib/Card/CardContent.tsx",
+            "name": "TypeLiteral"
+          }
+        ],
+        "required": false,
+        "type": {
+          "name": "string | undefined"
+        }
+      },
+      "style": {
+        "defaultValue": null,
+        "description": "",
+        "name": "style",
+        "declarations": [
+          {
+            "fileName": "arctic-kit/packages/snow/src/lib/Card/CardContent.tsx",
+            "name": "TypeLiteral"
+          }
+        ],
+        "required": false,
+        "type": {
+          "name": "CSSProperties | undefined"
+        }
+      }
+    }
+  },
+  {
+    "tags": {},
+    "description": "",
+    "displayName": "CardFooter",
+    "methods": [],
+    "props": {
+      "className": {
+        "defaultValue": null,
+        "description": "",
+        "name": "className",
+        "declarations": [
+          {
+            "fileName": "arctic-kit/packages/snow/src/lib/Card/CardFooter.tsx",
+            "name": "TypeLiteral"
+          }
+        ],
+        "required": false,
+        "type": {
+          "name": "string | undefined"
+        }
+      },
+      "style": {
+        "defaultValue": null,
+        "description": "",
+        "name": "style",
+        "declarations": [
+          {
+            "fileName": "arctic-kit/packages/snow/src/lib/Card/CardFooter.tsx",
+            "name": "TypeLiteral"
+          }
+        ],
+        "required": false,
+        "type": {
+          "name": "CSSProperties | undefined"
+        }
+      }
+    }
+  },
+  {
+    "tags": {},
+    "description": "",
+    "displayName": "CardTitle",
+    "methods": [],
+    "props": {
+      "className": {
+        "defaultValue": null,
+        "description": "",
+        "name": "className",
+        "declarations": [
+          {
+            "fileName": "arctic-kit/packages/snow/src/lib/Card/CardTitle.tsx",
+            "name": "TypeLiteral"
+          }
+        ],
+        "required": false,
+        "type": {
+          "name": "string | undefined"
+        }
+      },
+      "style": {
+        "defaultValue": null,
+        "description": "",
+        "name": "style",
+        "declarations": [
+          {
+            "fileName": "arctic-kit/packages/snow/src/lib/Card/CardTitle.tsx",
+            "name": "TypeLiteral"
+          }
+        ],
+        "required": false,
+        "type": {
+          "name": "CSSProperties | undefined"
+        }
+      }
+    }
+  },
+  {
+    "tags": {},
+    "description": "",
+    "displayName": "CardHeader",
+    "methods": [],
+    "props": {
+      "className": {
+        "defaultValue": null,
+        "description": "",
+        "name": "className",
+        "declarations": [
+          {
+            "fileName": "arctic-kit/packages/snow/src/lib/Card/CardHeader.tsx",
+            "name": "TypeLiteral"
+          }
+        ],
+        "required": false,
+        "type": {
+          "name": "string | undefined"
+        }
+      },
+      "style": {
+        "defaultValue": null,
+        "description": "",
+        "name": "style",
+        "declarations": [
+          {
+            "fileName": "arctic-kit/packages/snow/src/lib/Card/CardHeader.tsx",
+            "name": "TypeLiteral"
+          }
+        ],
+        "required": false,
+        "type": {
+          "name": "CSSProperties | undefined"
+        }
+      }
+    }
+  },
+  {
+    "tags": {},
+    "description": "",
+    "displayName": "CardFooter",
+    "methods": [],
+    "props": {
+      "className": {
+        "defaultValue": null,
+        "description": "",
+        "name": "className",
+        "declarations": [
+          {
+            "fileName": "arctic-kit/packages/snow/src/lib/Card/CardFooter.tsx",
+            "name": "TypeLiteral"
+          }
+        ],
+        "required": false,
+        "type": {
+          "name": "string | undefined"
+        }
+      },
+      "style": {
+        "defaultValue": null,
+        "description": "",
+        "name": "style",
+        "declarations": [
+          {
+            "fileName": "arctic-kit/packages/snow/src/lib/Card/CardFooter.tsx",
+            "name": "TypeLiteral"
+          }
+        ],
+        "required": false,
+        "type": {
+          "name": "CSSProperties | undefined"
+        }
+      }
+    }
+  },
+  {
+    "tags": {},
+    "description": "",
+    "displayName": "CardDescription",
+    "methods": [],
+    "props": {
+      "className": {
+        "defaultValue": null,
+        "description": "",
+        "name": "className",
+        "declarations": [
+          {
+            "fileName": "arctic-kit/packages/snow/src/lib/Card/CardDescription.tsx",
+            "name": "TypeLiteral"
+          }
+        ],
+        "required": false,
+        "type": {
+          "name": "string | undefined"
+        }
+      },
+      "style": {
+        "defaultValue": null,
+        "description": "",
+        "name": "style",
+        "declarations": [
+          {
+            "fileName": "arctic-kit/packages/snow/src/lib/Card/CardDescription.tsx",
+            "name": "TypeLiteral"
+          }
+        ],
+        "required": false,
+        "type": {
+          "name": "CSSProperties | undefined"
+        }
+      }
+    }
+  },
+  {
+    "tags": {},
+    "description": "",
+    "displayName": "CardContent",
+    "methods": [],
+    "props": {
+      "className": {
+        "defaultValue": null,
+        "description": "",
+        "name": "className",
+        "declarations": [
+          {
+            "fileName": "arctic-kit/packages/snow/src/lib/Card/CardContent.tsx",
+            "name": "TypeLiteral"
+          }
+        ],
+        "required": false,
+        "type": {
+          "name": "string | undefined"
+        }
+      },
+      "style": {
+        "defaultValue": null,
+        "description": "",
+        "name": "style",
+        "declarations": [
+          {
+            "fileName": "arctic-kit/packages/snow/src/lib/Card/CardContent.tsx",
+            "name": "TypeLiteral"
+          }
+        ],
+        "required": false,
+        "type": {
+          "name": "CSSProperties | undefined"
+        }
+      }
+    }
+  },
+  {
+    "tags": {},
+    "description": "",
+    "displayName": "Card",
+    "methods": [],
+    "props": {
+      "className": {
+        "defaultValue": null,
+        "description": "",
+        "name": "className",
+        "declarations": [
+          {
+            "fileName": "arctic-kit/packages/snow/src/lib/Paper/Paper.tsx",
+            "name": "TypeLiteral"
+          }
+        ],
+        "required": false,
+        "type": {
+          "name": "string | undefined"
+        }
+      },
+      "style": {
+        "defaultValue": null,
+        "description": "",
+        "name": "style",
+        "declarations": [
+          {
+            "fileName": "arctic-kit/packages/snow/src/lib/Paper/Paper.tsx",
+            "name": "TypeLiteral"
+          }
+        ],
+        "required": false,
+        "type": {
+          "name": "CSSProperties | undefined"
+        }
+      },
+      "variant": {
+        "defaultValue": null,
+        "description": "",
+        "name": "variant",
+        "declarations": [
+          {
+            "fileName": "arctic-kit/packages/snow/src/lib/Paper/Paper.tsx",
+            "name": "TypeLiteral"
+          }
+        ],
+        "required": false,
+        "type": {
+          "name": "enum",
+          "raw": "PaperVariant | undefined",
+          "value": [
+            {
+              "value": "undefined"
+            },
+            {
+              "value": "\"outlined\""
+            },
+            {
+              "value": "\"elevation\""
+            }
+          ]
+        }
+      },
+      "onClick": {
+        "defaultValue": null,
+        "description": "",
+        "name": "onClick",
+        "declarations": [
+          {
+            "fileName": "arctic-kit/packages/snow/src/lib/Paper/Paper.tsx",
+            "name": "TypeLiteral"
+          }
+        ],
+        "required": false,
+        "type": {
+          "name": "(() => void) | undefined"
+        }
+      },
+      "elevation": {
+        "defaultValue": null,
+        "description": "",
+        "name": "elevation",
+        "declarations": [
+          {
+            "fileName": "arctic-kit/packages/snow/src/lib/Paper/Paper.tsx",
+            "name": "TypeLiteral"
+          }
+        ],
+        "required": false,
+        "type": {
+          "name": "enum",
+          "raw": "0 | 4 | 1 | 2 | 3 | 5 | 6 | 7 | 8 | 9 | 10 | undefined",
+          "value": [
+            {
+              "value": "undefined"
+            },
+            {
+              "value": "0"
+            },
+            {
+              "value": "4"
+            },
+            {
+              "value": "1"
+            },
+            {
+              "value": "2"
+            },
+            {
+              "value": "3"
+            },
+            {
+              "value": "5"
+            },
+            {
+              "value": "6"
+            },
+            {
+              "value": "7"
+            },
+            {
+              "value": "8"
+            },
+            {
+              "value": "9"
+            },
+            {
+              "value": "10"
+            }
+          ]
+        }
+      },
+      "square": {
+        "defaultValue": null,
+        "description": "",
+        "name": "square",
+        "declarations": [
+          {
+            "fileName": "arctic-kit/packages/snow/src/lib/Paper/Paper.tsx",
+            "name": "TypeLiteral"
+          }
+        ],
+        "required": false,
+        "type": {
+          "name": "boolean | undefined"
+        }
+      }
+    }
+  },
+  {
+    "tags": {},
+    "description": "",
     "displayName": "Calendar",
     "methods": [],
     "props": {
@@ -24785,6 +28035,46 @@
           "name": "boolean | undefined"
         }
       },
+      "style": {
+        "defaultValue": null,
+        "description": "",
+        "name": "style",
+        "parent": {
+          "fileName": "arctic-kit/packages/snow/src/lib/Button/Button.tsx",
+          "name": "ButtonProps"
+        },
+        "declarations": [
+          {
+            "fileName": "arctic-kit/packages/snow/src/lib/Button/Button.tsx",
+            "name": "ButtonProps"
+          }
+        ],
+        "required": false,
+        "type": {
+          "name": "CSSProperties | undefined"
+        }
+      },
+      "noHighlights": {
+        "defaultValue": {
+          "value": "false"
+        },
+        "description": "",
+        "name": "noHighlights",
+        "parent": {
+          "fileName": "arctic-kit/packages/snow/src/lib/Button/Button.tsx",
+          "name": "ButtonProps"
+        },
+        "declarations": [
+          {
+            "fileName": "arctic-kit/packages/snow/src/lib/Button/Button.tsx",
+            "name": "ButtonProps"
+          }
+        ],
+        "required": false,
+        "type": {
+          "name": "boolean | undefined"
+        }
+      },
       "color": {
         "defaultValue": {
           "value": "\"primary\""
@@ -25123,6 +28413,46 @@
           "name": "boolean | undefined"
         }
       },
+      "style": {
+        "defaultValue": null,
+        "description": "",
+        "name": "style",
+        "parent": {
+          "fileName": "arctic-kit/packages/snow/src/lib/Button/Button.tsx",
+          "name": "ButtonProps"
+        },
+        "declarations": [
+          {
+            "fileName": "arctic-kit/packages/snow/src/lib/Button/Button.tsx",
+            "name": "ButtonProps"
+          }
+        ],
+        "required": false,
+        "type": {
+          "name": "CSSProperties | undefined"
+        }
+      },
+      "noHighlights": {
+        "defaultValue": {
+          "value": "false"
+        },
+        "description": "",
+        "name": "noHighlights",
+        "parent": {
+          "fileName": "arctic-kit/packages/snow/src/lib/Button/Button.tsx",
+          "name": "ButtonProps"
+        },
+        "declarations": [
+          {
+            "fileName": "arctic-kit/packages/snow/src/lib/Button/Button.tsx",
+            "name": "ButtonProps"
+          }
+        ],
+        "required": false,
+        "type": {
+          "name": "boolean | undefined"
+        }
+      },
       "color": {
         "defaultValue": {
           "value": "\"primary\""
@@ -26352,6 +29682,75 @@
             }
           ]
         }
+      },
+      "size": {
+        "defaultValue": null,
+        "description": "",
+        "name": "size",
+        "declarations": [
+          {
+            "fileName": "arctic-kit/packages/snow/src/lib/Avatar/Avatar.tsx",
+            "name": "TypeLiteral"
+          }
+        ],
+        "required": false,
+        "type": {
+          "name": "enum",
+          "raw": "\"small\" | \"medium\" | \"large\" | undefined",
+          "value": [
+            {
+              "value": "undefined"
+            },
+            {
+              "value": "\"small\""
+            },
+            {
+              "value": "\"medium\""
+            },
+            {
+              "value": "\"large\""
+            }
+          ]
+        }
+      },
+      "bgColor": {
+        "defaultValue": null,
+        "description": "",
+        "name": "bgColor",
+        "declarations": [
+          {
+            "fileName": "arctic-kit/packages/snow/src/lib/Avatar/Avatar.tsx",
+            "name": "TypeLiteral"
+          }
+        ],
+        "required": false,
+        "type": {
+          "name": "enum",
+          "raw": "SnowColor | undefined",
+          "value": [
+            {
+              "value": "undefined"
+            },
+            {
+              "value": "\"success\""
+            },
+            {
+              "value": "\"error\""
+            },
+            {
+              "value": "\"warning\""
+            },
+            {
+              "value": "\"info\""
+            },
+            {
+              "value": "\"primary\""
+            },
+            {
+              "value": "\"secondary\""
+            }
+          ]
+        }
       }
     }
   },
@@ -26410,6 +29809,75 @@
         "defaultValue": null,
         "description": "",
         "name": "color",
+        "declarations": [
+          {
+            "fileName": "arctic-kit/packages/snow/src/lib/Avatar/Avatar.tsx",
+            "name": "TypeLiteral"
+          }
+        ],
+        "required": false,
+        "type": {
+          "name": "enum",
+          "raw": "SnowColor | undefined",
+          "value": [
+            {
+              "value": "undefined"
+            },
+            {
+              "value": "\"success\""
+            },
+            {
+              "value": "\"error\""
+            },
+            {
+              "value": "\"warning\""
+            },
+            {
+              "value": "\"info\""
+            },
+            {
+              "value": "\"primary\""
+            },
+            {
+              "value": "\"secondary\""
+            }
+          ]
+        }
+      },
+      "size": {
+        "defaultValue": null,
+        "description": "",
+        "name": "size",
+        "declarations": [
+          {
+            "fileName": "arctic-kit/packages/snow/src/lib/Avatar/Avatar.tsx",
+            "name": "TypeLiteral"
+          }
+        ],
+        "required": false,
+        "type": {
+          "name": "enum",
+          "raw": "\"small\" | \"medium\" | \"large\" | undefined",
+          "value": [
+            {
+              "value": "undefined"
+            },
+            {
+              "value": "\"small\""
+            },
+            {
+              "value": "\"medium\""
+            },
+            {
+              "value": "\"large\""
+            }
+          ]
+        }
+      },
+      "bgColor": {
+        "defaultValue": null,
+        "description": "",
+        "name": "bgColor",
         "declarations": [
           {
             "fileName": "arctic-kit/packages/snow/src/lib/Avatar/Avatar.tsx",
