@@ -2339,6 +2339,45 @@
         "type": {
           "name": "((month: number) => void) | undefined"
         }
+      },
+      "color": {
+        "defaultValue": null,
+        "description": "",
+        "name": "color",
+        "declarations": [
+          {
+            "fileName": "arctic-kit/packages/snow/src/lib/Calendar/Calendar.tsx",
+            "name": "TypeLiteral"
+          }
+        ],
+        "required": false,
+        "type": {
+          "name": "enum",
+          "raw": "SnowColor | undefined",
+          "value": [
+            {
+              "value": "undefined"
+            },
+            {
+              "value": "\"success\""
+            },
+            {
+              "value": "\"error\""
+            },
+            {
+              "value": "\"warning\""
+            },
+            {
+              "value": "\"info\""
+            },
+            {
+              "value": "\"primary\""
+            },
+            {
+              "value": "\"secondary\""
+            }
+          ]
+        }
       }
     }
   },
@@ -8560,6 +8599,45 @@
         "type": {
           "name": "boolean | undefined"
         }
+      },
+      "color": {
+        "defaultValue": null,
+        "description": "",
+        "name": "color",
+        "declarations": [
+          {
+            "fileName": "arctic-kit/packages/snow/src/lib/ToggleGroup/ToggleGroup.tsx",
+            "name": "TypeLiteral"
+          }
+        ],
+        "required": false,
+        "type": {
+          "name": "enum",
+          "raw": "SnowColor | undefined",
+          "value": [
+            {
+              "value": "undefined"
+            },
+            {
+              "value": "\"success\""
+            },
+            {
+              "value": "\"error\""
+            },
+            {
+              "value": "\"warning\""
+            },
+            {
+              "value": "\"info\""
+            },
+            {
+              "value": "\"primary\""
+            },
+            {
+              "value": "\"secondary\""
+            }
+          ]
+        }
       }
     }
   },
@@ -9889,6 +9967,45 @@
         "type": {
           "name": "boolean | undefined"
         }
+      },
+      "color": {
+        "defaultValue": null,
+        "description": "",
+        "name": "color",
+        "declarations": [
+          {
+            "fileName": "arctic-kit/packages/snow/src/lib/ToggleGroup/ToggleGroup.tsx",
+            "name": "TypeLiteral"
+          }
+        ],
+        "required": false,
+        "type": {
+          "name": "enum",
+          "raw": "SnowColor | undefined",
+          "value": [
+            {
+              "value": "undefined"
+            },
+            {
+              "value": "\"success\""
+            },
+            {
+              "value": "\"error\""
+            },
+            {
+              "value": "\"warning\""
+            },
+            {
+              "value": "\"info\""
+            },
+            {
+              "value": "\"primary\""
+            },
+            {
+              "value": "\"secondary\""
+            }
+          ]
+        }
       }
     }
   },
@@ -10061,6 +10178,45 @@
         "required": false,
         "type": {
           "name": "boolean | undefined"
+        }
+      },
+      "color": {
+        "defaultValue": null,
+        "description": "",
+        "name": "color",
+        "declarations": [
+          {
+            "fileName": "arctic-kit/packages/snow/src/lib/ToggleGroup/ToggleGroup.tsx",
+            "name": "TypeLiteral"
+          }
+        ],
+        "required": false,
+        "type": {
+          "name": "enum",
+          "raw": "SnowColor | undefined",
+          "value": [
+            {
+              "value": "undefined"
+            },
+            {
+              "value": "\"success\""
+            },
+            {
+              "value": "\"error\""
+            },
+            {
+              "value": "\"warning\""
+            },
+            {
+              "value": "\"info\""
+            },
+            {
+              "value": "\"primary\""
+            },
+            {
+              "value": "\"secondary\""
+            }
+          ]
         }
       }
     }
@@ -26980,6 +27136,45 @@
         "type": {
           "name": "((month: number) => void) | undefined"
         }
+      },
+      "color": {
+        "defaultValue": null,
+        "description": "",
+        "name": "color",
+        "declarations": [
+          {
+            "fileName": "arctic-kit/packages/snow/src/lib/Calendar/Calendar.tsx",
+            "name": "TypeLiteral"
+          }
+        ],
+        "required": false,
+        "type": {
+          "name": "enum",
+          "raw": "SnowColor | undefined",
+          "value": [
+            {
+              "value": "undefined"
+            },
+            {
+              "value": "\"success\""
+            },
+            {
+              "value": "\"error\""
+            },
+            {
+              "value": "\"warning\""
+            },
+            {
+              "value": "\"info\""
+            },
+            {
+              "value": "\"primary\""
+            },
+            {
+              "value": "\"secondary\""
+            }
+          ]
+        }
       }
     }
   },
@@ -27062,6 +27257,45 @@
         "required": false,
         "type": {
           "name": "Date | undefined"
+        }
+      },
+      "color": {
+        "defaultValue": null,
+        "description": "",
+        "name": "color",
+        "declarations": [
+          {
+            "fileName": "arctic-kit/packages/snow/src/lib/Calendar/Weeks.tsx",
+            "name": "TypeLiteral"
+          }
+        ],
+        "required": false,
+        "type": {
+          "name": "enum",
+          "raw": "SnowColor | undefined",
+          "value": [
+            {
+              "value": "undefined"
+            },
+            {
+              "value": "\"success\""
+            },
+            {
+              "value": "\"error\""
+            },
+            {
+              "value": "\"warning\""
+            },
+            {
+              "value": "\"info\""
+            },
+            {
+              "value": "\"primary\""
+            },
+            {
+              "value": "\"secondary\""
+            }
+          ]
         }
       }
     }
@@ -27182,6 +27416,45 @@
         "required": false,
         "type": {
           "name": "string | undefined"
+        }
+      },
+      "color": {
+        "defaultValue": null,
+        "description": "",
+        "name": "color",
+        "declarations": [
+          {
+            "fileName": "arctic-kit/packages/snow/src/lib/Calendar/Week.tsx",
+            "name": "TypeLiteral"
+          }
+        ],
+        "required": false,
+        "type": {
+          "name": "enum",
+          "raw": "SnowColor | undefined",
+          "value": [
+            {
+              "value": "undefined"
+            },
+            {
+              "value": "\"success\""
+            },
+            {
+              "value": "\"error\""
+            },
+            {
+              "value": "\"warning\""
+            },
+            {
+              "value": "\"info\""
+            },
+            {
+              "value": "\"primary\""
+            },
+            {
+              "value": "\"secondary\""
+            }
+          ]
         }
       }
     }
@@ -27475,6 +27748,45 @@
         "required": false,
         "type": {
           "name": "((month: number) => void) | undefined"
+        }
+      },
+      "color": {
+        "defaultValue": null,
+        "description": "",
+        "name": "color",
+        "declarations": [
+          {
+            "fileName": "arctic-kit/packages/snow/src/lib/Calendar/Calendar.tsx",
+            "name": "TypeLiteral"
+          }
+        ],
+        "required": false,
+        "type": {
+          "name": "enum",
+          "raw": "SnowColor | undefined",
+          "value": [
+            {
+              "value": "undefined"
+            },
+            {
+              "value": "\"success\""
+            },
+            {
+              "value": "\"error\""
+            },
+            {
+              "value": "\"warning\""
+            },
+            {
+              "value": "\"info\""
+            },
+            {
+              "value": "\"primary\""
+            },
+            {
+              "value": "\"secondary\""
+            }
+          ]
         }
       }
     }
