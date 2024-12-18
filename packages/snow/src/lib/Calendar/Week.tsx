@@ -3,6 +3,7 @@ import DateUtilities from './DateUtilities';
 import { dayStyles } from './commonStyles';
 import { Box } from '../Box';
 import { DayButton } from './StyledElements';
+import { SnowColor } from '../types';
 
 const isDisabled = (day: Date, minDate?: Date, maxDate?: Date) => {
   return (
@@ -36,12 +37,21 @@ type WeekProps = {
   maxDate?: Date;
   className?: string;
   id?: string;
+  color?: SnowColor;
 };
 
-function Week(props: WeekProps) {
-  const buildDays = (start: Date) => {
-    const days = [DateUtilities.clone(start)];
-    let clone = DateUtilities.clone(start);
+function Week({
+  month,
+  selected,
+  start,
+  minDate,
+  maxDate,
+  color,
+  onSelect,
+}: WeekProps) {
+  const buildDays = (startDate: Date) => {
+    const days = [DateUtilities.clone(startDate)];
+    let clone = DateUtilities.clone(startDate);
     for (let i = 1; i <= 6; i++) {
       clone = DateUtilities.clone(clone);
       clone.setDate(clone.getDate() + 1);
@@ -50,13 +60,13 @@ function Week(props: WeekProps) {
     return days;
   };
 
-  const onSelect = (day: Date) => {
-    if (!isDisabled(day, props.minDate, props.maxDate)) {
-      props.onSelect(day);
+  const onSelectHandler = (day: Date) => {
+    if (!isDisabled(day, minDate, maxDate)) {
+      onSelect(day);
     }
   };
 
-  const days = buildDays(props.start);
+  const days = buildDays(start);
 
   return (
     <Box
@@ -68,15 +78,16 @@ function Week(props: WeekProps) {
       }}
     >
       {days.map((day, i) => {
-        const dayStyleClasses = getDayStyles(day, props.month, props.selected);
-        const disabled = isDisabled(day, props.minDate, props.maxDate);
+        const dayStyleClasses = getDayStyles(day, month, selected);
+        const disabled = isDisabled(day, minDate, maxDate);
         return (
           <div key={i}>
             <DayButton
-              onClick={() => onSelect(day)}
+              onClick={() => onSelectHandler(day)}
               disabled={disabled}
               aria-disabled={disabled}
               className={clsx(dayStyleClasses, dayStyles)}
+              color={color}
             >
               {DateUtilities.toDayOfMonthString(day)}
             </DayButton>

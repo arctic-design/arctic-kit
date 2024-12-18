@@ -4,12 +4,14 @@ import { SnowThemeArgs } from '../../core';
 import { LayoutSpacingType, Stack } from '../Layout';
 import { SpacingMap } from '../Layout/constants';
 import { createContext, useContext, useState } from 'react';
+import { SnowColor, SnowColorValues } from '../types';
 export type ToggleGroupProps = {
   children: React.ReactNode;
   spacing?: LayoutSpacingType;
   sx?: SxProp;
   withBorder?: boolean;
   singleSelect?: boolean;
+  color?: SnowColor;
 };
 
 interface ToggleGroupContextProps {
@@ -27,13 +29,12 @@ const Container = styled.div<
 >(({ theme: { vars: theme } }: SnowThemeArgs) => ({
   display: 'flex',
   alignItems: 'center',
-  justifyContent: 'space-between',
+  justifyContent: 'stretch',
   gap: 4,
   color: theme.colors.grey[800],
   '.item': {
     cursor: 'pointer',
     borderRadius: theme.border.radius.main,
-    boxSizing: 'content-box',
     '&:hover': {
       backgroundColor: theme.colors.grey[200],
     },
@@ -50,8 +51,6 @@ const Container = styled.div<
         gap: `${spacing * 4}px`,
         '.item': {
           padding: `${spacing * 4 * 2}px`,
-          width: `${spacing * 24}px`,
-          height: `${spacing * 24}px`,
         },
       },
     })),
@@ -72,6 +71,34 @@ const Container = styled.div<
         },
       },
     },
+    ...SnowColorValues.map((color) => ({
+      props: { color },
+      style: {
+        color: theme.colors[color][800],
+        '.item': {
+          '&:hover': {
+            backgroundColor: theme.colors[color][50],
+          },
+
+          '&.active': {
+            backgroundColor: theme.colors[color][100],
+            color: theme.colors[color][800],
+          },
+        },
+      },
+    })),
+    ...SnowColorValues.map((color) => ({
+      props: { color, withBorder: true },
+      style: {
+        '.item': {
+          borderColor: theme.colors[color][200],
+          borderWidth: 0.5,
+          '&.active': {
+            borderColor: theme.colors[color][700],
+          },
+        },
+      },
+    })),
   ],
 }));
 
@@ -80,7 +107,8 @@ const ToggleGroupItemContainer = styled(Stack)<{
   role: string;
   'aria-pressed'?: boolean;
   'aria-checked'?: boolean;
-}>(() => ({
+}>({
+  flex: 1,
   transition: 'background-color 0.2s, color 0.2s, border-color 0.2s',
   variants: [
     ...SpacingMap.map((spacing) => ({
@@ -90,12 +118,12 @@ const ToggleGroupItemContainer = styled(Stack)<{
       },
     })),
   ],
-}));
+});
 
 export type ToggleGroupItemProps = {
   children: React.ReactNode;
   spacing?: LayoutSpacingType;
-  value: string; // New prop to identify the toggle item
+  value: string;
 };
 
 export function ToggleGroup({
@@ -169,11 +197,11 @@ export function ToggleGroupItem({
       spacing={spacing}
       className={`item${isActive ? ' active' : ''}`}
       onClick={handleClick}
-      centerAlign
       role={roleAttr}
       aria-pressed={ariaPressed}
       aria-checked={ariaChecked}
       tabIndex={0}
+      centerAlign
       onKeyPress={(e: React.KeyboardEvent<HTMLDivElement>) => {
         if (e.key === 'Enter' || e.key === ' ') {
           e.preventDefault();

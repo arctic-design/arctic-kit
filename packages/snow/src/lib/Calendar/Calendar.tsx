@@ -6,6 +6,7 @@ import { Weeks } from './Weeks';
 import DateUtilities from './DateUtilities';
 import { Paper } from '../Paper';
 import { CalendarContainer } from './StyledElements';
+import { SnowColor } from '../types';
 
 export type CalendarProps = {
   className?: string;
@@ -18,6 +19,7 @@ export type CalendarProps = {
   onYearChange?: (year: number) => void;
   onMonthChange?: (month: number) => void;
   id?: string;
+  color?: SnowColor;
 };
 
 function Calendar({
@@ -31,6 +33,7 @@ function Calendar({
   minDate,
   maxDate,
   onSelect,
+  color,
 }: CalendarProps) {
   const [calendarView, setCalendarView] = useState(new Date());
   useEffect(() => {
@@ -93,6 +96,7 @@ function Calendar({
           onSelect={onSelect}
           minDate={minDate}
           maxDate={maxDate}
+          color={color}
         />
       </Paper>
     </CalendarContainer>

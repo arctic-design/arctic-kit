@@ -1,7 +1,7 @@
 import { styled } from '@pigment-css/react';
 import { PropsWithChildren, forwardRef } from 'react';
 import { DefaultSnowProps, SnowColorValues, SnowSizeValues } from '../types';
-import { SnowHeights } from '../constants';
+import { SnowFontSizes, SnowHeights } from '../constants';
 import { Loader } from '../Loader';
 import { SnowThemeArgs } from '../../core';
 
@@ -49,6 +49,7 @@ const ChipContainer = styled.button<ChipProps>(
         props: { size },
         style: {
           height: SnowHeights[size],
+          fontSize: SnowFontSizes[size],
         },
       })),
       ...SnowColorValues.map((color) => ({
