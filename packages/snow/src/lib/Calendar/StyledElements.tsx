@@ -1,13 +1,14 @@
 import { styled } from '@pigment-css/react';
 import { SnowThemeArgs } from '../../core';
 import { IconButton } from '../IconButton';
+import { SnowColor, SnowColorValues } from '../types';
 
 export const CalendarContainer = styled.div(
   ({ theme: { vars: theme } }: SnowThemeArgs) => ({
     display: 'flex',
     maxWidth: 280,
     minWidth: 250,
-    minHeight: 305,
+    // minHeight: 305,
     overflowX: 'hidden',
     flexDirection: 'column',
     justifyContent: 'center',
@@ -47,7 +48,7 @@ export const MonthYearView = styled.span(
   })
 );
 
-export const DayButton = styled.button(
+export const DayButton = styled.button<{ color?: SnowColor }>(
   ({ theme: { vars: theme } }: SnowThemeArgs) => ({
     fontFamily: theme.font.family.base,
     backgroundColor: theme.colors.neutral[0],
@@ -74,5 +75,19 @@ export const DayButton = styled.button(
     '&:disabled': {
       color: '#E0E0E0',
     },
+    variants: [
+      ...SnowColorValues.map((color) => ({
+        props: { color },
+        style: {
+          '&.sameDay': {
+            color: theme.colors[color].main,
+          },
+          '&.selected': {
+            backgroundColor: theme.colors[color].main,
+            color: theme.colors.white,
+          },
+        },
+      })),
+    ],
   })
 );

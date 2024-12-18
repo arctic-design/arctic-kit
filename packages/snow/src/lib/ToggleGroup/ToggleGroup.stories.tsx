@@ -66,7 +66,7 @@ function AdvanceExampleRender(args: Story['args']) {
       </CardHeader>
       <CardContent>
         <Stack spacing={3}>
-          <ToggleGroup {...args} spacing={3} withBorder singleSelect>
+          <ToggleGroup withBorder {...args} spacing={3} singleSelect>
             <ToggleGroupItem value="basic">
               <UserIcon width={24} />
               <strong>Basic</strong>
@@ -163,6 +163,16 @@ export const WithBorder: Story = {
 };
 
 export const AdvanceExample: Story = {
-  args: {},
+  args: {
+    withBorder: false,
+  },
+  render: AdvanceExampleRender,
+};
+
+export const ColorAdvanceExample: Story = {
+  args: {
+    withBorder: false,
+    color: 'primary',
+  },
   render: AdvanceExampleRender,
 };

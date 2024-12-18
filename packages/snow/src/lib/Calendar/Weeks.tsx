@@ -1,4 +1,5 @@
 import { Stack } from '../Layout';
+import { SnowColor } from '../types';
 import DateUtilities from './DateUtilities';
 import { Week } from './Week';
 
@@ -9,6 +10,7 @@ type Props = {
   minDate?: Date;
   maxDate?: Date;
   id?: string;
+  color?: SnowColor;
 };
 
 const getWeekStartDates = (view: Date) => {
@@ -36,6 +38,7 @@ const WeeksRenderer = ({
   onSelect,
   minDate,
   maxDate,
+  color,
 }: {
   view: Date;
   className?: string;
@@ -43,6 +46,7 @@ const WeeksRenderer = ({
   onSelect: (date: Date) => void;
   minDate?: Date;
   maxDate?: Date;
+  color?: SnowColor;
 }) => {
   const starts = getWeekStartDates(view);
   const month = starts[1].getMonth();
@@ -59,6 +63,7 @@ const WeeksRenderer = ({
       className={className}
       id={`week-${i}`}
       data-testid={`week-${i}`}
+      color={color}
     />
   ));
 };
