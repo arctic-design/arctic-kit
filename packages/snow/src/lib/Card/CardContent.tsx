@@ -1,22 +1,23 @@
 import { styled } from '@pigment-css/react';
 import { forwardRef } from 'react';
+import { SnowSize } from '../types';
+import { clsx } from 'clsx';
 
 const Container = styled.div({
   display: 'flex',
   flexDirection: 'column',
-  padding: 24,
-  paddingTop: 0,
 });
 
 export type CardContentProps = {
   children: React.ReactNode;
   className?: string;
   style?: React.CSSProperties;
+  size?: SnowSize;
 };
 export const CardContent = forwardRef<HTMLDivElement, CardContentProps>(
-  function CardContent({ children, ...props }, ref) {
+  function CardContent({ children, className, ...props }, ref) {
     return (
-      <Container ref={ref} {...props}>
+      <Container ref={ref} className={clsx('content', className)} {...props}>
         {children}
       </Container>
     );

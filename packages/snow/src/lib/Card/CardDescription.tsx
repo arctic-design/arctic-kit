@@ -1,12 +1,10 @@
 import { styled } from '@pigment-css/react';
 import { forwardRef } from 'react';
-import { SnowThemeArgs } from '../../core';
+import { clsx } from 'clsx';
 
-const Container = styled.div(({ theme: { vars: theme } }: SnowThemeArgs) => ({
-  color: theme.colors.grey[700],
-  fontSize: theme.font.size[100],
+const Container = styled.div({
   lineHeight: '20px',
-}));
+});
 
 export type CardDescriptionProps = {
   children: React.ReactNode;
@@ -14,9 +12,13 @@ export type CardDescriptionProps = {
   style?: React.CSSProperties;
 };
 export const CardDescription = forwardRef<HTMLDivElement, CardDescriptionProps>(
-  function CardDescription({ children, ...props }, ref) {
+  function CardDescription({ children, className, ...props }, ref) {
     return (
-      <Container ref={ref} {...props}>
+      <Container
+        ref={ref}
+        className={clsx('description', className)}
+        {...props}
+      >
         {children}
       </Container>
     );

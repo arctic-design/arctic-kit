@@ -1,6 +1,6 @@
 import { PropsWithChildren, forwardRef } from 'react';
 import { styled } from '@pigment-css/react';
-import { SnowColor, SnowColorValues } from '../types';
+import { SnowColor, SnowColorValues, SnowSize } from '../types';
 import { SnowThemeArgs } from '../../core';
 
 export type PaperVariant = 'elevation' | 'outlined';
@@ -16,6 +16,7 @@ export type PaperProps = {
   onClick?: () => void;
   id?: string;
   noPadding?: boolean;
+  size?: SnowSize;
 };
 
 type StyledBoxProps = Omit<

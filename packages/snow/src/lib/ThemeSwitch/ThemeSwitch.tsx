@@ -18,6 +18,7 @@ const ThemeIconButton = styled.button<{ active?: boolean; size?: SnowSize }>(
     border: 0,
     backgroundColor: theme.colors.neutral[0],
     cursor: 'pointer',
+    boxSizing: 'border-box',
     '&:hover': {
       backgroundColor: theme.colors.grey[100],
     },
@@ -49,7 +50,7 @@ const Container = styled.div(({ theme: { vars: theme } }: SnowThemeArgs) => ({
   gap: 2,
   borderRadius: 9999,
   border: `0.5px solid ${theme.colors.grey[400]}`,
-  padding: 3,
+  padding: '3px !important',
   color: theme.colors.grey[700],
   backgroundColor: theme.colors.neutral[0],
 }));

@@ -1,22 +1,21 @@
-import { styled } from '@pigment-css/react';
+import { styled, SxProp } from '@pigment-css/react';
 import { forwardRef } from 'react';
-import { SnowThemeArgs } from '../../core';
+import { clsx } from 'clsx';
 
-const Container = styled.div(({ theme: { vars: theme } }: SnowThemeArgs) => ({
-  fontWeight: theme.font.weight.semibold,
-  fontSize: theme.font.size[300],
+const Container = styled.div<{ sx?: SxProp }>({
   lineHeight: '24px',
-}));
+});
 
 export type CardTitleProps = {
   children: React.ReactNode;
   className?: string;
   style?: React.CSSProperties;
+  sx?: SxProp;
 };
 export const CardTitle = forwardRef<HTMLDivElement, CardTitleProps>(
-  function CardTitle({ children, ...props }, ref) {
+  function CardTitle({ children, className, ...props }, ref) {
     return (
-      <Container ref={ref} {...props}>
+      <Container ref={ref} className={clsx('title', className)} {...props}>
         {children}
       </Container>
     );

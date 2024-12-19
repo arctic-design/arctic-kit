@@ -60,7 +60,7 @@ function DefaultRender(args: StoryObj['args']) {
           />
         </Stack>
       </CardContent>
-      <CardFooter className="flex justify-between">
+      <CardFooter>
         <Stack direction="horizontal" spacing={3} justifyBetween>
           <Button variant="outlined">Reset</Button>
           <Button>Save Event</Button>
@@ -72,5 +72,12 @@ function DefaultRender(args: StoryObj['args']) {
 
 export const Default: Story = {
   args: {},
+  render: DefaultRender,
+};
+
+export const Small: Story = {
+  args: {
+    size: 'small',
+  },
   render: DefaultRender,
 };

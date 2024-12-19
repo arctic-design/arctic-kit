@@ -1,10 +1,5 @@
-import { styled } from '@pigment-css/react';
+import { clsx } from 'clsx';
 import { forwardRef } from 'react';
-
-const Container = styled.div(() => ({
-  padding: 24,
-  paddingTop: 0,
-}));
 
 export type CardFooterProps = {
   children: React.ReactNode;
@@ -12,11 +7,11 @@ export type CardFooterProps = {
   style?: React.CSSProperties;
 };
 export const CardFooter = forwardRef<HTMLDivElement, CardFooterProps>(
-  function CardFooter({ children, ...props }, ref) {
+  function CardFooter({ children, className, ...props }, ref) {
     return (
-      <Container ref={ref} {...props}>
+      <div ref={ref} className={clsx('footer', className)} {...props}>
         {children}
-      </Container>
+      </div>
     );
   }
 );
