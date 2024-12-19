@@ -45,4 +45,5 @@ export * from './Tooltip';
 export * from './TreeView';
 export * from './Typography';
 
+export * from './constants';
 export * from './types';
