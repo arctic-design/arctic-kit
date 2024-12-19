@@ -2459,6 +2459,42 @@
           "name": "(() => void) | undefined"
         }
       },
+      "size": {
+        "defaultValue": {
+          "value": "medium"
+        },
+        "description": "",
+        "name": "size",
+        "declarations": [
+          {
+            "fileName": "arctic-kit/packages/snow/src/lib/Paper/Paper.tsx",
+            "name": "TypeLiteral"
+          },
+          {
+            "fileName": "arctic-kit/packages/snow/src/lib/Card/Card.tsx",
+            "name": "TypeLiteral"
+          }
+        ],
+        "required": false,
+        "type": {
+          "name": "enum",
+          "raw": "\"small\" | \"medium\" | \"large\" | undefined",
+          "value": [
+            {
+              "value": "undefined"
+            },
+            {
+              "value": "\"small\""
+            },
+            {
+              "value": "\"medium\""
+            },
+            {
+              "value": "\"large\""
+            }
+          ]
+        }
+      },
       "elevation": {
         "defaultValue": null,
         "description": "",
@@ -2678,6 +2714,36 @@
         "required": false,
         "type": {
           "name": "CSSProperties | undefined"
+        }
+      },
+      "size": {
+        "defaultValue": null,
+        "description": "",
+        "name": "size",
+        "declarations": [
+          {
+            "fileName": "arctic-kit/packages/snow/src/lib/Card/CardContent.tsx",
+            "name": "TypeLiteral"
+          }
+        ],
+        "required": false,
+        "type": {
+          "name": "enum",
+          "raw": "\"small\" | \"medium\" | \"large\" | undefined",
+          "value": [
+            {
+              "value": "undefined"
+            },
+            {
+              "value": "\"small\""
+            },
+            {
+              "value": "\"medium\""
+            },
+            {
+              "value": "\"large\""
+            }
+          ]
         }
       }
     }
@@ -6054,6 +6120,36 @@
         "required": false,
         "type": {
           "name": "boolean | undefined"
+        }
+      },
+      "size": {
+        "defaultValue": null,
+        "description": "",
+        "name": "size",
+        "declarations": [
+          {
+            "fileName": "arctic-kit/packages/snow/src/lib/Paper/Paper.tsx",
+            "name": "TypeLiteral"
+          }
+        ],
+        "required": false,
+        "type": {
+          "name": "enum",
+          "raw": "\"small\" | \"medium\" | \"large\" | undefined",
+          "value": [
+            {
+              "value": "undefined"
+            },
+            {
+              "value": "\"small\""
+            },
+            {
+              "value": "\"medium\""
+            },
+            {
+              "value": "\"large\""
+            }
+          ]
         }
       }
     }
@@ -19034,6 +19130,36 @@
         "type": {
           "name": "boolean | undefined"
         }
+      },
+      "size": {
+        "defaultValue": null,
+        "description": "",
+        "name": "size",
+        "declarations": [
+          {
+            "fileName": "arctic-kit/packages/snow/src/lib/Paper/Paper.tsx",
+            "name": "TypeLiteral"
+          }
+        ],
+        "required": false,
+        "type": {
+          "name": "enum",
+          "raw": "\"small\" | \"medium\" | \"large\" | undefined",
+          "value": [
+            {
+              "value": "undefined"
+            },
+            {
+              "value": "\"small\""
+            },
+            {
+              "value": "\"medium\""
+            },
+            {
+              "value": "\"large\""
+            }
+          ]
+        }
       }
     }
   },
@@ -19236,6 +19362,36 @@
         "required": false,
         "type": {
           "name": "boolean | undefined"
+        }
+      },
+      "size": {
+        "defaultValue": null,
+        "description": "",
+        "name": "size",
+        "declarations": [
+          {
+            "fileName": "arctic-kit/packages/snow/src/lib/Paper/Paper.tsx",
+            "name": "TypeLiteral"
+          }
+        ],
+        "required": false,
+        "type": {
+          "name": "enum",
+          "raw": "\"small\" | \"medium\" | \"large\" | undefined",
+          "value": [
+            {
+              "value": "undefined"
+            },
+            {
+              "value": "\"small\""
+            },
+            {
+              "value": "\"medium\""
+            },
+            {
+              "value": "\"large\""
+            }
+          ]
         }
       }
     }
@@ -26394,6 +26550,42 @@
           "name": "(() => void) | undefined"
         }
       },
+      "size": {
+        "defaultValue": {
+          "value": "medium"
+        },
+        "description": "",
+        "name": "size",
+        "declarations": [
+          {
+            "fileName": "arctic-kit/packages/snow/src/lib/Paper/Paper.tsx",
+            "name": "TypeLiteral"
+          },
+          {
+            "fileName": "arctic-kit/packages/snow/src/lib/Card/Card.tsx",
+            "name": "TypeLiteral"
+          }
+        ],
+        "required": false,
+        "type": {
+          "name": "enum",
+          "raw": "\"small\" | \"medium\" | \"large\" | undefined",
+          "value": [
+            {
+              "value": "undefined"
+            },
+            {
+              "value": "\"small\""
+            },
+            {
+              "value": "\"medium\""
+            },
+            {
+              "value": "\"large\""
+            }
+          ]
+        }
+      },
       "elevation": {
         "defaultValue": null,
         "description": "",
@@ -26614,6 +26806,36 @@
         "type": {
           "name": "CSSProperties | undefined"
         }
+      },
+      "size": {
+        "defaultValue": null,
+        "description": "",
+        "name": "size",
+        "declarations": [
+          {
+            "fileName": "arctic-kit/packages/snow/src/lib/Card/CardContent.tsx",
+            "name": "TypeLiteral"
+          }
+        ],
+        "required": false,
+        "type": {
+          "name": "enum",
+          "raw": "\"small\" | \"medium\" | \"large\" | undefined",
+          "value": [
+            {
+              "value": "undefined"
+            },
+            {
+              "value": "\"small\""
+            },
+            {
+              "value": "\"medium\""
+            },
+            {
+              "value": "\"large\""
+            }
+          ]
+        }
       }
     }
   },
@@ -26842,6 +27064,36 @@
         "type": {
           "name": "CSSProperties | undefined"
         }
+      },
+      "size": {
+        "defaultValue": null,
+        "description": "",
+        "name": "size",
+        "declarations": [
+          {
+            "fileName": "arctic-kit/packages/snow/src/lib/Card/CardContent.tsx",
+            "name": "TypeLiteral"
+          }
+        ],
+        "required": false,
+        "type": {
+          "name": "enum",
+          "raw": "\"small\" | \"medium\" | \"large\" | undefined",
+          "value": [
+            {
+              "value": "undefined"
+            },
+            {
+              "value": "\"small\""
+            },
+            {
+              "value": "\"medium\""
+            },
+            {
+              "value": "\"large\""
+            }
+          ]
+        }
       }
     }
   },
@@ -26921,6 +27173,42 @@
         "required": false,
         "type": {
           "name": "(() => void) | undefined"
+        }
+      },
+      "size": {
+        "defaultValue": {
+          "value": "medium"
+        },
+        "description": "",
+        "name": "size",
+        "declarations": [
+          {
+            "fileName": "arctic-kit/packages/snow/src/lib/Paper/Paper.tsx",
+            "name": "TypeLiteral"
+          },
+          {
+            "fileName": "arctic-kit/packages/snow/src/lib/Card/Card.tsx",
+            "name": "TypeLiteral"
+          }
+        ],
+        "required": false,
+        "type": {
+          "name": "enum",
+          "raw": "\"small\" | \"medium\" | \"large\" | undefined",
+          "value": [
+            {
+              "value": "undefined"
+            },
+            {
+              "value": "\"small\""
+            },
+            {
+              "value": "\"medium\""
+            },
+            {
+              "value": "\"large\""
+            }
+          ]
         }
       },
       "elevation": {
