@@ -2,6 +2,9 @@ import type { Meta, StoryObj } from '@storybook/react';
 
 import { ToggleGroup, ToggleGroupItem } from './ToggleGroup';
 import {
+  Bars3BottomLeftIcon,
+  Bars3BottomRightIcon,
+  Bars3Icon,
   BuildingOffice2Icon,
   UserGroupIcon,
   UserIcon,
@@ -43,13 +46,13 @@ function DefaultRender(args: Story['args']) {
   return (
     <ToggleGroup {...args}>
       <ToggleGroupItem value="b">
-        <b>B</b>
-      </ToggleGroupItem>
-      <ToggleGroupItem value="i">
-        <i>I</i>
+        <Bars3BottomLeftIcon width={16} />
       </ToggleGroupItem>
       <ToggleGroupItem value="u">
-        <u>U</u>
+        <Bars3Icon width={16} />
+      </ToggleGroupItem>
+      <ToggleGroupItem value="i">
+        <Bars3BottomRightIcon width={16} />
       </ToggleGroupItem>
     </ToggleGroup>
   );
@@ -151,28 +154,16 @@ function AdvanceExampleRender(args: Story['args']) {
 }
 
 export const Default: Story = {
-  args: {},
-  render: DefaultRender,
-};
-
-export const WithBorder: Story = {
   args: {
     withBorder: true,
+    singleSelect: true,
   },
   render: DefaultRender,
 };
 
 export const AdvanceExample: Story = {
   args: {
-    withBorder: false,
-  },
-  render: AdvanceExampleRender,
-};
-
-export const ColorAdvanceExample: Story = {
-  args: {
-    withBorder: false,
-    color: 'primary',
+    withBorder: true,
   },
   render: AdvanceExampleRender,
 };

@@ -25,7 +25,8 @@ export const Container = styled.ul(
     flexDirection: 'column',
     gap: 12,
     border: `1px solid ${theme.colors.grey[400]}`,
-    borderRadius: 4,
+    borderRadius: theme.border.radius.main,
+    backgroundColor: theme.colors.neutral[0],
   })
 );
 

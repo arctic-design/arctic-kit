@@ -56,7 +56,7 @@ const Content = styled.div({
   paddingTop: 2,
 });
 
-const AccordionItemContainer = styled.div(
+const AccordionItemContainer = styled.div<{ spacing: number | null }>(
   ({ theme: { vars: theme } }: SnowThemeArgs) => ({
     border: `1px solid ${theme.colors.grey[300]}`,
     borderRadius: '6px',
@@ -77,6 +77,40 @@ const AccordionItemContainer = styled.div(
       borderRightWidth: 0,
       borderRadius: 0,
     },
+    variants: [
+      {
+        props: { spacing: 0 },
+        style: {
+          border: 'none',
+          borderBottom: `1px solid ${theme.colors.grey[300]}`,
+          borderRadius: 0,
+          '.emptySpace': {
+            borderRadius: 0,
+          },
+          '&:last-child': {
+            borderBottom: 'none',
+            borderBottomLeftRadius: 6,
+            borderBottomRightRadius: 6,
+            '.emptySpace': {
+              '&:hover': {
+                borderBottomLeftRadius: 6,
+                borderBottomRightRadius: 6,
+              },
+            },
+          },
+          '&:first-child': {
+            borderTopLeftRadius: 6,
+            borderTopRightRadius: 6,
+            '.emptySpace': {
+              '&:hover': {
+                borderTopLeftRadius: 6,
+                borderTopRightRadius: 6,
+              },
+            },
+          },
+        },
+      },
+    ],
   })
 );
 
@@ -198,12 +232,13 @@ const AccordionItem = forwardRef(function AccordionItem(
       data-testid={`${id}-container`}
       className={clsx({ active, hideVerticalBorder })}
       aria-disabled={disableToggle}
+      spacing={spacing}
       {...otherProps}
     >
       <Header
         onClick={toggleOpen}
         role="button"
-        className={clsx({ reverse, disableToggle })}
+        className={clsx({ reverse, disableToggle, emptySpace: spacing === 0 })}
         id={`${id}-header`}
         data-testid={`${id}-header`}
         style={headerStyle}

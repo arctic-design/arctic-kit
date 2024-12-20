@@ -1,10 +1,10 @@
 'use client';
 import React from 'react';
-import { styled } from '@pigment-css/react';
+import { styled, SxProp } from '@pigment-css/react';
 import { AccordionContext } from './AccordionContext';
 import { SnowThemeArgs } from '../../core';
 
-const Container = styled.div<{ spacing?: number }>(
+const Container = styled.div<{ spacing?: number; sx?: SxProp }>(
   ({ theme: { vars: theme } }: SnowThemeArgs) => ({
     fontFamily: theme.font.family.base,
     display: 'flex',
@@ -14,6 +14,15 @@ const Container = styled.div<{ spacing?: number }>(
     svg: {
       width: 16,
     },
+    variants: [
+      {
+        props: { spacing: 0 },
+        style: {
+          border: `1px solid ${theme.colors.grey[300]}`,
+          borderRadius: '6px',
+        },
+      },
+    ],
   })
 );
 
@@ -23,11 +32,12 @@ export type AccordionProps = {
   style?: React.CSSProperties;
   spacing?: number;
   id?: string;
+  sx?: SxProp;
 };
 
 const Accordion = React.forwardRef<HTMLDivElement, AccordionProps>(
   function Accordion(
-    { children, spacing = 4, id = 'accordion', ...otherProps }: AccordionProps,
+    { children, spacing = 0, id = 'accordion', ...otherProps }: AccordionProps,
     ref
   ) {
     return (
