@@ -120,6 +120,11 @@ export const SelectMenu = styled.div<{ inputsize?: SnowSize }>(
       alignItems: 'center',
       cursor: 'default',
       borderRadius: 4,
+      marginBottom: 4,
+
+      '&:last-child': {
+        marginBottom: 0,
+      },
 
       '&:hover': {
         backgroundColor: theme.colors.grey[100],
@@ -209,18 +214,20 @@ export const TagLabel = styled.div<{ inputsize?: SnowSize }>(
   })
 );
 
-export const SelectCloseContainer = styled.span({
-  display: 'flex',
-  alignItems: 'center',
+export const SelectCloseContainer = styled.span(
+  ({ theme: { vars: theme } }: SnowThemeArgs) => ({
+    display: 'flex',
+    alignItems: 'center',
 
-  '&.multiple': {
-    width: '14px',
+    '&.multiple': {
+      width: '14px',
 
-    '&:hover': {
-      backgroundColor: '#ddd',
+      '&:hover': {
+        backgroundColor: theme.colors.grey[200],
+      },
     },
-  },
-});
+  })
+);
 
 export const SearchBox = styled.div(
   ({ theme: { vars: theme } }: SnowThemeArgs) => ({

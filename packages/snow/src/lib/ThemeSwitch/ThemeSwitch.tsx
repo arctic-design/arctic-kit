@@ -19,6 +19,9 @@ const ThemeIconButton = styled.button<{ active?: boolean; size?: SnowSize }>(
     backgroundColor: theme.colors.neutral[0],
     cursor: 'pointer',
     boxSizing: 'border-box',
+    svg: {
+      width: 18,
+    },
     '&:hover': {
       backgroundColor: theme.colors.grey[100],
     },

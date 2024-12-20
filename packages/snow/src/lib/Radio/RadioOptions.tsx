@@ -8,6 +8,7 @@ type RadioOptionsProps = DefaultSnowProps & {
   disabled?: boolean;
   error?: boolean;
   readOnly?: boolean;
+  withSeparator?: boolean;
 };
 
 export function RadioOptions({
@@ -19,6 +20,7 @@ export function RadioOptions({
   disabled,
   error,
   readOnly,
+  withSeparator = false,
 }: RadioOptionsProps) {
   return options.map((option) => {
     return (
@@ -33,6 +35,7 @@ export function RadioOptions({
         disabled={disabled}
         error={error}
         readOnly={readOnly}
+        withSeparator={withSeparator}
       />
     );
   });

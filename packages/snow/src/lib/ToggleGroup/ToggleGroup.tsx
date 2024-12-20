@@ -30,11 +30,12 @@ const Container = styled.div<
   display: 'flex',
   alignItems: 'center',
   justifyContent: 'stretch',
-  gap: 4,
+  gap: 0,
   color: theme.colors.grey[800],
   '.item': {
     cursor: 'pointer',
     borderRadius: theme.border.radius.main,
+    padding: `${4 * 2}px`,
     '&:hover': {
       backgroundColor: theme.colors.grey[200],
     },
@@ -45,7 +46,7 @@ const Container = styled.div<
     },
   },
   variants: [
-    ...SpacingMap.map((spacing) => ({
+    ...SpacingMap.filter((item) => item > 0).map((spacing) => ({
       props: { spacing },
       style: {
         gap: `${spacing * 4}px`,
@@ -54,8 +55,8 @@ const Container = styled.div<
         },
       },
     })),
-    {
-      props: { withBorder: true },
+    ...SpacingMap.filter((item) => item > 0).map((spacing) => ({
+      props: { spacing, withBorder: true },
       style: {
         '.item': {
           border: `2px solid ${theme.colors.grey[200]}`,
@@ -70,7 +71,39 @@ const Container = styled.div<
           },
         },
       },
+    })),
+    {
+      props: { spacing: 0, withBorder: false },
+      style: {
+        borderRadius: theme.border.radius.main,
+        '.item': {
+          borderWidth: 0,
+          borderRightWidth: 2,
+          borderRadius: 0,
+
+          '&:last-child': {
+            borderRightWidth: 0,
+            borderTopRightRadius: theme.border.radius.main,
+            borderBottomRightRadius: theme.border.radius.main,
+          },
+          '&:first-child': {
+            borderTopLeftRadius: theme.border.radius.main,
+            borderBottomLeftRadius: theme.border.radius.main,
+          },
+        },
+      },
     },
+    {
+      props: { spacing: 0, withBorder: true },
+      style: {
+        borderRadius: theme.border.radius.main,
+        border: `2px solid ${theme.colors.grey[200]}`,
+        '.item': {
+          borderRadius: 0,
+        },
+      },
+    },
+
     ...SnowColorValues.map((color) => ({
       props: { color },
       style: {
@@ -93,6 +126,32 @@ const Container = styled.div<
         '.item': {
           borderColor: theme.colors[color][200],
           borderWidth: 0.5,
+          '&.active': {
+            borderColor: theme.colors[color][700],
+          },
+        },
+      },
+    })),
+    ...SnowColorValues.map((color) => ({
+      props: { color, withBorder: true, spacing: 0 },
+      style: {
+        borderColor: theme.colors[color][200],
+        borderRadius: theme.border.radius.main,
+        borderWidth: 0.5,
+        '.item': {
+          borderColor: 'none',
+          borderWidth: 0,
+          borderRadius: 0,
+
+          '&:last-child': {
+            borderRightWidth: 0.5,
+            borderTopRightRadius: theme.border.radius.main,
+            borderBottomRightRadius: theme.border.radius.main,
+          },
+          '&:first-child': {
+            borderTopLeftRadius: theme.border.radius.main,
+            borderBottomLeftRadius: theme.border.radius.main,
+          },
           '&.active': {
             borderColor: theme.colors[color][700],
           },
@@ -128,7 +187,7 @@ export type ToggleGroupItemProps = {
 
 export function ToggleGroup({
   children,
-  spacing = 1,
+  spacing = 0,
   singleSelect = false,
   ...otherProps
 }: ToggleGroupProps) {

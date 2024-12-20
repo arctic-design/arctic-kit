@@ -15,7 +15,7 @@ export const Wrapper = styled.div({
   gap: 4,
 });
 
-export const Container = styled.ul(
+export const Container = styled.ul<{ withSeparator?: boolean }>(
   ({ theme: { vars: theme } }: SnowThemeArgs) => ({
     padding: 12,
     margin: 0,
@@ -25,7 +25,17 @@ export const Container = styled.ul(
     flexDirection: 'column',
     gap: 12,
     border: `1px solid ${theme.colors.grey[400]}`,
-    borderRadius: 4,
+    borderRadius: theme.border.radius.main,
+    backgroundColor: theme.colors.neutral[0],
+    variants: [
+      {
+        props: { withSeparator: true },
+        style: {
+          padding: 0,
+          gap: 0,
+        },
+      },
+    ],
   })
 );
 
@@ -37,6 +47,7 @@ export type RadioGroupProps = DefaultSnowProps &
     required?: boolean;
     errorText?: string;
     readOnly?: boolean;
+    withSeparator?: boolean;
   };
 
 export function RadioGroup({
@@ -45,12 +56,13 @@ export function RadioGroup({
   options = [],
   value,
   onChange,
-  size,
-  color,
-  required,
-  errorText,
-  disabled,
-  readOnly,
+  size = 'medium',
+  color = 'primary',
+  required = false,
+  errorText = undefined,
+  disabled = false,
+  readOnly = false,
+  withSeparator = false,
 }: RadioGroupProps) {
   const [focusId, setFocusId] = useState<string | undefined>(undefined);
 
@@ -123,6 +135,7 @@ export function RadioGroup({
         aria-activedescendant={focusId}
         onFocus={handleInitialContainerFocus}
         onKeyDown={handleContainerKeyPress}
+        withSeparator={withSeparator}
         id={`${id}-radio-group-container`}
       >
         <RadioOptions
@@ -134,6 +147,7 @@ export function RadioGroup({
           disabled={disabled}
           error={error}
           readOnly={readOnly}
+          withSeparator={withSeparator}
         />
       </Container>
       {errorText && <HelperText>{errorText}</HelperText>}

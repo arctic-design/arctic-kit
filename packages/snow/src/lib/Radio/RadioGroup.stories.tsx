@@ -84,6 +84,17 @@ export const Default: Story = {
   render: Render,
 };
 
+export const WitSeparator: Story = {
+  args: {
+    id: 'with_separator_radio',
+    label: 'Select anyone',
+    options,
+    withSeparator: true,
+    size: 'medium',
+  },
+  render: Render,
+};
+
 export const LargeContent: Story = {
   args: {
     id: 'default_radio',
