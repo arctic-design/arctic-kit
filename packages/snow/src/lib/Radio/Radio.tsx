@@ -7,6 +7,7 @@ import {
   SnowColor,
   SnowColorValues,
   SnowSize,
+  SnowSizeValues,
 } from '../types';
 import { RadioSizes } from './types';
 
@@ -14,25 +15,52 @@ import { useRadioVariants } from './useRadioVariants';
 import { SnowThemeArgs } from '../../core';
 import { Typography } from '../Typography';
 
-export const RadioOption = styled.li(
-  ({ theme: { vars: theme } }: SnowThemeArgs) => ({
-    fontFamily: theme.font.family.base,
-    display: 'flex',
-    cursor: 'pointer',
-    alignItems: 'center',
-    justifyContent: 'flex-start',
-    gap: '8px',
-    color: theme.colors.neutral[1000],
-    '&[aria-disabled="true"]': {
-      cursor: 'not-allowed',
-      color: theme.colors.grey[500],
+const RadioOptionPadding = {
+  small: 8,
+  medium: 10,
+  large: 12,
+};
+
+export const RadioOption = styled.li<{
+  withSeparator?: boolean;
+  size?: SnowSize;
+}>(({ theme: { vars: theme } }: SnowThemeArgs) => ({
+  fontFamily: theme.font.family.base,
+  display: 'flex',
+  cursor: 'pointer',
+  alignItems: 'center',
+  justifyContent: 'flex-start',
+  gap: '8px',
+  color: theme.colors.neutral[1000],
+  '&[aria-disabled="true"]': {
+    cursor: 'not-allowed',
+    color: theme.colors.grey[500],
+  },
+  '&[aria-readonly="true"]': {
+    cursor: 'default',
+    color: theme.colors.grey[900],
+  },
+
+  variants: [
+    {
+      props: { withSeparator: true },
+      style: {
+        padding: `${RadioOptionPadding.medium}px 12px`,
+        borderBottom: `1px solid ${theme.colors.grey[400]}`,
+        borderRadius: 0,
+        '&:last-child': {
+          borderBottom: 'none',
+        },
+      },
     },
-    '&[aria-readonly="true"]': {
-      cursor: 'default',
-      color: theme.colors.grey[900],
-    },
-  })
-);
+    ...SnowSizeValues.map((size) => ({
+      props: { size, withSeparator: true },
+      style: {
+        padding: `${RadioOptionPadding[size]}px 12px`,
+      },
+    })),
+  ],
+}));
 
 const StyledRadioOptionCircle = styled.div<{
   size?: SnowSize;
@@ -127,6 +155,7 @@ export type RadioProps = DefaultSnowProps & {
   stopPropagation?: boolean;
   error?: boolean;
   readOnly?: boolean;
+  withSeparator?: boolean;
 };
 
 export function Radio({
@@ -139,6 +168,7 @@ export function Radio({
   disabled = false,
   error = false,
   readOnly = false,
+  withSeparator = false,
 }: RadioProps) {
   const isSelected = option.value === selectedValue;
   const { variants } = useRadioVariants(size);
@@ -158,6 +188,8 @@ export function Radio({
       onClick={(event) => !disabled && !readOnly && onClickHandler(event)}
       aria-disabled={disabled}
       aria-readonly={readOnly ? 'true' : undefined}
+      withSeparator={withSeparator}
+      size={size}
     >
       <RadioOptionCircle
         variants={variants}
