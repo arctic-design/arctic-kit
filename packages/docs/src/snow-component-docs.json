@@ -37,7 +37,7 @@
       },
       "spacing": {
         "defaultValue": {
-          "value": "4"
+          "value": "0"
         },
         "description": "",
         "name": "spacing",
@@ -467,28 +467,16 @@
               "value": "undefined"
             },
             {
-              "value": "\"top\""
-            },
-            {
-              "value": "\"right\""
-            },
-            {
               "value": "\"bottom\""
             },
             {
               "value": "\"left\""
             },
             {
-              "value": "\"top-start\""
+              "value": "\"right\""
             },
             {
-              "value": "\"top-end\""
-            },
-            {
-              "value": "\"right-start\""
-            },
-            {
-              "value": "\"right-end\""
+              "value": "\"top\""
             },
             {
               "value": "\"bottom-start\""
@@ -501,6 +489,18 @@
             },
             {
               "value": "\"left-end\""
+            },
+            {
+              "value": "\"right-start\""
+            },
+            {
+              "value": "\"right-end\""
+            },
+            {
+              "value": "\"top-start\""
+            },
+            {
+              "value": "\"top-end\""
             }
           ]
         }
@@ -1473,6 +1473,36 @@
     "displayName": "Box",
     "methods": [],
     "props": {
+      "fontSize": {
+        "defaultValue": null,
+        "description": "",
+        "name": "fontSize",
+        "declarations": [
+          {
+            "fileName": "arctic-kit/packages/snow/src/lib/Box/Box.tsx",
+            "name": "TypeLiteral"
+          }
+        ],
+        "required": false,
+        "type": {
+          "name": "enum",
+          "raw": "\"small\" | \"medium\" | \"large\" | undefined",
+          "value": [
+            {
+              "value": "undefined"
+            },
+            {
+              "value": "\"small\""
+            },
+            {
+              "value": "\"medium\""
+            },
+            {
+              "value": "\"large\""
+            }
+          ]
+        }
+      },
       "aria-describedby": {
         "defaultValue": null,
         "description": "Identifies the element (or elements) that describes the object.\n@see aria-labelledby",
@@ -1539,36 +1569,6 @@
         "required": false,
         "type": {
           "name": "string | undefined"
-        }
-      },
-      "fontSize": {
-        "defaultValue": null,
-        "description": "",
-        "name": "fontSize",
-        "declarations": [
-          {
-            "fileName": "arctic-kit/packages/snow/src/lib/Box/Box.tsx",
-            "name": "TypeLiteral"
-          }
-        ],
-        "required": false,
-        "type": {
-          "name": "enum",
-          "raw": "\"small\" | \"medium\" | \"large\" | undefined",
-          "value": [
-            {
-              "value": "undefined"
-            },
-            {
-              "value": "\"small\""
-            },
-            {
-              "value": "\"medium\""
-            },
-            {
-              "value": "\"large\""
-            }
-          ]
         }
       }
     }
@@ -2508,16 +2508,13 @@
         "required": false,
         "type": {
           "name": "enum",
-          "raw": "0 | 4 | 1 | 2 | 3 | 5 | 6 | 7 | 8 | 9 | 10 | undefined",
+          "raw": "0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | undefined",
           "value": [
             {
               "value": "undefined"
             },
             {
               "value": "0"
-            },
-            {
-              "value": "4"
             },
             {
               "value": "1"
@@ -2527,6 +2524,9 @@
             },
             {
               "value": "3"
+            },
+            {
+              "value": "4"
             },
             {
               "value": "5"
@@ -3948,16 +3948,16 @@
               "value": "undefined"
             },
             {
-              "value": "\"top\""
+              "value": "\"bottom\""
+            },
+            {
+              "value": "\"left\""
             },
             {
               "value": "\"right\""
             },
             {
-              "value": "\"bottom\""
-            },
-            {
-              "value": "\"left\""
+              "value": "\"top\""
             }
           ]
         }
@@ -4555,16 +4555,13 @@
         "required": false,
         "type": {
           "name": "enum",
-          "raw": "0 | 4 | 1 | 2 | 3 | 5 | 6 | 7 | 8 | 9 | 10 | undefined",
+          "raw": "0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | undefined",
           "value": [
             {
               "value": "undefined"
             },
             {
               "value": "0"
-            },
-            {
-              "value": "4"
             },
             {
               "value": "1"
@@ -4574,6 +4571,9 @@
             },
             {
               "value": "3"
+            },
+            {
+              "value": "4"
             },
             {
               "value": "5"
@@ -4750,16 +4750,13 @@
         "required": false,
         "type": {
           "name": "enum",
-          "raw": "0 | 4 | 1 | 2 | 3 | 5 | 6 | 7 | 8 | 9 | 10 | undefined",
+          "raw": "0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | undefined",
           "value": [
             {
               "value": "undefined"
             },
             {
               "value": "0"
-            },
-            {
-              "value": "4"
             },
             {
               "value": "1"
@@ -4769,6 +4766,9 @@
             },
             {
               "value": "3"
+            },
+            {
+              "value": "4"
             },
             {
               "value": "5"
@@ -5026,16 +5026,13 @@
         "required": false,
         "type": {
           "name": "enum",
-          "raw": "0 | 4 | 1 | 2 | 3 | 5 | 6 | 7 | 8 | 9 | 10 | undefined",
+          "raw": "0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | undefined",
           "value": [
             {
               "value": "undefined"
             },
             {
               "value": "0"
-            },
-            {
-              "value": "4"
             },
             {
               "value": "1"
@@ -5045,6 +5042,9 @@
             },
             {
               "value": "3"
+            },
+            {
+              "value": "4"
             },
             {
               "value": "5"
@@ -5189,21 +5189,6 @@
     "displayName": "Loader",
     "methods": [],
     "props": {
-      "disabled": {
-        "defaultValue": null,
-        "description": "",
-        "name": "disabled",
-        "declarations": [
-          {
-            "fileName": "arctic-kit/packages/snow/src/lib/types.ts",
-            "name": "TypeLiteral"
-          }
-        ],
-        "required": false,
-        "type": {
-          "name": "boolean | undefined"
-        }
-      },
       "color": {
         "defaultValue": {
           "value": "primary"
@@ -5243,6 +5228,21 @@
               "value": "\"secondary\""
             }
           ]
+        }
+      },
+      "disabled": {
+        "defaultValue": null,
+        "description": "",
+        "name": "disabled",
+        "declarations": [
+          {
+            "fileName": "arctic-kit/packages/snow/src/lib/types.ts",
+            "name": "TypeLiteral"
+          }
+        ],
+        "required": false,
+        "type": {
+          "name": "boolean | undefined"
         }
       },
       "type": {
@@ -5940,16 +5940,13 @@
         "required": false,
         "type": {
           "name": "enum",
-          "raw": "0 | 4 | 1 | 2 | 3 | 5 | 6 | 7 | 8 | 9 | 10 | undefined",
+          "raw": "0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | undefined",
           "value": [
             {
               "value": "undefined"
             },
             {
               "value": "0"
-            },
-            {
-              "value": "4"
             },
             {
               "value": "1"
@@ -5959,6 +5956,9 @@
             },
             {
               "value": "3"
+            },
+            {
+              "value": "4"
             },
             {
               "value": "5"
@@ -6202,28 +6202,16 @@
               "value": "undefined"
             },
             {
-              "value": "\"top\""
-            },
-            {
-              "value": "\"right\""
-            },
-            {
               "value": "\"bottom\""
             },
             {
               "value": "\"left\""
             },
             {
-              "value": "\"top-start\""
+              "value": "\"right\""
             },
             {
-              "value": "\"top-end\""
-            },
-            {
-              "value": "\"right-start\""
-            },
-            {
-              "value": "\"right-end\""
+              "value": "\"top\""
             },
             {
               "value": "\"bottom-start\""
@@ -6236,6 +6224,18 @@
             },
             {
               "value": "\"left-end\""
+            },
+            {
+              "value": "\"right-start\""
+            },
+            {
+              "value": "\"right-end\""
+            },
+            {
+              "value": "\"top-start\""
+            },
+            {
+              "value": "\"top-end\""
             }
           ]
         }
@@ -6328,29 +6328,6 @@
     "displayName": "PopoverTrigger",
     "methods": [],
     "props": {
-      "disabled": {
-        "defaultValue": null,
-        "description": "",
-        "name": "disabled",
-        "parent": {
-          "fileName": "arctic-kit/node_modules/@types/react/index.d.ts",
-          "name": "AllHTMLAttributes"
-        },
-        "declarations": [
-          {
-            "fileName": "arctic-kit/node_modules/@types/react/index.d.ts",
-            "name": "AllHTMLAttributes"
-          },
-          {
-            "fileName": "arctic-kit/packages/snow/src/lib/types.ts",
-            "name": "TypeLiteral"
-          }
-        ],
-        "required": false,
-        "type": {
-          "name": "boolean | undefined"
-        }
-      },
       "color": {
         "defaultValue": {
           "value": "\"primary\""
@@ -6398,6 +6375,29 @@
               "value": "\"secondary\""
             }
           ]
+        }
+      },
+      "disabled": {
+        "defaultValue": null,
+        "description": "",
+        "name": "disabled",
+        "parent": {
+          "fileName": "arctic-kit/node_modules/@types/react/index.d.ts",
+          "name": "AllHTMLAttributes"
+        },
+        "declarations": [
+          {
+            "fileName": "arctic-kit/node_modules/@types/react/index.d.ts",
+            "name": "AllHTMLAttributes"
+          },
+          {
+            "fileName": "arctic-kit/packages/snow/src/lib/types.ts",
+            "name": "TypeLiteral"
+          }
+        ],
+        "required": false,
+        "type": {
+          "name": "boolean | undefined"
         }
       },
       "size": {
@@ -6644,6 +6644,23 @@
         "type": {
           "name": "boolean | undefined"
         }
+      },
+      "withSeparator": {
+        "defaultValue": {
+          "value": "false"
+        },
+        "description": "",
+        "name": "withSeparator",
+        "declarations": [
+          {
+            "fileName": "arctic-kit/packages/snow/src/lib/Radio/Radio.tsx",
+            "name": "TypeLiteral"
+          }
+        ],
+        "required": false,
+        "type": {
+          "name": "boolean | undefined"
+        }
       }
     }
   },
@@ -6655,7 +6672,7 @@
     "props": {
       "color": {
         "defaultValue": {
-          "value": "\"primary\""
+          "value": "primary"
         },
         "description": "",
         "name": "color",
@@ -6696,7 +6713,7 @@
       },
       "size": {
         "defaultValue": {
-          "value": "\"medium\""
+          "value": "medium"
         },
         "description": "",
         "name": "size",
@@ -6727,7 +6744,9 @@
         }
       },
       "disabled": {
-        "defaultValue": null,
+        "defaultValue": {
+          "value": "false"
+        },
         "description": "",
         "name": "disabled",
         "declarations": [
@@ -6804,7 +6823,9 @@
         }
       },
       "required": {
-        "defaultValue": null,
+        "defaultValue": {
+          "value": "false"
+        },
         "description": "",
         "name": "required",
         "declarations": [
@@ -6819,7 +6840,9 @@
         }
       },
       "errorText": {
-        "defaultValue": null,
+        "defaultValue": {
+          "value": "undefined"
+        },
         "description": "",
         "name": "errorText",
         "declarations": [
@@ -6834,9 +6857,28 @@
         }
       },
       "readOnly": {
-        "defaultValue": null,
+        "defaultValue": {
+          "value": "false"
+        },
         "description": "",
         "name": "readOnly",
+        "declarations": [
+          {
+            "fileName": "arctic-kit/packages/snow/src/lib/Radio/RadioGroup.tsx",
+            "name": "TypeLiteral"
+          }
+        ],
+        "required": false,
+        "type": {
+          "name": "boolean | undefined"
+        }
+      },
+      "withSeparator": {
+        "defaultValue": {
+          "value": "false"
+        },
+        "description": "",
+        "name": "withSeparator",
         "declarations": [
           {
             "fileName": "arctic-kit/packages/snow/src/lib/Radio/RadioGroup.tsx",
@@ -8610,7 +8652,7 @@
     "props": {
       "spacing": {
         "defaultValue": {
-          "value": "1"
+          "value": "0"
         },
         "description": "",
         "name": "spacing",
@@ -8623,16 +8665,13 @@
         "required": false,
         "type": {
           "name": "enum",
-          "raw": "0 | 4 | 1 | 2 | 3 | 5 | 6 | 7 | 8 | 9 | 10 | undefined",
+          "raw": "0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | undefined",
           "value": [
             {
               "value": "undefined"
             },
             {
               "value": "0"
-            },
-            {
-              "value": "4"
             },
             {
               "value": "1"
@@ -8642,6 +8681,9 @@
             },
             {
               "value": "3"
+            },
+            {
+              "value": "4"
             },
             {
               "value": "5"
@@ -8756,16 +8798,13 @@
         "required": false,
         "type": {
           "name": "enum",
-          "raw": "0 | 4 | 1 | 2 | 3 | 5 | 6 | 7 | 8 | 9 | 10 | undefined",
+          "raw": "0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | undefined",
           "value": [
             {
               "value": "undefined"
             },
             {
               "value": "0"
-            },
-            {
-              "value": "4"
             },
             {
               "value": "1"
@@ -8775,6 +8814,9 @@
             },
             {
               "value": "3"
+            },
+            {
+              "value": "4"
             },
             {
               "value": "5"
@@ -8854,28 +8896,16 @@
               "value": "undefined"
             },
             {
-              "value": "\"top\""
-            },
-            {
-              "value": "\"right\""
-            },
-            {
               "value": "\"bottom\""
             },
             {
               "value": "\"left\""
             },
             {
-              "value": "\"top-start\""
+              "value": "\"right\""
             },
             {
-              "value": "\"top-end\""
-            },
-            {
-              "value": "\"right-start\""
-            },
-            {
-              "value": "\"right-end\""
+              "value": "\"top\""
             },
             {
               "value": "\"bottom-start\""
@@ -8888,6 +8918,18 @@
             },
             {
               "value": "\"left-end\""
+            },
+            {
+              "value": "\"right-start\""
+            },
+            {
+              "value": "\"right-end\""
+            },
+            {
+              "value": "\"top-start\""
+            },
+            {
+              "value": "\"top-end\""
             }
           ]
         }
@@ -9676,28 +9718,16 @@
               "value": "undefined"
             },
             {
-              "value": "\"top\""
-            },
-            {
-              "value": "\"right\""
-            },
-            {
               "value": "\"bottom\""
             },
             {
               "value": "\"left\""
             },
             {
-              "value": "\"top-start\""
+              "value": "\"right\""
             },
             {
-              "value": "\"top-end\""
-            },
-            {
-              "value": "\"right-start\""
-            },
-            {
-              "value": "\"right-end\""
+              "value": "\"top\""
             },
             {
               "value": "\"bottom-start\""
@@ -9710,6 +9740,18 @@
             },
             {
               "value": "\"left-end\""
+            },
+            {
+              "value": "\"right-start\""
+            },
+            {
+              "value": "\"right-end\""
+            },
+            {
+              "value": "\"top-start\""
+            },
+            {
+              "value": "\"top-end\""
             }
           ]
         }
@@ -9794,28 +9836,16 @@
               "value": "undefined"
             },
             {
-              "value": "\"top\""
-            },
-            {
-              "value": "\"right\""
-            },
-            {
               "value": "\"bottom\""
             },
             {
               "value": "\"left\""
             },
             {
-              "value": "\"top-start\""
+              "value": "\"right\""
             },
             {
-              "value": "\"top-end\""
-            },
-            {
-              "value": "\"right-start\""
-            },
-            {
-              "value": "\"right-end\""
+              "value": "\"top\""
             },
             {
               "value": "\"bottom-start\""
@@ -9828,6 +9858,18 @@
             },
             {
               "value": "\"left-end\""
+            },
+            {
+              "value": "\"right-start\""
+            },
+            {
+              "value": "\"right-end\""
+            },
+            {
+              "value": "\"top-start\""
+            },
+            {
+              "value": "\"top-end\""
             }
           ]
         }
@@ -9930,28 +9972,16 @@
               "value": "undefined"
             },
             {
-              "value": "\"top\""
-            },
-            {
-              "value": "\"right\""
-            },
-            {
               "value": "\"bottom\""
             },
             {
               "value": "\"left\""
             },
             {
-              "value": "\"top-start\""
+              "value": "\"right\""
             },
             {
-              "value": "\"top-end\""
-            },
-            {
-              "value": "\"right-start\""
-            },
-            {
-              "value": "\"right-end\""
+              "value": "\"top\""
             },
             {
               "value": "\"bottom-start\""
@@ -9964,6 +9994,18 @@
             },
             {
               "value": "\"left-end\""
+            },
+            {
+              "value": "\"right-start\""
+            },
+            {
+              "value": "\"right-end\""
+            },
+            {
+              "value": "\"top-start\""
+            },
+            {
+              "value": "\"top-end\""
             }
           ]
         }
@@ -9978,7 +10020,7 @@
     "props": {
       "spacing": {
         "defaultValue": {
-          "value": "1"
+          "value": "0"
         },
         "description": "",
         "name": "spacing",
@@ -9991,16 +10033,13 @@
         "required": false,
         "type": {
           "name": "enum",
-          "raw": "0 | 4 | 1 | 2 | 3 | 5 | 6 | 7 | 8 | 9 | 10 | undefined",
+          "raw": "0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | undefined",
           "value": [
             {
               "value": "undefined"
             },
             {
               "value": "0"
-            },
-            {
-              "value": "4"
             },
             {
               "value": "1"
@@ -10010,6 +10049,9 @@
             },
             {
               "value": "3"
+            },
+            {
+              "value": "4"
             },
             {
               "value": "5"
@@ -10124,16 +10166,13 @@
         "required": false,
         "type": {
           "name": "enum",
-          "raw": "0 | 4 | 1 | 2 | 3 | 5 | 6 | 7 | 8 | 9 | 10 | undefined",
+          "raw": "0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | undefined",
           "value": [
             {
               "value": "undefined"
             },
             {
               "value": "0"
-            },
-            {
-              "value": "4"
             },
             {
               "value": "1"
@@ -10143,6 +10182,9 @@
             },
             {
               "value": "3"
+            },
+            {
+              "value": "4"
             },
             {
               "value": "5"
@@ -10190,7 +10232,7 @@
     "props": {
       "spacing": {
         "defaultValue": {
-          "value": "1"
+          "value": "0"
         },
         "description": "",
         "name": "spacing",
@@ -10203,16 +10245,13 @@
         "required": false,
         "type": {
           "name": "enum",
-          "raw": "0 | 4 | 1 | 2 | 3 | 5 | 6 | 7 | 8 | 9 | 10 | undefined",
+          "raw": "0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | undefined",
           "value": [
             {
               "value": "undefined"
             },
             {
               "value": "0"
-            },
-            {
-              "value": "4"
             },
             {
               "value": "1"
@@ -10222,6 +10261,9 @@
             },
             {
               "value": "3"
+            },
+            {
+              "value": "4"
             },
             {
               "value": "5"
@@ -10336,16 +10378,13 @@
         "required": false,
         "type": {
           "name": "enum",
-          "raw": "0 | 4 | 1 | 2 | 3 | 5 | 6 | 7 | 8 | 9 | 10 | undefined",
+          "raw": "0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | undefined",
           "value": [
             {
               "value": "undefined"
             },
             {
               "value": "0"
-            },
-            {
-              "value": "4"
             },
             {
               "value": "1"
@@ -10355,6 +10394,9 @@
             },
             {
               "value": "3"
+            },
+            {
+              "value": "4"
             },
             {
               "value": "5"
@@ -14866,6 +14908,23 @@
         "type": {
           "name": "boolean | undefined"
         }
+      },
+      "withSeparator": {
+        "defaultValue": {
+          "value": "false"
+        },
+        "description": "",
+        "name": "withSeparator",
+        "declarations": [
+          {
+            "fileName": "arctic-kit/packages/snow/src/lib/Radio/Radio.tsx",
+            "name": "TypeLiteral"
+          }
+        ],
+        "required": false,
+        "type": {
+          "name": "boolean | undefined"
+        }
       }
     }
   },
@@ -14877,7 +14936,7 @@
     "props": {
       "color": {
         "defaultValue": {
-          "value": "\"primary\""
+          "value": "primary"
         },
         "description": "",
         "name": "color",
@@ -14918,7 +14977,7 @@
       },
       "size": {
         "defaultValue": {
-          "value": "\"medium\""
+          "value": "medium"
         },
         "description": "",
         "name": "size",
@@ -14949,7 +15008,9 @@
         }
       },
       "disabled": {
-        "defaultValue": null,
+        "defaultValue": {
+          "value": "false"
+        },
         "description": "",
         "name": "disabled",
         "declarations": [
@@ -15026,7 +15087,9 @@
         }
       },
       "required": {
-        "defaultValue": null,
+        "defaultValue": {
+          "value": "false"
+        },
         "description": "",
         "name": "required",
         "declarations": [
@@ -15041,7 +15104,9 @@
         }
       },
       "errorText": {
-        "defaultValue": null,
+        "defaultValue": {
+          "value": "undefined"
+        },
         "description": "",
         "name": "errorText",
         "declarations": [
@@ -15056,9 +15121,28 @@
         }
       },
       "readOnly": {
-        "defaultValue": null,
+        "defaultValue": {
+          "value": "false"
+        },
         "description": "",
         "name": "readOnly",
+        "declarations": [
+          {
+            "fileName": "arctic-kit/packages/snow/src/lib/Radio/RadioGroup.tsx",
+            "name": "TypeLiteral"
+          }
+        ],
+        "required": false,
+        "type": {
+          "name": "boolean | undefined"
+        }
+      },
+      "withSeparator": {
+        "defaultValue": {
+          "value": "false"
+        },
+        "description": "",
+        "name": "withSeparator",
         "declarations": [
           {
             "fileName": "arctic-kit/packages/snow/src/lib/Radio/RadioGroup.tsx",
@@ -15244,6 +15328,23 @@
         "type": {
           "name": "boolean | undefined"
         }
+      },
+      "withSeparator": {
+        "defaultValue": {
+          "value": "false"
+        },
+        "description": "",
+        "name": "withSeparator",
+        "declarations": [
+          {
+            "fileName": "arctic-kit/packages/snow/src/lib/Radio/RadioOptions.tsx",
+            "name": "TypeLiteral"
+          }
+        ],
+        "required": false,
+        "type": {
+          "name": "boolean | undefined"
+        }
       }
     }
   },
@@ -15255,7 +15356,7 @@
     "props": {
       "color": {
         "defaultValue": {
-          "value": "\"primary\""
+          "value": "primary"
         },
         "description": "",
         "name": "color",
@@ -15296,7 +15397,7 @@
       },
       "size": {
         "defaultValue": {
-          "value": "\"medium\""
+          "value": "medium"
         },
         "description": "",
         "name": "size",
@@ -15327,7 +15428,9 @@
         }
       },
       "disabled": {
-        "defaultValue": null,
+        "defaultValue": {
+          "value": "false"
+        },
         "description": "",
         "name": "disabled",
         "declarations": [
@@ -15404,7 +15507,9 @@
         }
       },
       "required": {
-        "defaultValue": null,
+        "defaultValue": {
+          "value": "false"
+        },
         "description": "",
         "name": "required",
         "declarations": [
@@ -15419,7 +15524,9 @@
         }
       },
       "errorText": {
-        "defaultValue": null,
+        "defaultValue": {
+          "value": "undefined"
+        },
         "description": "",
         "name": "errorText",
         "declarations": [
@@ -15434,9 +15541,28 @@
         }
       },
       "readOnly": {
-        "defaultValue": null,
+        "defaultValue": {
+          "value": "false"
+        },
         "description": "",
         "name": "readOnly",
+        "declarations": [
+          {
+            "fileName": "arctic-kit/packages/snow/src/lib/Radio/RadioGroup.tsx",
+            "name": "TypeLiteral"
+          }
+        ],
+        "required": false,
+        "type": {
+          "name": "boolean | undefined"
+        }
+      },
+      "withSeparator": {
+        "defaultValue": {
+          "value": "false"
+        },
+        "description": "",
+        "name": "withSeparator",
         "declarations": [
           {
             "fileName": "arctic-kit/packages/snow/src/lib/Radio/RadioGroup.tsx",
@@ -15653,6 +15779,23 @@
         "type": {
           "name": "boolean | undefined"
         }
+      },
+      "withSeparator": {
+        "defaultValue": {
+          "value": "false"
+        },
+        "description": "",
+        "name": "withSeparator",
+        "declarations": [
+          {
+            "fileName": "arctic-kit/packages/snow/src/lib/Radio/Radio.tsx",
+            "name": "TypeLiteral"
+          }
+        ],
+        "required": false,
+        "type": {
+          "name": "boolean | undefined"
+        }
       }
     }
   },
@@ -15703,6 +15846,36 @@
         "required": false,
         "type": {
           "name": "string | undefined"
+        }
+      },
+      "content": {
+        "defaultValue": null,
+        "description": "",
+        "name": "content",
+        "required": false,
+        "type": {
+          "name": "string | undefined"
+        }
+      },
+      "translate": {
+        "defaultValue": null,
+        "description": "",
+        "name": "translate",
+        "required": false,
+        "type": {
+          "name": "enum",
+          "raw": "\"yes\" | \"no\" | undefined",
+          "value": [
+            {
+              "value": "undefined"
+            },
+            {
+              "value": "\"yes\""
+            },
+            {
+              "value": "\"no\""
+            }
+          ]
         }
       },
       "prefix": {
@@ -15765,7 +15938,7 @@
         "name": "autoCapitalize",
         "required": false,
         "type": {
-          "name": "\"off\" | \"none\" | \"on\" | \"sentences\" | \"words\" | \"characters\" | (string & {}) | undefined"
+          "name": "(string & {}) | \"off\" | \"none\" | \"on\" | \"sentences\" | \"words\" | \"characters\" | undefined"
         }
       },
       "autoFocus": {
@@ -15894,27 +16067,6 @@
           "name": "number | undefined"
         }
       },
-      "translate": {
-        "defaultValue": null,
-        "description": "",
-        "name": "translate",
-        "required": false,
-        "type": {
-          "name": "enum",
-          "raw": "\"yes\" | \"no\" | undefined",
-          "value": [
-            {
-              "value": "undefined"
-            },
-            {
-              "value": "\"yes\""
-            },
-            {
-              "value": "\"no\""
-            }
-          ]
-        }
-      },
       "radioGroup": {
         "defaultValue": null,
         "description": "",
@@ -15928,15 +16080,6 @@
         "defaultValue": null,
         "description": "",
         "name": "about",
-        "required": false,
-        "type": {
-          "name": "string | undefined"
-        }
-      },
-      "content": {
-        "defaultValue": null,
-        "description": "",
-        "name": "content",
         "required": false,
         "type": {
           "name": "string | undefined"
@@ -16296,7 +16439,7 @@
         "name": "aria-current",
         "required": false,
         "type": {
-          "name": "boolean | \"time\" | \"true\" | \"false\" | \"page\" | \"step\" | \"location\" | \"date\" | undefined"
+          "name": "boolean | \"time\" | \"page\" | \"true\" | \"false\" | \"step\" | \"location\" | \"date\" | undefined"
         }
       },
       "aria-describedby": {
@@ -16410,7 +16553,7 @@
         "name": "aria-haspopup",
         "required": false,
         "type": {
-          "name": "boolean | \"dialog\" | \"menu\" | \"true\" | \"false\" | \"grid\" | \"listbox\" | \"tree\" | undefined"
+          "name": "boolean | \"dialog\" | \"menu\" | \"grid\" | \"true\" | \"false\" | \"listbox\" | \"tree\" | undefined"
         }
       },
       "aria-hidden": {
@@ -16591,13 +16734,16 @@
         "required": false,
         "type": {
           "name": "enum",
-          "raw": "\"text\" | \"additions\" | \"additions removals\" | \"additions text\" | \"all\" | \"removals\" | \"removals additions\" | \"removals text\" | \"text additions\" | \"text removals\" | undefined",
+          "raw": "\"text\" | \"all\" | \"additions\" | \"additions removals\" | \"additions text\" | \"removals\" | \"removals additions\" | \"removals text\" | \"text additions\" | \"text removals\" | undefined",
           "value": [
             {
               "value": "undefined"
             },
             {
               "value": "\"text\""
+            },
+            {
+              "value": "\"all\""
             },
             {
               "value": "\"additions\""
@@ -16607,9 +16753,6 @@
             },
             {
               "value": "\"additions text\""
-            },
-            {
-              "value": "\"all\""
             },
             {
               "value": "\"removals\""
@@ -18227,28 +18370,16 @@
               "value": "undefined"
             },
             {
-              "value": "\"top\""
-            },
-            {
-              "value": "\"right\""
-            },
-            {
               "value": "\"bottom\""
             },
             {
               "value": "\"left\""
             },
             {
-              "value": "\"top-start\""
+              "value": "\"right\""
             },
             {
-              "value": "\"top-end\""
-            },
-            {
-              "value": "\"right-start\""
-            },
-            {
-              "value": "\"right-end\""
+              "value": "\"top\""
             },
             {
               "value": "\"bottom-start\""
@@ -18261,6 +18392,18 @@
             },
             {
               "value": "\"left-end\""
+            },
+            {
+              "value": "\"right-start\""
+            },
+            {
+              "value": "\"right-end\""
+            },
+            {
+              "value": "\"top-start\""
+            },
+            {
+              "value": "\"top-end\""
             }
           ]
         }
@@ -18353,29 +18496,6 @@
     "displayName": "PopoverTrigger",
     "methods": [],
     "props": {
-      "disabled": {
-        "defaultValue": null,
-        "description": "",
-        "name": "disabled",
-        "parent": {
-          "fileName": "arctic-kit/node_modules/@types/react/index.d.ts",
-          "name": "AllHTMLAttributes"
-        },
-        "declarations": [
-          {
-            "fileName": "arctic-kit/node_modules/@types/react/index.d.ts",
-            "name": "AllHTMLAttributes"
-          },
-          {
-            "fileName": "arctic-kit/packages/snow/src/lib/types.ts",
-            "name": "TypeLiteral"
-          }
-        ],
-        "required": false,
-        "type": {
-          "name": "boolean | undefined"
-        }
-      },
       "color": {
         "defaultValue": {
           "value": "\"primary\""
@@ -18423,6 +18543,29 @@
               "value": "\"secondary\""
             }
           ]
+        }
+      },
+      "disabled": {
+        "defaultValue": null,
+        "description": "",
+        "name": "disabled",
+        "parent": {
+          "fileName": "arctic-kit/node_modules/@types/react/index.d.ts",
+          "name": "AllHTMLAttributes"
+        },
+        "declarations": [
+          {
+            "fileName": "arctic-kit/node_modules/@types/react/index.d.ts",
+            "name": "AllHTMLAttributes"
+          },
+          {
+            "fileName": "arctic-kit/packages/snow/src/lib/types.ts",
+            "name": "TypeLiteral"
+          }
+        ],
+        "required": false,
+        "type": {
+          "name": "boolean | undefined"
         }
       },
       "size": {
@@ -18532,28 +18675,16 @@
               "value": "undefined"
             },
             {
-              "value": "\"top\""
-            },
-            {
-              "value": "\"right\""
-            },
-            {
               "value": "\"bottom\""
             },
             {
               "value": "\"left\""
             },
             {
-              "value": "\"top-start\""
+              "value": "\"right\""
             },
             {
-              "value": "\"top-end\""
-            },
-            {
-              "value": "\"right-start\""
-            },
-            {
-              "value": "\"right-end\""
+              "value": "\"top\""
             },
             {
               "value": "\"bottom-start\""
@@ -18566,6 +18697,18 @@
             },
             {
               "value": "\"left-end\""
+            },
+            {
+              "value": "\"right-start\""
+            },
+            {
+              "value": "\"right-end\""
+            },
+            {
+              "value": "\"top-start\""
+            },
+            {
+              "value": "\"top-end\""
             }
           ]
         }
@@ -18677,28 +18820,16 @@
               "value": "undefined"
             },
             {
-              "value": "\"top\""
-            },
-            {
-              "value": "\"right\""
-            },
-            {
               "value": "\"bottom\""
             },
             {
               "value": "\"left\""
             },
             {
-              "value": "\"top-start\""
+              "value": "\"right\""
             },
             {
-              "value": "\"top-end\""
-            },
-            {
-              "value": "\"right-start\""
-            },
-            {
-              "value": "\"right-end\""
+              "value": "\"top\""
             },
             {
               "value": "\"bottom-start\""
@@ -18711,6 +18842,18 @@
             },
             {
               "value": "\"left-end\""
+            },
+            {
+              "value": "\"right-start\""
+            },
+            {
+              "value": "\"right-end\""
+            },
+            {
+              "value": "\"top-start\""
+            },
+            {
+              "value": "\"top-end\""
             }
           ]
         }
@@ -18782,29 +18925,6 @@
     "displayName": "PopoverTrigger",
     "methods": [],
     "props": {
-      "disabled": {
-        "defaultValue": null,
-        "description": "",
-        "name": "disabled",
-        "parent": {
-          "fileName": "arctic-kit/node_modules/@types/react/index.d.ts",
-          "name": "AllHTMLAttributes"
-        },
-        "declarations": [
-          {
-            "fileName": "arctic-kit/node_modules/@types/react/index.d.ts",
-            "name": "AllHTMLAttributes"
-          },
-          {
-            "fileName": "arctic-kit/packages/snow/src/lib/types.ts",
-            "name": "TypeLiteral"
-          }
-        ],
-        "required": false,
-        "type": {
-          "name": "boolean | undefined"
-        }
-      },
       "color": {
         "defaultValue": {
           "value": "\"primary\""
@@ -18852,6 +18972,29 @@
               "value": "\"secondary\""
             }
           ]
+        }
+      },
+      "disabled": {
+        "defaultValue": null,
+        "description": "",
+        "name": "disabled",
+        "parent": {
+          "fileName": "arctic-kit/node_modules/@types/react/index.d.ts",
+          "name": "AllHTMLAttributes"
+        },
+        "declarations": [
+          {
+            "fileName": "arctic-kit/node_modules/@types/react/index.d.ts",
+            "name": "AllHTMLAttributes"
+          },
+          {
+            "fileName": "arctic-kit/packages/snow/src/lib/types.ts",
+            "name": "TypeLiteral"
+          }
+        ],
+        "required": false,
+        "type": {
+          "name": "boolean | undefined"
         }
       },
       "size": {
@@ -18949,16 +19092,13 @@
         "required": false,
         "type": {
           "name": "enum",
-          "raw": "0 | 4 | 1 | 2 | 3 | 5 | 6 | 7 | 8 | 9 | 10 | undefined",
+          "raw": "0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | undefined",
           "value": [
             {
               "value": "undefined"
             },
             {
               "value": "0"
-            },
-            {
-              "value": "4"
             },
             {
               "value": "1"
@@ -18968,6 +19108,9 @@
             },
             {
               "value": "3"
+            },
+            {
+              "value": "4"
             },
             {
               "value": "5"
@@ -19182,16 +19325,13 @@
         "required": false,
         "type": {
           "name": "enum",
-          "raw": "0 | 4 | 1 | 2 | 3 | 5 | 6 | 7 | 8 | 9 | 10 | undefined",
+          "raw": "0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | undefined",
           "value": [
             {
               "value": "undefined"
             },
             {
               "value": "0"
-            },
-            {
-              "value": "4"
             },
             {
               "value": "1"
@@ -19201,6 +19341,9 @@
             },
             {
               "value": "3"
+            },
+            {
+              "value": "4"
             },
             {
               "value": "5"
@@ -20985,21 +21128,6 @@
     "displayName": "Loader",
     "methods": [],
     "props": {
-      "disabled": {
-        "defaultValue": null,
-        "description": "",
-        "name": "disabled",
-        "declarations": [
-          {
-            "fileName": "arctic-kit/packages/snow/src/lib/types.ts",
-            "name": "TypeLiteral"
-          }
-        ],
-        "required": false,
-        "type": {
-          "name": "boolean | undefined"
-        }
-      },
       "color": {
         "defaultValue": {
           "value": "primary"
@@ -21039,6 +21167,21 @@
               "value": "\"secondary\""
             }
           ]
+        }
+      },
+      "disabled": {
+        "defaultValue": null,
+        "description": "",
+        "name": "disabled",
+        "declarations": [
+          {
+            "fileName": "arctic-kit/packages/snow/src/lib/types.ts",
+            "name": "TypeLiteral"
+          }
+        ],
+        "required": false,
+        "type": {
+          "name": "boolean | undefined"
         }
       },
       "type": {
@@ -21113,21 +21256,6 @@
     "displayName": "Loader",
     "methods": [],
     "props": {
-      "disabled": {
-        "defaultValue": null,
-        "description": "",
-        "name": "disabled",
-        "declarations": [
-          {
-            "fileName": "arctic-kit/packages/snow/src/lib/types.ts",
-            "name": "TypeLiteral"
-          }
-        ],
-        "required": false,
-        "type": {
-          "name": "boolean | undefined"
-        }
-      },
       "color": {
         "defaultValue": {
           "value": "primary"
@@ -21167,6 +21295,21 @@
               "value": "\"secondary\""
             }
           ]
+        }
+      },
+      "disabled": {
+        "defaultValue": null,
+        "description": "",
+        "name": "disabled",
+        "declarations": [
+          {
+            "fileName": "arctic-kit/packages/snow/src/lib/types.ts",
+            "name": "TypeLiteral"
+          }
+        ],
+        "required": false,
+        "type": {
+          "name": "boolean | undefined"
         }
       },
       "type": {
@@ -21256,16 +21399,13 @@
         "required": false,
         "type": {
           "name": "enum",
-          "raw": "0 | 4 | 1 | 2 | 3 | 5 | 6 | 7 | 8 | 9 | 10 | undefined",
+          "raw": "0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | undefined",
           "value": [
             {
               "value": "undefined"
             },
             {
               "value": "0"
-            },
-            {
-              "value": "4"
             },
             {
               "value": "1"
@@ -21275,6 +21415,9 @@
             },
             {
               "value": "3"
+            },
+            {
+              "value": "4"
             },
             {
               "value": "5"
@@ -21548,16 +21691,13 @@
         "required": false,
         "type": {
           "name": "enum",
-          "raw": "0 | 4 | 1 | 2 | 3 | 5 | 6 | 7 | 8 | 9 | 10 | undefined",
+          "raw": "0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | undefined",
           "value": [
             {
               "value": "undefined"
             },
             {
               "value": "0"
-            },
-            {
-              "value": "4"
             },
             {
               "value": "1"
@@ -21567,6 +21707,9 @@
             },
             {
               "value": "3"
+            },
+            {
+              "value": "4"
             },
             {
               "value": "5"
@@ -21626,16 +21769,13 @@
         "required": false,
         "type": {
           "name": "enum",
-          "raw": "0 | 4 | 1 | 2 | 3 | 5 | 6 | 7 | 8 | 9 | 10 | undefined",
+          "raw": "0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | undefined",
           "value": [
             {
               "value": "undefined"
             },
             {
               "value": "0"
-            },
-            {
-              "value": "4"
             },
             {
               "value": "1"
@@ -21645,6 +21785,9 @@
             },
             {
               "value": "3"
+            },
+            {
+              "value": "4"
             },
             {
               "value": "5"
@@ -21821,16 +21964,13 @@
         "required": false,
         "type": {
           "name": "enum",
-          "raw": "0 | 4 | 1 | 2 | 3 | 5 | 6 | 7 | 8 | 9 | 10 | undefined",
+          "raw": "0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | undefined",
           "value": [
             {
               "value": "undefined"
             },
             {
               "value": "0"
-            },
-            {
-              "value": "4"
             },
             {
               "value": "1"
@@ -21840,6 +21980,9 @@
             },
             {
               "value": "3"
+            },
+            {
+              "value": "4"
             },
             {
               "value": "5"
@@ -22090,16 +22233,13 @@
         "required": false,
         "type": {
           "name": "enum",
-          "raw": "0 | 4 | 1 | 2 | 3 | 5 | 6 | 7 | 8 | 9 | 10 | undefined",
+          "raw": "0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | undefined",
           "value": [
             {
               "value": "undefined"
             },
             {
               "value": "0"
-            },
-            {
-              "value": "4"
             },
             {
               "value": "1"
@@ -22109,6 +22249,9 @@
             },
             {
               "value": "3"
+            },
+            {
+              "value": "4"
             },
             {
               "value": "5"
@@ -22359,16 +22502,13 @@
         "required": false,
         "type": {
           "name": "enum",
-          "raw": "0 | 4 | 1 | 2 | 3 | 5 | 6 | 7 | 8 | 9 | 10 | undefined",
+          "raw": "0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | undefined",
           "value": [
             {
               "value": "undefined"
             },
             {
               "value": "0"
-            },
-            {
-              "value": "4"
             },
             {
               "value": "1"
@@ -22378,6 +22518,9 @@
             },
             {
               "value": "3"
+            },
+            {
+              "value": "4"
             },
             {
               "value": "5"
@@ -23668,16 +23811,16 @@
               "value": "undefined"
             },
             {
-              "value": "\"top\""
+              "value": "\"bottom\""
+            },
+            {
+              "value": "\"left\""
             },
             {
               "value": "\"right\""
             },
             {
-              "value": "\"bottom\""
-            },
-            {
-              "value": "\"left\""
+              "value": "\"top\""
             }
           ]
         }
@@ -23888,16 +24031,16 @@
               "value": "undefined"
             },
             {
-              "value": "\"top\""
+              "value": "\"bottom\""
+            },
+            {
+              "value": "\"left\""
             },
             {
               "value": "\"right\""
             },
             {
-              "value": "\"bottom\""
-            },
-            {
-              "value": "\"left\""
+              "value": "\"top\""
             }
           ]
         }
@@ -24085,16 +24228,16 @@
               "value": "undefined"
             },
             {
-              "value": "\"top\""
+              "value": "\"bottom\""
+            },
+            {
+              "value": "\"left\""
             },
             {
               "value": "\"right\""
             },
             {
-              "value": "\"bottom\""
-            },
-            {
-              "value": "\"left\""
+              "value": "\"top\""
             }
           ]
         }
@@ -26599,16 +26742,13 @@
         "required": false,
         "type": {
           "name": "enum",
-          "raw": "0 | 4 | 1 | 2 | 3 | 5 | 6 | 7 | 8 | 9 | 10 | undefined",
+          "raw": "0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | undefined",
           "value": [
             {
               "value": "undefined"
             },
             {
               "value": "0"
-            },
-            {
-              "value": "4"
             },
             {
               "value": "1"
@@ -26618,6 +26758,9 @@
             },
             {
               "value": "3"
+            },
+            {
+              "value": "4"
             },
             {
               "value": "5"
@@ -27224,16 +27367,13 @@
         "required": false,
         "type": {
           "name": "enum",
-          "raw": "0 | 4 | 1 | 2 | 3 | 5 | 6 | 7 | 8 | 9 | 10 | undefined",
+          "raw": "0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | undefined",
           "value": [
             {
               "value": "undefined"
             },
             {
               "value": "0"
-            },
-            {
-              "value": "4"
             },
             {
               "value": "1"
@@ -27243,6 +27383,9 @@
             },
             {
               "value": "3"
+            },
+            {
+              "value": "4"
             },
             {
               "value": "5"
@@ -29333,6 +29476,36 @@
     "displayName": "Box",
     "methods": [],
     "props": {
+      "fontSize": {
+        "defaultValue": null,
+        "description": "",
+        "name": "fontSize",
+        "declarations": [
+          {
+            "fileName": "arctic-kit/packages/snow/src/lib/Box/Box.tsx",
+            "name": "TypeLiteral"
+          }
+        ],
+        "required": false,
+        "type": {
+          "name": "enum",
+          "raw": "\"small\" | \"medium\" | \"large\" | undefined",
+          "value": [
+            {
+              "value": "undefined"
+            },
+            {
+              "value": "\"small\""
+            },
+            {
+              "value": "\"medium\""
+            },
+            {
+              "value": "\"large\""
+            }
+          ]
+        }
+      },
       "aria-describedby": {
         "defaultValue": null,
         "description": "Identifies the element (or elements) that describes the object.\n@see aria-labelledby",
@@ -29399,36 +29572,6 @@
         "required": false,
         "type": {
           "name": "string | undefined"
-        }
-      },
-      "fontSize": {
-        "defaultValue": null,
-        "description": "",
-        "name": "fontSize",
-        "declarations": [
-          {
-            "fileName": "arctic-kit/packages/snow/src/lib/Box/Box.tsx",
-            "name": "TypeLiteral"
-          }
-        ],
-        "required": false,
-        "type": {
-          "name": "enum",
-          "raw": "\"small\" | \"medium\" | \"large\" | undefined",
-          "value": [
-            {
-              "value": "undefined"
-            },
-            {
-              "value": "\"small\""
-            },
-            {
-              "value": "\"medium\""
-            },
-            {
-              "value": "\"large\""
-            }
-          ]
         }
       }
     }
@@ -29439,6 +29582,36 @@
     "displayName": "Box",
     "methods": [],
     "props": {
+      "fontSize": {
+        "defaultValue": null,
+        "description": "",
+        "name": "fontSize",
+        "declarations": [
+          {
+            "fileName": "arctic-kit/packages/snow/src/lib/Box/Box.tsx",
+            "name": "TypeLiteral"
+          }
+        ],
+        "required": false,
+        "type": {
+          "name": "enum",
+          "raw": "\"small\" | \"medium\" | \"large\" | undefined",
+          "value": [
+            {
+              "value": "undefined"
+            },
+            {
+              "value": "\"small\""
+            },
+            {
+              "value": "\"medium\""
+            },
+            {
+              "value": "\"large\""
+            }
+          ]
+        }
+      },
       "aria-describedby": {
         "defaultValue": null,
         "description": "Identifies the element (or elements) that describes the object.\n@see aria-labelledby",
@@ -29505,36 +29678,6 @@
         "required": false,
         "type": {
           "name": "string | undefined"
-        }
-      },
-      "fontSize": {
-        "defaultValue": null,
-        "description": "",
-        "name": "fontSize",
-        "declarations": [
-          {
-            "fileName": "arctic-kit/packages/snow/src/lib/Box/Box.tsx",
-            "name": "TypeLiteral"
-          }
-        ],
-        "required": false,
-        "type": {
-          "name": "enum",
-          "raw": "\"small\" | \"medium\" | \"large\" | undefined",
-          "value": [
-            {
-              "value": "undefined"
-            },
-            {
-              "value": "\"small\""
-            },
-            {
-              "value": "\"medium\""
-            },
-            {
-              "value": "\"large\""
-            }
-          ]
         }
       }
     }
@@ -31676,28 +31819,16 @@
               "value": "undefined"
             },
             {
-              "value": "\"top\""
-            },
-            {
-              "value": "\"right\""
-            },
-            {
               "value": "\"bottom\""
             },
             {
               "value": "\"left\""
             },
             {
-              "value": "\"top-start\""
+              "value": "\"right\""
             },
             {
-              "value": "\"top-end\""
-            },
-            {
-              "value": "\"right-start\""
-            },
-            {
-              "value": "\"right-end\""
+              "value": "\"top\""
             },
             {
               "value": "\"bottom-start\""
@@ -31710,6 +31841,18 @@
             },
             {
               "value": "\"left-end\""
+            },
+            {
+              "value": "\"right-start\""
+            },
+            {
+              "value": "\"right-end\""
+            },
+            {
+              "value": "\"top-start\""
+            },
+            {
+              "value": "\"top-end\""
             }
           ]
         }
@@ -32157,6 +32300,53 @@
           "name": "string | undefined"
         }
       },
+      "color": {
+        "defaultValue": null,
+        "description": "",
+        "name": "color",
+        "parent": {
+          "fileName": "arctic-kit/packages/snow/src/lib/ActionMenu/types.ts",
+          "name": "ActionMenuProps"
+        },
+        "declarations": [
+          {
+            "fileName": "arctic-kit/packages/snow/src/lib/ActionMenu/types.ts",
+            "name": "ActionMenuProps"
+          },
+          {
+            "fileName": "arctic-kit/node_modules/@types/react/index.d.ts",
+            "name": "HTMLAttributes"
+          }
+        ],
+        "required": false,
+        "type": {
+          "name": "enum",
+          "raw": "\"success\" | \"error\" | \"warning\" | \"info\" | \"primary\" | \"secondary\" | undefined",
+          "value": [
+            {
+              "value": "undefined"
+            },
+            {
+              "value": "\"success\""
+            },
+            {
+              "value": "\"error\""
+            },
+            {
+              "value": "\"warning\""
+            },
+            {
+              "value": "\"info\""
+            },
+            {
+              "value": "\"primary\""
+            },
+            {
+              "value": "\"secondary\""
+            }
+          ]
+        }
+      },
       "renderContent": {
         "defaultValue": null,
         "description": "",
@@ -32218,53 +32408,6 @@
           "name": "boolean | undefined"
         }
       },
-      "color": {
-        "defaultValue": null,
-        "description": "",
-        "name": "color",
-        "parent": {
-          "fileName": "arctic-kit/packages/snow/src/lib/ActionMenu/types.ts",
-          "name": "ActionMenuProps"
-        },
-        "declarations": [
-          {
-            "fileName": "arctic-kit/packages/snow/src/lib/ActionMenu/types.ts",
-            "name": "ActionMenuProps"
-          },
-          {
-            "fileName": "arctic-kit/node_modules/@types/react/index.d.ts",
-            "name": "HTMLAttributes"
-          }
-        ],
-        "required": false,
-        "type": {
-          "name": "enum",
-          "raw": "\"success\" | \"error\" | \"warning\" | \"info\" | \"primary\" | \"secondary\" | undefined",
-          "value": [
-            {
-              "value": "undefined"
-            },
-            {
-              "value": "\"success\""
-            },
-            {
-              "value": "\"error\""
-            },
-            {
-              "value": "\"warning\""
-            },
-            {
-              "value": "\"info\""
-            },
-            {
-              "value": "\"primary\""
-            },
-            {
-              "value": "\"secondary\""
-            }
-          ]
-        }
-      },
       "placement": {
         "defaultValue": {
           "value": "bottom-start"
@@ -32290,28 +32433,16 @@
               "value": "undefined"
             },
             {
-              "value": "\"top\""
-            },
-            {
-              "value": "\"right\""
-            },
-            {
               "value": "\"bottom\""
             },
             {
               "value": "\"left\""
             },
             {
-              "value": "\"top-start\""
+              "value": "\"right\""
             },
             {
-              "value": "\"top-end\""
-            },
-            {
-              "value": "\"right-start\""
-            },
-            {
-              "value": "\"right-end\""
+              "value": "\"top\""
             },
             {
               "value": "\"bottom-start\""
@@ -32324,6 +32455,18 @@
             },
             {
               "value": "\"left-end\""
+            },
+            {
+              "value": "\"right-start\""
+            },
+            {
+              "value": "\"right-end\""
+            },
+            {
+              "value": "\"top-start\""
+            },
+            {
+              "value": "\"top-end\""
             }
           ]
         }
@@ -32588,28 +32731,16 @@
               "value": "undefined"
             },
             {
-              "value": "\"top\""
-            },
-            {
-              "value": "\"right\""
-            },
-            {
               "value": "\"bottom\""
             },
             {
               "value": "\"left\""
             },
             {
-              "value": "\"top-start\""
+              "value": "\"right\""
             },
             {
-              "value": "\"top-end\""
-            },
-            {
-              "value": "\"right-start\""
-            },
-            {
-              "value": "\"right-end\""
+              "value": "\"top\""
             },
             {
               "value": "\"bottom-start\""
@@ -32622,6 +32753,18 @@
             },
             {
               "value": "\"left-end\""
+            },
+            {
+              "value": "\"right-start\""
+            },
+            {
+              "value": "\"right-end\""
+            },
+            {
+              "value": "\"top-start\""
+            },
+            {
+              "value": "\"top-end\""
             }
           ]
         }
@@ -32781,7 +32924,7 @@
       },
       "spacing": {
         "defaultValue": {
-          "value": "4"
+          "value": "0"
         },
         "description": "",
         "name": "spacing",
@@ -33362,7 +33505,7 @@
       },
       "spacing": {
         "defaultValue": {
-          "value": "4"
+          "value": "0"
         },
         "description": "",
         "name": "spacing",
