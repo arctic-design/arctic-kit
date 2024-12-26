@@ -16,4 +16,5 @@ export interface ActionMenuProps {
   prefix?: React.ReactNode;
   noBorder?: boolean;
   variant?: ActionMenuRootVariants;
+  fullWidth?: boolean;
 }

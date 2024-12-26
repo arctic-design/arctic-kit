@@ -66,6 +66,7 @@ export const ActionMenuComponent = forwardRef<
       prefix,
       noBorder,
       variant = 'outlined',
+      fullWidth,
       ...props
     },
     forwardedRef
@@ -175,13 +176,18 @@ export const ActionMenuComponent = forwardRef<
           id={rootId}
           data-testid={rootId}
           className={`${
-            isNested ? 'MenuItem' : !renderContent ? 'RootMenu' : ''
+            isNested
+              ? 'MenuItem'
+              : !renderContent
+              ? 'RootMenu'
+              : 'RootMenuCustom'
           } ${variant}`}
           disabled={disabled}
           aria-disabled={disabled}
           color={color}
           itemSize={itemSize}
           data-no-border={noBorder}
+          fullWidth={fullWidth}
           {...getReferenceProps(
             parent.getItemProps?.({
               ...props,
@@ -200,6 +206,8 @@ export const ActionMenuComponent = forwardRef<
               display: 'flex',
               alignItems: 'center',
               gap: 8,
+              justifyContent: 'space-between',
+              width: '100%',
             }}
           >
             {renderContent ? (

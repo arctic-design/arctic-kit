@@ -2,9 +2,7 @@ import { styled, SxProp } from '@pigment-css/react';
 import { forwardRef } from 'react';
 import { clsx } from 'clsx';
 
-const Container = styled.div<{ sx?: SxProp }>({
-  lineHeight: '24px',
-});
+const Container = styled.div<{ sx?: SxProp }>({});
 
 export type CardTitleProps = {
   children: React.ReactNode;

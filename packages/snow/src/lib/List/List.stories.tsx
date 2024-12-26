@@ -14,6 +14,12 @@ import { ListItemDescription } from './ListItemDescription';
 import { Button } from '../Button';
 import { useCallback, useState } from 'react';
 import { Switch } from '../Switch';
+import {
+  ArchiveBoxIcon,
+  Battery0Icon,
+  Battery100Icon,
+} from '@arctic-kit/icons';
+import { Separator } from '../Indicators';
 
 // More on how to set up stories at: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
 const meta: Meta<typeof List> = {
@@ -37,7 +43,7 @@ type Story = StoryObj<typeof meta>;
 
 type ChoiceType = 'strict' | 'functional' | 'performance';
 
-function Render() {
+function Render(args: Story['args']) {
   const [preferences, setPreferences] = useState<{ [key: string]: boolean }>({
     strict: false,
     functional: true,
@@ -57,7 +63,7 @@ function Render() {
         <CardDescription>Manage your cookie settings here.</CardDescription>
       </CardHeader>
       <CardContent>
-        <List>
+        <List {...args}>
           <ListItem
             suffix={
               <Switch
@@ -108,7 +114,54 @@ function Render() {
   );
 }
 
+function PrefixIconsRender(args: Story['args']) {
+  const [selectedIndex, setSelectedIndex] = useState(-1);
+  return (
+    <List {...args} spacing={1}>
+      <ListItem
+        prefix={<Battery0Icon width={16} />}
+        selected={selectedIndex === 0}
+        onClick={() => setSelectedIndex(0)}
+      >
+        <ListItemTitle>Strictly Necessary</ListItemTitle>
+        <ListItemDescription>
+          These cookies are essential in order to use the website and use its
+          features.
+        </ListItemDescription>
+      </ListItem>
+      <ListItem
+        prefix={<ArchiveBoxIcon width={16} />}
+        selected={selectedIndex === 1}
+        onClick={() => setSelectedIndex(1)}
+      >
+        <ListItemTitle>Functional Cookies</ListItemTitle>
+        <ListItemDescription>
+          These cookies allow the website to provide personalized functionality.
+        </ListItemDescription>
+      </ListItem>
+      <Separator />
+      <ListItem
+        prefix={<Battery100Icon width={16} />}
+        selected={selectedIndex === 2}
+        onClick={() => setSelectedIndex(2)}
+      >
+        <ListItemTitle>Performance Cookies</ListItemTitle>
+        <ListItemDescription>
+          These cookies help to improve the performance of the website.
+        </ListItemDescription>
+      </ListItem>
+    </List>
+  );
+}
+
 export const Default: Story = {
   args: {},
   render: Render,
+};
+
+export const WithPrefixIcons: Story = {
+  args: {
+    spacing: 2,
+  },
+  render: PrefixIconsRender,
 };

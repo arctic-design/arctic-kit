@@ -20,6 +20,7 @@ export * from './Drawer';
 export * from './FileUpload';
 export * from './Grid';
 export * from './IconButton';
+export * from './Indicators';
 export * from './Layout';
 export * from './Link';
 export * from './List';

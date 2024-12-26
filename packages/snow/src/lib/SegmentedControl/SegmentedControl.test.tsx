@@ -69,9 +69,7 @@ describe('SegmentedControl', () => {
       expect(indicator).toHaveStyle(
         `border: 1px solid ${DEFAULT_THEME.colors.primary.main}`
       );
-      expect(rootContainer).toHaveStyle(
-        `height: ${SnowHeights[ThemeSize.small] - 2}px`
-      );
+      expect(rootContainer).toHaveStyle(`height: ${SnowHeights.small}px`);
     });
   });
 
@@ -88,9 +86,7 @@ describe('SegmentedControl', () => {
     waitFor(() => {
       expect(indicator).toHaveStyle(`height: 100%`);
       expect(indicator).toHaveStyle(`border: none`);
-      expect(rootContainer).toHaveStyle(
-        `height: ${SnowHeights[ThemeSize.small] - 2}px`
-      );
+      expect(rootContainer).toHaveStyle(`height: ${SnowHeights.small}px`);
     });
   });
 
@@ -104,9 +100,7 @@ describe('SegmentedControl', () => {
     const rootContainer = getByTestId('segmented-control-root');
 
     waitFor(() => {
-      expect(rootContainer).toHaveStyle(
-        `height: ${SnowHeights[ThemeSize.medium] - 2}px`
-      );
+      expect(rootContainer).toHaveStyle(`height: ${SnowHeights.medium}px`);
     });
   });
 
@@ -122,9 +116,7 @@ describe('SegmentedControl', () => {
     const rootContainer = getByTestId('segmented-control-root');
 
     waitFor(() => {
-      expect(rootContainer).toHaveStyle(
-        `height: ${SnowHeights[ThemeSize.large] - 2}px`
-      );
+      expect(rootContainer).toHaveStyle(`height: ${SnowHeights.large}px`);
     });
   });
 

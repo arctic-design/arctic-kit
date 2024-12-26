@@ -6,6 +6,7 @@ import { SnowThemeArgs } from '../../core';
 export const ActionItem = styled.button<{
   itemSize?: SnowSize;
   color?: SnowColor;
+  fullWidth?: boolean;
 }>(({ theme: { vars: theme } }: SnowThemeArgs) => ({
   outline: 0,
   backgroundColor: 'transparent',
@@ -13,7 +14,7 @@ export const ActionItem = styled.button<{
   '&:hover': {
     cursor: 'default',
   },
-  '&.RootMenu, &.MenuItem': {
+  '&.RootMenu, &.MenuItem, &.RootMenuCustom': {
     fontSize: theme.font.size[100],
     fontFamily: theme.font.family.base,
     color: theme.colors.neutral[1000],
@@ -115,7 +116,7 @@ export const ActionItem = styled.button<{
     borderRadius: '4px',
     textAlign: 'left',
     lineHeight: 1.8,
-    minWidth: 224,
+    minWidth: 200,
     margin: 0,
     outline: 0,
     '&:focus, &[data-nested][data-open]:not([data-focus-inside]), &[data-focus-inside][data-open]':
@@ -130,7 +131,7 @@ export const ActionItem = styled.button<{
 
   variants: [
     ...SnowColorValues.map((color) => ({
-      props: { color: color },
+      props: { color },
       style: {
         '&.RootMenu, &.MenuItem': {
           color: theme.colors[color].main,
@@ -194,13 +195,26 @@ export const ActionItem = styled.button<{
     ...SnowSizeValues.map((size) => ({
       props: { itemSize: size },
       style: {
-        '&.RootMenu, &.MenuItem': {
+        '&.RootMenu, &.MenuItem, &.RootMenuCustom': {
           height: `${SnowHeights[size]}px`,
+        },
+        '&.RootMenu, &.MenuItem': {
           padding: `calc(${theme.spacings.main} * ${
             SnowSpacingMap[size]
           }) calc(${theme.spacings.main} * ${SnowSpacingMap[size] * 1.25});`,
         },
+        '&.RootMenuCustom': {
+          padding: 0,
+        },
       },
     })),
+    {
+      props: { fullWidth: true },
+      style: {
+        '&.RootMenu': {
+          width: '100%',
+        },
+      },
+    },
   ],
 }));

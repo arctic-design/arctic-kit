@@ -17,11 +17,12 @@ export type PaperProps = {
   id?: string;
   noPadding?: boolean;
   size?: SnowSize;
+  selected?: boolean;
 };
 
 type StyledBoxProps = Omit<
   PaperProps,
-  'style' | 'className' | 'onClick' | 'id'
+  'style' | 'className' | 'onClick' | 'id' | 'selected'
 >;
 
 const StyledBox = styled.div<StyledBoxProps>(
@@ -32,6 +33,17 @@ const StyledBox = styled.div<StyledBoxProps>(
     cursor: 'default',
     color: theme.colors.neutral[1000],
     backgroundColor: theme.colors.neutral[0],
+    transition: 'background 0.3s ease, border-color 0.3s ease',
+    "&[data-clickable='true']": {
+      cursor: 'pointer',
+      '&:hover': {
+        backgroundColor: theme.colors.grey[50],
+      },
+    },
+    "&[data-selected='true']": {
+      backgroundColor: theme.colors.grey[100],
+      borderColor: theme.colors.grey[700],
+    },
     variants: [
       {
         props: { variant: 'outlined' },
@@ -48,8 +60,19 @@ const StyledBox = styled.div<StyledBoxProps>(
           border: `${theme.border.width.main} solid ${theme.colors[color][300]}`,
           backgroundColor: theme.colors[color].main,
           color: theme.colors.white,
+          "&[data-clickable='true']": {
+            cursor: 'pointer',
+            '&:hover': {
+              backgroundColor: theme.colors[color][50],
+            },
+          },
+          "&[data-selected='true']": {
+            backgroundColor: theme.colors[color][100],
+            borderColor: theme.colors[color][700],
+          },
         },
       })),
+
       ...PaperElevationValues.map((elevation) => ({
         props: { elevation },
         style: {
@@ -73,9 +96,6 @@ const StyledBox = styled.div<StyledBoxProps>(
         },
       },
     ],
-    "&[data-clickable='true']": {
-      cursor: 'pointer',
-    },
   })
 );
 
@@ -89,6 +109,7 @@ export const Paper = forwardRef<HTMLDivElement, PropsWithChildren<PaperProps>>(
       square = false,
       color,
       onClick,
+      selected = undefined,
       ...rest
     } = props;
     return (
@@ -98,6 +119,7 @@ export const Paper = forwardRef<HTMLDivElement, PropsWithChildren<PaperProps>>(
         elevation={elevation}
         data-variant={variant}
         data-clickable={!!onClick}
+        data-selected={!!selected}
         variant={variant}
         square={square}
         color={color}

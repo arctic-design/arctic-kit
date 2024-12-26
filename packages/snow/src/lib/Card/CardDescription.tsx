@@ -1,10 +1,5 @@
-import { styled } from '@pigment-css/react';
 import { forwardRef } from 'react';
 import { clsx } from 'clsx';
-
-const Container = styled.div({
-  lineHeight: '20px',
-});
 
 export type CardDescriptionProps = {
   children: React.ReactNode;
@@ -14,13 +9,9 @@ export type CardDescriptionProps = {
 export const CardDescription = forwardRef<HTMLDivElement, CardDescriptionProps>(
   function CardDescription({ children, className, ...props }, ref) {
     return (
-      <Container
-        ref={ref}
-        className={clsx('description', className)}
-        {...props}
-      >
+      <div ref={ref} className={clsx('description', className)} {...props}>
         {children}
-      </Container>
+      </div>
     );
   }
 );

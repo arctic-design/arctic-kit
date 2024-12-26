@@ -41,12 +41,11 @@ export type CenterProps = LayoutType & {
 export const Center = ({
   children,
   inline = false,
-  spacing = 0,
   color,
   ...otherProps
 }: PropsWithChildren<CenterProps>) => {
   return (
-    <Container inline={inline} spacing={spacing} color={color} {...otherProps}>
+    <Container inline={inline} color={color} {...otherProps}>
       {children}
     </Container>
   );

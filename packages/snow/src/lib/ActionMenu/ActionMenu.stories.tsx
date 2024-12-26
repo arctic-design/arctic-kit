@@ -17,6 +17,7 @@ import {
   EnvelopeIcon,
   UserGroupIcon,
 } from '@arctic-kit/icons';
+import { Box } from '../Box';
 
 // More on how to set up stories at: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
 const meta: Meta<typeof ActionMenu> = {
@@ -106,6 +107,14 @@ function WithIconsRender(args: Story['args']) {
   );
 }
 
+function FullWidthRender(args: Story['args']) {
+  return (
+    <Box sx={{ width: 200 }}>
+      <WithIconsRender {...args} />
+    </Box>
+  );
+}
+
 export const Default: Story = {
   args: {
     label: 'Edit',
@@ -120,4 +129,13 @@ export const WithIcons: Story = {
     noBorder: false,
   },
   render: WithIconsRender,
+};
+
+export const FullWidth: Story = {
+  args: {
+    label: 'Edit with Icons',
+    noBorder: false,
+    fullWidth: true,
+  },
+  render: FullWidthRender,
 };
