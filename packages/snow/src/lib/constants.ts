@@ -8,28 +8,28 @@ export const ELEVATION_STYLE = {
 };
 
 // Snow font-size in px based on size
-export const SnowFontSizes = {
+export const SnowFontSizes: Record<ThemeSize, number> = {
   [ThemeSize.small]: 12,
   [ThemeSize.medium]: 14,
   [ThemeSize.large]: 16,
 };
 
 // Snow heights in px based on size
-export const SnowHeights: { [key: string]: number } = {
+export const SnowHeights: Record<ThemeSize, number> = {
   [ThemeSize.small]: 24,
   [ThemeSize.medium]: 32,
   [ThemeSize.large]: 40,
 };
 
 //Text Padding in px based on size
-export const SnowTextPadding: { [key: string]: number } = {
+export const SnowTextPadding: Record<ThemeSize, number> = {
   [ThemeSize.small]: 6,
   [ThemeSize.medium]: 8,
   [ThemeSize.large]: 12,
 };
 
 // Multiplier to spacing values based on size
-export const SnowSpacingMap: { [key: string]: number } = {
+export const SnowSpacingMap: Record<ThemeSize, number> = {
   [ThemeSize.small]: 0.5,
   [ThemeSize.medium]: 1,
   [ThemeSize.large]: 1.5,

@@ -10,7 +10,7 @@ import {
 import { SnowHeights } from '../constants';
 import { SnowThemeArgs } from '../../core';
 
-export const Container = styled.button<{
+export const Container = styled.span<{
   rounded?: boolean;
   color?: SnowColor;
   size?: SnowSize;
@@ -24,7 +24,7 @@ export const Container = styled.button<{
   cursor: 'pointer',
   color: theme.colors.neutral[1000],
   border: `1px solid ${theme.colors.grey[400]}`,
-  borderRadius: 4,
+  borderRadius: theme.border.radius.main,
   backgroundColor: theme.colors.neutral[0],
   svg: {
     width: 16,
@@ -33,20 +33,15 @@ export const Container = styled.button<{
   justifyContent: 'center',
   alignItems: 'center',
   outline: 'none',
-  height: SnowHeights['medium'] - 2,
-  width: SnowHeights['medium'] - 2,
+  height: SnowHeights['medium'],
+  width: SnowHeights['medium'],
+  boxSizing: 'border-box',
 
   '&:hover': {
     '&:not(:disabled)': {
       cursor: 'pointer',
       backgroundColor: theme.colors.grey[50],
       borderColor: theme.colors.grey[700],
-    },
-  },
-  '&:focus': {
-    '&:not(:disabled)': {
-      outlineOffset: 2,
-      outline: `1px solid ${theme.colors.grey[300]}`,
     },
   },
 
@@ -64,7 +59,6 @@ export const Container = styled.button<{
       props: { color },
       style: {
         border: `1px solid ${theme.colors[color][400]}`,
-        outlineColor: theme.colors[color][200],
         svg: {
           color: theme.colors[color].main,
         },
@@ -76,18 +70,13 @@ export const Container = styled.button<{
             },
           },
         },
-        '&:focus': {
-          '&:not(:disabled)': {
-            outlineColor: theme.colors[color][300],
-          },
-        },
       },
     })),
     ...SnowSizeValues.map((size) => ({
       props: { size },
       style: {
-        height: SnowHeights[size] - 2,
-        width: SnowHeights[size] - 2,
+        height: SnowHeights[size],
+        width: SnowHeights[size],
       },
     })),
     {
@@ -116,7 +105,7 @@ export const Container = styled.button<{
 export type IconButtonProps = DefaultSnowProps & {
   rounded?: boolean;
   noBorder?: boolean;
-} & ComponentPropsWithoutRef<'button'>;
+} & ComponentPropsWithoutRef<'span'>;
 
 export const IconButton = forwardRef<
   HTMLButtonElement,
@@ -130,6 +119,7 @@ export const IconButton = forwardRef<
       aria-disabled={disabled}
       disabled={disabled}
       size={size}
+      role="button"
       {...props}
     >
       {children}

@@ -1,9 +1,9 @@
-import { styled } from '@pigment-css/react';
+import { styled, SxProp } from '@pigment-css/react';
 import { forwardRef } from 'react';
 import { SnowSize } from '../types';
 import { clsx } from 'clsx';
 
-const Container = styled.div({
+const Container = styled.div<{ sx?: SxProp }>({
   display: 'flex',
   flexDirection: 'column',
 });
@@ -13,6 +13,7 @@ export type CardContentProps = {
   className?: string;
   style?: React.CSSProperties;
   size?: SnowSize;
+  sx?: SxProp;
 };
 export const CardContent = forwardRef<HTMLDivElement, CardContentProps>(
   function CardContent({ children, className, ...props }, ref) {

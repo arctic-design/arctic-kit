@@ -14,6 +14,7 @@ export const ActionMenu = forwardRef<HTMLButtonElement, ActionMenuProps>(
       variant,
       disabled,
       color,
+      fullWidth,
       ...props
     }: ActionMenuProps,
     ref
@@ -37,6 +38,7 @@ export const ActionMenu = forwardRef<HTMLButtonElement, ActionMenuProps>(
             id={id}
             data-testid={id}
             variant={grpVariant || variant}
+            fullWidth={fullWidth}
             {...props}
             ref={ref}
           />

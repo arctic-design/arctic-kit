@@ -1,5 +1,5 @@
 import { styled } from '@pigment-css/react';
-import { SnowColor, SnowColorValues, SnowSize } from '../types';
+import { SnowColor, SnowColorValues, SnowSize, SnowSizeValues } from '../types';
 import { SnowThemeArgs } from '../../core';
 import { SnowHeights } from '../constants';
 
@@ -13,14 +13,15 @@ export const RootContainer = styled.div<{ size?: SnowSize }>(
   ({ theme: { vars: theme } }: SnowThemeArgs) => ({
     display: 'flex',
     background: theme.colors.grey[200],
-    borderRadius: '4px',
+    borderRadius: theme.border.radius.main,
     border: `1px solid ${theme.colors.grey[300]}`,
     width: 'fit-content',
-    height: SnowHeights['medium'] - 2,
-    variants: ['small', 'medium', 'large'].map((size) => ({
-      props: { size: size as SnowSize },
+    height: SnowHeights.medium,
+    boxSizing: 'border-box',
+    variants: SnowSizeValues.map((size) => ({
+      props: { size },
       style: {
-        height: SnowHeights[size as SnowSize] - 2,
+        height: SnowHeights[size],
       },
     })),
   })
@@ -44,7 +45,7 @@ export const StyledIndicator = styled.div<{
   margin: 0,
   top: 0,
   height: '100%',
-  borderRadius: 4,
+  borderRadius: theme.border.radius.main,
   border: `1px solid ${theme.colors.grey[400]}`,
   background: theme.colors.neutral[0],
   variants: [
@@ -85,7 +86,7 @@ export const Button = styled.button<{ color?: SnowColor }>(
     outline: 'none',
     position: 'relative',
     zIndex: 1,
-    borderRadius: 4,
+    borderRadius: theme.border.radius.main,
     '&[aria-selected="true"]': {
       color: theme.colors.grey[900],
     },
