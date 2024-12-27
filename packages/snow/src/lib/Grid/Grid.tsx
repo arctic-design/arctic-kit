@@ -1,17 +1,29 @@
-'use client';
 import { styled } from '@pigment-css/react';
-import { HTMLAttributes, PropsWithChildren, useEffect, useState } from 'react';
-import { GridContext } from './GridContext';
+import { HTMLAttributes, PropsWithChildren } from 'react';
+import { Row } from './GridRow';
 
 // A grid component using the following css as inspiration.
 // https://github.com/kristoferjoseph/flexboxgrid/blob/master/src/css/flexboxgrid.css
-const Container = styled.div<{ gutterWidth?: number }>({
+const Container = styled.div<{
+  gutterCompensation?: number;
+  spacing?: number;
+}>({
   boxSizing: 'border-box',
   marginLeft: 'auto',
   marginRight: 'auto',
   paddingRight: '8px',
   paddingLeft: '8px',
   width: '100%',
+
+  [`& ${Row}`]: {
+    marginLeft: ({ gutterCompensation }) =>
+      gutterCompensation !== undefined ? gutterCompensation : -8,
+    marginRight: ({ gutterCompensation }) =>
+      gutterCompensation !== undefined ? gutterCompensation : -8,
+    [`.grid-col`]: {
+      padding: ({ spacing }) => (spacing !== 0 && spacing ? spacing * 4 : 0),
+    },
+  },
 });
 
 export type GridProviderProps = {
@@ -20,33 +32,23 @@ export type GridProviderProps = {
 } & HTMLAttributes<HTMLDivElement>;
 
 function Grid(props: PropsWithChildren<GridProviderProps>) {
-  const { children, spacing = 0, gutterWidth = 0, ...restProps } = props;
-  const [gridSpacing, setGridSpacing] = useState<number>();
-  const [gutter, setGutter] = useState<number>(0);
+  const {
+    children,
+    spacing = 0,
+    gutterWidth: gutter = 0,
+    ...restProps
+  } = props;
 
-  useEffect(() => {
-    setGridSpacing(spacing);
-  }, [spacing]);
-
-  useEffect(() => {
-    if (gutterWidth) {
-      setGutter(gutterWidth);
-    }
-  }, [gutterWidth]);
+  const gutterCompensation = gutter * 0.5 * -1;
 
   return (
-    <GridContext.Provider
-      value={{
-        spacing: gridSpacing,
-        gutterWidth: gutter,
-        gutterCompensation: gutter * 0.5 * -1,
-        halfGutterWidth: gutter * 0.5,
-      }}
+    <Container
+      gutterCompensation={gutterCompensation}
+      spacing={spacing}
+      {...restProps}
     >
-      <Container gutterWidth={gutter} {...restProps}>
-        {children}
-      </Container>
-    </GridContext.Provider>
+      {children}
+    </Container>
   );
 }
 

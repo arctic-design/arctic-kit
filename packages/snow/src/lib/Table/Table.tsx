@@ -110,12 +110,12 @@ export const TableCell: React.FC<TableCellProps> = ({ children }) => {
 
 TableCell.displayName = 'Table.Cell';
 
-export const Table = {
-  Root: TableRoot,
-  Header: TableHeader,
-  Body: TableBody,
-  Row: TableRow,
-  Cell: TableCell,
-  ColumnHeaderCell: TableColumnHeaderCell,
-  RowHeaderCell: TableRowHeaderCell,
+export {
+  TableRoot as Root,
+  TableHeader as Header,
+  TableBody as Body,
+  TableRow as Row,
+  TableCell as Cell,
+  TableColumnHeaderCell as ColumnHeaderCell,
+  TableRowHeaderCell as RowHeaderCell,
 };
