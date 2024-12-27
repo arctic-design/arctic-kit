@@ -4384,7 +4384,49 @@
         ],
         "required": false,
         "type": {
-          "name": "number | undefined"
+          "name": "enum",
+          "raw": "1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12 | undefined",
+          "value": [
+            {
+              "value": "undefined"
+            },
+            {
+              "value": "1"
+            },
+            {
+              "value": "2"
+            },
+            {
+              "value": "3"
+            },
+            {
+              "value": "4"
+            },
+            {
+              "value": "5"
+            },
+            {
+              "value": "6"
+            },
+            {
+              "value": "7"
+            },
+            {
+              "value": "8"
+            },
+            {
+              "value": "9"
+            },
+            {
+              "value": "10"
+            },
+            {
+              "value": "11"
+            },
+            {
+              "value": "12"
+            }
+          ]
         }
       },
       "sm": {
@@ -4399,7 +4441,49 @@
         ],
         "required": false,
         "type": {
-          "name": "number | undefined"
+          "name": "enum",
+          "raw": "1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12 | undefined",
+          "value": [
+            {
+              "value": "undefined"
+            },
+            {
+              "value": "1"
+            },
+            {
+              "value": "2"
+            },
+            {
+              "value": "3"
+            },
+            {
+              "value": "4"
+            },
+            {
+              "value": "5"
+            },
+            {
+              "value": "6"
+            },
+            {
+              "value": "7"
+            },
+            {
+              "value": "8"
+            },
+            {
+              "value": "9"
+            },
+            {
+              "value": "10"
+            },
+            {
+              "value": "11"
+            },
+            {
+              "value": "12"
+            }
+          ]
         }
       },
       "md": {
@@ -4414,7 +4498,49 @@
         ],
         "required": false,
         "type": {
-          "name": "number | undefined"
+          "name": "enum",
+          "raw": "1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12 | undefined",
+          "value": [
+            {
+              "value": "undefined"
+            },
+            {
+              "value": "1"
+            },
+            {
+              "value": "2"
+            },
+            {
+              "value": "3"
+            },
+            {
+              "value": "4"
+            },
+            {
+              "value": "5"
+            },
+            {
+              "value": "6"
+            },
+            {
+              "value": "7"
+            },
+            {
+              "value": "8"
+            },
+            {
+              "value": "9"
+            },
+            {
+              "value": "10"
+            },
+            {
+              "value": "11"
+            },
+            {
+              "value": "12"
+            }
+          ]
         }
       },
       "lg": {
@@ -4429,7 +4555,49 @@
         ],
         "required": false,
         "type": {
-          "name": "number | undefined"
+          "name": "enum",
+          "raw": "1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12 | undefined",
+          "value": [
+            {
+              "value": "undefined"
+            },
+            {
+              "value": "1"
+            },
+            {
+              "value": "2"
+            },
+            {
+              "value": "3"
+            },
+            {
+              "value": "4"
+            },
+            {
+              "value": "5"
+            },
+            {
+              "value": "6"
+            },
+            {
+              "value": "7"
+            },
+            {
+              "value": "8"
+            },
+            {
+              "value": "9"
+            },
+            {
+              "value": "10"
+            },
+            {
+              "value": "11"
+            },
+            {
+              "value": "12"
+            }
+          ]
         }
       },
       "xl": {
@@ -4444,7 +4612,49 @@
         ],
         "required": false,
         "type": {
-          "name": "number | undefined"
+          "name": "enum",
+          "raw": "1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12 | undefined",
+          "value": [
+            {
+              "value": "undefined"
+            },
+            {
+              "value": "1"
+            },
+            {
+              "value": "2"
+            },
+            {
+              "value": "3"
+            },
+            {
+              "value": "4"
+            },
+            {
+              "value": "5"
+            },
+            {
+              "value": "6"
+            },
+            {
+              "value": "7"
+            },
+            {
+              "value": "8"
+            },
+            {
+              "value": "9"
+            },
+            {
+              "value": "10"
+            },
+            {
+              "value": "11"
+            },
+            {
+              "value": "12"
+            }
+          ]
         }
       },
       "xxl": {
@@ -4459,7 +4669,49 @@
         ],
         "required": false,
         "type": {
-          "name": "number | undefined"
+          "name": "enum",
+          "raw": "1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12 | undefined",
+          "value": [
+            {
+              "value": "undefined"
+            },
+            {
+              "value": "1"
+            },
+            {
+              "value": "2"
+            },
+            {
+              "value": "3"
+            },
+            {
+              "value": "4"
+            },
+            {
+              "value": "5"
+            },
+            {
+              "value": "6"
+            },
+            {
+              "value": "7"
+            },
+            {
+              "value": "8"
+            },
+            {
+              "value": "9"
+            },
+            {
+              "value": "10"
+            },
+            {
+              "value": "11"
+            },
+            {
+              "value": "12"
+            }
+          ]
         }
       }
     }
@@ -23317,7 +23569,49 @@
         ],
         "required": false,
         "type": {
-          "name": "number | undefined"
+          "name": "enum",
+          "raw": "1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12 | undefined",
+          "value": [
+            {
+              "value": "undefined"
+            },
+            {
+              "value": "1"
+            },
+            {
+              "value": "2"
+            },
+            {
+              "value": "3"
+            },
+            {
+              "value": "4"
+            },
+            {
+              "value": "5"
+            },
+            {
+              "value": "6"
+            },
+            {
+              "value": "7"
+            },
+            {
+              "value": "8"
+            },
+            {
+              "value": "9"
+            },
+            {
+              "value": "10"
+            },
+            {
+              "value": "11"
+            },
+            {
+              "value": "12"
+            }
+          ]
         }
       },
       "sm": {
@@ -23332,7 +23626,49 @@
         ],
         "required": false,
         "type": {
-          "name": "number | undefined"
+          "name": "enum",
+          "raw": "1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12 | undefined",
+          "value": [
+            {
+              "value": "undefined"
+            },
+            {
+              "value": "1"
+            },
+            {
+              "value": "2"
+            },
+            {
+              "value": "3"
+            },
+            {
+              "value": "4"
+            },
+            {
+              "value": "5"
+            },
+            {
+              "value": "6"
+            },
+            {
+              "value": "7"
+            },
+            {
+              "value": "8"
+            },
+            {
+              "value": "9"
+            },
+            {
+              "value": "10"
+            },
+            {
+              "value": "11"
+            },
+            {
+              "value": "12"
+            }
+          ]
         }
       },
       "md": {
@@ -23347,7 +23683,49 @@
         ],
         "required": false,
         "type": {
-          "name": "number | undefined"
+          "name": "enum",
+          "raw": "1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12 | undefined",
+          "value": [
+            {
+              "value": "undefined"
+            },
+            {
+              "value": "1"
+            },
+            {
+              "value": "2"
+            },
+            {
+              "value": "3"
+            },
+            {
+              "value": "4"
+            },
+            {
+              "value": "5"
+            },
+            {
+              "value": "6"
+            },
+            {
+              "value": "7"
+            },
+            {
+              "value": "8"
+            },
+            {
+              "value": "9"
+            },
+            {
+              "value": "10"
+            },
+            {
+              "value": "11"
+            },
+            {
+              "value": "12"
+            }
+          ]
         }
       },
       "lg": {
@@ -23362,7 +23740,49 @@
         ],
         "required": false,
         "type": {
-          "name": "number | undefined"
+          "name": "enum",
+          "raw": "1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12 | undefined",
+          "value": [
+            {
+              "value": "undefined"
+            },
+            {
+              "value": "1"
+            },
+            {
+              "value": "2"
+            },
+            {
+              "value": "3"
+            },
+            {
+              "value": "4"
+            },
+            {
+              "value": "5"
+            },
+            {
+              "value": "6"
+            },
+            {
+              "value": "7"
+            },
+            {
+              "value": "8"
+            },
+            {
+              "value": "9"
+            },
+            {
+              "value": "10"
+            },
+            {
+              "value": "11"
+            },
+            {
+              "value": "12"
+            }
+          ]
         }
       },
       "xl": {
@@ -23377,7 +23797,49 @@
         ],
         "required": false,
         "type": {
-          "name": "number | undefined"
+          "name": "enum",
+          "raw": "1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12 | undefined",
+          "value": [
+            {
+              "value": "undefined"
+            },
+            {
+              "value": "1"
+            },
+            {
+              "value": "2"
+            },
+            {
+              "value": "3"
+            },
+            {
+              "value": "4"
+            },
+            {
+              "value": "5"
+            },
+            {
+              "value": "6"
+            },
+            {
+              "value": "7"
+            },
+            {
+              "value": "8"
+            },
+            {
+              "value": "9"
+            },
+            {
+              "value": "10"
+            },
+            {
+              "value": "11"
+            },
+            {
+              "value": "12"
+            }
+          ]
         }
       },
       "xxl": {
@@ -23392,7 +23854,49 @@
         ],
         "required": false,
         "type": {
-          "name": "number | undefined"
+          "name": "enum",
+          "raw": "1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12 | undefined",
+          "value": [
+            {
+              "value": "undefined"
+            },
+            {
+              "value": "1"
+            },
+            {
+              "value": "2"
+            },
+            {
+              "value": "3"
+            },
+            {
+              "value": "4"
+            },
+            {
+              "value": "5"
+            },
+            {
+              "value": "6"
+            },
+            {
+              "value": "7"
+            },
+            {
+              "value": "8"
+            },
+            {
+              "value": "9"
+            },
+            {
+              "value": "10"
+            },
+            {
+              "value": "11"
+            },
+            {
+              "value": "12"
+            }
+          ]
         }
       }
     }
@@ -23401,6 +23905,13 @@
     "tags": {},
     "description": "",
     "displayName": "GridRow",
+    "methods": [],
+    "props": {}
+  },
+  {
+    "tags": {},
+    "description": "",
+    "displayName": "Row",
     "methods": [],
     "props": {}
   },
@@ -23422,7 +23933,49 @@
         ],
         "required": false,
         "type": {
-          "name": "number | undefined"
+          "name": "enum",
+          "raw": "1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12 | undefined",
+          "value": [
+            {
+              "value": "undefined"
+            },
+            {
+              "value": "1"
+            },
+            {
+              "value": "2"
+            },
+            {
+              "value": "3"
+            },
+            {
+              "value": "4"
+            },
+            {
+              "value": "5"
+            },
+            {
+              "value": "6"
+            },
+            {
+              "value": "7"
+            },
+            {
+              "value": "8"
+            },
+            {
+              "value": "9"
+            },
+            {
+              "value": "10"
+            },
+            {
+              "value": "11"
+            },
+            {
+              "value": "12"
+            }
+          ]
         }
       },
       "sm": {
@@ -23437,7 +23990,49 @@
         ],
         "required": false,
         "type": {
-          "name": "number | undefined"
+          "name": "enum",
+          "raw": "1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12 | undefined",
+          "value": [
+            {
+              "value": "undefined"
+            },
+            {
+              "value": "1"
+            },
+            {
+              "value": "2"
+            },
+            {
+              "value": "3"
+            },
+            {
+              "value": "4"
+            },
+            {
+              "value": "5"
+            },
+            {
+              "value": "6"
+            },
+            {
+              "value": "7"
+            },
+            {
+              "value": "8"
+            },
+            {
+              "value": "9"
+            },
+            {
+              "value": "10"
+            },
+            {
+              "value": "11"
+            },
+            {
+              "value": "12"
+            }
+          ]
         }
       },
       "md": {
@@ -23452,7 +24047,49 @@
         ],
         "required": false,
         "type": {
-          "name": "number | undefined"
+          "name": "enum",
+          "raw": "1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12 | undefined",
+          "value": [
+            {
+              "value": "undefined"
+            },
+            {
+              "value": "1"
+            },
+            {
+              "value": "2"
+            },
+            {
+              "value": "3"
+            },
+            {
+              "value": "4"
+            },
+            {
+              "value": "5"
+            },
+            {
+              "value": "6"
+            },
+            {
+              "value": "7"
+            },
+            {
+              "value": "8"
+            },
+            {
+              "value": "9"
+            },
+            {
+              "value": "10"
+            },
+            {
+              "value": "11"
+            },
+            {
+              "value": "12"
+            }
+          ]
         }
       },
       "lg": {
@@ -23467,7 +24104,49 @@
         ],
         "required": false,
         "type": {
-          "name": "number | undefined"
+          "name": "enum",
+          "raw": "1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12 | undefined",
+          "value": [
+            {
+              "value": "undefined"
+            },
+            {
+              "value": "1"
+            },
+            {
+              "value": "2"
+            },
+            {
+              "value": "3"
+            },
+            {
+              "value": "4"
+            },
+            {
+              "value": "5"
+            },
+            {
+              "value": "6"
+            },
+            {
+              "value": "7"
+            },
+            {
+              "value": "8"
+            },
+            {
+              "value": "9"
+            },
+            {
+              "value": "10"
+            },
+            {
+              "value": "11"
+            },
+            {
+              "value": "12"
+            }
+          ]
         }
       },
       "xl": {
@@ -23482,7 +24161,49 @@
         ],
         "required": false,
         "type": {
-          "name": "number | undefined"
+          "name": "enum",
+          "raw": "1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12 | undefined",
+          "value": [
+            {
+              "value": "undefined"
+            },
+            {
+              "value": "1"
+            },
+            {
+              "value": "2"
+            },
+            {
+              "value": "3"
+            },
+            {
+              "value": "4"
+            },
+            {
+              "value": "5"
+            },
+            {
+              "value": "6"
+            },
+            {
+              "value": "7"
+            },
+            {
+              "value": "8"
+            },
+            {
+              "value": "9"
+            },
+            {
+              "value": "10"
+            },
+            {
+              "value": "11"
+            },
+            {
+              "value": "12"
+            }
+          ]
         }
       },
       "xxl": {
@@ -23497,10 +24218,59 @@
         ],
         "required": false,
         "type": {
-          "name": "number | undefined"
+          "name": "enum",
+          "raw": "1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12 | undefined",
+          "value": [
+            {
+              "value": "undefined"
+            },
+            {
+              "value": "1"
+            },
+            {
+              "value": "2"
+            },
+            {
+              "value": "3"
+            },
+            {
+              "value": "4"
+            },
+            {
+              "value": "5"
+            },
+            {
+              "value": "6"
+            },
+            {
+              "value": "7"
+            },
+            {
+              "value": "8"
+            },
+            {
+              "value": "9"
+            },
+            {
+              "value": "10"
+            },
+            {
+              "value": "11"
+            },
+            {
+              "value": "12"
+            }
+          ]
         }
       }
     }
+  },
+  {
+    "tags": {},
+    "description": "",
+    "displayName": "Col",
+    "methods": [],
+    "props": {}
   },
   {
     "tags": {},
