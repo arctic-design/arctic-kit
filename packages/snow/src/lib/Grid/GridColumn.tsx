@@ -1,37 +1,28 @@
-'use client';
 import { styled } from '@pigment-css/react';
 import { mq } from './utils';
 import { HTMLAttributes, PropsWithChildren } from 'react';
-import { useGrid } from './useGrid';
+import { clsx } from 'clsx';
+export const GridSizeMap = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12] as const;
+export type GridSizeType = (typeof GridSizeMap)[number];
+
 type DefaultColProps = {
-  xs?: number;
-  sm?: number;
-  md?: number;
-  lg?: number;
-  xl?: number;
-  xxl?: number;
-};
-type ColProps = DefaultColProps & {
-  gutterWidth?: number;
-  halfGutterWidth?: number;
-  spacing?: number;
+  xs?: GridSizeType;
+  sm?: GridSizeType;
+  md?: GridSizeType;
+  lg?: GridSizeType;
+  xl?: GridSizeType;
+  xxl?: GridSizeType;
 };
 
-const GridSizeMap = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
-
-const Col = styled.div<ColProps>({
+export const Col = styled.div<DefaultColProps & { spacing?: number }>({
   boxSizing: 'border-box',
   flex: '0 0 auto',
   flexBasis: '100%',
-  padding: (props: ColProps) =>
-    props.spacing !== 0 && props.spacing ? props.spacing * 4 : 0,
   maxWidth: '100%',
   flexGrow: 1,
-
   '&.reverse': {
     flexDirection: 'column-reverse',
   },
-
   variants: [
     ...GridSizeMap.map((xs) => ({
       props: { xs },
@@ -91,16 +82,11 @@ const Col = styled.div<ColProps>({
 type GridColumnProps = DefaultColProps & HTMLAttributes<HTMLDivElement>;
 export function GridColumn({
   children,
+  className,
   ...restProps
 }: PropsWithChildren<GridColumnProps>) {
-  const { gutterWidth, halfGutterWidth, spacing } = useGrid();
   return (
-    <Col
-      gutterWidth={gutterWidth}
-      halfGutterWidth={halfGutterWidth}
-      spacing={spacing}
-      {...restProps}
-    >
+    <Col className={clsx('grid-col', { className })} {...restProps}>
       {children}
     </Col>
   );

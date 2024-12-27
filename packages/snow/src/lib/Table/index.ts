@@ -1,4 +1,4 @@
-export { Table } from './Table';
+export * as Table from './Table';
 export type {
   TableRootProps,
   TableHeaderProps,

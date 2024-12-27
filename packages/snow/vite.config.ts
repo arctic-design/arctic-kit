@@ -1,5 +1,5 @@
 /// <reference types='vitest' />
-import { defineConfig } from 'vite';
+import { defineConfig, type Plugin } from 'vite';
 import react from '@vitejs/plugin-react';
 import dts from 'vite-plugin-dts';
 import * as path from 'path';
@@ -7,6 +7,7 @@ import { nxViteTsPaths } from '@nx/vite/plugins/nx-tsconfig-paths.plugin';
 import { nxCopyAssetsPlugin } from '@nx/vite/plugins/nx-copy-assets.plugin';
 import { extendTheme, pigment } from '@pigment-css/vite-plugin';
 import { DEFAULT_THEME, DEFAULT_DARK_THEME } from './src/theming/theme';
+import preserveDirectives from 'rollup-preserve-directives';
 
 const theme = extendTheme({
   colorSchemes: {
@@ -31,6 +32,7 @@ export default defineConfig({
       entryRoot: 'src',
       tsconfigPath: path.join(__dirname, 'tsconfig.lib.json'),
     }),
+    preserveDirectives() as Plugin,
   ],
 
   // Uncomment this if you are using workers.
@@ -71,7 +73,7 @@ export default defineConfig({
         preserveModulesRoot: 'src',
         // entryFileNames: '[name].js',
         dir: '../../dist/packages/snow',
-        banner: `'use client';`,
+        // banner: `'use client';`,
         // exports: 'named',
         entryFileNames: (chunkInfo) => {
           if (chunkInfo.name.includes('node_modules')) {
