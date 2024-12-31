@@ -6,12 +6,13 @@ export const TooltipContentContainer = styled.div(
   ({ theme: { vars: theme } }: SnowThemeArgs) => ({
     backgroundColor: theme.colors.grey[900],
     color: theme.colors.grey[50],
-    borderRadius: 4,
+    borderRadius: theme.border.radius.main,
     boxSizing: 'border-box',
     width: 'max-content',
     maxWidth: 'calc(100vw - 10px)',
     display: 'flex',
-    padding: 8,
+    paddingInline: 8,
+    paddingBlock: 4,
     flexDirection: 'column',
     alignItems: 'flex-start',
     alignSelf: 'stretch',
@@ -19,7 +20,8 @@ export const TooltipContentContainer = styled.div(
     fontSize: theme.font.size[25],
     fontStyle: 'normal',
     fontWeight: theme.font.weight.regular,
-    lineHeight: 'normal',
+    lineHeight: '1rem',
+    outline: 0,
   })
 );
 

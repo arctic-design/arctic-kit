@@ -3,6 +3,8 @@ import type { Meta, StoryObj } from '@storybook/react';
 import { Tooltip } from './Tooltip';
 import { Button } from '../Button';
 import { Box } from '../Box';
+import { IconButton } from '../IconButton';
+import { InformationCircleIcon } from '@arctic-kit/icons';
 
 // More on how to set up stories at: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
 const meta: Meta<typeof Tooltip> = {
@@ -62,6 +64,17 @@ export const WithDiv: Story = {
       >
         Trigger Div
       </Box>
+    ),
+  },
+};
+
+export const WithIconButton: Story = {
+  args: {
+    message: 'This info might help others.',
+    children: (
+      <IconButton noBorder>
+        <InformationCircleIcon />
+      </IconButton>
     ),
   },
 };
