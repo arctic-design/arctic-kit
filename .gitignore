@@ -63,3 +63,4 @@ doctor-storybook.log
 .next
 out
 vite.config.*.timestamp*
+vitest.config.*.timestamp*
