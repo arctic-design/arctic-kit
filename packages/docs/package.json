@@ -1,6 +1,6 @@
 {
   "name": "@arctic-kit/docs",
-  "version": "0.31.0",
+  "version": "0.31.1",
   "dependencies": {
     "tslib": "^2.3.0"
   },
