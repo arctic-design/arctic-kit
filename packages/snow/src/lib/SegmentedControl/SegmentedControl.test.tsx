@@ -1,9 +1,7 @@
 import { fireEvent, render, waitFor } from '../../utils/test-utils';
 import { SegmentedControl } from './SegmentedControl';
 import { SegmentedControlButton } from './SegmentedControlButton';
-
 import { SnowHeights } from '../constants';
-import { ThemeSize } from '../types';
 import { DEFAULT_THEME } from '../../theming/theme';
 import { forwardRef } from 'react';
 import { useSegmentedControl } from './SegmentedControlContext';
