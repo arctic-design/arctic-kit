@@ -84,13 +84,10 @@
     "verdaccio": "6.0.5",
     "vite": "6.2.1",
     "vite-plugin-dts": "4.5.3",
-    "vitest": "^2.1.9"
+    "vitest": "^3.0.8"
   },
   "nx": {
     "includedScripts": []
   },
-  "packageManager": "yarn@4.7.0",
-  "resolutions": {
-    "express": "^4.21.1"
-  }
+  "packageManager": "yarn@4.7.0"
 }
