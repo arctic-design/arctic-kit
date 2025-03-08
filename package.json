@@ -89,8 +89,5 @@
   "nx": {
     "includedScripts": []
   },
-  "packageManager": "yarn@4.7.0",
-  "resolutions": {
-    "express": "^4.21.1"
-  }
+  "packageManager": "yarn@4.7.0"
 }
