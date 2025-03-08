@@ -5,14 +5,14 @@
   "types": "./index.d.ts",
   "exports": {
     ".": {
+      "types": "./index.d.ts",
       "import": "./index.mjs",
-      "require": "./index.js",
-      "types": "./index.d.ts"
+      "require": "./index.js"
     },
     "./solid": {
+      "types": "./solid/index.d.ts",
       "import": "./solid/index.mjs",
-      "require": "./solid/index.js",
-      "types": "./solid/index.d.ts"
+      "require": "./solid/index.js"
     }
   },
   "author": "Barun Prasad",

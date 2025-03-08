@@ -1,5 +1,6 @@
 /// <reference types='vitest' />
-import { defineConfig, type Plugin } from 'vite';
+import { defineConfig, type Plugin, type UserConfig } from 'vite';
+import type { InlineConfig } from 'vitest/node';
 import react from '@vitejs/plugin-react';
 import dts from 'vite-plugin-dts';
 import * as path from 'path';
@@ -8,6 +9,10 @@ import { nxCopyAssetsPlugin } from '@nx/vite/plugins/nx-copy-assets.plugin';
 import { extendTheme, pigment } from '@pigment-css/vite-plugin';
 import { DEFAULT_THEME, DEFAULT_DARK_THEME } from './src/theming/theme';
 import preserveDirectives from 'rollup-preserve-directives';
+
+interface VitestConfigExport extends UserConfig {
+  test: InlineConfig;
+}
 
 const theme = extendTheme({
   colorSchemes: {
@@ -98,4 +103,4 @@ export default defineConfig({
       provider: 'v8',
     },
   },
-});
+} as VitestConfigExport);
