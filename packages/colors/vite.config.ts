@@ -1,9 +1,14 @@
 /// <reference types='vitest' />
-import { defineConfig } from 'vite';
+import { defineConfig, type UserConfig } from 'vite';
+import type { InlineConfig } from 'vitest/node';
 import dts from 'vite-plugin-dts';
 import * as path from 'path';
 import { nxViteTsPaths } from '@nx/vite/plugins/nx-tsconfig-paths.plugin';
 import { nxCopyAssetsPlugin } from '@nx/vite/plugins/nx-copy-assets.plugin';
+
+interface VitestConfigExport extends UserConfig {
+  test: InlineConfig;
+}
 
 export default defineConfig({
   root: __dirname,
@@ -59,4 +64,4 @@ export default defineConfig({
       provider: 'v8',
     },
   },
-});
+} as VitestConfigExport);
