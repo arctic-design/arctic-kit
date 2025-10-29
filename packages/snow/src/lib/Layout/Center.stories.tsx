@@ -1,4 +1,4 @@
-import type { Meta, StoryObj } from '@storybook/react';
+import type { Meta, StoryObj } from '@storybook/react-vite';
 import { Center, CenterProps } from './Center';
 import { ChevronLeftIcon } from '@arctic-kit/icons';
 import { PropsWithChildren } from 'react';

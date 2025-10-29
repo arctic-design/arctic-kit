@@ -1,4 +1,4 @@
-import type { Meta, StoryObj } from '@storybook/react';
+import type { Meta, StoryObj } from '@storybook/react-vite';
 import { Combobox } from './Combobox';
 import { data, dataObject } from '../Autocomplete/stories.data';
 import { useState } from 'react';

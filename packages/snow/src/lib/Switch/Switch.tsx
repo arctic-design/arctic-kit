@@ -1,5 +1,5 @@
 'use client';
-import { motion } from 'framer-motion';
+import { motion, Transition } from 'framer-motion';
 import { styled } from '@pigment-css/react';
 import { DefaultSnowProps, SnowColor, SnowColorValues } from '../types';
 import { ELEVATION_STYLE } from '../constants';
@@ -11,6 +11,12 @@ const SwitchSizeMap = {
   small: DefaultSize - 4,
   medium: DefaultSize,
   large: DefaultSize + 4,
+};
+
+const spring: Transition = {
+  type: 'spring',
+  stiffness: 700,
+  damping: 30,
 };
 
 const Container = styled.div(({ theme: { vars: theme } }: SnowThemeArgs) => ({
@@ -194,11 +200,5 @@ function Switch({
     </Container>
   );
 }
-
-const spring = {
-  type: 'spring',
-  stiffness: 700,
-  damping: 30,
-};
 
 export { Switch };

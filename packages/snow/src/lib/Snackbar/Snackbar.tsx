@@ -33,7 +33,8 @@ const Snackbar = React.forwardRef<HTMLDivElement, SnackbarProps>(
       id,
     } = props;
 
-    const timerAutoHide = React.useRef<ReturnType<typeof setTimeout>>();
+    const timerAutoHide =
+      React.useRef<ReturnType<typeof setTimeout>>(undefined);
 
     const handleClose = useEventCallback((...args: [SnackbarKey]) => {
       if (onClose) {
