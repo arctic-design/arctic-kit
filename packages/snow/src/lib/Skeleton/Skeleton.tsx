@@ -1,6 +1,6 @@
 'use client';
 import React from 'react';
-import { motion } from 'framer-motion';
+import { motion, Variants } from 'framer-motion';
 import { styled } from '@pigment-css/react';
 import { SnowThemeArgs } from '../../core';
 
@@ -12,7 +12,7 @@ export type SkeletonProps = {
   id?: string;
 };
 
-const animationVariants = {
+const animationVariants: Variants = {
   animate: {
     opacity: [0.4, 1, 0.4],
     transition: {

@@ -162,7 +162,7 @@ export const PopoverTrigger = React.forwardRef<
       context.getReferenceProps({
         ref,
         ...props,
-        ...children.props,
+        ...(children as any).props, // eslint-disable-line
         'data-state': context.open ? 'open' : 'closed',
       })
     );

@@ -36,7 +36,7 @@ const getVariantStyles = (theme: SnowTheme) => {
   ];
 };
 
-const IconMap: Record<SnowFeedbackColor, JSX.Element> = {
+const IconMap: Record<SnowFeedbackColor, React.JSX.Element> = {
   success: <CheckCircleIcon />,
   info: <InformationCircleIcon />,
   warning: <ExclamationTriangleIcon />,
