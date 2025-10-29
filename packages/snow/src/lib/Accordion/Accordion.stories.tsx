@@ -1,4 +1,4 @@
-import type { Meta, StoryObj } from '@storybook/react';
+import type { Meta, StoryObj } from '@storybook/react-vite';
 import { Accordion } from './Accordion';
 import { AccordionItem } from './AccordionItem';
 import { HandThumbDownIcon, MegaphoneIcon } from '@arctic-kit/icons';
