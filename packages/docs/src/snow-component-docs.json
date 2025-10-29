@@ -467,16 +467,28 @@
               "value": "undefined"
             },
             {
+              "value": "\"top\""
+            },
+            {
+              "value": "\"right\""
+            },
+            {
               "value": "\"bottom\""
             },
             {
               "value": "\"left\""
             },
             {
-              "value": "\"right\""
+              "value": "\"top-start\""
             },
             {
-              "value": "\"top\""
+              "value": "\"top-end\""
+            },
+            {
+              "value": "\"right-start\""
+            },
+            {
+              "value": "\"right-end\""
             },
             {
               "value": "\"bottom-start\""
@@ -489,18 +501,6 @@
             },
             {
               "value": "\"left-end\""
-            },
-            {
-              "value": "\"right-start\""
-            },
-            {
-              "value": "\"right-end\""
-            },
-            {
-              "value": "\"top-start\""
-            },
-            {
-              "value": "\"top-end\""
             }
           ]
         }
@@ -602,13 +602,13 @@
               "value": "undefined"
             },
             {
-              "value": "\"text\""
-            },
-            {
               "value": "\"filled\""
             },
             {
               "value": "\"outlined\""
+            },
+            {
+              "value": "\"text\""
             }
           ]
         }
@@ -968,10 +968,10 @@
           "name": "CSSProperties | undefined"
         }
       },
-      "label": {
+      "errorText": {
         "defaultValue": null,
         "description": "",
-        "name": "label",
+        "name": "errorText",
         "declarations": [
           {
             "fileName": "arctic-kit/packages/snow/src/lib/BaseInput/BaseInput.tsx",
@@ -983,10 +983,10 @@
           "name": "string | undefined"
         }
       },
-      "errorText": {
+      "label": {
         "defaultValue": null,
         "description": "",
-        "name": "errorText",
+        "name": "label",
         "declarations": [
           {
             "fileName": "arctic-kit/packages/snow/src/lib/BaseInput/BaseInput.tsx",
@@ -1078,7 +1078,9 @@
         }
       },
       "size": {
-        "defaultValue": null,
+        "defaultValue": {
+          "value": "medium"
+        },
         "description": "",
         "name": "size",
         "declarations": [
@@ -1107,6 +1109,21 @@
           ]
         }
       },
+      "maxLength": {
+        "defaultValue": null,
+        "description": "",
+        "name": "maxLength",
+        "declarations": [
+          {
+            "fileName": "arctic-kit/packages/snow/src/lib/BaseInput/BaseInput.tsx",
+            "name": "TypeLiteral"
+          }
+        ],
+        "required": false,
+        "type": {
+          "name": "number | undefined"
+        }
+      },
       "placeholder": {
         "defaultValue": {
           "value": "Type to search"
@@ -1124,6 +1141,21 @@
           "name": "string | undefined"
         }
       },
+      "readOnly": {
+        "defaultValue": null,
+        "description": "",
+        "name": "readOnly",
+        "declarations": [
+          {
+            "fileName": "arctic-kit/packages/snow/src/lib/BaseInput/BaseInput.tsx",
+            "name": "TypeLiteral"
+          }
+        ],
+        "required": false,
+        "type": {
+          "name": "boolean | undefined"
+        }
+      },
       "required": {
         "defaultValue": null,
         "description": "",
@@ -1139,19 +1171,19 @@
           "name": "boolean | undefined"
         }
       },
-      "maxLength": {
+      "suffix": {
         "defaultValue": null,
         "description": "",
-        "name": "maxLength",
+        "name": "suffix",
         "declarations": [
           {
-            "fileName": "arctic-kit/packages/snow/src/lib/BaseInput/BaseInput.tsx",
+            "fileName": "arctic-kit/packages/snow/src/lib/TextInput/TextInput.tsx",
             "name": "TypeLiteral"
           }
         ],
         "required": false,
         "type": {
-          "name": "number | undefined"
+          "name": "ReactNode"
         }
       },
       "containerStyle": {
@@ -1182,36 +1214,6 @@
         "required": false,
         "type": {
           "name": "string | undefined"
-        }
-      },
-      "readOnly": {
-        "defaultValue": null,
-        "description": "",
-        "name": "readOnly",
-        "declarations": [
-          {
-            "fileName": "arctic-kit/packages/snow/src/lib/BaseInput/BaseInput.tsx",
-            "name": "TypeLiteral"
-          }
-        ],
-        "required": false,
-        "type": {
-          "name": "boolean | undefined"
-        }
-      },
-      "suffix": {
-        "defaultValue": null,
-        "description": "",
-        "name": "suffix",
-        "declarations": [
-          {
-            "fileName": "arctic-kit/packages/snow/src/lib/TextInput/TextInput.tsx",
-            "name": "TypeLiteral"
-          }
-        ],
-        "required": false,
-        "type": {
-          "name": "ReactNode"
         }
       },
       "prefixProps": {
@@ -1492,36 +1494,6 @@
     "displayName": "Box",
     "methods": [],
     "props": {
-      "fontSize": {
-        "defaultValue": null,
-        "description": "",
-        "name": "fontSize",
-        "declarations": [
-          {
-            "fileName": "arctic-kit/packages/snow/src/lib/Box/Box.tsx",
-            "name": "TypeLiteral"
-          }
-        ],
-        "required": false,
-        "type": {
-          "name": "enum",
-          "raw": "\"small\" | \"medium\" | \"large\" | undefined",
-          "value": [
-            {
-              "value": "undefined"
-            },
-            {
-              "value": "\"small\""
-            },
-            {
-              "value": "\"medium\""
-            },
-            {
-              "value": "\"large\""
-            }
-          ]
-        }
-      },
       "aria-describedby": {
         "defaultValue": null,
         "description": "Identifies the element (or elements) that describes the object.\n@see aria-labelledby",
@@ -1561,7 +1533,9 @@
         }
       },
       "data-testid": {
-        "defaultValue": null,
+        "defaultValue": {
+          "value": "box-component"
+        },
         "description": "",
         "name": "data-testid",
         "declarations": [
@@ -1588,6 +1562,36 @@
         "required": false,
         "type": {
           "name": "string | undefined"
+        }
+      },
+      "fontSize": {
+        "defaultValue": null,
+        "description": "",
+        "name": "fontSize",
+        "declarations": [
+          {
+            "fileName": "arctic-kit/packages/snow/src/lib/Box/Box.tsx",
+            "name": "TypeLiteral"
+          }
+        ],
+        "required": false,
+        "type": {
+          "name": "enum",
+          "raw": "\"small\" | \"medium\" | \"large\" | undefined",
+          "value": [
+            {
+              "value": "undefined"
+            },
+            {
+              "value": "\"small\""
+            },
+            {
+              "value": "\"medium\""
+            },
+            {
+              "value": "\"large\""
+            }
+          ]
         }
       }
     }
@@ -1711,7 +1715,7 @@
       },
       "variant": {
         "defaultValue": {
-          "value": "\"filled\""
+          "value": "filled"
         },
         "description": "Variant of the button",
         "name": "variant",
@@ -1734,13 +1738,13 @@
               "value": "undefined"
             },
             {
-              "value": "\"text\""
-            },
-            {
               "value": "\"filled\""
             },
             {
               "value": "\"outlined\""
+            },
+            {
+              "value": "\"text\""
             }
           ]
         }
@@ -2001,7 +2005,7 @@
       },
       "size": {
         "defaultValue": {
-          "value": "\"medium\""
+          "value": "medium"
         },
         "description": "",
         "name": "size",
@@ -2032,7 +2036,9 @@
         }
       },
       "disabled": {
-        "defaultValue": null,
+        "defaultValue": {
+          "value": "false"
+        },
         "description": "",
         "name": "disabled",
         "declarations": [
@@ -2086,13 +2092,13 @@
               "value": "undefined"
             },
             {
-              "value": "\"text\""
-            },
-            {
               "value": "\"filled\""
             },
             {
               "value": "\"outlined\""
+            },
+            {
+              "value": "\"text\""
             }
           ]
         }
@@ -3427,10 +3433,10 @@
           "name": "CSSProperties | undefined"
         }
       },
-      "label": {
+      "errorText": {
         "defaultValue": null,
         "description": "",
-        "name": "label",
+        "name": "errorText",
         "declarations": [
           {
             "fileName": "arctic-kit/packages/snow/src/lib/BaseInput/BaseInput.tsx",
@@ -3442,10 +3448,10 @@
           "name": "string | undefined"
         }
       },
-      "errorText": {
+      "label": {
         "defaultValue": null,
         "description": "",
-        "name": "errorText",
+        "name": "label",
         "declarations": [
           {
             "fileName": "arctic-kit/packages/snow/src/lib/BaseInput/BaseInput.tsx",
@@ -3566,6 +3572,21 @@
           ]
         }
       },
+      "maxLength": {
+        "defaultValue": null,
+        "description": "",
+        "name": "maxLength",
+        "declarations": [
+          {
+            "fileName": "arctic-kit/packages/snow/src/lib/BaseInput/BaseInput.tsx",
+            "name": "TypeLiteral"
+          }
+        ],
+        "required": false,
+        "type": {
+          "name": "number | undefined"
+        }
+      },
       "placeholder": {
         "defaultValue": null,
         "description": "",
@@ -3579,6 +3600,21 @@
         "required": false,
         "type": {
           "name": "string | undefined"
+        }
+      },
+      "readOnly": {
+        "defaultValue": null,
+        "description": "",
+        "name": "readOnly",
+        "declarations": [
+          {
+            "fileName": "arctic-kit/packages/snow/src/lib/BaseInput/BaseInput.tsx",
+            "name": "TypeLiteral"
+          }
+        ],
+        "required": false,
+        "type": {
+          "name": "boolean | undefined"
         }
       },
       "required": {
@@ -3596,19 +3632,19 @@
           "name": "boolean | undefined"
         }
       },
-      "maxLength": {
+      "options": {
         "defaultValue": null,
         "description": "",
-        "name": "maxLength",
+        "name": "options",
         "declarations": [
           {
-            "fileName": "arctic-kit/packages/snow/src/lib/BaseInput/BaseInput.tsx",
+            "fileName": "arctic-kit/packages/snow/src/lib/Autocomplete/Autocomplete.tsx",
             "name": "TypeLiteral"
           }
         ],
-        "required": false,
+        "required": true,
         "type": {
-          "name": "number | undefined"
+          "name": "readonly (string | OptionType)[]"
         }
       },
       "containerStyle": {
@@ -3639,36 +3675,6 @@
         "required": false,
         "type": {
           "name": "string | undefined"
-        }
-      },
-      "readOnly": {
-        "defaultValue": null,
-        "description": "",
-        "name": "readOnly",
-        "declarations": [
-          {
-            "fileName": "arctic-kit/packages/snow/src/lib/BaseInput/BaseInput.tsx",
-            "name": "TypeLiteral"
-          }
-        ],
-        "required": false,
-        "type": {
-          "name": "boolean | undefined"
-        }
-      },
-      "options": {
-        "defaultValue": null,
-        "description": "",
-        "name": "options",
-        "declarations": [
-          {
-            "fileName": "arctic-kit/packages/snow/src/lib/Autocomplete/Autocomplete.tsx",
-            "name": "TypeLiteral"
-          }
-        ],
-        "required": true,
-        "type": {
-          "name": "readonly (string | OptionType)[]"
         }
       }
     }
@@ -4012,16 +4018,16 @@
               "value": "undefined"
             },
             {
-              "value": "\"bottom\""
-            },
-            {
-              "value": "\"left\""
+              "value": "\"top\""
             },
             {
               "value": "\"right\""
             },
             {
-              "value": "\"top\""
+              "value": "\"bottom\""
+            },
+            {
+              "value": "\"left\""
             }
           ]
         }
@@ -5578,6 +5584,21 @@
     "displayName": "Loader",
     "methods": [],
     "props": {
+      "disabled": {
+        "defaultValue": null,
+        "description": "",
+        "name": "disabled",
+        "declarations": [
+          {
+            "fileName": "arctic-kit/packages/snow/src/lib/types.ts",
+            "name": "TypeLiteral"
+          }
+        ],
+        "required": false,
+        "type": {
+          "name": "boolean | undefined"
+        }
+      },
       "color": {
         "defaultValue": {
           "value": "primary"
@@ -5617,21 +5638,6 @@
               "value": "\"secondary\""
             }
           ]
-        }
-      },
-      "disabled": {
-        "defaultValue": null,
-        "description": "",
-        "name": "disabled",
-        "declarations": [
-          {
-            "fileName": "arctic-kit/packages/snow/src/lib/types.ts",
-            "name": "TypeLiteral"
-          }
-        ],
-        "required": false,
-        "type": {
-          "name": "boolean | undefined"
         }
       },
       "type": {
@@ -6606,16 +6612,28 @@
               "value": "undefined"
             },
             {
+              "value": "\"top\""
+            },
+            {
+              "value": "\"right\""
+            },
+            {
               "value": "\"bottom\""
             },
             {
               "value": "\"left\""
             },
             {
-              "value": "\"right\""
+              "value": "\"top-start\""
             },
             {
-              "value": "\"top\""
+              "value": "\"top-end\""
+            },
+            {
+              "value": "\"right-start\""
+            },
+            {
+              "value": "\"right-end\""
             },
             {
               "value": "\"bottom-start\""
@@ -6628,18 +6646,6 @@
             },
             {
               "value": "\"left-end\""
-            },
-            {
-              "value": "\"right-start\""
-            },
-            {
-              "value": "\"right-end\""
-            },
-            {
-              "value": "\"top-start\""
-            },
-            {
-              "value": "\"top-end\""
             }
           ]
         }
@@ -6732,103 +6738,6 @@
     "displayName": "PopoverTrigger",
     "methods": [],
     "props": {
-      "color": {
-        "defaultValue": {
-          "value": "\"primary\""
-        },
-        "description": "",
-        "name": "color",
-        "parent": {
-          "fileName": "arctic-kit/node_modules/@types/react/index.d.ts",
-          "name": "HTMLAttributes"
-        },
-        "declarations": [
-          {
-            "fileName": "arctic-kit/node_modules/@types/react/index.d.ts",
-            "name": "HTMLAttributes"
-          },
-          {
-            "fileName": "arctic-kit/packages/snow/src/lib/types.ts",
-            "name": "TypeLiteral"
-          }
-        ],
-        "required": false,
-        "type": {
-          "name": "enum",
-          "raw": "\"success\" | \"error\" | \"warning\" | \"info\" | \"primary\" | \"secondary\" | undefined",
-          "value": [
-            {
-              "value": "undefined"
-            },
-            {
-              "value": "\"success\""
-            },
-            {
-              "value": "\"error\""
-            },
-            {
-              "value": "\"warning\""
-            },
-            {
-              "value": "\"info\""
-            },
-            {
-              "value": "\"primary\""
-            },
-            {
-              "value": "\"secondary\""
-            }
-          ]
-        }
-      },
-      "disabled": {
-        "defaultValue": null,
-        "description": "",
-        "name": "disabled",
-        "parent": {
-          "fileName": "arctic-kit/node_modules/@types/react/index.d.ts",
-          "name": "AllHTMLAttributes"
-        },
-        "declarations": [
-          {
-            "fileName": "arctic-kit/node_modules/@types/react/index.d.ts",
-            "name": "AllHTMLAttributes"
-          },
-          {
-            "fileName": "arctic-kit/packages/snow/src/lib/types.ts",
-            "name": "TypeLiteral"
-          }
-        ],
-        "required": false,
-        "type": {
-          "name": "boolean | undefined"
-        }
-      },
-      "size": {
-        "defaultValue": {
-          "value": "\"medium\""
-        },
-        "description": "",
-        "name": "size",
-        "parent": {
-          "fileName": "arctic-kit/node_modules/@types/react/index.d.ts",
-          "name": "AllHTMLAttributes"
-        },
-        "declarations": [
-          {
-            "fileName": "arctic-kit/node_modules/@types/react/index.d.ts",
-            "name": "AllHTMLAttributes"
-          },
-          {
-            "fileName": "arctic-kit/packages/snow/src/lib/types.ts",
-            "name": "TypeLiteral"
-          }
-        ],
-        "required": false,
-        "type": {
-          "name": "undefined"
-        }
-      },
       "asChild": {
         "defaultValue": {
           "value": "false"
@@ -8062,6 +7971,1098 @@
   {
     "tags": {},
     "description": "",
+    "displayName": "\"/home/runner/work/arctic-kit/arctic-kit/packages/snow/src/lib/Table/Table\".TableRoot",
+    "methods": [],
+    "props": {
+      "size": {
+        "defaultValue": {
+          "value": "medium"
+        },
+        "description": "",
+        "name": "size",
+        "parent": {
+          "fileName": "arctic-kit/packages/snow/src/lib/Table/types.ts",
+          "name": "TableRootProps"
+        },
+        "declarations": [
+          {
+            "fileName": "arctic-kit/packages/snow/src/lib/Table/types.ts",
+            "name": "TableRootProps"
+          }
+        ],
+        "required": false,
+        "type": {
+          "name": "enum",
+          "raw": "\"small\" | \"medium\" | \"large\" | undefined",
+          "value": [
+            {
+              "value": "undefined"
+            },
+            {
+              "value": "\"small\""
+            },
+            {
+              "value": "\"medium\""
+            },
+            {
+              "value": "\"large\""
+            }
+          ]
+        }
+      },
+      "variant": {
+        "defaultValue": {
+          "value": "surface"
+        },
+        "description": "",
+        "name": "variant",
+        "parent": {
+          "fileName": "arctic-kit/packages/snow/src/lib/Table/types.ts",
+          "name": "TableRootProps"
+        },
+        "declarations": [
+          {
+            "fileName": "arctic-kit/packages/snow/src/lib/Table/types.ts",
+            "name": "TableRootProps"
+          }
+        ],
+        "required": false,
+        "type": {
+          "name": "enum",
+          "raw": "TableVariant | undefined",
+          "value": [
+            {
+              "value": "undefined"
+            },
+            {
+              "value": "\"surface\""
+            },
+            {
+              "value": "\"ghost\""
+            }
+          ]
+        }
+      },
+      "layout": {
+        "defaultValue": {
+          "value": "responsive"
+        },
+        "description": "",
+        "name": "layout",
+        "parent": {
+          "fileName": "arctic-kit/packages/snow/src/lib/Table/types.ts",
+          "name": "TableRootProps"
+        },
+        "declarations": [
+          {
+            "fileName": "arctic-kit/packages/snow/src/lib/Table/types.ts",
+            "name": "TableRootProps"
+          }
+        ],
+        "required": false,
+        "type": {
+          "name": "enum",
+          "raw": "TableLayout | undefined",
+          "value": [
+            {
+              "value": "undefined"
+            },
+            {
+              "value": "\"fixed\""
+            },
+            {
+              "value": "\"responsive\""
+            }
+          ]
+        }
+      },
+      "color": {
+        "defaultValue": null,
+        "description": "",
+        "name": "color",
+        "parent": {
+          "fileName": "arctic-kit/packages/snow/src/lib/Table/types.ts",
+          "name": "TableRootProps"
+        },
+        "declarations": [
+          {
+            "fileName": "arctic-kit/packages/snow/src/lib/Table/types.ts",
+            "name": "TableRootProps"
+          }
+        ],
+        "required": false,
+        "type": {
+          "name": "enum",
+          "raw": "SnowColor | undefined",
+          "value": [
+            {
+              "value": "undefined"
+            },
+            {
+              "value": "\"success\""
+            },
+            {
+              "value": "\"error\""
+            },
+            {
+              "value": "\"warning\""
+            },
+            {
+              "value": "\"info\""
+            },
+            {
+              "value": "\"primary\""
+            },
+            {
+              "value": "\"secondary\""
+            }
+          ]
+        }
+      }
+    }
+  },
+  {
+    "tags": {},
+    "description": "",
+    "displayName": "\"/home/runner/work/arctic-kit/arctic-kit/packages/snow/src/lib/Table/Table\".TableHeader",
+    "methods": [],
+    "props": {
+      "variant": {
+        "defaultValue": {
+          "value": "surface"
+        },
+        "description": "",
+        "name": "variant",
+        "parent": {
+          "fileName": "arctic-kit/packages/snow/src/lib/Table/types.ts",
+          "name": "TableHeaderProps"
+        },
+        "declarations": [
+          {
+            "fileName": "arctic-kit/packages/snow/src/lib/Table/types.ts",
+            "name": "TableHeaderProps"
+          }
+        ],
+        "required": false,
+        "type": {
+          "name": "enum",
+          "raw": "TableVariant | undefined",
+          "value": [
+            {
+              "value": "undefined"
+            },
+            {
+              "value": "\"surface\""
+            },
+            {
+              "value": "\"ghost\""
+            }
+          ]
+        }
+      },
+      "color": {
+        "defaultValue": null,
+        "description": "",
+        "name": "color",
+        "parent": {
+          "fileName": "arctic-kit/packages/snow/src/lib/Table/types.ts",
+          "name": "TableHeaderProps"
+        },
+        "declarations": [
+          {
+            "fileName": "arctic-kit/packages/snow/src/lib/Table/types.ts",
+            "name": "TableHeaderProps"
+          }
+        ],
+        "required": false,
+        "type": {
+          "name": "enum",
+          "raw": "SnowColor | undefined",
+          "value": [
+            {
+              "value": "undefined"
+            },
+            {
+              "value": "\"success\""
+            },
+            {
+              "value": "\"error\""
+            },
+            {
+              "value": "\"warning\""
+            },
+            {
+              "value": "\"info\""
+            },
+            {
+              "value": "\"primary\""
+            },
+            {
+              "value": "\"secondary\""
+            }
+          ]
+        }
+      }
+    }
+  },
+  {
+    "tags": {},
+    "description": "",
+    "displayName": "\"/home/runner/work/arctic-kit/arctic-kit/packages/snow/src/lib/Table/Table\".TableBody",
+    "methods": [],
+    "props": {
+      "variant": {
+        "defaultValue": {
+          "value": "surface"
+        },
+        "description": "",
+        "name": "variant",
+        "parent": {
+          "fileName": "arctic-kit/packages/snow/src/lib/Table/types.ts",
+          "name": "TableBodyProps"
+        },
+        "declarations": [
+          {
+            "fileName": "arctic-kit/packages/snow/src/lib/Table/types.ts",
+            "name": "TableBodyProps"
+          }
+        ],
+        "required": false,
+        "type": {
+          "name": "enum",
+          "raw": "TableVariant | undefined",
+          "value": [
+            {
+              "value": "undefined"
+            },
+            {
+              "value": "\"surface\""
+            },
+            {
+              "value": "\"ghost\""
+            }
+          ]
+        }
+      }
+    }
+  },
+  {
+    "tags": {},
+    "description": "",
+    "displayName": "\"/home/runner/work/arctic-kit/arctic-kit/packages/snow/src/lib/Table/Table\".TableRow",
+    "methods": [],
+    "props": {}
+  },
+  {
+    "tags": {},
+    "description": "",
+    "displayName": "\"/home/runner/work/arctic-kit/arctic-kit/packages/snow/src/lib/Table/Table\".TableColumnHeaderCell",
+    "methods": [],
+    "props": {
+      "size": {
+        "defaultValue": {
+          "value": "medium"
+        },
+        "description": "",
+        "name": "size",
+        "parent": {
+          "fileName": "arctic-kit/packages/snow/src/lib/Table/types.ts",
+          "name": "TableHeaderCellProps"
+        },
+        "declarations": [
+          {
+            "fileName": "arctic-kit/packages/snow/src/lib/Table/types.ts",
+            "name": "TableHeaderCellProps"
+          }
+        ],
+        "required": false,
+        "type": {
+          "name": "enum",
+          "raw": "\"small\" | \"medium\" | \"large\" | undefined",
+          "value": [
+            {
+              "value": "undefined"
+            },
+            {
+              "value": "\"small\""
+            },
+            {
+              "value": "\"medium\""
+            },
+            {
+              "value": "\"large\""
+            }
+          ]
+        }
+      },
+      "color": {
+        "defaultValue": null,
+        "description": "",
+        "name": "color",
+        "parent": {
+          "fileName": "arctic-kit/packages/snow/src/lib/Table/types.ts",
+          "name": "TableHeaderCellProps"
+        },
+        "declarations": [
+          {
+            "fileName": "arctic-kit/packages/snow/src/lib/Table/types.ts",
+            "name": "TableHeaderCellProps"
+          }
+        ],
+        "required": false,
+        "type": {
+          "name": "enum",
+          "raw": "SnowColor | undefined",
+          "value": [
+            {
+              "value": "undefined"
+            },
+            {
+              "value": "\"success\""
+            },
+            {
+              "value": "\"error\""
+            },
+            {
+              "value": "\"warning\""
+            },
+            {
+              "value": "\"info\""
+            },
+            {
+              "value": "\"primary\""
+            },
+            {
+              "value": "\"secondary\""
+            }
+          ]
+        }
+      }
+    }
+  },
+  {
+    "tags": {},
+    "description": "",
+    "displayName": "\"/home/runner/work/arctic-kit/arctic-kit/packages/snow/src/lib/Table/Table\".TableRowHeaderCell",
+    "methods": [],
+    "props": {
+      "size": {
+        "defaultValue": {
+          "value": "medium"
+        },
+        "description": "",
+        "name": "size",
+        "parent": {
+          "fileName": "arctic-kit/packages/snow/src/lib/Table/types.ts",
+          "name": "TableRowHeaderCellProps"
+        },
+        "declarations": [
+          {
+            "fileName": "arctic-kit/packages/snow/src/lib/Table/types.ts",
+            "name": "TableRowHeaderCellProps"
+          }
+        ],
+        "required": false,
+        "type": {
+          "name": "enum",
+          "raw": "\"small\" | \"medium\" | \"large\" | undefined",
+          "value": [
+            {
+              "value": "undefined"
+            },
+            {
+              "value": "\"small\""
+            },
+            {
+              "value": "\"medium\""
+            },
+            {
+              "value": "\"large\""
+            }
+          ]
+        }
+      },
+      "color": {
+        "defaultValue": null,
+        "description": "",
+        "name": "color",
+        "parent": {
+          "fileName": "arctic-kit/packages/snow/src/lib/Table/types.ts",
+          "name": "TableRowHeaderCellProps"
+        },
+        "declarations": [
+          {
+            "fileName": "arctic-kit/packages/snow/src/lib/Table/types.ts",
+            "name": "TableRowHeaderCellProps"
+          }
+        ],
+        "required": false,
+        "type": {
+          "name": "enum",
+          "raw": "SnowColor | undefined",
+          "value": [
+            {
+              "value": "undefined"
+            },
+            {
+              "value": "\"success\""
+            },
+            {
+              "value": "\"error\""
+            },
+            {
+              "value": "\"warning\""
+            },
+            {
+              "value": "\"info\""
+            },
+            {
+              "value": "\"primary\""
+            },
+            {
+              "value": "\"secondary\""
+            }
+          ]
+        }
+      }
+    }
+  },
+  {
+    "tags": {},
+    "description": "",
+    "displayName": "\"/home/runner/work/arctic-kit/arctic-kit/packages/snow/src/lib/Table/Table\".TableCell",
+    "methods": [],
+    "props": {
+      "size": {
+        "defaultValue": {
+          "value": "medium"
+        },
+        "description": "",
+        "name": "size",
+        "parent": {
+          "fileName": "arctic-kit/packages/snow/src/lib/Table/types.ts",
+          "name": "TableCellProps"
+        },
+        "declarations": [
+          {
+            "fileName": "arctic-kit/packages/snow/src/lib/Table/types.ts",
+            "name": "TableCellProps"
+          }
+        ],
+        "required": false,
+        "type": {
+          "name": "enum",
+          "raw": "\"small\" | \"medium\" | \"large\" | undefined",
+          "value": [
+            {
+              "value": "undefined"
+            },
+            {
+              "value": "\"small\""
+            },
+            {
+              "value": "\"medium\""
+            },
+            {
+              "value": "\"large\""
+            }
+          ]
+        }
+      },
+      "color": {
+        "defaultValue": null,
+        "description": "",
+        "name": "color",
+        "parent": {
+          "fileName": "arctic-kit/packages/snow/src/lib/Table/types.ts",
+          "name": "TableCellProps"
+        },
+        "declarations": [
+          {
+            "fileName": "arctic-kit/packages/snow/src/lib/Table/types.ts",
+            "name": "TableCellProps"
+          }
+        ],
+        "required": false,
+        "type": {
+          "name": "enum",
+          "raw": "SnowColor | undefined",
+          "value": [
+            {
+              "value": "undefined"
+            },
+            {
+              "value": "\"success\""
+            },
+            {
+              "value": "\"error\""
+            },
+            {
+              "value": "\"warning\""
+            },
+            {
+              "value": "\"info\""
+            },
+            {
+              "value": "\"primary\""
+            },
+            {
+              "value": "\"secondary\""
+            }
+          ]
+        }
+      }
+    }
+  },
+  {
+    "tags": {},
+    "description": "",
+    "displayName": "\"/home/runner/work/arctic-kit/arctic-kit/packages/snow/src/lib/Table/Table\".Root",
+    "methods": [],
+    "props": {
+      "size": {
+        "defaultValue": {
+          "value": "medium"
+        },
+        "description": "",
+        "name": "size",
+        "parent": {
+          "fileName": "arctic-kit/packages/snow/src/lib/Table/types.ts",
+          "name": "TableRootProps"
+        },
+        "declarations": [
+          {
+            "fileName": "arctic-kit/packages/snow/src/lib/Table/types.ts",
+            "name": "TableRootProps"
+          }
+        ],
+        "required": false,
+        "type": {
+          "name": "enum",
+          "raw": "\"small\" | \"medium\" | \"large\" | undefined",
+          "value": [
+            {
+              "value": "undefined"
+            },
+            {
+              "value": "\"small\""
+            },
+            {
+              "value": "\"medium\""
+            },
+            {
+              "value": "\"large\""
+            }
+          ]
+        }
+      },
+      "variant": {
+        "defaultValue": {
+          "value": "surface"
+        },
+        "description": "",
+        "name": "variant",
+        "parent": {
+          "fileName": "arctic-kit/packages/snow/src/lib/Table/types.ts",
+          "name": "TableRootProps"
+        },
+        "declarations": [
+          {
+            "fileName": "arctic-kit/packages/snow/src/lib/Table/types.ts",
+            "name": "TableRootProps"
+          }
+        ],
+        "required": false,
+        "type": {
+          "name": "enum",
+          "raw": "TableVariant | undefined",
+          "value": [
+            {
+              "value": "undefined"
+            },
+            {
+              "value": "\"surface\""
+            },
+            {
+              "value": "\"ghost\""
+            }
+          ]
+        }
+      },
+      "layout": {
+        "defaultValue": {
+          "value": "responsive"
+        },
+        "description": "",
+        "name": "layout",
+        "parent": {
+          "fileName": "arctic-kit/packages/snow/src/lib/Table/types.ts",
+          "name": "TableRootProps"
+        },
+        "declarations": [
+          {
+            "fileName": "arctic-kit/packages/snow/src/lib/Table/types.ts",
+            "name": "TableRootProps"
+          }
+        ],
+        "required": false,
+        "type": {
+          "name": "enum",
+          "raw": "TableLayout | undefined",
+          "value": [
+            {
+              "value": "undefined"
+            },
+            {
+              "value": "\"fixed\""
+            },
+            {
+              "value": "\"responsive\""
+            }
+          ]
+        }
+      },
+      "color": {
+        "defaultValue": null,
+        "description": "",
+        "name": "color",
+        "parent": {
+          "fileName": "arctic-kit/packages/snow/src/lib/Table/types.ts",
+          "name": "TableRootProps"
+        },
+        "declarations": [
+          {
+            "fileName": "arctic-kit/packages/snow/src/lib/Table/types.ts",
+            "name": "TableRootProps"
+          }
+        ],
+        "required": false,
+        "type": {
+          "name": "enum",
+          "raw": "SnowColor | undefined",
+          "value": [
+            {
+              "value": "undefined"
+            },
+            {
+              "value": "\"success\""
+            },
+            {
+              "value": "\"error\""
+            },
+            {
+              "value": "\"warning\""
+            },
+            {
+              "value": "\"info\""
+            },
+            {
+              "value": "\"primary\""
+            },
+            {
+              "value": "\"secondary\""
+            }
+          ]
+        }
+      }
+    }
+  },
+  {
+    "tags": {},
+    "description": "",
+    "displayName": "\"/home/runner/work/arctic-kit/arctic-kit/packages/snow/src/lib/Table/Table\".Header",
+    "methods": [],
+    "props": {
+      "variant": {
+        "defaultValue": {
+          "value": "surface"
+        },
+        "description": "",
+        "name": "variant",
+        "parent": {
+          "fileName": "arctic-kit/packages/snow/src/lib/Table/types.ts",
+          "name": "TableHeaderProps"
+        },
+        "declarations": [
+          {
+            "fileName": "arctic-kit/packages/snow/src/lib/Table/types.ts",
+            "name": "TableHeaderProps"
+          }
+        ],
+        "required": false,
+        "type": {
+          "name": "enum",
+          "raw": "TableVariant | undefined",
+          "value": [
+            {
+              "value": "undefined"
+            },
+            {
+              "value": "\"surface\""
+            },
+            {
+              "value": "\"ghost\""
+            }
+          ]
+        }
+      },
+      "color": {
+        "defaultValue": null,
+        "description": "",
+        "name": "color",
+        "parent": {
+          "fileName": "arctic-kit/packages/snow/src/lib/Table/types.ts",
+          "name": "TableHeaderProps"
+        },
+        "declarations": [
+          {
+            "fileName": "arctic-kit/packages/snow/src/lib/Table/types.ts",
+            "name": "TableHeaderProps"
+          }
+        ],
+        "required": false,
+        "type": {
+          "name": "enum",
+          "raw": "SnowColor | undefined",
+          "value": [
+            {
+              "value": "undefined"
+            },
+            {
+              "value": "\"success\""
+            },
+            {
+              "value": "\"error\""
+            },
+            {
+              "value": "\"warning\""
+            },
+            {
+              "value": "\"info\""
+            },
+            {
+              "value": "\"primary\""
+            },
+            {
+              "value": "\"secondary\""
+            }
+          ]
+        }
+      }
+    }
+  },
+  {
+    "tags": {},
+    "description": "",
+    "displayName": "\"/home/runner/work/arctic-kit/arctic-kit/packages/snow/src/lib/Table/Table\".Body",
+    "methods": [],
+    "props": {
+      "variant": {
+        "defaultValue": {
+          "value": "surface"
+        },
+        "description": "",
+        "name": "variant",
+        "parent": {
+          "fileName": "arctic-kit/packages/snow/src/lib/Table/types.ts",
+          "name": "TableBodyProps"
+        },
+        "declarations": [
+          {
+            "fileName": "arctic-kit/packages/snow/src/lib/Table/types.ts",
+            "name": "TableBodyProps"
+          }
+        ],
+        "required": false,
+        "type": {
+          "name": "enum",
+          "raw": "TableVariant | undefined",
+          "value": [
+            {
+              "value": "undefined"
+            },
+            {
+              "value": "\"surface\""
+            },
+            {
+              "value": "\"ghost\""
+            }
+          ]
+        }
+      }
+    }
+  },
+  {
+    "tags": {},
+    "description": "",
+    "displayName": "\"/home/runner/work/arctic-kit/arctic-kit/packages/snow/src/lib/Table/Table\".Row",
+    "methods": [],
+    "props": {}
+  },
+  {
+    "tags": {},
+    "description": "",
+    "displayName": "\"/home/runner/work/arctic-kit/arctic-kit/packages/snow/src/lib/Table/Table\".Cell",
+    "methods": [],
+    "props": {
+      "size": {
+        "defaultValue": {
+          "value": "medium"
+        },
+        "description": "",
+        "name": "size",
+        "parent": {
+          "fileName": "arctic-kit/packages/snow/src/lib/Table/types.ts",
+          "name": "TableCellProps"
+        },
+        "declarations": [
+          {
+            "fileName": "arctic-kit/packages/snow/src/lib/Table/types.ts",
+            "name": "TableCellProps"
+          }
+        ],
+        "required": false,
+        "type": {
+          "name": "enum",
+          "raw": "\"small\" | \"medium\" | \"large\" | undefined",
+          "value": [
+            {
+              "value": "undefined"
+            },
+            {
+              "value": "\"small\""
+            },
+            {
+              "value": "\"medium\""
+            },
+            {
+              "value": "\"large\""
+            }
+          ]
+        }
+      },
+      "color": {
+        "defaultValue": null,
+        "description": "",
+        "name": "color",
+        "parent": {
+          "fileName": "arctic-kit/packages/snow/src/lib/Table/types.ts",
+          "name": "TableCellProps"
+        },
+        "declarations": [
+          {
+            "fileName": "arctic-kit/packages/snow/src/lib/Table/types.ts",
+            "name": "TableCellProps"
+          }
+        ],
+        "required": false,
+        "type": {
+          "name": "enum",
+          "raw": "SnowColor | undefined",
+          "value": [
+            {
+              "value": "undefined"
+            },
+            {
+              "value": "\"success\""
+            },
+            {
+              "value": "\"error\""
+            },
+            {
+              "value": "\"warning\""
+            },
+            {
+              "value": "\"info\""
+            },
+            {
+              "value": "\"primary\""
+            },
+            {
+              "value": "\"secondary\""
+            }
+          ]
+        }
+      }
+    }
+  },
+  {
+    "tags": {},
+    "description": "",
+    "displayName": "\"/home/runner/work/arctic-kit/arctic-kit/packages/snow/src/lib/Table/Table\".ColumnHeaderCell",
+    "methods": [],
+    "props": {
+      "size": {
+        "defaultValue": {
+          "value": "medium"
+        },
+        "description": "",
+        "name": "size",
+        "parent": {
+          "fileName": "arctic-kit/packages/snow/src/lib/Table/types.ts",
+          "name": "TableHeaderCellProps"
+        },
+        "declarations": [
+          {
+            "fileName": "arctic-kit/packages/snow/src/lib/Table/types.ts",
+            "name": "TableHeaderCellProps"
+          }
+        ],
+        "required": false,
+        "type": {
+          "name": "enum",
+          "raw": "\"small\" | \"medium\" | \"large\" | undefined",
+          "value": [
+            {
+              "value": "undefined"
+            },
+            {
+              "value": "\"small\""
+            },
+            {
+              "value": "\"medium\""
+            },
+            {
+              "value": "\"large\""
+            }
+          ]
+        }
+      },
+      "color": {
+        "defaultValue": null,
+        "description": "",
+        "name": "color",
+        "parent": {
+          "fileName": "arctic-kit/packages/snow/src/lib/Table/types.ts",
+          "name": "TableHeaderCellProps"
+        },
+        "declarations": [
+          {
+            "fileName": "arctic-kit/packages/snow/src/lib/Table/types.ts",
+            "name": "TableHeaderCellProps"
+          }
+        ],
+        "required": false,
+        "type": {
+          "name": "enum",
+          "raw": "SnowColor | undefined",
+          "value": [
+            {
+              "value": "undefined"
+            },
+            {
+              "value": "\"success\""
+            },
+            {
+              "value": "\"error\""
+            },
+            {
+              "value": "\"warning\""
+            },
+            {
+              "value": "\"info\""
+            },
+            {
+              "value": "\"primary\""
+            },
+            {
+              "value": "\"secondary\""
+            }
+          ]
+        }
+      }
+    }
+  },
+  {
+    "tags": {},
+    "description": "",
+    "displayName": "\"/home/runner/work/arctic-kit/arctic-kit/packages/snow/src/lib/Table/Table\".RowHeaderCell",
+    "methods": [],
+    "props": {
+      "size": {
+        "defaultValue": {
+          "value": "medium"
+        },
+        "description": "",
+        "name": "size",
+        "parent": {
+          "fileName": "arctic-kit/packages/snow/src/lib/Table/types.ts",
+          "name": "TableRowHeaderCellProps"
+        },
+        "declarations": [
+          {
+            "fileName": "arctic-kit/packages/snow/src/lib/Table/types.ts",
+            "name": "TableRowHeaderCellProps"
+          }
+        ],
+        "required": false,
+        "type": {
+          "name": "enum",
+          "raw": "\"small\" | \"medium\" | \"large\" | undefined",
+          "value": [
+            {
+              "value": "undefined"
+            },
+            {
+              "value": "\"small\""
+            },
+            {
+              "value": "\"medium\""
+            },
+            {
+              "value": "\"large\""
+            }
+          ]
+        }
+      },
+      "color": {
+        "defaultValue": null,
+        "description": "",
+        "name": "color",
+        "parent": {
+          "fileName": "arctic-kit/packages/snow/src/lib/Table/types.ts",
+          "name": "TableRowHeaderCellProps"
+        },
+        "declarations": [
+          {
+            "fileName": "arctic-kit/packages/snow/src/lib/Table/types.ts",
+            "name": "TableRowHeaderCellProps"
+          }
+        ],
+        "required": false,
+        "type": {
+          "name": "enum",
+          "raw": "SnowColor | undefined",
+          "value": [
+            {
+              "value": "undefined"
+            },
+            {
+              "value": "\"success\""
+            },
+            {
+              "value": "\"error\""
+            },
+            {
+              "value": "\"warning\""
+            },
+            {
+              "value": "\"info\""
+            },
+            {
+              "value": "\"primary\""
+            },
+            {
+              "value": "\"secondary\""
+            }
+          ]
+        }
+      }
+    }
+  },
+  {
+    "tags": {},
+    "description": "",
     "displayName": "Tabs",
     "methods": [],
     "props": {
@@ -8442,10 +9443,10 @@
           "name": "CSSProperties | undefined"
         }
       },
-      "label": {
+      "errorText": {
         "defaultValue": null,
         "description": "",
-        "name": "label",
+        "name": "errorText",
         "declarations": [
           {
             "fileName": "arctic-kit/packages/snow/src/lib/BaseInput/BaseInput.tsx",
@@ -8457,10 +9458,10 @@
           "name": "string | undefined"
         }
       },
-      "errorText": {
+      "label": {
         "defaultValue": null,
         "description": "",
-        "name": "errorText",
+        "name": "label",
         "declarations": [
           {
             "fileName": "arctic-kit/packages/snow/src/lib/BaseInput/BaseInput.tsx",
@@ -8553,6 +9554,21 @@
           ]
         }
       },
+      "maxLength": {
+        "defaultValue": null,
+        "description": "",
+        "name": "maxLength",
+        "declarations": [
+          {
+            "fileName": "arctic-kit/packages/snow/src/lib/BaseInput/BaseInput.tsx",
+            "name": "TypeLiteral"
+          }
+        ],
+        "required": false,
+        "type": {
+          "name": "number | undefined"
+        }
+      },
       "placeholder": {
         "defaultValue": null,
         "description": "",
@@ -8568,6 +9584,23 @@
           "name": "string | undefined"
         }
       },
+      "readOnly": {
+        "defaultValue": {
+          "value": "false"
+        },
+        "description": "",
+        "name": "readOnly",
+        "declarations": [
+          {
+            "fileName": "arctic-kit/packages/snow/src/lib/BaseInput/BaseInput.tsx",
+            "name": "TypeLiteral"
+          }
+        ],
+        "required": false,
+        "type": {
+          "name": "boolean | undefined"
+        }
+      },
       "required": {
         "defaultValue": null,
         "description": "",
@@ -8581,21 +9614,6 @@
         "required": false,
         "type": {
           "name": "boolean | undefined"
-        }
-      },
-      "maxLength": {
-        "defaultValue": null,
-        "description": "",
-        "name": "maxLength",
-        "declarations": [
-          {
-            "fileName": "arctic-kit/packages/snow/src/lib/BaseInput/BaseInput.tsx",
-            "name": "TypeLiteral"
-          }
-        ],
-        "required": false,
-        "type": {
-          "name": "number | undefined"
         }
       },
       "containerStyle": {
@@ -8626,23 +9644,6 @@
         "required": false,
         "type": {
           "name": "string | undefined"
-        }
-      },
-      "readOnly": {
-        "defaultValue": {
-          "value": "false"
-        },
-        "description": "",
-        "name": "readOnly",
-        "declarations": [
-          {
-            "fileName": "arctic-kit/packages/snow/src/lib/BaseInput/BaseInput.tsx",
-            "name": "TypeLiteral"
-          }
-        ],
-        "required": false,
-        "type": {
-          "name": "boolean | undefined"
         }
       },
       "onChange": {
@@ -8698,10 +9699,10 @@
           "name": "CSSProperties | undefined"
         }
       },
-      "label": {
+      "errorText": {
         "defaultValue": null,
         "description": "",
-        "name": "label",
+        "name": "errorText",
         "declarations": [
           {
             "fileName": "arctic-kit/packages/snow/src/lib/BaseInput/BaseInput.tsx",
@@ -8713,10 +9714,10 @@
           "name": "string | undefined"
         }
       },
-      "errorText": {
+      "label": {
         "defaultValue": null,
         "description": "",
-        "name": "errorText",
+        "name": "label",
         "declarations": [
           {
             "fileName": "arctic-kit/packages/snow/src/lib/BaseInput/BaseInput.tsx",
@@ -8809,6 +9810,21 @@
           ]
         }
       },
+      "maxLength": {
+        "defaultValue": null,
+        "description": "",
+        "name": "maxLength",
+        "declarations": [
+          {
+            "fileName": "arctic-kit/packages/snow/src/lib/BaseInput/BaseInput.tsx",
+            "name": "TypeLiteral"
+          }
+        ],
+        "required": false,
+        "type": {
+          "name": "number | undefined"
+        }
+      },
       "placeholder": {
         "defaultValue": null,
         "description": "",
@@ -8824,6 +9840,23 @@
           "name": "string | undefined"
         }
       },
+      "readOnly": {
+        "defaultValue": {
+          "value": "false"
+        },
+        "description": "",
+        "name": "readOnly",
+        "declarations": [
+          {
+            "fileName": "arctic-kit/packages/snow/src/lib/BaseInput/BaseInput.tsx",
+            "name": "TypeLiteral"
+          }
+        ],
+        "required": false,
+        "type": {
+          "name": "boolean | undefined"
+        }
+      },
       "required": {
         "defaultValue": null,
         "description": "",
@@ -8837,21 +9870,6 @@
         "required": false,
         "type": {
           "name": "boolean | undefined"
-        }
-      },
-      "maxLength": {
-        "defaultValue": null,
-        "description": "",
-        "name": "maxLength",
-        "declarations": [
-          {
-            "fileName": "arctic-kit/packages/snow/src/lib/BaseInput/BaseInput.tsx",
-            "name": "TypeLiteral"
-          }
-        ],
-        "required": false,
-        "type": {
-          "name": "number | undefined"
         }
       },
       "containerStyle": {
@@ -8882,23 +9900,6 @@
         "required": false,
         "type": {
           "name": "string | undefined"
-        }
-      },
-      "readOnly": {
-        "defaultValue": {
-          "value": "false"
-        },
-        "description": "",
-        "name": "readOnly",
-        "declarations": [
-          {
-            "fileName": "arctic-kit/packages/snow/src/lib/BaseInput/BaseInput.tsx",
-            "name": "TypeLiteral"
-          }
-        ],
-        "required": false,
-        "type": {
-          "name": "boolean | undefined"
         }
       },
       "onChange": {
@@ -9300,16 +10301,28 @@
               "value": "undefined"
             },
             {
+              "value": "\"top\""
+            },
+            {
+              "value": "\"right\""
+            },
+            {
               "value": "\"bottom\""
             },
             {
               "value": "\"left\""
             },
             {
-              "value": "\"right\""
+              "value": "\"top-start\""
             },
             {
-              "value": "\"top\""
+              "value": "\"top-end\""
+            },
+            {
+              "value": "\"right-start\""
+            },
+            {
+              "value": "\"right-end\""
             },
             {
               "value": "\"bottom-start\""
@@ -9322,18 +10335,6 @@
             },
             {
               "value": "\"left-end\""
-            },
-            {
-              "value": "\"right-start\""
-            },
-            {
-              "value": "\"right-end\""
-            },
-            {
-              "value": "\"top-start\""
-            },
-            {
-              "value": "\"top-end\""
             }
           ]
         }
@@ -10122,16 +11123,28 @@
               "value": "undefined"
             },
             {
+              "value": "\"top\""
+            },
+            {
+              "value": "\"right\""
+            },
+            {
               "value": "\"bottom\""
             },
             {
               "value": "\"left\""
             },
             {
-              "value": "\"right\""
+              "value": "\"top-start\""
             },
             {
-              "value": "\"top\""
+              "value": "\"top-end\""
+            },
+            {
+              "value": "\"right-start\""
+            },
+            {
+              "value": "\"right-end\""
             },
             {
               "value": "\"bottom-start\""
@@ -10144,18 +11157,6 @@
             },
             {
               "value": "\"left-end\""
-            },
-            {
-              "value": "\"right-start\""
-            },
-            {
-              "value": "\"right-end\""
-            },
-            {
-              "value": "\"top-start\""
-            },
-            {
-              "value": "\"top-end\""
             }
           ]
         }
@@ -10240,16 +11241,28 @@
               "value": "undefined"
             },
             {
+              "value": "\"top\""
+            },
+            {
+              "value": "\"right\""
+            },
+            {
               "value": "\"bottom\""
             },
             {
               "value": "\"left\""
             },
             {
-              "value": "\"right\""
+              "value": "\"top-start\""
             },
             {
-              "value": "\"top\""
+              "value": "\"top-end\""
+            },
+            {
+              "value": "\"right-start\""
+            },
+            {
+              "value": "\"right-end\""
             },
             {
               "value": "\"bottom-start\""
@@ -10262,18 +11275,6 @@
             },
             {
               "value": "\"left-end\""
-            },
-            {
-              "value": "\"right-start\""
-            },
-            {
-              "value": "\"right-end\""
-            },
-            {
-              "value": "\"top-start\""
-            },
-            {
-              "value": "\"top-end\""
             }
           ]
         }
@@ -10304,16 +11305,6 @@
         }
       }
     }
-  },
-  {
-    "tags": {
-      "see": "{@link https://react.dev/learn/passing-data-deeply-with-context React Docs}\n{@link https://react-typescript-cheatsheet.netlify.app/docs/basic/getting-started/context/ React TypeScript Cheatsheet}",
-      "example": "```tsx\nimport { createContext } from 'react';\n\nconst ThemeContext = createContext('light');\n```"
-    },
-    "description": "Context lets components pass information deep down without explicitly\npassing props.\n\nCreated from {@link createContext}",
-    "displayName": "Context",
-    "methods": [],
-    "props": {}
   },
   {
     "tags": {},
@@ -10376,16 +11367,28 @@
               "value": "undefined"
             },
             {
+              "value": "\"top\""
+            },
+            {
+              "value": "\"right\""
+            },
+            {
               "value": "\"bottom\""
             },
             {
               "value": "\"left\""
             },
             {
-              "value": "\"right\""
+              "value": "\"top-start\""
             },
             {
-              "value": "\"top\""
+              "value": "\"top-end\""
+            },
+            {
+              "value": "\"right-start\""
+            },
+            {
+              "value": "\"right-end\""
             },
             {
               "value": "\"bottom-start\""
@@ -10398,18 +11401,6 @@
             },
             {
               "value": "\"left-end\""
-            },
-            {
-              "value": "\"right-start\""
-            },
-            {
-              "value": "\"right-end\""
-            },
-            {
-              "value": "\"top-start\""
-            },
-            {
-              "value": "\"top-end\""
             }
           ]
         }
@@ -10982,10 +11973,10 @@
           "name": "CSSProperties | undefined"
         }
       },
-      "label": {
+      "errorText": {
         "defaultValue": null,
         "description": "",
-        "name": "label",
+        "name": "errorText",
         "declarations": [
           {
             "fileName": "arctic-kit/packages/snow/src/lib/BaseInput/BaseInput.tsx",
@@ -10997,10 +11988,10 @@
           "name": "string | undefined"
         }
       },
-      "errorText": {
+      "label": {
         "defaultValue": null,
         "description": "",
-        "name": "errorText",
+        "name": "label",
         "declarations": [
           {
             "fileName": "arctic-kit/packages/snow/src/lib/BaseInput/BaseInput.tsx",
@@ -11093,6 +12084,21 @@
           ]
         }
       },
+      "maxLength": {
+        "defaultValue": null,
+        "description": "",
+        "name": "maxLength",
+        "declarations": [
+          {
+            "fileName": "arctic-kit/packages/snow/src/lib/BaseInput/BaseInput.tsx",
+            "name": "TypeLiteral"
+          }
+        ],
+        "required": false,
+        "type": {
+          "name": "number | undefined"
+        }
+      },
       "placeholder": {
         "defaultValue": null,
         "description": "",
@@ -11108,6 +12114,23 @@
           "name": "string | undefined"
         }
       },
+      "readOnly": {
+        "defaultValue": {
+          "value": "false"
+        },
+        "description": "",
+        "name": "readOnly",
+        "declarations": [
+          {
+            "fileName": "arctic-kit/packages/snow/src/lib/BaseInput/BaseInput.tsx",
+            "name": "TypeLiteral"
+          }
+        ],
+        "required": false,
+        "type": {
+          "name": "boolean | undefined"
+        }
+      },
       "required": {
         "defaultValue": null,
         "description": "",
@@ -11121,21 +12144,6 @@
         "required": false,
         "type": {
           "name": "boolean | undefined"
-        }
-      },
-      "maxLength": {
-        "defaultValue": null,
-        "description": "",
-        "name": "maxLength",
-        "declarations": [
-          {
-            "fileName": "arctic-kit/packages/snow/src/lib/BaseInput/BaseInput.tsx",
-            "name": "TypeLiteral"
-          }
-        ],
-        "required": false,
-        "type": {
-          "name": "number | undefined"
         }
       },
       "containerStyle": {
@@ -11166,23 +12174,6 @@
         "required": false,
         "type": {
           "name": "string | undefined"
-        }
-      },
-      "readOnly": {
-        "defaultValue": {
-          "value": "false"
-        },
-        "description": "",
-        "name": "readOnly",
-        "declarations": [
-          {
-            "fileName": "arctic-kit/packages/snow/src/lib/BaseInput/BaseInput.tsx",
-            "name": "TypeLiteral"
-          }
-        ],
-        "required": false,
-        "type": {
-          "name": "boolean | undefined"
         }
       },
       "onChange": {
@@ -11315,10 +12306,10 @@
           "name": "CSSProperties | undefined"
         }
       },
-      "label": {
+      "errorText": {
         "defaultValue": null,
         "description": "",
-        "name": "label",
+        "name": "errorText",
         "declarations": [
           {
             "fileName": "arctic-kit/packages/snow/src/lib/BaseInput/BaseInput.tsx",
@@ -11330,10 +12321,10 @@
           "name": "string | undefined"
         }
       },
-      "errorText": {
+      "label": {
         "defaultValue": null,
         "description": "",
-        "name": "errorText",
+        "name": "label",
         "declarations": [
           {
             "fileName": "arctic-kit/packages/snow/src/lib/BaseInput/BaseInput.tsx",
@@ -11426,6 +12417,21 @@
           ]
         }
       },
+      "maxLength": {
+        "defaultValue": null,
+        "description": "",
+        "name": "maxLength",
+        "declarations": [
+          {
+            "fileName": "arctic-kit/packages/snow/src/lib/BaseInput/BaseInput.tsx",
+            "name": "TypeLiteral"
+          }
+        ],
+        "required": false,
+        "type": {
+          "name": "number | undefined"
+        }
+      },
       "placeholder": {
         "defaultValue": null,
         "description": "",
@@ -11441,6 +12447,23 @@
           "name": "string | undefined"
         }
       },
+      "readOnly": {
+        "defaultValue": {
+          "value": "false"
+        },
+        "description": "",
+        "name": "readOnly",
+        "declarations": [
+          {
+            "fileName": "arctic-kit/packages/snow/src/lib/BaseInput/BaseInput.tsx",
+            "name": "TypeLiteral"
+          }
+        ],
+        "required": false,
+        "type": {
+          "name": "boolean | undefined"
+        }
+      },
       "required": {
         "defaultValue": null,
         "description": "",
@@ -11454,21 +12477,6 @@
         "required": false,
         "type": {
           "name": "boolean | undefined"
-        }
-      },
-      "maxLength": {
-        "defaultValue": null,
-        "description": "",
-        "name": "maxLength",
-        "declarations": [
-          {
-            "fileName": "arctic-kit/packages/snow/src/lib/BaseInput/BaseInput.tsx",
-            "name": "TypeLiteral"
-          }
-        ],
-        "required": false,
-        "type": {
-          "name": "number | undefined"
         }
       },
       "containerStyle": {
@@ -11499,23 +12507,6 @@
         "required": false,
         "type": {
           "name": "string | undefined"
-        }
-      },
-      "readOnly": {
-        "defaultValue": {
-          "value": "false"
-        },
-        "description": "",
-        "name": "readOnly",
-        "declarations": [
-          {
-            "fileName": "arctic-kit/packages/snow/src/lib/BaseInput/BaseInput.tsx",
-            "name": "TypeLiteral"
-          }
-        ],
-        "required": false,
-        "type": {
-          "name": "boolean | undefined"
         }
       },
       "onChange": {
@@ -11648,10 +12639,10 @@
           "name": "CSSProperties | undefined"
         }
       },
-      "label": {
+      "errorText": {
         "defaultValue": null,
         "description": "",
-        "name": "label",
+        "name": "errorText",
         "declarations": [
           {
             "fileName": "arctic-kit/packages/snow/src/lib/BaseInput/BaseInput.tsx",
@@ -11663,10 +12654,10 @@
           "name": "string | undefined"
         }
       },
-      "errorText": {
+      "label": {
         "defaultValue": null,
         "description": "",
-        "name": "errorText",
+        "name": "label",
         "declarations": [
           {
             "fileName": "arctic-kit/packages/snow/src/lib/BaseInput/BaseInput.tsx",
@@ -11759,6 +12750,21 @@
           ]
         }
       },
+      "maxLength": {
+        "defaultValue": null,
+        "description": "",
+        "name": "maxLength",
+        "declarations": [
+          {
+            "fileName": "arctic-kit/packages/snow/src/lib/BaseInput/BaseInput.tsx",
+            "name": "TypeLiteral"
+          }
+        ],
+        "required": false,
+        "type": {
+          "name": "number | undefined"
+        }
+      },
       "placeholder": {
         "defaultValue": null,
         "description": "",
@@ -11774,6 +12780,23 @@
           "name": "string | undefined"
         }
       },
+      "readOnly": {
+        "defaultValue": {
+          "value": "false"
+        },
+        "description": "",
+        "name": "readOnly",
+        "declarations": [
+          {
+            "fileName": "arctic-kit/packages/snow/src/lib/BaseInput/BaseInput.tsx",
+            "name": "TypeLiteral"
+          }
+        ],
+        "required": false,
+        "type": {
+          "name": "boolean | undefined"
+        }
+      },
       "required": {
         "defaultValue": null,
         "description": "",
@@ -11787,21 +12810,6 @@
         "required": false,
         "type": {
           "name": "boolean | undefined"
-        }
-      },
-      "maxLength": {
-        "defaultValue": null,
-        "description": "",
-        "name": "maxLength",
-        "declarations": [
-          {
-            "fileName": "arctic-kit/packages/snow/src/lib/BaseInput/BaseInput.tsx",
-            "name": "TypeLiteral"
-          }
-        ],
-        "required": false,
-        "type": {
-          "name": "number | undefined"
         }
       },
       "containerStyle": {
@@ -11832,23 +12840,6 @@
         "required": false,
         "type": {
           "name": "string | undefined"
-        }
-      },
-      "readOnly": {
-        "defaultValue": {
-          "value": "false"
-        },
-        "description": "",
-        "name": "readOnly",
-        "declarations": [
-          {
-            "fileName": "arctic-kit/packages/snow/src/lib/BaseInput/BaseInput.tsx",
-            "name": "TypeLiteral"
-          }
-        ],
-        "required": false,
-        "type": {
-          "name": "boolean | undefined"
         }
       },
       "onChange": {
@@ -11904,10 +12895,10 @@
           "name": "CSSProperties | undefined"
         }
       },
-      "label": {
+      "errorText": {
         "defaultValue": null,
         "description": "",
-        "name": "label",
+        "name": "errorText",
         "declarations": [
           {
             "fileName": "arctic-kit/packages/snow/src/lib/BaseInput/BaseInput.tsx",
@@ -11919,10 +12910,10 @@
           "name": "string | undefined"
         }
       },
-      "errorText": {
+      "label": {
         "defaultValue": null,
         "description": "",
-        "name": "errorText",
+        "name": "label",
         "declarations": [
           {
             "fileName": "arctic-kit/packages/snow/src/lib/BaseInput/BaseInput.tsx",
@@ -12015,6 +13006,21 @@
           ]
         }
       },
+      "maxLength": {
+        "defaultValue": null,
+        "description": "",
+        "name": "maxLength",
+        "declarations": [
+          {
+            "fileName": "arctic-kit/packages/snow/src/lib/BaseInput/BaseInput.tsx",
+            "name": "TypeLiteral"
+          }
+        ],
+        "required": false,
+        "type": {
+          "name": "number | undefined"
+        }
+      },
       "placeholder": {
         "defaultValue": null,
         "description": "",
@@ -12030,6 +13036,23 @@
           "name": "string | undefined"
         }
       },
+      "readOnly": {
+        "defaultValue": {
+          "value": "false"
+        },
+        "description": "",
+        "name": "readOnly",
+        "declarations": [
+          {
+            "fileName": "arctic-kit/packages/snow/src/lib/BaseInput/BaseInput.tsx",
+            "name": "TypeLiteral"
+          }
+        ],
+        "required": false,
+        "type": {
+          "name": "boolean | undefined"
+        }
+      },
       "required": {
         "defaultValue": null,
         "description": "",
@@ -12043,21 +13066,6 @@
         "required": false,
         "type": {
           "name": "boolean | undefined"
-        }
-      },
-      "maxLength": {
-        "defaultValue": null,
-        "description": "",
-        "name": "maxLength",
-        "declarations": [
-          {
-            "fileName": "arctic-kit/packages/snow/src/lib/BaseInput/BaseInput.tsx",
-            "name": "TypeLiteral"
-          }
-        ],
-        "required": false,
-        "type": {
-          "name": "number | undefined"
         }
       },
       "containerStyle": {
@@ -12088,23 +13096,6 @@
         "required": false,
         "type": {
           "name": "string | undefined"
-        }
-      },
-      "readOnly": {
-        "defaultValue": {
-          "value": "false"
-        },
-        "description": "",
-        "name": "readOnly",
-        "declarations": [
-          {
-            "fileName": "arctic-kit/packages/snow/src/lib/BaseInput/BaseInput.tsx",
-            "name": "TypeLiteral"
-          }
-        ],
-        "required": false,
-        "type": {
-          "name": "boolean | undefined"
         }
       },
       "onChange": {
@@ -12817,6 +13808,1105 @@
         }
       }
     }
+  },
+  {
+    "tags": {},
+    "description": "",
+    "displayName": "\"/home/runner/work/arctic-kit/arctic-kit/packages/snow/src/lib/Table/Table\".TableRoot",
+    "methods": [],
+    "props": {
+      "size": {
+        "defaultValue": {
+          "value": "medium"
+        },
+        "description": "",
+        "name": "size",
+        "parent": {
+          "fileName": "arctic-kit/packages/snow/src/lib/Table/types.ts",
+          "name": "TableRootProps"
+        },
+        "declarations": [
+          {
+            "fileName": "arctic-kit/packages/snow/src/lib/Table/types.ts",
+            "name": "TableRootProps"
+          }
+        ],
+        "required": false,
+        "type": {
+          "name": "enum",
+          "raw": "\"small\" | \"medium\" | \"large\" | undefined",
+          "value": [
+            {
+              "value": "undefined"
+            },
+            {
+              "value": "\"small\""
+            },
+            {
+              "value": "\"medium\""
+            },
+            {
+              "value": "\"large\""
+            }
+          ]
+        }
+      },
+      "variant": {
+        "defaultValue": {
+          "value": "surface"
+        },
+        "description": "",
+        "name": "variant",
+        "parent": {
+          "fileName": "arctic-kit/packages/snow/src/lib/Table/types.ts",
+          "name": "TableRootProps"
+        },
+        "declarations": [
+          {
+            "fileName": "arctic-kit/packages/snow/src/lib/Table/types.ts",
+            "name": "TableRootProps"
+          }
+        ],
+        "required": false,
+        "type": {
+          "name": "enum",
+          "raw": "TableVariant | undefined",
+          "value": [
+            {
+              "value": "undefined"
+            },
+            {
+              "value": "\"surface\""
+            },
+            {
+              "value": "\"ghost\""
+            }
+          ]
+        }
+      },
+      "layout": {
+        "defaultValue": {
+          "value": "responsive"
+        },
+        "description": "",
+        "name": "layout",
+        "parent": {
+          "fileName": "arctic-kit/packages/snow/src/lib/Table/types.ts",
+          "name": "TableRootProps"
+        },
+        "declarations": [
+          {
+            "fileName": "arctic-kit/packages/snow/src/lib/Table/types.ts",
+            "name": "TableRootProps"
+          }
+        ],
+        "required": false,
+        "type": {
+          "name": "enum",
+          "raw": "TableLayout | undefined",
+          "value": [
+            {
+              "value": "undefined"
+            },
+            {
+              "value": "\"fixed\""
+            },
+            {
+              "value": "\"responsive\""
+            }
+          ]
+        }
+      },
+      "color": {
+        "defaultValue": null,
+        "description": "",
+        "name": "color",
+        "parent": {
+          "fileName": "arctic-kit/packages/snow/src/lib/Table/types.ts",
+          "name": "TableRootProps"
+        },
+        "declarations": [
+          {
+            "fileName": "arctic-kit/packages/snow/src/lib/Table/types.ts",
+            "name": "TableRootProps"
+          }
+        ],
+        "required": false,
+        "type": {
+          "name": "enum",
+          "raw": "SnowColor | undefined",
+          "value": [
+            {
+              "value": "undefined"
+            },
+            {
+              "value": "\"success\""
+            },
+            {
+              "value": "\"error\""
+            },
+            {
+              "value": "\"warning\""
+            },
+            {
+              "value": "\"info\""
+            },
+            {
+              "value": "\"primary\""
+            },
+            {
+              "value": "\"secondary\""
+            }
+          ]
+        }
+      }
+    }
+  },
+  {
+    "tags": {},
+    "description": "",
+    "displayName": "\"/home/runner/work/arctic-kit/arctic-kit/packages/snow/src/lib/Table/Table\".TableHeader",
+    "methods": [],
+    "props": {
+      "variant": {
+        "defaultValue": {
+          "value": "surface"
+        },
+        "description": "",
+        "name": "variant",
+        "parent": {
+          "fileName": "arctic-kit/packages/snow/src/lib/Table/types.ts",
+          "name": "TableHeaderProps"
+        },
+        "declarations": [
+          {
+            "fileName": "arctic-kit/packages/snow/src/lib/Table/types.ts",
+            "name": "TableHeaderProps"
+          }
+        ],
+        "required": false,
+        "type": {
+          "name": "enum",
+          "raw": "TableVariant | undefined",
+          "value": [
+            {
+              "value": "undefined"
+            },
+            {
+              "value": "\"surface\""
+            },
+            {
+              "value": "\"ghost\""
+            }
+          ]
+        }
+      },
+      "color": {
+        "defaultValue": null,
+        "description": "",
+        "name": "color",
+        "parent": {
+          "fileName": "arctic-kit/packages/snow/src/lib/Table/types.ts",
+          "name": "TableHeaderProps"
+        },
+        "declarations": [
+          {
+            "fileName": "arctic-kit/packages/snow/src/lib/Table/types.ts",
+            "name": "TableHeaderProps"
+          }
+        ],
+        "required": false,
+        "type": {
+          "name": "enum",
+          "raw": "SnowColor | undefined",
+          "value": [
+            {
+              "value": "undefined"
+            },
+            {
+              "value": "\"success\""
+            },
+            {
+              "value": "\"error\""
+            },
+            {
+              "value": "\"warning\""
+            },
+            {
+              "value": "\"info\""
+            },
+            {
+              "value": "\"primary\""
+            },
+            {
+              "value": "\"secondary\""
+            }
+          ]
+        }
+      }
+    }
+  },
+  {
+    "tags": {},
+    "description": "",
+    "displayName": "\"/home/runner/work/arctic-kit/arctic-kit/packages/snow/src/lib/Table/Table\".TableBody",
+    "methods": [],
+    "props": {
+      "variant": {
+        "defaultValue": {
+          "value": "surface"
+        },
+        "description": "",
+        "name": "variant",
+        "parent": {
+          "fileName": "arctic-kit/packages/snow/src/lib/Table/types.ts",
+          "name": "TableBodyProps"
+        },
+        "declarations": [
+          {
+            "fileName": "arctic-kit/packages/snow/src/lib/Table/types.ts",
+            "name": "TableBodyProps"
+          }
+        ],
+        "required": false,
+        "type": {
+          "name": "enum",
+          "raw": "TableVariant | undefined",
+          "value": [
+            {
+              "value": "undefined"
+            },
+            {
+              "value": "\"surface\""
+            },
+            {
+              "value": "\"ghost\""
+            }
+          ]
+        }
+      }
+    }
+  },
+  {
+    "tags": {},
+    "description": "",
+    "displayName": "\"/home/runner/work/arctic-kit/arctic-kit/packages/snow/src/lib/Table/Table\".TableRow",
+    "methods": [],
+    "props": {}
+  },
+  {
+    "tags": {},
+    "description": "",
+    "displayName": "\"/home/runner/work/arctic-kit/arctic-kit/packages/snow/src/lib/Table/Table\".TableColumnHeaderCell",
+    "methods": [],
+    "props": {
+      "size": {
+        "defaultValue": {
+          "value": "medium"
+        },
+        "description": "",
+        "name": "size",
+        "parent": {
+          "fileName": "arctic-kit/packages/snow/src/lib/Table/types.ts",
+          "name": "TableHeaderCellProps"
+        },
+        "declarations": [
+          {
+            "fileName": "arctic-kit/packages/snow/src/lib/Table/types.ts",
+            "name": "TableHeaderCellProps"
+          }
+        ],
+        "required": false,
+        "type": {
+          "name": "enum",
+          "raw": "\"small\" | \"medium\" | \"large\" | undefined",
+          "value": [
+            {
+              "value": "undefined"
+            },
+            {
+              "value": "\"small\""
+            },
+            {
+              "value": "\"medium\""
+            },
+            {
+              "value": "\"large\""
+            }
+          ]
+        }
+      },
+      "color": {
+        "defaultValue": null,
+        "description": "",
+        "name": "color",
+        "parent": {
+          "fileName": "arctic-kit/packages/snow/src/lib/Table/types.ts",
+          "name": "TableHeaderCellProps"
+        },
+        "declarations": [
+          {
+            "fileName": "arctic-kit/packages/snow/src/lib/Table/types.ts",
+            "name": "TableHeaderCellProps"
+          }
+        ],
+        "required": false,
+        "type": {
+          "name": "enum",
+          "raw": "SnowColor | undefined",
+          "value": [
+            {
+              "value": "undefined"
+            },
+            {
+              "value": "\"success\""
+            },
+            {
+              "value": "\"error\""
+            },
+            {
+              "value": "\"warning\""
+            },
+            {
+              "value": "\"info\""
+            },
+            {
+              "value": "\"primary\""
+            },
+            {
+              "value": "\"secondary\""
+            }
+          ]
+        }
+      }
+    }
+  },
+  {
+    "tags": {},
+    "description": "",
+    "displayName": "\"/home/runner/work/arctic-kit/arctic-kit/packages/snow/src/lib/Table/Table\".TableRowHeaderCell",
+    "methods": [],
+    "props": {
+      "size": {
+        "defaultValue": {
+          "value": "medium"
+        },
+        "description": "",
+        "name": "size",
+        "parent": {
+          "fileName": "arctic-kit/packages/snow/src/lib/Table/types.ts",
+          "name": "TableRowHeaderCellProps"
+        },
+        "declarations": [
+          {
+            "fileName": "arctic-kit/packages/snow/src/lib/Table/types.ts",
+            "name": "TableRowHeaderCellProps"
+          }
+        ],
+        "required": false,
+        "type": {
+          "name": "enum",
+          "raw": "\"small\" | \"medium\" | \"large\" | undefined",
+          "value": [
+            {
+              "value": "undefined"
+            },
+            {
+              "value": "\"small\""
+            },
+            {
+              "value": "\"medium\""
+            },
+            {
+              "value": "\"large\""
+            }
+          ]
+        }
+      },
+      "color": {
+        "defaultValue": null,
+        "description": "",
+        "name": "color",
+        "parent": {
+          "fileName": "arctic-kit/packages/snow/src/lib/Table/types.ts",
+          "name": "TableRowHeaderCellProps"
+        },
+        "declarations": [
+          {
+            "fileName": "arctic-kit/packages/snow/src/lib/Table/types.ts",
+            "name": "TableRowHeaderCellProps"
+          }
+        ],
+        "required": false,
+        "type": {
+          "name": "enum",
+          "raw": "SnowColor | undefined",
+          "value": [
+            {
+              "value": "undefined"
+            },
+            {
+              "value": "\"success\""
+            },
+            {
+              "value": "\"error\""
+            },
+            {
+              "value": "\"warning\""
+            },
+            {
+              "value": "\"info\""
+            },
+            {
+              "value": "\"primary\""
+            },
+            {
+              "value": "\"secondary\""
+            }
+          ]
+        }
+      }
+    }
+  },
+  {
+    "tags": {},
+    "description": "",
+    "displayName": "\"/home/runner/work/arctic-kit/arctic-kit/packages/snow/src/lib/Table/Table\".TableCell",
+    "methods": [],
+    "props": {
+      "size": {
+        "defaultValue": {
+          "value": "medium"
+        },
+        "description": "",
+        "name": "size",
+        "parent": {
+          "fileName": "arctic-kit/packages/snow/src/lib/Table/types.ts",
+          "name": "TableCellProps"
+        },
+        "declarations": [
+          {
+            "fileName": "arctic-kit/packages/snow/src/lib/Table/types.ts",
+            "name": "TableCellProps"
+          }
+        ],
+        "required": false,
+        "type": {
+          "name": "enum",
+          "raw": "\"small\" | \"medium\" | \"large\" | undefined",
+          "value": [
+            {
+              "value": "undefined"
+            },
+            {
+              "value": "\"small\""
+            },
+            {
+              "value": "\"medium\""
+            },
+            {
+              "value": "\"large\""
+            }
+          ]
+        }
+      },
+      "color": {
+        "defaultValue": null,
+        "description": "",
+        "name": "color",
+        "parent": {
+          "fileName": "arctic-kit/packages/snow/src/lib/Table/types.ts",
+          "name": "TableCellProps"
+        },
+        "declarations": [
+          {
+            "fileName": "arctic-kit/packages/snow/src/lib/Table/types.ts",
+            "name": "TableCellProps"
+          }
+        ],
+        "required": false,
+        "type": {
+          "name": "enum",
+          "raw": "SnowColor | undefined",
+          "value": [
+            {
+              "value": "undefined"
+            },
+            {
+              "value": "\"success\""
+            },
+            {
+              "value": "\"error\""
+            },
+            {
+              "value": "\"warning\""
+            },
+            {
+              "value": "\"info\""
+            },
+            {
+              "value": "\"primary\""
+            },
+            {
+              "value": "\"secondary\""
+            }
+          ]
+        }
+      }
+    }
+  },
+  {
+    "tags": {},
+    "description": "",
+    "displayName": "\"/home/runner/work/arctic-kit/arctic-kit/packages/snow/src/lib/Table/Table\".Root",
+    "methods": [],
+    "props": {
+      "size": {
+        "defaultValue": {
+          "value": "medium"
+        },
+        "description": "",
+        "name": "size",
+        "parent": {
+          "fileName": "arctic-kit/packages/snow/src/lib/Table/types.ts",
+          "name": "TableRootProps"
+        },
+        "declarations": [
+          {
+            "fileName": "arctic-kit/packages/snow/src/lib/Table/types.ts",
+            "name": "TableRootProps"
+          }
+        ],
+        "required": false,
+        "type": {
+          "name": "enum",
+          "raw": "\"small\" | \"medium\" | \"large\" | undefined",
+          "value": [
+            {
+              "value": "undefined"
+            },
+            {
+              "value": "\"small\""
+            },
+            {
+              "value": "\"medium\""
+            },
+            {
+              "value": "\"large\""
+            }
+          ]
+        }
+      },
+      "variant": {
+        "defaultValue": {
+          "value": "surface"
+        },
+        "description": "",
+        "name": "variant",
+        "parent": {
+          "fileName": "arctic-kit/packages/snow/src/lib/Table/types.ts",
+          "name": "TableRootProps"
+        },
+        "declarations": [
+          {
+            "fileName": "arctic-kit/packages/snow/src/lib/Table/types.ts",
+            "name": "TableRootProps"
+          }
+        ],
+        "required": false,
+        "type": {
+          "name": "enum",
+          "raw": "TableVariant | undefined",
+          "value": [
+            {
+              "value": "undefined"
+            },
+            {
+              "value": "\"surface\""
+            },
+            {
+              "value": "\"ghost\""
+            }
+          ]
+        }
+      },
+      "layout": {
+        "defaultValue": {
+          "value": "responsive"
+        },
+        "description": "",
+        "name": "layout",
+        "parent": {
+          "fileName": "arctic-kit/packages/snow/src/lib/Table/types.ts",
+          "name": "TableRootProps"
+        },
+        "declarations": [
+          {
+            "fileName": "arctic-kit/packages/snow/src/lib/Table/types.ts",
+            "name": "TableRootProps"
+          }
+        ],
+        "required": false,
+        "type": {
+          "name": "enum",
+          "raw": "TableLayout | undefined",
+          "value": [
+            {
+              "value": "undefined"
+            },
+            {
+              "value": "\"fixed\""
+            },
+            {
+              "value": "\"responsive\""
+            }
+          ]
+        }
+      },
+      "color": {
+        "defaultValue": null,
+        "description": "",
+        "name": "color",
+        "parent": {
+          "fileName": "arctic-kit/packages/snow/src/lib/Table/types.ts",
+          "name": "TableRootProps"
+        },
+        "declarations": [
+          {
+            "fileName": "arctic-kit/packages/snow/src/lib/Table/types.ts",
+            "name": "TableRootProps"
+          }
+        ],
+        "required": false,
+        "type": {
+          "name": "enum",
+          "raw": "SnowColor | undefined",
+          "value": [
+            {
+              "value": "undefined"
+            },
+            {
+              "value": "\"success\""
+            },
+            {
+              "value": "\"error\""
+            },
+            {
+              "value": "\"warning\""
+            },
+            {
+              "value": "\"info\""
+            },
+            {
+              "value": "\"primary\""
+            },
+            {
+              "value": "\"secondary\""
+            }
+          ]
+        }
+      }
+    }
+  },
+  {
+    "tags": {},
+    "description": "",
+    "displayName": "\"/home/runner/work/arctic-kit/arctic-kit/packages/snow/src/lib/Table/Table\".Header",
+    "methods": [],
+    "props": {
+      "variant": {
+        "defaultValue": {
+          "value": "surface"
+        },
+        "description": "",
+        "name": "variant",
+        "parent": {
+          "fileName": "arctic-kit/packages/snow/src/lib/Table/types.ts",
+          "name": "TableHeaderProps"
+        },
+        "declarations": [
+          {
+            "fileName": "arctic-kit/packages/snow/src/lib/Table/types.ts",
+            "name": "TableHeaderProps"
+          }
+        ],
+        "required": false,
+        "type": {
+          "name": "enum",
+          "raw": "TableVariant | undefined",
+          "value": [
+            {
+              "value": "undefined"
+            },
+            {
+              "value": "\"surface\""
+            },
+            {
+              "value": "\"ghost\""
+            }
+          ]
+        }
+      },
+      "color": {
+        "defaultValue": null,
+        "description": "",
+        "name": "color",
+        "parent": {
+          "fileName": "arctic-kit/packages/snow/src/lib/Table/types.ts",
+          "name": "TableHeaderProps"
+        },
+        "declarations": [
+          {
+            "fileName": "arctic-kit/packages/snow/src/lib/Table/types.ts",
+            "name": "TableHeaderProps"
+          }
+        ],
+        "required": false,
+        "type": {
+          "name": "enum",
+          "raw": "SnowColor | undefined",
+          "value": [
+            {
+              "value": "undefined"
+            },
+            {
+              "value": "\"success\""
+            },
+            {
+              "value": "\"error\""
+            },
+            {
+              "value": "\"warning\""
+            },
+            {
+              "value": "\"info\""
+            },
+            {
+              "value": "\"primary\""
+            },
+            {
+              "value": "\"secondary\""
+            }
+          ]
+        }
+      }
+    }
+  },
+  {
+    "tags": {},
+    "description": "",
+    "displayName": "\"/home/runner/work/arctic-kit/arctic-kit/packages/snow/src/lib/Table/Table\".Body",
+    "methods": [],
+    "props": {
+      "variant": {
+        "defaultValue": {
+          "value": "surface"
+        },
+        "description": "",
+        "name": "variant",
+        "parent": {
+          "fileName": "arctic-kit/packages/snow/src/lib/Table/types.ts",
+          "name": "TableBodyProps"
+        },
+        "declarations": [
+          {
+            "fileName": "arctic-kit/packages/snow/src/lib/Table/types.ts",
+            "name": "TableBodyProps"
+          }
+        ],
+        "required": false,
+        "type": {
+          "name": "enum",
+          "raw": "TableVariant | undefined",
+          "value": [
+            {
+              "value": "undefined"
+            },
+            {
+              "value": "\"surface\""
+            },
+            {
+              "value": "\"ghost\""
+            }
+          ]
+        }
+      }
+    }
+  },
+  {
+    "tags": {},
+    "description": "",
+    "displayName": "\"/home/runner/work/arctic-kit/arctic-kit/packages/snow/src/lib/Table/Table\".Row",
+    "methods": [],
+    "props": {}
+  },
+  {
+    "tags": {},
+    "description": "",
+    "displayName": "\"/home/runner/work/arctic-kit/arctic-kit/packages/snow/src/lib/Table/Table\".Cell",
+    "methods": [],
+    "props": {
+      "size": {
+        "defaultValue": {
+          "value": "medium"
+        },
+        "description": "",
+        "name": "size",
+        "parent": {
+          "fileName": "arctic-kit/packages/snow/src/lib/Table/types.ts",
+          "name": "TableCellProps"
+        },
+        "declarations": [
+          {
+            "fileName": "arctic-kit/packages/snow/src/lib/Table/types.ts",
+            "name": "TableCellProps"
+          }
+        ],
+        "required": false,
+        "type": {
+          "name": "enum",
+          "raw": "\"small\" | \"medium\" | \"large\" | undefined",
+          "value": [
+            {
+              "value": "undefined"
+            },
+            {
+              "value": "\"small\""
+            },
+            {
+              "value": "\"medium\""
+            },
+            {
+              "value": "\"large\""
+            }
+          ]
+        }
+      },
+      "color": {
+        "defaultValue": null,
+        "description": "",
+        "name": "color",
+        "parent": {
+          "fileName": "arctic-kit/packages/snow/src/lib/Table/types.ts",
+          "name": "TableCellProps"
+        },
+        "declarations": [
+          {
+            "fileName": "arctic-kit/packages/snow/src/lib/Table/types.ts",
+            "name": "TableCellProps"
+          }
+        ],
+        "required": false,
+        "type": {
+          "name": "enum",
+          "raw": "SnowColor | undefined",
+          "value": [
+            {
+              "value": "undefined"
+            },
+            {
+              "value": "\"success\""
+            },
+            {
+              "value": "\"error\""
+            },
+            {
+              "value": "\"warning\""
+            },
+            {
+              "value": "\"info\""
+            },
+            {
+              "value": "\"primary\""
+            },
+            {
+              "value": "\"secondary\""
+            }
+          ]
+        }
+      }
+    }
+  },
+  {
+    "tags": {},
+    "description": "",
+    "displayName": "\"/home/runner/work/arctic-kit/arctic-kit/packages/snow/src/lib/Table/Table\".ColumnHeaderCell",
+    "methods": [],
+    "props": {
+      "size": {
+        "defaultValue": {
+          "value": "medium"
+        },
+        "description": "",
+        "name": "size",
+        "parent": {
+          "fileName": "arctic-kit/packages/snow/src/lib/Table/types.ts",
+          "name": "TableHeaderCellProps"
+        },
+        "declarations": [
+          {
+            "fileName": "arctic-kit/packages/snow/src/lib/Table/types.ts",
+            "name": "TableHeaderCellProps"
+          }
+        ],
+        "required": false,
+        "type": {
+          "name": "enum",
+          "raw": "\"small\" | \"medium\" | \"large\" | undefined",
+          "value": [
+            {
+              "value": "undefined"
+            },
+            {
+              "value": "\"small\""
+            },
+            {
+              "value": "\"medium\""
+            },
+            {
+              "value": "\"large\""
+            }
+          ]
+        }
+      },
+      "color": {
+        "defaultValue": null,
+        "description": "",
+        "name": "color",
+        "parent": {
+          "fileName": "arctic-kit/packages/snow/src/lib/Table/types.ts",
+          "name": "TableHeaderCellProps"
+        },
+        "declarations": [
+          {
+            "fileName": "arctic-kit/packages/snow/src/lib/Table/types.ts",
+            "name": "TableHeaderCellProps"
+          }
+        ],
+        "required": false,
+        "type": {
+          "name": "enum",
+          "raw": "SnowColor | undefined",
+          "value": [
+            {
+              "value": "undefined"
+            },
+            {
+              "value": "\"success\""
+            },
+            {
+              "value": "\"error\""
+            },
+            {
+              "value": "\"warning\""
+            },
+            {
+              "value": "\"info\""
+            },
+            {
+              "value": "\"primary\""
+            },
+            {
+              "value": "\"secondary\""
+            }
+          ]
+        }
+      }
+    }
+  },
+  {
+    "tags": {},
+    "description": "",
+    "displayName": "\"/home/runner/work/arctic-kit/arctic-kit/packages/snow/src/lib/Table/Table\".RowHeaderCell",
+    "methods": [],
+    "props": {
+      "size": {
+        "defaultValue": {
+          "value": "medium"
+        },
+        "description": "",
+        "name": "size",
+        "parent": {
+          "fileName": "arctic-kit/packages/snow/src/lib/Table/types.ts",
+          "name": "TableRowHeaderCellProps"
+        },
+        "declarations": [
+          {
+            "fileName": "arctic-kit/packages/snow/src/lib/Table/types.ts",
+            "name": "TableRowHeaderCellProps"
+          }
+        ],
+        "required": false,
+        "type": {
+          "name": "enum",
+          "raw": "\"small\" | \"medium\" | \"large\" | undefined",
+          "value": [
+            {
+              "value": "undefined"
+            },
+            {
+              "value": "\"small\""
+            },
+            {
+              "value": "\"medium\""
+            },
+            {
+              "value": "\"large\""
+            }
+          ]
+        }
+      },
+      "color": {
+        "defaultValue": null,
+        "description": "",
+        "name": "color",
+        "parent": {
+          "fileName": "arctic-kit/packages/snow/src/lib/Table/types.ts",
+          "name": "TableRowHeaderCellProps"
+        },
+        "declarations": [
+          {
+            "fileName": "arctic-kit/packages/snow/src/lib/Table/types.ts",
+            "name": "TableRowHeaderCellProps"
+          }
+        ],
+        "required": false,
+        "type": {
+          "name": "enum",
+          "raw": "SnowColor | undefined",
+          "value": [
+            {
+              "value": "undefined"
+            },
+            {
+              "value": "\"success\""
+            },
+            {
+              "value": "\"error\""
+            },
+            {
+              "value": "\"warning\""
+            },
+            {
+              "value": "\"info\""
+            },
+            {
+              "value": "\"primary\""
+            },
+            {
+              "value": "\"secondary\""
+            }
+          ]
+        }
+      }
+    }
+  },
+  {
+    "tags": {},
+    "description": "",
+    "displayName": "TableContext",
+    "methods": [],
+    "props": {}
   },
   {
     "tags": {},
@@ -12885,10 +14975,10 @@
               "value": "undefined"
             },
             {
-              "value": "\"ghost\""
+              "value": "\"surface\""
             },
             {
-              "value": "\"surface\""
+              "value": "\"ghost\""
             }
           ]
         }
@@ -12938,6 +15028,399 @@
           {
             "fileName": "arctic-kit/packages/snow/src/lib/Table/types.ts",
             "name": "TableRootProps"
+          }
+        ],
+        "required": false,
+        "type": {
+          "name": "enum",
+          "raw": "SnowColor | undefined",
+          "value": [
+            {
+              "value": "undefined"
+            },
+            {
+              "value": "\"success\""
+            },
+            {
+              "value": "\"error\""
+            },
+            {
+              "value": "\"warning\""
+            },
+            {
+              "value": "\"info\""
+            },
+            {
+              "value": "\"primary\""
+            },
+            {
+              "value": "\"secondary\""
+            }
+          ]
+        }
+      }
+    }
+  },
+  {
+    "tags": {},
+    "description": "",
+    "displayName": "Table.Header",
+    "methods": [],
+    "props": {
+      "variant": {
+        "defaultValue": {
+          "value": "surface"
+        },
+        "description": "",
+        "name": "variant",
+        "parent": {
+          "fileName": "arctic-kit/packages/snow/src/lib/Table/types.ts",
+          "name": "TableHeaderProps"
+        },
+        "declarations": [
+          {
+            "fileName": "arctic-kit/packages/snow/src/lib/Table/types.ts",
+            "name": "TableHeaderProps"
+          }
+        ],
+        "required": false,
+        "type": {
+          "name": "enum",
+          "raw": "TableVariant | undefined",
+          "value": [
+            {
+              "value": "undefined"
+            },
+            {
+              "value": "\"surface\""
+            },
+            {
+              "value": "\"ghost\""
+            }
+          ]
+        }
+      },
+      "color": {
+        "defaultValue": null,
+        "description": "",
+        "name": "color",
+        "parent": {
+          "fileName": "arctic-kit/packages/snow/src/lib/Table/types.ts",
+          "name": "TableHeaderProps"
+        },
+        "declarations": [
+          {
+            "fileName": "arctic-kit/packages/snow/src/lib/Table/types.ts",
+            "name": "TableHeaderProps"
+          }
+        ],
+        "required": false,
+        "type": {
+          "name": "enum",
+          "raw": "SnowColor | undefined",
+          "value": [
+            {
+              "value": "undefined"
+            },
+            {
+              "value": "\"success\""
+            },
+            {
+              "value": "\"error\""
+            },
+            {
+              "value": "\"warning\""
+            },
+            {
+              "value": "\"info\""
+            },
+            {
+              "value": "\"primary\""
+            },
+            {
+              "value": "\"secondary\""
+            }
+          ]
+        }
+      }
+    }
+  },
+  {
+    "tags": {},
+    "description": "",
+    "displayName": "Table.Body",
+    "methods": [],
+    "props": {
+      "variant": {
+        "defaultValue": {
+          "value": "surface"
+        },
+        "description": "",
+        "name": "variant",
+        "parent": {
+          "fileName": "arctic-kit/packages/snow/src/lib/Table/types.ts",
+          "name": "TableBodyProps"
+        },
+        "declarations": [
+          {
+            "fileName": "arctic-kit/packages/snow/src/lib/Table/types.ts",
+            "name": "TableBodyProps"
+          }
+        ],
+        "required": false,
+        "type": {
+          "name": "enum",
+          "raw": "TableVariant | undefined",
+          "value": [
+            {
+              "value": "undefined"
+            },
+            {
+              "value": "\"surface\""
+            },
+            {
+              "value": "\"ghost\""
+            }
+          ]
+        }
+      }
+    }
+  },
+  {
+    "tags": {},
+    "description": "",
+    "displayName": "Table.Row",
+    "methods": [],
+    "props": {}
+  },
+  {
+    "tags": {},
+    "description": "",
+    "displayName": "Table.ColumnHeaderCell",
+    "methods": [],
+    "props": {
+      "size": {
+        "defaultValue": {
+          "value": "medium"
+        },
+        "description": "",
+        "name": "size",
+        "parent": {
+          "fileName": "arctic-kit/packages/snow/src/lib/Table/types.ts",
+          "name": "TableHeaderCellProps"
+        },
+        "declarations": [
+          {
+            "fileName": "arctic-kit/packages/snow/src/lib/Table/types.ts",
+            "name": "TableHeaderCellProps"
+          }
+        ],
+        "required": false,
+        "type": {
+          "name": "enum",
+          "raw": "\"small\" | \"medium\" | \"large\" | undefined",
+          "value": [
+            {
+              "value": "undefined"
+            },
+            {
+              "value": "\"small\""
+            },
+            {
+              "value": "\"medium\""
+            },
+            {
+              "value": "\"large\""
+            }
+          ]
+        }
+      },
+      "color": {
+        "defaultValue": null,
+        "description": "",
+        "name": "color",
+        "parent": {
+          "fileName": "arctic-kit/packages/snow/src/lib/Table/types.ts",
+          "name": "TableHeaderCellProps"
+        },
+        "declarations": [
+          {
+            "fileName": "arctic-kit/packages/snow/src/lib/Table/types.ts",
+            "name": "TableHeaderCellProps"
+          }
+        ],
+        "required": false,
+        "type": {
+          "name": "enum",
+          "raw": "SnowColor | undefined",
+          "value": [
+            {
+              "value": "undefined"
+            },
+            {
+              "value": "\"success\""
+            },
+            {
+              "value": "\"error\""
+            },
+            {
+              "value": "\"warning\""
+            },
+            {
+              "value": "\"info\""
+            },
+            {
+              "value": "\"primary\""
+            },
+            {
+              "value": "\"secondary\""
+            }
+          ]
+        }
+      }
+    }
+  },
+  {
+    "tags": {},
+    "description": "",
+    "displayName": "Table.RowHeaderCell",
+    "methods": [],
+    "props": {
+      "size": {
+        "defaultValue": {
+          "value": "medium"
+        },
+        "description": "",
+        "name": "size",
+        "parent": {
+          "fileName": "arctic-kit/packages/snow/src/lib/Table/types.ts",
+          "name": "TableRowHeaderCellProps"
+        },
+        "declarations": [
+          {
+            "fileName": "arctic-kit/packages/snow/src/lib/Table/types.ts",
+            "name": "TableRowHeaderCellProps"
+          }
+        ],
+        "required": false,
+        "type": {
+          "name": "enum",
+          "raw": "\"small\" | \"medium\" | \"large\" | undefined",
+          "value": [
+            {
+              "value": "undefined"
+            },
+            {
+              "value": "\"small\""
+            },
+            {
+              "value": "\"medium\""
+            },
+            {
+              "value": "\"large\""
+            }
+          ]
+        }
+      },
+      "color": {
+        "defaultValue": null,
+        "description": "",
+        "name": "color",
+        "parent": {
+          "fileName": "arctic-kit/packages/snow/src/lib/Table/types.ts",
+          "name": "TableRowHeaderCellProps"
+        },
+        "declarations": [
+          {
+            "fileName": "arctic-kit/packages/snow/src/lib/Table/types.ts",
+            "name": "TableRowHeaderCellProps"
+          }
+        ],
+        "required": false,
+        "type": {
+          "name": "enum",
+          "raw": "SnowColor | undefined",
+          "value": [
+            {
+              "value": "undefined"
+            },
+            {
+              "value": "\"success\""
+            },
+            {
+              "value": "\"error\""
+            },
+            {
+              "value": "\"warning\""
+            },
+            {
+              "value": "\"info\""
+            },
+            {
+              "value": "\"primary\""
+            },
+            {
+              "value": "\"secondary\""
+            }
+          ]
+        }
+      }
+    }
+  },
+  {
+    "tags": {},
+    "description": "",
+    "displayName": "Table.Cell",
+    "methods": [],
+    "props": {
+      "size": {
+        "defaultValue": {
+          "value": "medium"
+        },
+        "description": "",
+        "name": "size",
+        "parent": {
+          "fileName": "arctic-kit/packages/snow/src/lib/Table/types.ts",
+          "name": "TableCellProps"
+        },
+        "declarations": [
+          {
+            "fileName": "arctic-kit/packages/snow/src/lib/Table/types.ts",
+            "name": "TableCellProps"
+          }
+        ],
+        "required": false,
+        "type": {
+          "name": "enum",
+          "raw": "\"small\" | \"medium\" | \"large\" | undefined",
+          "value": [
+            {
+              "value": "undefined"
+            },
+            {
+              "value": "\"small\""
+            },
+            {
+              "value": "\"medium\""
+            },
+            {
+              "value": "\"large\""
+            }
+          ]
+        }
+      },
+      "color": {
+        "defaultValue": null,
+        "description": "",
+        "name": "color",
+        "parent": {
+          "fileName": "arctic-kit/packages/snow/src/lib/Table/types.ts",
+          "name": "TableCellProps"
+        },
+        "declarations": [
+          {
+            "fileName": "arctic-kit/packages/snow/src/lib/Table/types.ts",
+            "name": "TableCellProps"
           }
         ],
         "required": false,
@@ -13366,16 +15849,6 @@
     "tags": {},
     "description": "",
     "displayName": "SnackbarProvider",
-    "methods": [],
-    "props": {}
-  },
-  {
-    "tags": {
-      "see": "{@link https://react.dev/learn/passing-data-deeply-with-context React Docs}\n{@link https://react-typescript-cheatsheet.netlify.app/docs/basic/getting-started/context/ React TypeScript Cheatsheet}",
-      "example": "```tsx\nimport { createContext } from 'react';\n\nconst ThemeContext = createContext('light');\n```"
-    },
-    "description": "Context lets components pass information deep down without explicitly\npassing props.\n\nCreated from {@link createContext}",
-    "displayName": "Context",
     "methods": [],
     "props": {}
   },
@@ -14847,6 +17320,13 @@
   {
     "tags": {},
     "description": "",
+    "displayName": "SegmentedControlContext",
+    "methods": [],
+    "props": {}
+  },
+  {
+    "tags": {},
+    "description": "",
     "displayName": "SegmentedControlButton",
     "methods": [],
     "props": {
@@ -16258,16 +18738,28 @@
               "value": "undefined"
             },
             {
+              "value": "\"top\""
+            },
+            {
+              "value": "\"right\""
+            },
+            {
               "value": "\"bottom\""
             },
             {
               "value": "\"left\""
             },
             {
-              "value": "\"right\""
+              "value": "\"top-start\""
             },
             {
-              "value": "\"top\""
+              "value": "\"top-end\""
+            },
+            {
+              "value": "\"right-start\""
+            },
+            {
+              "value": "\"right-end\""
             },
             {
               "value": "\"bottom-start\""
@@ -16280,18 +18772,6 @@
             },
             {
               "value": "\"left-end\""
-            },
-            {
-              "value": "\"right-start\""
-            },
-            {
-              "value": "\"right-end\""
-            },
-            {
-              "value": "\"top-start\""
-            },
-            {
-              "value": "\"top-end\""
             }
           ]
         }
@@ -16384,103 +18864,6 @@
     "displayName": "PopoverTrigger",
     "methods": [],
     "props": {
-      "color": {
-        "defaultValue": {
-          "value": "\"primary\""
-        },
-        "description": "",
-        "name": "color",
-        "parent": {
-          "fileName": "arctic-kit/node_modules/@types/react/index.d.ts",
-          "name": "HTMLAttributes"
-        },
-        "declarations": [
-          {
-            "fileName": "arctic-kit/node_modules/@types/react/index.d.ts",
-            "name": "HTMLAttributes"
-          },
-          {
-            "fileName": "arctic-kit/packages/snow/src/lib/types.ts",
-            "name": "TypeLiteral"
-          }
-        ],
-        "required": false,
-        "type": {
-          "name": "enum",
-          "raw": "\"success\" | \"error\" | \"warning\" | \"info\" | \"primary\" | \"secondary\" | undefined",
-          "value": [
-            {
-              "value": "undefined"
-            },
-            {
-              "value": "\"success\""
-            },
-            {
-              "value": "\"error\""
-            },
-            {
-              "value": "\"warning\""
-            },
-            {
-              "value": "\"info\""
-            },
-            {
-              "value": "\"primary\""
-            },
-            {
-              "value": "\"secondary\""
-            }
-          ]
-        }
-      },
-      "disabled": {
-        "defaultValue": null,
-        "description": "",
-        "name": "disabled",
-        "parent": {
-          "fileName": "arctic-kit/node_modules/@types/react/index.d.ts",
-          "name": "AllHTMLAttributes"
-        },
-        "declarations": [
-          {
-            "fileName": "arctic-kit/node_modules/@types/react/index.d.ts",
-            "name": "AllHTMLAttributes"
-          },
-          {
-            "fileName": "arctic-kit/packages/snow/src/lib/types.ts",
-            "name": "TypeLiteral"
-          }
-        ],
-        "required": false,
-        "type": {
-          "name": "boolean | undefined"
-        }
-      },
-      "size": {
-        "defaultValue": {
-          "value": "\"medium\""
-        },
-        "description": "",
-        "name": "size",
-        "parent": {
-          "fileName": "arctic-kit/node_modules/@types/react/index.d.ts",
-          "name": "AllHTMLAttributes"
-        },
-        "declarations": [
-          {
-            "fileName": "arctic-kit/node_modules/@types/react/index.d.ts",
-            "name": "AllHTMLAttributes"
-          },
-          {
-            "fileName": "arctic-kit/packages/snow/src/lib/types.ts",
-            "name": "TypeLiteral"
-          }
-        ],
-        "required": false,
-        "type": {
-          "name": "undefined"
-        }
-      },
       "asChild": {
         "defaultValue": {
           "value": "false"
@@ -16563,16 +18946,28 @@
               "value": "undefined"
             },
             {
+              "value": "\"top\""
+            },
+            {
+              "value": "\"right\""
+            },
+            {
               "value": "\"bottom\""
             },
             {
               "value": "\"left\""
             },
             {
-              "value": "\"right\""
+              "value": "\"top-start\""
             },
             {
-              "value": "\"top\""
+              "value": "\"top-end\""
+            },
+            {
+              "value": "\"right-start\""
+            },
+            {
+              "value": "\"right-end\""
             },
             {
               "value": "\"bottom-start\""
@@ -16585,18 +18980,6 @@
             },
             {
               "value": "\"left-end\""
-            },
-            {
-              "value": "\"right-start\""
-            },
-            {
-              "value": "\"right-end\""
-            },
-            {
-              "value": "\"top-start\""
-            },
-            {
-              "value": "\"top-end\""
             }
           ]
         }
@@ -16708,16 +19091,28 @@
               "value": "undefined"
             },
             {
+              "value": "\"top\""
+            },
+            {
+              "value": "\"right\""
+            },
+            {
               "value": "\"bottom\""
             },
             {
               "value": "\"left\""
             },
             {
-              "value": "\"right\""
+              "value": "\"top-start\""
             },
             {
-              "value": "\"top\""
+              "value": "\"top-end\""
+            },
+            {
+              "value": "\"right-start\""
+            },
+            {
+              "value": "\"right-end\""
             },
             {
               "value": "\"bottom-start\""
@@ -16730,18 +19125,6 @@
             },
             {
               "value": "\"left-end\""
-            },
-            {
-              "value": "\"right-start\""
-            },
-            {
-              "value": "\"right-end\""
-            },
-            {
-              "value": "\"top-start\""
-            },
-            {
-              "value": "\"top-end\""
             }
           ]
         }
@@ -16813,103 +19196,6 @@
     "displayName": "PopoverTrigger",
     "methods": [],
     "props": {
-      "color": {
-        "defaultValue": {
-          "value": "\"primary\""
-        },
-        "description": "",
-        "name": "color",
-        "parent": {
-          "fileName": "arctic-kit/node_modules/@types/react/index.d.ts",
-          "name": "HTMLAttributes"
-        },
-        "declarations": [
-          {
-            "fileName": "arctic-kit/node_modules/@types/react/index.d.ts",
-            "name": "HTMLAttributes"
-          },
-          {
-            "fileName": "arctic-kit/packages/snow/src/lib/types.ts",
-            "name": "TypeLiteral"
-          }
-        ],
-        "required": false,
-        "type": {
-          "name": "enum",
-          "raw": "\"success\" | \"error\" | \"warning\" | \"info\" | \"primary\" | \"secondary\" | undefined",
-          "value": [
-            {
-              "value": "undefined"
-            },
-            {
-              "value": "\"success\""
-            },
-            {
-              "value": "\"error\""
-            },
-            {
-              "value": "\"warning\""
-            },
-            {
-              "value": "\"info\""
-            },
-            {
-              "value": "\"primary\""
-            },
-            {
-              "value": "\"secondary\""
-            }
-          ]
-        }
-      },
-      "disabled": {
-        "defaultValue": null,
-        "description": "",
-        "name": "disabled",
-        "parent": {
-          "fileName": "arctic-kit/node_modules/@types/react/index.d.ts",
-          "name": "AllHTMLAttributes"
-        },
-        "declarations": [
-          {
-            "fileName": "arctic-kit/node_modules/@types/react/index.d.ts",
-            "name": "AllHTMLAttributes"
-          },
-          {
-            "fileName": "arctic-kit/packages/snow/src/lib/types.ts",
-            "name": "TypeLiteral"
-          }
-        ],
-        "required": false,
-        "type": {
-          "name": "boolean | undefined"
-        }
-      },
-      "size": {
-        "defaultValue": {
-          "value": "\"medium\""
-        },
-        "description": "",
-        "name": "size",
-        "parent": {
-          "fileName": "arctic-kit/node_modules/@types/react/index.d.ts",
-          "name": "AllHTMLAttributes"
-        },
-        "declarations": [
-          {
-            "fileName": "arctic-kit/node_modules/@types/react/index.d.ts",
-            "name": "AllHTMLAttributes"
-          },
-          {
-            "fileName": "arctic-kit/packages/snow/src/lib/types.ts",
-            "name": "TypeLiteral"
-          }
-        ],
-        "required": false,
-        "type": {
-          "name": "undefined"
-        }
-      },
       "asChild": {
         "defaultValue": {
           "value": "false"
@@ -18560,6 +20846,13 @@
   {
     "tags": {},
     "description": "",
+    "displayName": "ModalContext",
+    "methods": [],
+    "props": {}
+  },
+  {
+    "tags": {},
+    "description": "",
     "displayName": "ModalContent",
     "methods": [],
     "props": {
@@ -19046,6 +21339,21 @@
     "displayName": "Loader",
     "methods": [],
     "props": {
+      "disabled": {
+        "defaultValue": null,
+        "description": "",
+        "name": "disabled",
+        "declarations": [
+          {
+            "fileName": "arctic-kit/packages/snow/src/lib/types.ts",
+            "name": "TypeLiteral"
+          }
+        ],
+        "required": false,
+        "type": {
+          "name": "boolean | undefined"
+        }
+      },
       "color": {
         "defaultValue": {
           "value": "primary"
@@ -19085,21 +21393,6 @@
               "value": "\"secondary\""
             }
           ]
-        }
-      },
-      "disabled": {
-        "defaultValue": null,
-        "description": "",
-        "name": "disabled",
-        "declarations": [
-          {
-            "fileName": "arctic-kit/packages/snow/src/lib/types.ts",
-            "name": "TypeLiteral"
-          }
-        ],
-        "required": false,
-        "type": {
-          "name": "boolean | undefined"
         }
       },
       "type": {
@@ -19174,6 +21467,21 @@
     "displayName": "Loader",
     "methods": [],
     "props": {
+      "disabled": {
+        "defaultValue": null,
+        "description": "",
+        "name": "disabled",
+        "declarations": [
+          {
+            "fileName": "arctic-kit/packages/snow/src/lib/types.ts",
+            "name": "TypeLiteral"
+          }
+        ],
+        "required": false,
+        "type": {
+          "name": "boolean | undefined"
+        }
+      },
       "color": {
         "defaultValue": {
           "value": "primary"
@@ -19213,21 +21521,6 @@
               "value": "\"secondary\""
             }
           ]
-        }
-      },
-      "disabled": {
-        "defaultValue": null,
-        "description": "",
-        "name": "disabled",
-        "declarations": [
-          {
-            "fileName": "arctic-kit/packages/snow/src/lib/types.ts",
-            "name": "TypeLiteral"
-          }
-        ],
-        "required": false,
-        "type": {
-          "name": "boolean | undefined"
         }
       },
       "type": {
@@ -20881,9 +23174,139 @@
   {
     "tags": {},
     "description": "",
-    "displayName": "IconButton",
+    "displayName": "Container",
     "methods": [],
     "props": {}
+  },
+  {
+    "tags": {},
+    "description": "",
+    "displayName": "IconButton",
+    "methods": [],
+    "props": {
+      "color": {
+        "defaultValue": {
+          "value": "\"primary\""
+        },
+        "description": "",
+        "name": "color",
+        "declarations": [
+          {
+            "fileName": "arctic-kit/packages/snow/src/lib/types.ts",
+            "name": "TypeLiteral"
+          },
+          {
+            "fileName": "arctic-kit/node_modules/@types/react/index.d.ts",
+            "name": "HTMLAttributes"
+          }
+        ],
+        "required": false,
+        "type": {
+          "name": "enum",
+          "raw": "\"success\" | \"error\" | \"warning\" | \"info\" | \"primary\" | \"secondary\" | undefined",
+          "value": [
+            {
+              "value": "undefined"
+            },
+            {
+              "value": "\"success\""
+            },
+            {
+              "value": "\"error\""
+            },
+            {
+              "value": "\"warning\""
+            },
+            {
+              "value": "\"info\""
+            },
+            {
+              "value": "\"primary\""
+            },
+            {
+              "value": "\"secondary\""
+            }
+          ]
+        }
+      },
+      "size": {
+        "defaultValue": {
+          "value": "medium"
+        },
+        "description": "",
+        "name": "size",
+        "declarations": [
+          {
+            "fileName": "arctic-kit/packages/snow/src/lib/types.ts",
+            "name": "TypeLiteral"
+          }
+        ],
+        "required": false,
+        "type": {
+          "name": "enum",
+          "raw": "\"small\" | \"medium\" | \"large\" | undefined",
+          "value": [
+            {
+              "value": "undefined"
+            },
+            {
+              "value": "\"small\""
+            },
+            {
+              "value": "\"medium\""
+            },
+            {
+              "value": "\"large\""
+            }
+          ]
+        }
+      },
+      "disabled": {
+        "defaultValue": null,
+        "description": "",
+        "name": "disabled",
+        "declarations": [
+          {
+            "fileName": "arctic-kit/packages/snow/src/lib/types.ts",
+            "name": "TypeLiteral"
+          }
+        ],
+        "required": false,
+        "type": {
+          "name": "boolean | undefined"
+        }
+      },
+      "rounded": {
+        "defaultValue": null,
+        "description": "",
+        "name": "rounded",
+        "declarations": [
+          {
+            "fileName": "arctic-kit/packages/snow/src/lib/IconButton/IconButton.tsx",
+            "name": "TypeLiteral"
+          }
+        ],
+        "required": false,
+        "type": {
+          "name": "boolean | undefined"
+        }
+      },
+      "noBorder": {
+        "defaultValue": null,
+        "description": "",
+        "name": "noBorder",
+        "declarations": [
+          {
+            "fileName": "arctic-kit/packages/snow/src/lib/IconButton/IconButton.tsx",
+            "name": "TypeLiteral"
+          }
+        ],
+        "required": false,
+        "type": {
+          "name": "boolean | undefined"
+        }
+      }
+    }
   },
   {
     "tags": {},
@@ -22351,16 +24774,16 @@
               "value": "undefined"
             },
             {
-              "value": "\"bottom\""
-            },
-            {
-              "value": "\"left\""
+              "value": "\"top\""
             },
             {
               "value": "\"right\""
             },
             {
-              "value": "\"top\""
+              "value": "\"bottom\""
+            },
+            {
+              "value": "\"left\""
             }
           ]
         }
@@ -22571,16 +24994,16 @@
               "value": "undefined"
             },
             {
-              "value": "\"bottom\""
-            },
-            {
-              "value": "\"left\""
+              "value": "\"top\""
             },
             {
               "value": "\"right\""
             },
             {
-              "value": "\"top\""
+              "value": "\"bottom\""
+            },
+            {
+              "value": "\"left\""
             }
           ]
         }
@@ -22768,16 +25191,16 @@
               "value": "undefined"
             },
             {
-              "value": "\"bottom\""
-            },
-            {
-              "value": "\"left\""
+              "value": "\"top\""
             },
             {
               "value": "\"right\""
             },
             {
-              "value": "\"top\""
+              "value": "\"bottom\""
+            },
+            {
+              "value": "\"left\""
             }
           ]
         }
@@ -23255,10 +25678,10 @@
           "name": "CSSProperties | undefined"
         }
       },
-      "label": {
+      "errorText": {
         "defaultValue": null,
         "description": "",
-        "name": "label",
+        "name": "errorText",
         "declarations": [
           {
             "fileName": "arctic-kit/packages/snow/src/lib/BaseInput/BaseInput.tsx",
@@ -23270,10 +25693,10 @@
           "name": "string | undefined"
         }
       },
-      "errorText": {
+      "label": {
         "defaultValue": null,
         "description": "",
-        "name": "errorText",
+        "name": "label",
         "declarations": [
           {
             "fileName": "arctic-kit/packages/snow/src/lib/BaseInput/BaseInput.tsx",
@@ -23394,6 +25817,21 @@
           ]
         }
       },
+      "maxLength": {
+        "defaultValue": null,
+        "description": "",
+        "name": "maxLength",
+        "declarations": [
+          {
+            "fileName": "arctic-kit/packages/snow/src/lib/BaseInput/BaseInput.tsx",
+            "name": "TypeLiteral"
+          }
+        ],
+        "required": false,
+        "type": {
+          "name": "number | undefined"
+        }
+      },
       "placeholder": {
         "defaultValue": null,
         "description": "",
@@ -23407,6 +25845,21 @@
         "required": false,
         "type": {
           "name": "string | undefined"
+        }
+      },
+      "readOnly": {
+        "defaultValue": null,
+        "description": "",
+        "name": "readOnly",
+        "declarations": [
+          {
+            "fileName": "arctic-kit/packages/snow/src/lib/BaseInput/BaseInput.tsx",
+            "name": "TypeLiteral"
+          }
+        ],
+        "required": false,
+        "type": {
+          "name": "boolean | undefined"
         }
       },
       "required": {
@@ -23424,19 +25877,19 @@
           "name": "boolean | undefined"
         }
       },
-      "maxLength": {
+      "options": {
         "defaultValue": null,
         "description": "",
-        "name": "maxLength",
+        "name": "options",
         "declarations": [
           {
-            "fileName": "arctic-kit/packages/snow/src/lib/BaseInput/BaseInput.tsx",
+            "fileName": "arctic-kit/packages/snow/src/lib/Autocomplete/Autocomplete.tsx",
             "name": "TypeLiteral"
           }
         ],
-        "required": false,
+        "required": true,
         "type": {
-          "name": "number | undefined"
+          "name": "readonly (string | OptionType)[]"
         }
       },
       "containerStyle": {
@@ -23467,36 +25920,6 @@
         "required": false,
         "type": {
           "name": "string | undefined"
-        }
-      },
-      "readOnly": {
-        "defaultValue": null,
-        "description": "",
-        "name": "readOnly",
-        "declarations": [
-          {
-            "fileName": "arctic-kit/packages/snow/src/lib/BaseInput/BaseInput.tsx",
-            "name": "TypeLiteral"
-          }
-        ],
-        "required": false,
-        "type": {
-          "name": "boolean | undefined"
-        }
-      },
-      "options": {
-        "defaultValue": null,
-        "description": "",
-        "name": "options",
-        "declarations": [
-          {
-            "fileName": "arctic-kit/packages/snow/src/lib/Autocomplete/Autocomplete.tsx",
-            "name": "TypeLiteral"
-          }
-        ],
-        "required": true,
-        "type": {
-          "name": "readonly (string | OptionType)[]"
         }
       }
     }
@@ -23537,10 +25960,10 @@
           "name": "CSSProperties | undefined"
         }
       },
-      "label": {
+      "errorText": {
         "defaultValue": null,
         "description": "",
-        "name": "label",
+        "name": "errorText",
         "declarations": [
           {
             "fileName": "arctic-kit/packages/snow/src/lib/BaseInput/BaseInput.tsx",
@@ -23552,10 +25975,10 @@
           "name": "string | undefined"
         }
       },
-      "errorText": {
+      "label": {
         "defaultValue": null,
         "description": "",
-        "name": "errorText",
+        "name": "label",
         "declarations": [
           {
             "fileName": "arctic-kit/packages/snow/src/lib/BaseInput/BaseInput.tsx",
@@ -23676,6 +26099,21 @@
           ]
         }
       },
+      "maxLength": {
+        "defaultValue": null,
+        "description": "",
+        "name": "maxLength",
+        "declarations": [
+          {
+            "fileName": "arctic-kit/packages/snow/src/lib/BaseInput/BaseInput.tsx",
+            "name": "TypeLiteral"
+          }
+        ],
+        "required": false,
+        "type": {
+          "name": "number | undefined"
+        }
+      },
       "placeholder": {
         "defaultValue": null,
         "description": "",
@@ -23689,6 +26127,21 @@
         "required": false,
         "type": {
           "name": "string | undefined"
+        }
+      },
+      "readOnly": {
+        "defaultValue": null,
+        "description": "",
+        "name": "readOnly",
+        "declarations": [
+          {
+            "fileName": "arctic-kit/packages/snow/src/lib/BaseInput/BaseInput.tsx",
+            "name": "TypeLiteral"
+          }
+        ],
+        "required": false,
+        "type": {
+          "name": "boolean | undefined"
         }
       },
       "required": {
@@ -23706,19 +26159,19 @@
           "name": "boolean | undefined"
         }
       },
-      "maxLength": {
+      "options": {
         "defaultValue": null,
         "description": "",
-        "name": "maxLength",
+        "name": "options",
         "declarations": [
           {
-            "fileName": "arctic-kit/packages/snow/src/lib/BaseInput/BaseInput.tsx",
+            "fileName": "arctic-kit/packages/snow/src/lib/Autocomplete/Autocomplete.tsx",
             "name": "TypeLiteral"
           }
         ],
-        "required": false,
+        "required": true,
         "type": {
-          "name": "number | undefined"
+          "name": "readonly (string | OptionType)[]"
         }
       },
       "containerStyle": {
@@ -23749,36 +26202,6 @@
         "required": false,
         "type": {
           "name": "string | undefined"
-        }
-      },
-      "readOnly": {
-        "defaultValue": null,
-        "description": "",
-        "name": "readOnly",
-        "declarations": [
-          {
-            "fileName": "arctic-kit/packages/snow/src/lib/BaseInput/BaseInput.tsx",
-            "name": "TypeLiteral"
-          }
-        ],
-        "required": false,
-        "type": {
-          "name": "boolean | undefined"
-        }
-      },
-      "options": {
-        "defaultValue": null,
-        "description": "",
-        "name": "options",
-        "declarations": [
-          {
-            "fileName": "arctic-kit/packages/snow/src/lib/Autocomplete/Autocomplete.tsx",
-            "name": "TypeLiteral"
-          }
-        ],
-        "required": true,
-        "type": {
-          "name": "readonly (string | OptionType)[]"
         }
       }
     }
@@ -26671,6 +29094,62 @@
   {
     "tags": {},
     "description": "",
+    "displayName": "clone",
+    "methods": [],
+    "props": {}
+  },
+  {
+    "tags": {},
+    "description": "",
+    "displayName": "toString",
+    "methods": [],
+    "props": {}
+  },
+  {
+    "tags": {},
+    "description": "",
+    "displayName": "toDayOfMonthString",
+    "methods": [],
+    "props": {}
+  },
+  {
+    "tags": {},
+    "description": "",
+    "displayName": "toMonthAndYearString",
+    "methods": [],
+    "props": {}
+  },
+  {
+    "tags": {},
+    "description": "",
+    "displayName": "toMonthString",
+    "methods": [],
+    "props": {}
+  },
+  {
+    "tags": {},
+    "description": "",
+    "displayName": "toYearString",
+    "methods": [],
+    "props": {}
+  },
+  {
+    "tags": {},
+    "description": "",
+    "displayName": "getPreviousYears",
+    "methods": [],
+    "props": {}
+  },
+  {
+    "tags": {},
+    "description": "",
+    "displayName": "getTimeFromDate",
+    "methods": [],
+    "props": {}
+  },
+  {
+    "tags": {},
+    "description": "",
     "displayName": "Calendar",
     "methods": [],
     "props": {
@@ -26883,13 +29362,13 @@
               "value": "undefined"
             },
             {
-              "value": "\"text\""
-            },
-            {
               "value": "\"filled\""
             },
             {
               "value": "\"outlined\""
+            },
+            {
+              "value": "\"text\""
             }
           ]
         }
@@ -27012,6 +29491,13 @@
         }
       }
     }
+  },
+  {
+    "tags": {},
+    "description": "",
+    "displayName": "ButtonGroupContext",
+    "methods": [],
+    "props": {}
   },
   {
     "tags": {},
@@ -27044,13 +29530,13 @@
               "value": "undefined"
             },
             {
-              "value": "\"text\""
-            },
-            {
               "value": "\"filled\""
             },
             {
               "value": "\"outlined\""
+            },
+            {
+              "value": "\"text\""
             }
           ]
         }
@@ -27201,7 +29687,7 @@
       },
       "variant": {
         "defaultValue": {
-          "value": "\"filled\""
+          "value": "filled"
         },
         "description": "Variant of the button",
         "name": "variant",
@@ -27224,13 +29710,13 @@
               "value": "undefined"
             },
             {
-              "value": "\"text\""
-            },
-            {
               "value": "\"filled\""
             },
             {
               "value": "\"outlined\""
+            },
+            {
+              "value": "\"text\""
             }
           ]
         }
@@ -27491,7 +29977,7 @@
       },
       "size": {
         "defaultValue": {
-          "value": "\"medium\""
+          "value": "medium"
         },
         "description": "",
         "name": "size",
@@ -27522,7 +30008,9 @@
         }
       },
       "disabled": {
-        "defaultValue": null,
+        "defaultValue": {
+          "value": "false"
+        },
         "description": "",
         "name": "disabled",
         "declarations": [
@@ -27579,7 +30067,7 @@
       },
       "variant": {
         "defaultValue": {
-          "value": "\"filled\""
+          "value": "filled"
         },
         "description": "Variant of the button",
         "name": "variant",
@@ -27602,13 +30090,13 @@
               "value": "undefined"
             },
             {
-              "value": "\"text\""
-            },
-            {
               "value": "\"filled\""
             },
             {
               "value": "\"outlined\""
+            },
+            {
+              "value": "\"text\""
             }
           ]
         }
@@ -27869,7 +30357,7 @@
       },
       "size": {
         "defaultValue": {
-          "value": "\"medium\""
+          "value": "medium"
         },
         "description": "",
         "name": "size",
@@ -27900,7 +30388,9 @@
         }
       },
       "disabled": {
-        "defaultValue": null,
+        "defaultValue": {
+          "value": "false"
+        },
         "description": "",
         "name": "disabled",
         "declarations": [
@@ -28106,36 +30596,6 @@
     "displayName": "Box",
     "methods": [],
     "props": {
-      "fontSize": {
-        "defaultValue": null,
-        "description": "",
-        "name": "fontSize",
-        "declarations": [
-          {
-            "fileName": "arctic-kit/packages/snow/src/lib/Box/Box.tsx",
-            "name": "TypeLiteral"
-          }
-        ],
-        "required": false,
-        "type": {
-          "name": "enum",
-          "raw": "\"small\" | \"medium\" | \"large\" | undefined",
-          "value": [
-            {
-              "value": "undefined"
-            },
-            {
-              "value": "\"small\""
-            },
-            {
-              "value": "\"medium\""
-            },
-            {
-              "value": "\"large\""
-            }
-          ]
-        }
-      },
       "aria-describedby": {
         "defaultValue": null,
         "description": "Identifies the element (or elements) that describes the object.\n@see aria-labelledby",
@@ -28175,7 +30635,9 @@
         }
       },
       "data-testid": {
-        "defaultValue": null,
+        "defaultValue": {
+          "value": "box-component"
+        },
         "description": "",
         "name": "data-testid",
         "declarations": [
@@ -28202,6 +30664,36 @@
         "required": false,
         "type": {
           "name": "string | undefined"
+        }
+      },
+      "fontSize": {
+        "defaultValue": null,
+        "description": "",
+        "name": "fontSize",
+        "declarations": [
+          {
+            "fileName": "arctic-kit/packages/snow/src/lib/Box/Box.tsx",
+            "name": "TypeLiteral"
+          }
+        ],
+        "required": false,
+        "type": {
+          "name": "enum",
+          "raw": "\"small\" | \"medium\" | \"large\" | undefined",
+          "value": [
+            {
+              "value": "undefined"
+            },
+            {
+              "value": "\"small\""
+            },
+            {
+              "value": "\"medium\""
+            },
+            {
+              "value": "\"large\""
+            }
+          ]
         }
       }
     }
@@ -28212,36 +30704,6 @@
     "displayName": "Box",
     "methods": [],
     "props": {
-      "fontSize": {
-        "defaultValue": null,
-        "description": "",
-        "name": "fontSize",
-        "declarations": [
-          {
-            "fileName": "arctic-kit/packages/snow/src/lib/Box/Box.tsx",
-            "name": "TypeLiteral"
-          }
-        ],
-        "required": false,
-        "type": {
-          "name": "enum",
-          "raw": "\"small\" | \"medium\" | \"large\" | undefined",
-          "value": [
-            {
-              "value": "undefined"
-            },
-            {
-              "value": "\"small\""
-            },
-            {
-              "value": "\"medium\""
-            },
-            {
-              "value": "\"large\""
-            }
-          ]
-        }
-      },
       "aria-describedby": {
         "defaultValue": null,
         "description": "Identifies the element (or elements) that describes the object.\n@see aria-labelledby",
@@ -28281,7 +30743,9 @@
         }
       },
       "data-testid": {
-        "defaultValue": null,
+        "defaultValue": {
+          "value": "box-component"
+        },
         "description": "",
         "name": "data-testid",
         "declarations": [
@@ -28308,6 +30772,36 @@
         "required": false,
         "type": {
           "name": "string | undefined"
+        }
+      },
+      "fontSize": {
+        "defaultValue": null,
+        "description": "",
+        "name": "fontSize",
+        "declarations": [
+          {
+            "fileName": "arctic-kit/packages/snow/src/lib/Box/Box.tsx",
+            "name": "TypeLiteral"
+          }
+        ],
+        "required": false,
+        "type": {
+          "name": "enum",
+          "raw": "\"small\" | \"medium\" | \"large\" | undefined",
+          "value": [
+            {
+              "value": "undefined"
+            },
+            {
+              "value": "\"small\""
+            },
+            {
+              "value": "\"medium\""
+            },
+            {
+              "value": "\"large\""
+            }
+          ]
         }
       }
     }
@@ -29324,10 +31818,10 @@
           "name": "CSSProperties | undefined"
         }
       },
-      "label": {
+      "errorText": {
         "defaultValue": null,
         "description": "",
-        "name": "label",
+        "name": "errorText",
         "declarations": [
           {
             "fileName": "arctic-kit/packages/snow/src/lib/BaseInput/BaseInput.tsx",
@@ -29339,10 +31833,10 @@
           "name": "string | undefined"
         }
       },
-      "errorText": {
+      "label": {
         "defaultValue": null,
         "description": "",
-        "name": "errorText",
+        "name": "label",
         "declarations": [
           {
             "fileName": "arctic-kit/packages/snow/src/lib/BaseInput/BaseInput.tsx",
@@ -29434,7 +31928,9 @@
         }
       },
       "size": {
-        "defaultValue": null,
+        "defaultValue": {
+          "value": "medium"
+        },
         "description": "",
         "name": "size",
         "declarations": [
@@ -29463,6 +31959,21 @@
           ]
         }
       },
+      "maxLength": {
+        "defaultValue": null,
+        "description": "",
+        "name": "maxLength",
+        "declarations": [
+          {
+            "fileName": "arctic-kit/packages/snow/src/lib/BaseInput/BaseInput.tsx",
+            "name": "TypeLiteral"
+          }
+        ],
+        "required": false,
+        "type": {
+          "name": "number | undefined"
+        }
+      },
       "placeholder": {
         "defaultValue": {
           "value": "Type to search"
@@ -29480,6 +31991,21 @@
           "name": "string | undefined"
         }
       },
+      "readOnly": {
+        "defaultValue": null,
+        "description": "",
+        "name": "readOnly",
+        "declarations": [
+          {
+            "fileName": "arctic-kit/packages/snow/src/lib/BaseInput/BaseInput.tsx",
+            "name": "TypeLiteral"
+          }
+        ],
+        "required": false,
+        "type": {
+          "name": "boolean | undefined"
+        }
+      },
       "required": {
         "defaultValue": null,
         "description": "",
@@ -29495,19 +32021,19 @@
           "name": "boolean | undefined"
         }
       },
-      "maxLength": {
+      "suffix": {
         "defaultValue": null,
         "description": "",
-        "name": "maxLength",
+        "name": "suffix",
         "declarations": [
           {
-            "fileName": "arctic-kit/packages/snow/src/lib/BaseInput/BaseInput.tsx",
+            "fileName": "arctic-kit/packages/snow/src/lib/TextInput/TextInput.tsx",
             "name": "TypeLiteral"
           }
         ],
         "required": false,
         "type": {
-          "name": "number | undefined"
+          "name": "ReactNode"
         }
       },
       "containerStyle": {
@@ -29538,36 +32064,6 @@
         "required": false,
         "type": {
           "name": "string | undefined"
-        }
-      },
-      "readOnly": {
-        "defaultValue": null,
-        "description": "",
-        "name": "readOnly",
-        "declarations": [
-          {
-            "fileName": "arctic-kit/packages/snow/src/lib/BaseInput/BaseInput.tsx",
-            "name": "TypeLiteral"
-          }
-        ],
-        "required": false,
-        "type": {
-          "name": "boolean | undefined"
-        }
-      },
-      "suffix": {
-        "defaultValue": null,
-        "description": "",
-        "name": "suffix",
-        "declarations": [
-          {
-            "fileName": "arctic-kit/packages/snow/src/lib/TextInput/TextInput.tsx",
-            "name": "TypeLiteral"
-          }
-        ],
-        "required": false,
-        "type": {
-          "name": "ReactNode"
         }
       },
       "prefixProps": {
@@ -29697,10 +32193,10 @@
           "name": "CSSProperties | undefined"
         }
       },
-      "label": {
+      "errorText": {
         "defaultValue": null,
         "description": "",
-        "name": "label",
+        "name": "errorText",
         "declarations": [
           {
             "fileName": "arctic-kit/packages/snow/src/lib/BaseInput/BaseInput.tsx",
@@ -29712,10 +32208,10 @@
           "name": "string | undefined"
         }
       },
-      "errorText": {
+      "label": {
         "defaultValue": null,
         "description": "",
-        "name": "errorText",
+        "name": "label",
         "declarations": [
           {
             "fileName": "arctic-kit/packages/snow/src/lib/BaseInput/BaseInput.tsx",
@@ -29807,7 +32303,9 @@
         }
       },
       "size": {
-        "defaultValue": null,
+        "defaultValue": {
+          "value": "medium"
+        },
         "description": "",
         "name": "size",
         "declarations": [
@@ -29836,6 +32334,21 @@
           ]
         }
       },
+      "maxLength": {
+        "defaultValue": null,
+        "description": "",
+        "name": "maxLength",
+        "declarations": [
+          {
+            "fileName": "arctic-kit/packages/snow/src/lib/BaseInput/BaseInput.tsx",
+            "name": "TypeLiteral"
+          }
+        ],
+        "required": false,
+        "type": {
+          "name": "number | undefined"
+        }
+      },
       "placeholder": {
         "defaultValue": {
           "value": "Type to search"
@@ -29853,6 +32366,21 @@
           "name": "string | undefined"
         }
       },
+      "readOnly": {
+        "defaultValue": null,
+        "description": "",
+        "name": "readOnly",
+        "declarations": [
+          {
+            "fileName": "arctic-kit/packages/snow/src/lib/BaseInput/BaseInput.tsx",
+            "name": "TypeLiteral"
+          }
+        ],
+        "required": false,
+        "type": {
+          "name": "boolean | undefined"
+        }
+      },
       "required": {
         "defaultValue": null,
         "description": "",
@@ -29868,19 +32396,19 @@
           "name": "boolean | undefined"
         }
       },
-      "maxLength": {
+      "suffix": {
         "defaultValue": null,
         "description": "",
-        "name": "maxLength",
+        "name": "suffix",
         "declarations": [
           {
-            "fileName": "arctic-kit/packages/snow/src/lib/BaseInput/BaseInput.tsx",
+            "fileName": "arctic-kit/packages/snow/src/lib/TextInput/TextInput.tsx",
             "name": "TypeLiteral"
           }
         ],
         "required": false,
         "type": {
-          "name": "number | undefined"
+          "name": "ReactNode"
         }
       },
       "containerStyle": {
@@ -29911,36 +32439,6 @@
         "required": false,
         "type": {
           "name": "string | undefined"
-        }
-      },
-      "readOnly": {
-        "defaultValue": null,
-        "description": "",
-        "name": "readOnly",
-        "declarations": [
-          {
-            "fileName": "arctic-kit/packages/snow/src/lib/BaseInput/BaseInput.tsx",
-            "name": "TypeLiteral"
-          }
-        ],
-        "required": false,
-        "type": {
-          "name": "boolean | undefined"
-        }
-      },
-      "suffix": {
-        "defaultValue": null,
-        "description": "",
-        "name": "suffix",
-        "declarations": [
-          {
-            "fileName": "arctic-kit/packages/snow/src/lib/TextInput/TextInput.tsx",
-            "name": "TypeLiteral"
-          }
-        ],
-        "required": false,
-        "type": {
-          "name": "ReactNode"
         }
       },
       "prefixProps": {
@@ -30449,16 +32947,28 @@
               "value": "undefined"
             },
             {
+              "value": "\"top\""
+            },
+            {
+              "value": "\"right\""
+            },
+            {
               "value": "\"bottom\""
             },
             {
               "value": "\"left\""
             },
             {
-              "value": "\"right\""
+              "value": "\"top-start\""
             },
             {
-              "value": "\"top\""
+              "value": "\"top-end\""
+            },
+            {
+              "value": "\"right-start\""
+            },
+            {
+              "value": "\"right-end\""
             },
             {
               "value": "\"bottom-start\""
@@ -30471,18 +32981,6 @@
             },
             {
               "value": "\"left-end\""
-            },
-            {
-              "value": "\"right-start\""
-            },
-            {
-              "value": "\"right-end\""
-            },
-            {
-              "value": "\"top-start\""
-            },
-            {
-              "value": "\"top-end\""
             }
           ]
         }
@@ -30584,13 +33082,13 @@
               "value": "undefined"
             },
             {
-              "value": "\"text\""
-            },
-            {
               "value": "\"filled\""
             },
             {
               "value": "\"outlined\""
+            },
+            {
+              "value": "\"text\""
             }
           ]
         }
@@ -30923,6 +33421,13 @@
   {
     "tags": {},
     "description": "",
+    "displayName": "ActionMenuContext",
+    "methods": [],
+    "props": {}
+  },
+  {
+    "tags": {},
+    "description": "",
     "displayName": "ActionMenuComponent",
     "methods": [],
     "props": {
@@ -30947,53 +33452,6 @@
         "required": false,
         "type": {
           "name": "string | undefined"
-        }
-      },
-      "color": {
-        "defaultValue": null,
-        "description": "",
-        "name": "color",
-        "parent": {
-          "fileName": "arctic-kit/packages/snow/src/lib/ActionMenu/types.ts",
-          "name": "ActionMenuProps"
-        },
-        "declarations": [
-          {
-            "fileName": "arctic-kit/packages/snow/src/lib/ActionMenu/types.ts",
-            "name": "ActionMenuProps"
-          },
-          {
-            "fileName": "arctic-kit/node_modules/@types/react/index.d.ts",
-            "name": "HTMLAttributes"
-          }
-        ],
-        "required": false,
-        "type": {
-          "name": "enum",
-          "raw": "\"success\" | \"error\" | \"warning\" | \"info\" | \"primary\" | \"secondary\" | undefined",
-          "value": [
-            {
-              "value": "undefined"
-            },
-            {
-              "value": "\"success\""
-            },
-            {
-              "value": "\"error\""
-            },
-            {
-              "value": "\"warning\""
-            },
-            {
-              "value": "\"info\""
-            },
-            {
-              "value": "\"primary\""
-            },
-            {
-              "value": "\"secondary\""
-            }
-          ]
         }
       },
       "renderContent": {
@@ -31057,6 +33515,53 @@
           "name": "boolean | undefined"
         }
       },
+      "color": {
+        "defaultValue": null,
+        "description": "",
+        "name": "color",
+        "parent": {
+          "fileName": "arctic-kit/packages/snow/src/lib/ActionMenu/types.ts",
+          "name": "ActionMenuProps"
+        },
+        "declarations": [
+          {
+            "fileName": "arctic-kit/packages/snow/src/lib/ActionMenu/types.ts",
+            "name": "ActionMenuProps"
+          },
+          {
+            "fileName": "arctic-kit/node_modules/@types/react/index.d.ts",
+            "name": "HTMLAttributes"
+          }
+        ],
+        "required": false,
+        "type": {
+          "name": "enum",
+          "raw": "\"success\" | \"error\" | \"warning\" | \"info\" | \"primary\" | \"secondary\" | undefined",
+          "value": [
+            {
+              "value": "undefined"
+            },
+            {
+              "value": "\"success\""
+            },
+            {
+              "value": "\"error\""
+            },
+            {
+              "value": "\"warning\""
+            },
+            {
+              "value": "\"info\""
+            },
+            {
+              "value": "\"primary\""
+            },
+            {
+              "value": "\"secondary\""
+            }
+          ]
+        }
+      },
       "placement": {
         "defaultValue": {
           "value": "bottom-start"
@@ -31082,16 +33587,28 @@
               "value": "undefined"
             },
             {
+              "value": "\"top\""
+            },
+            {
+              "value": "\"right\""
+            },
+            {
               "value": "\"bottom\""
             },
             {
               "value": "\"left\""
             },
             {
-              "value": "\"right\""
+              "value": "\"top-start\""
             },
             {
-              "value": "\"top\""
+              "value": "\"top-end\""
+            },
+            {
+              "value": "\"right-start\""
+            },
+            {
+              "value": "\"right-end\""
             },
             {
               "value": "\"bottom-start\""
@@ -31104,18 +33621,6 @@
             },
             {
               "value": "\"left-end\""
-            },
-            {
-              "value": "\"right-start\""
-            },
-            {
-              "value": "\"right-end\""
-            },
-            {
-              "value": "\"top-start\""
-            },
-            {
-              "value": "\"top-end\""
             }
           ]
         }
@@ -31217,13 +33722,13 @@
               "value": "undefined"
             },
             {
-              "value": "\"text\""
-            },
-            {
               "value": "\"filled\""
             },
             {
               "value": "\"outlined\""
+            },
+            {
+              "value": "\"text\""
             }
           ]
         }
@@ -31399,16 +33904,28 @@
               "value": "undefined"
             },
             {
+              "value": "\"top\""
+            },
+            {
+              "value": "\"right\""
+            },
+            {
               "value": "\"bottom\""
             },
             {
               "value": "\"left\""
             },
             {
-              "value": "\"right\""
+              "value": "\"top-start\""
             },
             {
-              "value": "\"top\""
+              "value": "\"top-end\""
+            },
+            {
+              "value": "\"right-start\""
+            },
+            {
+              "value": "\"right-end\""
             },
             {
               "value": "\"bottom-start\""
@@ -31421,18 +33938,6 @@
             },
             {
               "value": "\"left-end\""
-            },
-            {
-              "value": "\"right-start\""
-            },
-            {
-              "value": "\"right-end\""
-            },
-            {
-              "value": "\"top-start\""
-            },
-            {
-              "value": "\"top-end\""
             }
           ]
         }
@@ -31534,13 +34039,13 @@
               "value": "undefined"
             },
             {
-              "value": "\"text\""
-            },
-            {
               "value": "\"filled\""
             },
             {
               "value": "\"outlined\""
+            },
+            {
+              "value": "\"text\""
             }
           ]
         }
@@ -32153,6 +34658,13 @@
         }
       }
     }
+  },
+  {
+    "tags": {},
+    "description": "",
+    "displayName": "AccordionContext",
+    "methods": [],
+    "props": {}
   },
   {
     "tags": {},
